@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conoce a Agencia Nohemi: Agencia de turismo náutico en Cartagena liderada por locales. Especialistas en Islas del Rosario y experiencias premium."
+    />
+    <title>Sobre Nosotros | Agencia Nohemi</title>
+    <link rel="icon" href="images/logoqueku.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .page-header {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("images/foto (6).JPG");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+      }
+
+      /* --- Estilos WhatsApp Widget Multi-idioma --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      .wa-options {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .wa-options.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .wa-item {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        min-width: 210px;
+        border-left: 4px solid #25d366;
+      }
+      .wa-item:hover {
+        transform: translateX(-5px);
+        background-color: #f0fdf4;
+      }
+      .wa-flag {
+        font-size: 24px;
+        margin-right: 12px;
+      }
+      .wa-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .wa-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+      }
+      .wa-number {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .wa-options.active + .whatsapp-float {
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-0 transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 z-50">
+          <img
+            src="images/logoqueku.png"
+            alt="Agencia Nohemi Logo"
+            class="h-20 drop-shadow-lg object-contain"
+          />
+        </a>
+        <div
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase h-full items-center"
+        >
+          <a href="index.html" class="text-gray-300 hover:text-white transition"
+            >Inicio</a
+          >
+          <a href="fleet.html" class="text-gray-300 hover:text-white transition"
+            >Flotilla</a
+          >
+          <a
+            href="experiences.html"
+            class="text-gray-300 hover:text-white transition"
+            >Experiencias</a
+          >
+          <a href="about.html" class="text-white border-b-2 border-blue-500"
+            >Nosotros</a
+          >
+          <a
+            href="blog/index.html"
+            class="text-gray-300 hover:text-white transition"
+            >Blog</a
+          >
+          <a
+            href="fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Reservar</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-white"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Inicio</a
+      >
+      <!-- CAMBIO: Flotilla -->
+      <a
+        href="fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nuestra Flotilla</a
+      >
+      <a
+        href="experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiencias</a
+      >
+      <a
+        href="about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nosotros</a
+      >
+      <a
+        href="blog/index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- HEADER CON IMAGEN -->
+    <div class="page-header pt-36 pb-20 text-center text-white px-4">
+      <span
+        class="text-blue-400 font-bold tracking-widest uppercase text-xs mb-3 block drop-shadow-md"
+        >Nuestra Historia</span
+      >
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+        Expertos Locales
+      </h1>
+      <p
+        class="text-lg text-gray-200 max-w-2xl mx-auto font-light drop-shadow-md"
+      >
+        Somos cartageneros nativos, profesionales en comunicación y turismo.
+      </p>
+    </div>
+
+    <!-- Contenido Nosotros -->
+    <section class="py-20 container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Imagen Lateral -->
+        <div class="relative lg:sticky lg:top-32">
+          <div
+            class="absolute -bottom-4 -right-4 w-full h-full border-2 border-blue-100 rounded-lg -z-10"
+          ></div>
+          <img
+            src="images/foto (8).JPG"
+            alt="Equipo Agencia Nohemi"
+            class="rounded-lg shadow-2xl w-full object-cover h-96 lg:h-[600px]"
+          />
+        </div>
+
+        <!-- Texto Principal -->
+        <div
+          class="space-y-6 text-lg text-gray-600 leading-relaxed text-justify"
+        >
+          <div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">
+              ¿Quiénes Somos?
+            </h2>
+            <div class="w-20 h-1 bg-blue-600 mb-8"></div>
+          </div>
+
+          <p>
+            <strong>Agencia Nohemi</strong> es una agencia virtual de turismo para la
+            zona norte del caribe colombiano, con manejo exclusivo de la ciudad
+            (Corralito de Piedra) <strong>Cartagena de Indias</strong>.
+            Brindamos servicio personalizado de planificación de tiempo de
+            estadía en la ciudad.
+          </p>
+
+          <p>
+            Contamos con información actualizada de botes, barcos y yates de
+            lujo, hoteles, estancias o cabañas privadas en las islas o
+            continente, turismo urbano, restaurantes, bares, y monumentos
+            históricos de interés turístico mundial como el
+            <strong>Castillo San Felipe de Barajas</strong> y la ciudad
+            amurallada entre muchos más.
+          </p>
+
+          <p>
+            Somos agentes de turismo con la capacidad de manejo de toda una
+            logística local necesaria para hacer de su tiempo de vacaciones la
+            mejor experiencia y sobre todo, un manejo de calidad de su
+            inversión.
+          </p>
+
+          <!-- Cita del Fundador -->
+          <div
+            class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 my-8"
+          >
+            <p class="italic text-gray-700">
+              "Nacemos de la necesidad de brindar al turista un servicio
+              personalizado y de confianza, donde las expectativas de vacaciones
+              en la ciudad serán planificadas y resueltas de forma eficiente,
+              rápida y actualizada. Siempre planes a medida de lo que exija el
+              cliente."
+            </p>
+            <div class="mt-4 flex items-center">
+              <div
+                class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-bold mr-3 text-sm"
+              >
+                MR
+              </div>
+              <div>
+                <p class="font-bold text-blue-900 text-sm">Mauricio Ramos</p>
+                <p class="text-xs text-gray-500">
+                  Fundador & Periodista Cartagenero
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Somos cartageneros nativos,
+            <strong
+              >profesionales en el ámbito de la comunicación social y el
+              periodismo</strong
+            >. Tenemos más de <strong>15 años</strong> en el manejo de turismo,
+            siendo el náutico e islas nuestra mayor fortaleza.
+          </p>
+
+          <p>
+            <strong>Agencia Nohemi</strong> está en la capacidad de organizar su plan de
+            vacaciones ya sea de tipo familiar, de fiesta, descanso y/o planes
+            herméticamente reservados bajo el amparo de contratos de
+            confidencialidad.
+          </p>
+
+          <p
+            class="font-semibold text-gray-900 border-t border-gray-100 pt-4 mt-4"
+          >
+            Tenemos nuestra agencia virtual y también contamos con oficinas
+            físicas en el barrio <strong>MANGA</strong> para que su confianza
+            sea nuestra razón de servir.
+          </p>
+
+          <!-- Estadísticas -->
+          <div class="grid grid-cols-2 gap-8 pt-4">
+            <div>
+              <span class="block text-4xl font-bold text-blue-600 mb-1"
+                >15+</span
+              >
+              <span
+                class="text-xs text-gray-400 uppercase tracking-wide font-bold"
+                >Años de Experiencia</span
+              >
+            </div>
+            <div>
+              <span class="block text-4xl font-bold text-blue-600 mb-1"
+                >100%</span
+              >
+              <span
+                class="text-xs text-gray-400 uppercase tracking-wide font-bold"
+                >Cartageneros</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seguridad Section (Resumen) -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-12">
+          <i class="fas fa-life-ring text-4xl text-blue-600 mb-4"></i>
+          <h2 class="text-3xl font-bold text-gray-900">
+            Seguridad y Confianza
+          </h2>
+          <p class="mt-4 text-gray-500">
+            Su seguridad es nuestra prioridad en cada zarpe.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md space-y-4">
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Pólizas de seguro vigentes para todos los pasajeros.
+            </p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Tripulación certificada y experta en navegación local.
+            </p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Embarcaciones con mantenimiento al día y permisos de la DIMAR.
+            </p>
+          </div>
+          <div
+            class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600"
+          >
+            <h4 class="font-bold text-blue-800 text-sm mb-1">
+              Compromiso Local
+            </h4>
+            <p class="text-blue-700 text-xs">
+              Apoyamos el turismo sostenible y respetuoso con el medio ambiente
+              y las comunidades nativas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Compacto -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <img
+              src="images/logoqueku.png"
+              alt="Agencia Nohemi"
+              class="h-8 mb-4 brightness-0 invert opacity-90"
+            />
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              Transformamos días ordinarios en memorias extraordinarias.
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <!-- CAMBIO: Flotilla -->
+              <li>
+                <a href="fleet.html" class="hover:text-blue-400">Flotilla</a>
+              </li>
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400"
+                  >Experiencias</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">Nosotros</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 322
+                6452179
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
+            <div class="flex justify-center md:justify-start gap-4">
+              <a
+                href="https://www.instagram.com/agencianohemi_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/agencianohemi"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2024 Agencia Nohemi. Todos los derechos reservados.</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white"
+              >Términos y Condiciones</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget Multi-idioma -->
+    <div class="whatsapp-container">
+      <!-- Opciones -->
+      <div id="wa-options" class="wa-options">
+        <a
+          href="https://wa.me/573245685595?text=Hello,%20I%20am%20interested%20in%20your%20services."
+          target="_blank"
+          class="wa-item"
+        >
+          <span class="wa-flag">🇺🇸</span>
+          <div class="wa-info">
+            <span class="wa-title">English Support</span>
+            <span class="wa-number">+57 324 568 5595</span>
+          </div>
+        </a>
+        <a
+          href="https://wa.me/573226452179?text=Hola,%20quisiera%20más%20información."
+          target="_blank"
+          class="wa-item"
+        >
+          <span class="wa-flag">🇨🇴</span>
+          <div class="wa-info">
+            <span class="wa-title">Asesor en Español</span>
+            <span class="wa-number">+57 322 645 2179</span>
+          </div>
+        </a>
+      </div>
+      <button id="wa-main-btn" class="whatsapp-float group focus:outline-none">
+        <img
+          src="images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // WhatsApp Logic
+      const waBtn = document.getElementById("wa-main-btn");
+      const waOptions = document.getElementById("wa-options");
+
+      if (waBtn && waOptions) {
+        waBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          waOptions.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (event) {
+          const isClickInside =
+            waBtn.contains(event.target) || waOptions.contains(event.target);
+          if (!isClickInside && waOptions.classList.contains("active")) {
+            waOptions.classList.remove("active");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

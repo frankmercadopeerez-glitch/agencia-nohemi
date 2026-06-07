@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Experiencias Agencia Nohemi: Pasadías en Islas del Rosario, Atardeceres en la Bahía y Gastronomía Local en Cartagena."
+    />
+    <title>Experiencias | Agencia Nohemi</title>
+    <link rel="icon" href="images/logoqueku.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .hero-section {
+        position: relative;
+        height: 60vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url("images/acuario.jpg"); /* Imagen de fondo genérica para experiencias */
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+      }
+      .hero-overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+      }
+
+      /* --- Estilos WhatsApp Widget Multi-idioma --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      .wa-options {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .wa-options.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .wa-item {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        min-width: 210px;
+        border-left: 4px solid #25d366;
+      }
+      .wa-item:hover {
+        transform: translateX(-5px);
+        background-color: #f0fdf4;
+      }
+      .wa-flag {
+        font-size: 24px;
+        margin-right: 12px;
+      }
+      .wa-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .wa-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+      }
+      .wa-number {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .wa-options.active + .whatsapp-float {
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 transition-all duration-300 py-0 text-white bg-gray-900/95 backdrop-blur-md shadow-lg"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 z-50">
+          <img
+            src="images/logoqueku.png"
+            alt="Agencia Nohemi Logo"
+            class="h-20 drop-shadow-lg object-contain"
+          />
+        </a>
+        <div
+          class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase h-full"
+        >
+          <a href="index.html" class="text-white hover:text-blue-400 transition"
+            >Inicio</a
+          >
+          <!-- CAMBIO: Flotilla -->
+          <a href="fleet.html" class="text-white hover:text-blue-400 transition"
+            >Flotilla</a
+          >
+          <a href="experiences.html" class="text-blue-400 transition"
+            >Experiencias</a
+          >
+          <a href="about.html" class="text-white hover:text-blue-400 transition"
+            >Nosotros</a
+          >
+          <a
+            href="blog/index.html"
+            class="text-white hover:text-blue-400 transition"
+            >Blog</a
+          >
+          <a
+            href="fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Reservar</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden z-50 focus:outline-none text-white"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Menú Móvil -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Inicio</a
+      >
+      <!-- CAMBIO: Flotilla -->
+      <a
+        href="fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nuestra Flotilla</a
+      >
+      <a
+        href="experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiencias</a
+      >
+      <a
+        href="about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nosotros</a
+      >
+      <a
+        href="blog/index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="relative z-10 text-center text-white px-4 max-w-4xl">
+        <span
+          class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-2 block"
+          >Descubre el Caribe</span
+        >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Nuestras Experiencias
+        </h1>
+        <p class="text-lg md:text-xl font-light text-gray-100">
+          Más que un alquiler, creamos momentos inolvidables en el Caribe.
+        </p>
+      </div>
+    </header>
+
+    <!-- Sección Gastronómica Premium -->
+    <section class="py-16 bg-white relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <span
+              class="text-blue-600 font-bold text-sm uppercase tracking-wide mb-2 block"
+              >Exclusividad a Bordo</span
+            >
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Experiencia Gastronómica Premium
+            </h2>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+              Elevamos tu experiencia a bordo. En cada alquiler puedes solicitar
+              nuestro servicio exclusivo de catering, diseñado para satisfacer
+              los paladares más exigentes mientras navegas.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4 mt-1">
+                  <i class="fas fa-cheese text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">
+                    Tablas de Quesos
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Selección gourmet de quesos y charcutería fina.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4 mt-1">
+                  <i class="fas fa-wine-glass-alt text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">
+                    Bebidas Premium
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Vinos, champañas y licores de alta gama.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4 mt-1">
+                  <i class="fas fa-utensils text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-gray-900">
+                    Catering a Medida
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Almuerzos y aperitivos preparados especialmente para ti.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="images/foto%20(18).JPG"
+              alt="Catering y Gastronomía"
+              class="rounded-2xl shadow-2xl w-full h-[500px] object-cover transform md:rotate-2 hover:rotate-0 transition duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista de Experiencias -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Elige tu Próxima Aventura
+          </h2>
+          <p class="text-gray-500 mt-2">Planes diseñados para cada ocasión.</p>
+        </div>
+
+        <div class="space-y-16">
+          <!-- Experiencia 1: Sunny Day -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
+          >
+            <div class="md:w-1/2 relative">
+              <img
+                src="images/acuario.jpg"
+                alt="Islas del Rosario"
+                class="w-full h-full object-cover min-h-[400px]"
+              />
+              <div
+                class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
+              >
+                Más Popular
+              </div>
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Pasadía Islas del Rosario (SUNNY DAY)
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Te ofrece la oportunidad de conocer el Parque Nacional Natural
+                Corales del Rosario y de San Bernardo a bordo de nuestras
+                embarcaciones. Contamos con un amplio portafolio de botes,
+                diseñados especialmente para satisfacer las necesidades de
+                nuestros clientes y totalmente equipados para poder disfrutar de
+                los diferentes destinos que ofrecemos.
+              </p>
+
+              <div class="mb-6">
+                <h4
+                  class="font-bold text-gray-900 text-sm mb-2 uppercase border-b pb-1 border-gray-100"
+                >
+                  Destinos Disponibles:
+                </h4>
+                <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    >Islas del Rosario
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Barú
+                    – Cholón
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Barú
+                    – Playa Blanca
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    >Tierra Bomba
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    >Punta Arena
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    >Bocachica
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    >Archipiélago San Bernardo
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Isla
+                    Fuerte
+                  </li>
+                </ul>
+              </div>
+
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-bold text-blue-900 text-sm mb-1">Horarios:</h4>
+                <p class="text-sm text-blue-800">
+                  <span class="font-semibold">Salida:</span> Sujeta a petición
+                  del cliente (después de 8:00 AM).
+                </p>
+                <p class="text-sm text-blue-800">
+                  <span class="font-semibold">Llegada:</span> La embarcación
+                  deberá estar en el muelle a las 5:00 PM.
+                </p>
+              </div>
+              <div class="mt-6">
+                <button
+                  onclick="
+                    document
+                      .getElementById('wa-options')
+                      .classList.toggle('active')
+                  "
+                  class="btn-primary w-full md:w-auto text-center cursor-pointer"
+                >
+                  Cotizar Pasadía
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experiencia 2: Bay Tour -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
+          >
+            <div class="md:w-1/2">
+              <img
+                src="images/cartagenasunset.jpg"
+                alt="Atardecer Cartagena"
+                class="w-full h-full object-cover min-h-[400px]"
+              />
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Atardeceres Mágicos en la Bahía (BAY TOUR)
+              </h3>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Nada mejor que navegar en los mejores botes por las aguas
+                mágicas de la mejor bahía del caribe colombiano llenas de
+                fantásticos atardeceres y románticas noches de encanto. Viviendo
+                experiencias únicas con tus mejores amigos, familiares o
+                declarando amor eterno a esa persona que consume tu corazón.
+              </p>
+              <p class="text-gray-600 mb-6 font-medium italic">
+                "Surcar las aguas de la bahía de Cartagena es mágico y
+                misterioso para tus deseos y somos esa nave que lo hace real."
+              </p>
+              <p class="text-gray-500 text-sm mb-6">
+                La bahía interna de Cartagena de Indias está cercada por el
+                barrio de Manga, la isla de Manzanillo, el centro histórico,
+                Bocagrande y Castillogrande. Disfruta desde el mar de uno de los
+                atardeceres más hermosos y percibe el contraste entre lo moderno
+                y antiguo de la ciudad.
+              </p>
+
+              <div class="mb-4">
+                <span class="text-xs font-bold text-gray-500 uppercase"
+                  >Ideal para:</span
+                >
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span
+                    class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full"
+                    >Propuestas de matrimonio</span
+                  >
+                  <span
+                    class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full"
+                    >Cenas románticas</span
+                  >
+                  <span
+                    class="bg-purple-100 text-purple-600 text-xs px-3 py-1 rounded-full"
+                    >Cumpleaños</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-600 text-xs px-3 py-1 rounded-full"
+                    >Pre-Rumba</span
+                  >
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h4 class="font-bold text-purple-900 text-sm mb-1">
+                  Horarios:
+                </h4>
+                <p class="text-sm text-purple-800">
+                  La tarifa incluye <strong>3 horas</strong> de recorrido, a
+                  disfrutar entre las <strong>6:00 PM y las 12:00 AM</strong>.
+                </p>
+              </div>
+              <div class="mt-6">
+                <button
+                  onclick="
+                    document
+                      .getElementById('wa-options')
+                      .classList.toggle('active')
+                  "
+                  class="btn-primary w-full md:w-auto text-center cursor-pointer bg-purple-600 hover:bg-purple-700"
+                >
+                  Cotizar Atardecer
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experiencia 3: Sabores Locales -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
+          >
+            <div class="md:w-1/2">
+              <img
+                src="images/cartagenacentro.jpg"
+                alt="Gastronomía Local"
+                class="w-full h-full object-cover min-h-[400px]"
+              />
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Sabores Locales en Casa y Gastronomía
+              </h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Disfruta de banquetes de platos típicos de caribe colombiano
+                (sabores de la cultura negra e indígena caribe) y la fusión del
+                mediterráneo y la migración árabe en tierras del caribe.
+                <br /><br />
+                <strong>Experiencia única:</strong> la brindamos en casas
+                locales en armonía con sus dueños y sus costumbres. Sumérgete en
+                la verdadera cultura cartagenera con una experiencia culinaria
+                preparada por cocineros locales en la privacidad y calidez de
+                una casa tradicional.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="font-bold text-gray-900 text-sm mb-1">
+                    <i class="fas fa-users text-orange-500 mr-2"></i>Ideal para
+                    Grupos
+                  </h4>
+                  <p class="text-xs text-gray-500">
+                    Exclusivo para grupos de 6 a 12 personas que buscan
+                    autenticidad lejos del turismo convencional.
+                  </p>
+                </div>
+                <div class="border border-gray-200 p-4 rounded-lg">
+                  <h4 class="font-bold text-gray-900 text-sm mb-1">
+                    <i class="fas fa-home text-orange-500 mr-2"></i>Ambiente
+                  </h4>
+                  <p class="text-xs text-gray-500">
+                    Privado, acogedor y con atención 100% personalizada.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-2">
+                <button
+                  onclick="
+                    document
+                      .getElementById('wa-options')
+                      .classList.toggle('active')
+                  "
+                  class="btn-primary w-full md:w-auto text-center cursor-pointer bg-orange-600 hover:bg-orange-700"
+                >
+                  Reservar Experiencia Culinaria
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Igual al Index) -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <img
+              src="images/logoqueku.png"
+              alt="Agencia Nohemi"
+              class="h-8 mb-4 brightness-0 invert opacity-90"
+            />
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              Brindamos experiencias reales para recuerdos mágicos del caribe.
+            </p>
+          </div>
+
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="fleet.html" class="hover:text-blue-400"
+                  >Nuestra Flotilla</a
+                >
+              </li>
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400"
+                  >Experiencias</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">Nosotros</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 322
+                6452179
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
+            <div class="flex justify-center md:justify-start gap-4">
+              <a
+                href="https://www.instagram.com/agencianohemi_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/agencianohemi"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2024 Agencia Nohemi. Todos los derechos reservados.</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white"
+              >Términos y Condiciones</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget Multi-idioma -->
+    <div class="whatsapp-container">
+      <!-- Opciones -->
+      <div id="wa-options" class="wa-options">
+        <!-- Inglés -->
+        <a
+          href="https://wa.me/573245685595?text=Hello,%20I%20am%20interested%20in%20booking%20an%20experience."
+          target="_blank"
+          class="wa-item"
+        >
+          <span class="wa-flag">🇺🇸</span>
+          <div class="wa-info">
+            <span class="wa-title">English Support</span>
+            <span class="wa-number">+57 324 568 5595</span>
+          </div>
+        </a>
+        <!-- Español -->
+        <a
+          href="https://wa.me/573226452179?text=Hola,%20estoy%20interesado%20en%20una%20experiencia."
+          target="_blank"
+          class="wa-item"
+        >
+          <span class="wa-flag">🇨🇴</span>
+          <div class="wa-info">
+            <span class="wa-title">Asesor en Español</span>
+            <span class="wa-number">+57 322 645 2179</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Botón Principal -->
+      <button id="wa-main-btn" class="whatsapp-float group focus:outline-none">
+        <img
+          src="images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // WhatsApp Logic
+      const waBtn = document.getElementById("wa-main-btn");
+      const waOptions = document.getElementById("wa-options");
+
+      waBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        waOptions.classList.toggle("active");
+      });
+
+      document.addEventListener("click", function (event) {
+        const isClickInside =
+          waBtn.contains(event.target) || waOptions.contains(event.target);
+        if (!isClickInside && waOptions.classList.contains("active")) {
+          waOptions.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocinas del Caribe: Relatos en un Plato | Agencia Nohemi Blog</title>
+    <link rel="icon" href="../../images/logoqueku.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      /* --- Estilos WhatsApp Widget Multi-idioma --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      .wa-options {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .wa-options.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .wa-item {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        min-width: 210px;
+        border-left: 4px solid #25d366;
+      }
+      .wa-item:hover {
+        transform: translateX(-5px);
+        background-color: #f0fdf4;
+      }
+      .wa-flag {
+        font-size: 24px;
+        margin-right: 12px;
+      }
+      .wa-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .wa-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+      }
+      .wa-number {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .wa-options.active + .whatsapp-float {
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+
+      .article-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #4b5563;
+      }
+      .article-content h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-0">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="../../index.html" class="flex items-center gap-2 z-50">
+          <img
+            src="../../images/logoqueku.png"
+            alt="Agencia Nohemi Logo"
+            class="h-12 md:h-20 drop-shadow-lg object-contain"
+          />
+        </a>
+        <div
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase items-center"
+        >
+          <a
+            href="../../index.html"
+            class="text-gray-300 hover:text-white transition"
+            >Inicio</a
+          >
+          <a
+            href="../../fleet.html"
+            class="text-gray-300 hover:text-white transition"
+            >Flotilla</a
+          >
+          <a
+            href="../../experiences.html"
+            class="text-gray-300 hover:text-white transition"
+            >Experiencias</a
+          >
+          <a
+            href="../../about.html"
+            class="text-gray-300 hover:text-white transition"
+            >Nosotros</a
+          >
+          <a href="../index.html" class="text-white border-b-2 border-blue-500"
+            >Blog</a
+          >
+          <a
+            href="../../fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Reservar</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-white"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="../../index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Inicio</a
+      >
+      <a
+        href="../../fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nuestra Flotilla</a
+      >
+      <a
+        href="../../experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiencias</a
+      >
+      <a
+        href="../../about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nosotros</a
+      >
+      <a
+        href="../index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <header class="relative pt-32 pb-12 bg-gray-900 text-white">
+      <div class="absolute inset-0 overflow-hidden">
+        <img
+          src="../../images/cartagenacentro.jpg"
+          class="w-full h-full object-cover opacity-30"
+          alt="Cocina Caribe"
+        />
+      </div>
+      <div class="relative container mx-auto px-6 text-center max-w-4xl">
+        <span
+          class="text-orange-400 font-bold tracking-widest uppercase text-xs mb-4 block"
+          >Cultura y Sabor</span
+        >
+        <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+          Cocinas del Caribe: relatos que se sirven en un plato
+        </h1>
+        <div
+          class="flex items-center justify-center text-sm text-gray-300 space-x-4"
+        >
+          <span><i class="far fa-user mr-2"></i> Por Agencia Nohemi</span>
+          <span><i class="far fa-clock mr-2"></i> 5 min de lectura</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-16 container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <article
+          class="lg:w-2/3 article-content bg-white p-8 md:p-12 rounded-xl shadow-sm border border-gray-100"
+        >
+          <h2>Sabores que narran historias</h2>
+          <p>
+            En el Caribe colombiano, cada plato es un relato, una memoria que se
+            sirve con el aroma del mar y el calor del sol. Las cocinas de esta
+            región no solo alimentan el cuerpo, sino que nutren el alma con
+            historias de resistencia, identidad y comunidad. ¿Qué secretos
+            guardan los fogones del Caribe? ¿Cómo se entrelazan los sabores con
+            las voces de quienes los preparan?
+          </p>
+
+          <h2>Identidad en cada bocado</h2>
+          <p>
+            La cocina caribeña es un mosaico de culturas, un crisol donde se
+            funden las tradiciones africanas, indígenas y europeas. Cada
+            ingrediente cuenta una historia de migración y mestizaje, reflejando
+            la identidad de un pueblo que ha sabido resistir y adaptarse. En un
+            plato de arroz con coco, se puede sentir el eco de tambores
+            africanos, mientras que en un sancocho de pescado, resuena la
+            sabiduría ancestral de los pueblos indígenas.
+          </p>
+
+          <h2>El legado africano</h2>
+          <p>
+            El uso de especias y técnicas de cocción como el ahumado son
+            herencias de los esclavos africanos que llegaron a estas costas. “La
+            cocina es nuestra forma de recordar de dónde venimos”, dice un
+            cocinero local, mientras remueve un guiso de mariscos.
+          </p>
+
+          <h2>Sabiduría indígena</h2>
+          <p>
+            Las comunidades indígenas han aportado ingredientes autóctonos como
+            el maíz y la yuca, esenciales en la dieta caribeña. Estos elementos
+            no solo enriquecen los platos, sino que también preservan la memoria
+            de un territorio que se resiste al olvido.
+          </p>
+
+          <h2>Memoria y transformación</h2>
+          <p>
+            La cocina del Caribe no es estática; evoluciona con el tiempo,
+            incorporando nuevas influencias y técnicas. Sin embargo, en su
+            esencia, sigue siendo un espacio de memoria y resistencia. “Cocinar
+            es recordar”, afirma una abuela mientras amasa arepas en su cocina
+            de barro. En cada plato, se preserva una historia, una identidad que
+            se niega a desaparecer.
+          </p>
+
+          <h2>Innovación y tradición</h2>
+          <p>
+            Los jóvenes chefs del Caribe están reinventando la cocina
+            tradicional, fusionando sabores y técnicas modernas sin perder de
+            vista sus raíces. Esta transformación es un reflejo de la dinámica
+            cultural de la región, donde lo nuevo y lo antiguo coexisten en
+            armonía.
+          </p>
+
+          <h2>Cuando el sabor se convierte en memoria</h2>
+          <p>
+            En el Caribe colombiano, la cocina es más que una necesidad; es una
+            forma de vida, una expresión de identidad y resistencia. En Agencia Nohemi,
+            celebramos estas historias que se sirven en un plato, recordándonos
+            que la cultura es un banquete que nos invita a todos a la mesa.
+          </p>
+
+          <div
+            class="mt-8 pt-6 border-t border-gray-100 text-sm text-gray-500 italic"
+          >
+            Fuente: Adaptado de textos sobre cultura culinaria del Caribe
+            (Eventario).
+          </div>
+        </article>
+
+        <aside class="lg:w-1/3 space-y-8">
+          <div
+            class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-32"
+          >
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Prueba estos sabores
+            </h3>
+            <p class="text-gray-600 text-sm mb-6">
+              Reserva nuestra experiencia de
+              <strong>Cenas Típicas en Casa Local</strong> y vive la gastronomía
+              real de Cartagena.
+            </p>
+            <a
+              href="../../experiences.html"
+              class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition mb-3"
+              >Ver Experiencias</a
+            >
+            <a
+              href="https://wa.me/573226452179"
+              class="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition"
+              ><i class="fab fa-whatsapp mr-2"></i> Reservar Cena</a
+            >
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <img
+              src="../../images/logoqueku.png"
+              alt="Agencia Nohemi"
+              class="h-8 mb-4 brightness-0 invert opacity-90"
+            />
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              Transformamos días ordinarios en memorias extraordinarias.
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="../../fleet.html" class="hover:text-blue-400"
+                  >Flotilla</a
+                >
+              </li>
+              <li>
+                <a href="../../experiences.html" class="hover:text-blue-400"
+                  >Experiencias</a
+                >
+              </li>
+              <li>
+                <a href="../../about.html" class="hover:text-blue-400"
+                  >Nosotros</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 322
+                6452179
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
+            <div class="flex justify-center md:justify-start gap-4">
+              <a
+                href="https://www.instagram.com/agencianohemi_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../../images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/agencianohemi"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../../images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2024 Agencia Nohemi. Todos los derechos reservados.</p>
+          <div class="mt-2 space-x-3">
+            <a href="../../policies.html" class="hover:text-white"
+              >Términos y Condiciones</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget Multi-idioma -->
+    <div class="whatsapp-container">
+      <div id="wa-options" class="wa-options">
+        <a
+          href="https://wa.me/573245685595?text=Hello,%20I%20am%20interested%20in%20your%20services."
+          target="_blank"
+          class="wa-item"
+        >
+          <span class="wa-flag">🇺🇸</span>
+          <div class="wa-info">
+            <span class="wa-title">English Support</span>
+            <span class="wa-number">+57 324 568 5595</span>
+          </div>
+        </a>
+        <a
+          href="https://wa.me/573226452179?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20gastronom%C3%ADa%20caribe%C3%B1a."
+          target="_blank"
+          class="wa-item"
+        >
+          <span class="wa-flag">🇨🇴</span>
+          <div class="wa-info">
+            <span class="wa-title">Asesor en Español</span>
+            <span class="wa-number">+57 322 645 2179</span>
+          </div>
+        </a>
+      </div>
+      <button id="wa-main-btn" class="whatsapp-float group focus:outline-none">
+        <img
+          src="../../images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // WhatsApp Logic
+      const waBtn = document.getElementById("wa-main-btn");
+      const waOptions = document.getElementById("wa-options");
+      waBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        waOptions.classList.toggle("active");
+      });
+      document.addEventListener("click", function (event) {
+        const isClickInside =
+          waBtn.contains(event.target) || waOptions.contains(event.target);
+        if (!isClickInside && waOptions.classList.contains("active")) {
+          waOptions.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
