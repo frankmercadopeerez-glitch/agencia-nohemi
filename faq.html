@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <title>Preguntas Frecuentes (FAQ) | Dunas & Olas</title>
+    <meta name="description" content="Resolvemos tus dudas sobre reservas, pagos, cancelaciones, seguridad y experiencias náuticas con Dunas & Olas en Cartagena de Indias."/>
+    <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <!-- Para obtenerlo: analytics.google.com → Crear propiedad → Flujo de datos web -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .page-header {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+          url("images/foto (6).JPG");
+        background-size: cover;
+        background-position: center;
+      }
+      .btn-primary {
+        background-color: #5b3a82;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(91, 58, 130, 0.3);
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #3f2761;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
+      }
+
+      /* --- Estilos WhatsApp --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+
+      /* Insignias de redes sociales en el footer */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+
+      /* FAQ accordion */
+      .faq-toggle summary { cursor: pointer; list-style: none; }
+      .faq-toggle summary::-webkit-details-marker { display: none; }
+      .faq-toggle summary i { transition: transform 0.2s ease; }
+      .faq-toggle[open] summary i { transform: rotate(180deg); }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Tour operator local en Cartagena de Indias. Alquiler de botes privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Preguntas Frecuentes — Dunas & Olas",
+      "url": "https://dunasyolas.com/faq.html",
+      "description": "Respuestas a las preguntas más frecuentes sobre reservas, pagos, cancelaciones, seguridad y experiencias de Dunas & Olas en Cartagena."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo reservo una experiencia o el alquiler de un bote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puedes reservar directamente desde nuestras páginas de Flotilla o Experiencias agregando tu plan al carrito y completando el formulario de reserva, o escribiéndonos por WhatsApp al +57 316 303 0589. Nohemi y su equipo confirmarán disponibilidad y los detalles finales contigo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué métodos de pago aceptan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aceptamos pago en línea con tarjeta a través de nuestra pasarela de pagos (Bold) y también coordinamos pagos en efectivo o transferencia el día del tour. Para reservas internacionales, recomendamos el pago en línea o coordinarlo por WhatsApp con anticipación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los precios están en pesos colombianos o dólares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todos los precios se calculan en pesos colombianos (COP). Para tu comodidad, puedes usar el botón COP/USD en la parte superior del sitio para ver una conversión aproximada a dólares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito pagar el 100% por adelantado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del plan. Para muchas experiencias solicitamos un anticipo para confirmar la reserva y el saldo se paga el día del tour. Te indicaremos las condiciones exactas al confirmar tu reserva."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cancelar o cambiar la fecha de mi reserva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Entendemos que los planes de viaje cambian. Escríbenos por WhatsApp con la mayor anticipación posible y haremos lo posible por reprogramar tu experiencia sujeto a disponibilidad. Consulta los términos específicos de cada plan en nuestros Términos y Condiciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si el clima no acompaña el día del tour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La seguridad es lo primero. Si las condiciones del mar o el clima no son seguras, te ofreceremos reprogramar sin costo adicional o ajustar el itinerario. Un atardecer nublado, sin embargo, no es motivo de cancelación: ¡también son hermosos en Cartagena!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay reembolso si cancelo a último momento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las políticas varían según el tipo de servicio (bote privado, experiencia grupal, kitesurf, etc.). Revisa la sección correspondiente en nuestros Términos y Condiciones o pregúntanos directamente antes de reservar para evitar sorpresas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué debo llevar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recomendamos protector solar biodegradable, gafas de sol, ropa de baño, una muda de ropa seca, toalla y efectivo para gastos personales (como la entrada al Parque Nacional Natural Corales del Rosario, si aplica)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay edad mínima para las actividades?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La mayoría de nuestros paseos en bote son aptos para toda la familia, incluidos niños pequeños con la supervisión de un adulto. Para actividades como kitesurf o buceo, recomendamos consultar la edad mínima específica al reservar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Incluyen transporte desde mi hotel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En varias experiencias podemos coordinar el punto de encuentro más conveniente para ti, incluyendo recogida en hoteles dentro del centro histórico, Bocagrande o Manga. Pregúntanos al reservar para confirmar si tu alojamiento está dentro de la cobertura."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con la comida y bebida a bordo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Algunas experiencias incluyen snacks, hielo y bebidas; otras son personalizables. Indícanos tus preferencias (incluyendo restricciones alimentarias) al momento de reservar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Las embarcaciones cuentan con permisos oficiales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Operamos con embarcaciones registradas y con los permisos correspondientes ante la autoridad marítima (DIMAR), además de contar con póliza de accidentes personales para nuestros pasajeros."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hay chalecos salvavidas a bordo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, todas nuestras embarcaciones cuentan con chalecos salvavidas para cada pasajero, de uso obligatorio durante la navegación cuando la tripulación lo indique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si tengo una emergencia médica durante el tour?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nuestras tripulaciones están preparadas para primeros auxilios básicos y mantenemos comunicación constante con tierra. Para más detalles sobre cobertura y responsabilidades, consulta nuestros Términos y Condiciones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuántas personas caben en cada bote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La capacidad varía según la embarcación, desde botes íntimos para grupos pequeños hasta yates para grupos grandes y eventos. Visita nuestra página de Flotilla para ver la capacidad de cada opción."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Organizan eventos privados o celebraciones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "¡Sí! Cumpleaños, despedidas de soltero/a, aniversarios y celebraciones corporativas son parte de nuestra especialidad. Cuéntanos la ocasión y armamos un plan a la medida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hablan inglés?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, nuestro equipo puede comunicarse en español e inglés para asistir a viajeros internacionales antes, durante y después de la experiencia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la mejor forma de contactarlos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WhatsApp es nuestro canal más rápido: +57 316 303 0589. También puedes escribirnos por Instagram o Facebook (@dunasyolas_ctg / @agencianohemi)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Preguntas Frecuentes (FAQ) | Dunas & Olas"/>
+    <meta property="og:description" content="Resolvemos tus dudas sobre reservas, pagos, cancelaciones, seguridad y experiencias náuticas con Dunas & Olas en Cartagena de Indias."/>
+    <meta property="og:url" content="https://dunasyolas.com/faq.html"/>
+    <meta property="og:image" content="https://dunasyolas.com/images/cartagena.jpg"/>
+    <meta property="og:site_name" content="Dunas & Olas"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Preguntas Frecuentes (FAQ) | Dunas & Olas"/>
+    <meta name="twitter:description" content="Resolvemos tus dudas sobre reservas, pagos, cancelaciones, seguridad y experiencias náuticas con Dunas & Olas en Cartagena de Indias."/>
+    <link rel="canonical" href="https://dunasyolas.com/faq.html"/>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/faq.html"/>
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/faq.html"/>
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/faq.html"/>
+  </head>
+  <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px] transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
+        </a>
+        <div
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase h-full items-center"
+        >
+          <a href="index.html" class="text-gray-300 hover:text-white transition"
+            >Inicio</a
+          >
+          <a href="fleet.html" class="text-gray-300 hover:text-white transition"
+            >Flotilla</a
+          >
+          <a
+            href="experiences.html"
+            class="text-gray-300 hover:text-white transition"
+            >Experiencias</a
+          >
+          <a href="about.html" class="text-gray-300 hover:text-white transition"
+            >Nosotros</a
+          >
+          <a
+            href="blog/index.html"
+            class="text-gray-300 hover:text-white transition"
+            >Blog</a
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button> <a id="lang-switch" href="en/faq.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
+
+          <a
+            href="fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Reservar</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-white"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Inicio</a
+      >
+      <a
+        href="fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nuestra Flotilla</a
+      >
+      <a
+        href="experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiencias</a
+      >
+      <a
+        href="about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Nosotros</a
+      >
+      <a
+        href="blog/index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- HEADER CON IMAGEN -->
+    <div class="page-header pt-36 pb-16 text-center text-white px-4">
+      <span
+        class="text-blue-400 font-bold tracking-widest uppercase text-xs mb-3 block drop-shadow-md"
+        >Resolvemos tus Dudas</span
+      >
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+        Preguntas Frecuentes
+      </h1>
+      <p class="text-gray-200 max-w-2xl mx-auto font-light drop-shadow-md">
+        Todo lo que necesitas saber antes de reservar tu experiencia con nosotros en Cartagena de Indias.
+      </p>
+    </div>
+
+    <section class="py-12 md:py-16 container mx-auto px-4 md:px-6 max-w-4xl">
+      <div class="bg-white p-6 md:p-14 rounded-xl shadow-lg border border-gray-100 break-words overflow-hidden">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mt-0 mb-4 pb-2 border-b-2 border-yellow-500 inline-block">Reservas y Pagos</h2>
+        <div class="space-y-3 mb-6">
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Cómo reservo una experiencia o el alquiler de un bote?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Puedes reservar directamente desde nuestras páginas de Flotilla o Experiencias agregando tu plan al carrito y completando el formulario de reserva, o escribiéndonos por WhatsApp al +57 316 303 0589. Nohemi y su equipo confirmarán disponibilidad y los detalles finales contigo.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Qué métodos de pago aceptan?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Aceptamos pago en línea con tarjeta a través de nuestra pasarela de pagos (Bold) y también coordinamos pagos en efectivo o transferencia el día del tour. Para reservas internacionales, recomendamos el pago en línea o coordinarlo por WhatsApp con anticipación.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Los precios están en pesos colombianos o dólares?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Todos los precios se calculan en pesos colombianos (COP). Para tu comodidad, puedes usar el botón COP/USD en la parte superior del sitio para ver una conversión aproximada a dólares.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Necesito pagar el 100% por adelantado?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Depende del plan. Para muchas experiencias solicitamos un anticipo para confirmar la reserva y el saldo se paga el día del tour. Te indicaremos las condiciones exactas al confirmar tu reserva.</p>
+          </details>
+        </div>
+        <h2 id="cancelaciones" class="text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b-2 border-yellow-500 inline-block">Cancelaciones y Cambios</h2>
+        <div class="space-y-3 mb-6">
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Puedo cancelar o cambiar la fecha de mi reserva?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Sí. Entendemos que los planes de viaje cambian. Escríbenos por WhatsApp con la mayor anticipación posible y haremos lo posible por reprogramar tu experiencia sujeto a disponibilidad. Consulta los términos específicos de cada plan en nuestros Términos y Condiciones.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Qué pasa si el clima no acompaña el día del tour?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">La seguridad es lo primero. Si las condiciones del mar o el clima no son seguras, te ofreceremos reprogramar sin costo adicional o ajustar el itinerario. Un atardecer nublado, sin embargo, no es motivo de cancelación: ¡también son hermosos en Cartagena!</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Hay reembolso si cancelo a último momento?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Las políticas varían según el tipo de servicio (bote privado, experiencia grupal, kitesurf, etc.). Revisa la sección correspondiente en nuestros Términos y Condiciones o pregúntanos directamente antes de reservar para evitar sorpresas.</p>
+          </details>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b-2 border-yellow-500 inline-block">Antes de tu Experiencia</h2>
+        <div class="space-y-3 mb-6">
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Qué debo llevar?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Recomendamos protector solar biodegradable, gafas de sol, ropa de baño, una muda de ropa seca, toalla y efectivo para gastos personales (como la entrada al Parque Nacional Natural Corales del Rosario, si aplica).</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Hay edad mínima para las actividades?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">La mayoría de nuestros paseos en bote son aptos para toda la familia, incluidos niños pequeños con la supervisión de un adulto. Para actividades como kitesurf o buceo, recomendamos consultar la edad mínima específica al reservar.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Incluyen transporte desde mi hotel?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">En varias experiencias podemos coordinar el punto de encuentro más conveniente para ti, incluyendo recogida en hoteles dentro del centro histórico, Bocagrande o Manga. Pregúntanos al reservar para confirmar si tu alojamiento está dentro de la cobertura.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Qué pasa con la comida y bebida a bordo?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Algunas experiencias incluyen snacks, hielo y bebidas; otras son personalizables. Indícanos tus preferencias (incluyendo restricciones alimentarias) al momento de reservar.</p>
+          </details>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b-2 border-yellow-500 inline-block">Seguridad y Certificaciones</h2>
+        <div class="space-y-3 mb-6">
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Las embarcaciones cuentan con permisos oficiales?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Sí. Operamos con embarcaciones registradas y con los permisos correspondientes ante la autoridad marítima (DIMAR), además de contar con póliza de accidentes personales para nuestros pasajeros.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Hay chalecos salvavidas a bordo?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Sí, todas nuestras embarcaciones cuentan con chalecos salvavidas para cada pasajero, de uso obligatorio durante la navegación cuando la tripulación lo indique.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Qué pasa si tengo una emergencia médica durante el tour?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Nuestras tripulaciones están preparadas para primeros auxilios básicos y mantenemos comunicación constante con tierra. Para más detalles sobre cobertura y responsabilidades, consulta nuestros Términos y Condiciones.</p>
+          </details>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b-2 border-yellow-500 inline-block">Grupos, Idiomas y Contacto</h2>
+        <div class="space-y-3 mb-6">
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Cuántas personas caben en cada bote?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">La capacidad varía según la embarcación, desde botes íntimos para grupos pequeños hasta yates para grupos grandes y eventos. Visita nuestra página de Flotilla para ver la capacidad de cada opción.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Organizan eventos privados o celebraciones?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">¡Sí! Cumpleaños, despedidas de soltero/a, aniversarios y celebraciones corporativas son parte de nuestra especialidad. Cuéntanos la ocasión y armamos un plan a la medida.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Hablan inglés?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">Sí, nuestro equipo puede comunicarse en español e inglés para asistir a viajeros internacionales antes, durante y después de la experiencia.</p>
+          </details>
+          <details class="faq-toggle bg-gray-50 rounded-lg border border-gray-100 px-5 py-4">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800">
+              <span>¿Cuál es la mejor forma de contactarlos?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 leading-relaxed mt-3">WhatsApp es nuestro canal más rápido: +57 316 303 0589. También puedes escribirnos por Instagram o Facebook (@dunasyolas_ctg / @agencianohemi).</p>
+          </details>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-gray-100 text-center">
+          <p class="text-gray-600 mb-4">¿No encontraste lo que buscabas?</p>
+          <a href="#" onclick="openWhatsApp('Hola, tengo una pregunta que no encontré en la sección de FAQ.'); return false;" class="btn-primary bg-blue-600 hover:bg-blue-700">
+            <i class="fab fa-whatsapp mr-2"></i>Pregúntanos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            No te pierdas nuestras ofertas
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Déjanos tu correo y te avisaremos por WhatsApp sobre promociones,
+            descuentos de temporada y nuevas experiencias en Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="tucorreo@ejemplo.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Suscribirme
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Por favor ingresa un correo válido.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hola, quiero suscribirme para recibir ofertas y promociones de Dunas & Olas. Mi correo es: " +
+            email
+        );
+        msg.textContent =
+          "¡Gracias! Te contactaremos por WhatsApp para confirmar tu suscripción.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              La calidez del norte, la magia del caribe.
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="fleet.html" class="hover:text-blue-400">Flotilla</a>
+              </li>
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400"
+                  >Experiencias</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">Nosotros</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
+            <div class="flex justify-center md:justify-start gap-2">
+              <a
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/dunasyolas"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: TikTok de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: YouTube de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: X de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2026 Dunas & Olas. Todos los derechos reservados.</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white"
+              >Términos y Condiciones</a
+            > · <a href="privacy.html" class="hover:text-white">Política de Privacidad</a> · <a href="faq.html" class="hover:text-white">Preguntas Frecuentes</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-container">
+      <button
+        id="wa-main-btn"
+        onclick="openWhatsApp('Hola, tengo una pregunta que no encontré en la sección de FAQ.')"
+        class="whatsapp-float group focus:outline-none"
+      >
+        <img
+          src="images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // WhatsApp — número único de contacto
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      }
+    </script>
+      <script src="js/currency.js"></script>
+      <script src="js/cookie-consent.js"></script>
+  </body>
+</html>

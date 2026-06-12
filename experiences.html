@@ -3,13 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <meta
       name="description"
-      content="Experiencias Agencia Nohemi: Pasadías en Islas del Rosario, Atardeceres en la Bahía y Gastronomía Local en Cartagena."
+      content="Experiencias Dunas & Olas: Pasadías en Islas del Rosario, Atardeceres en la Bahía y Gastronomía Local en Cartagena."
     />
-    <title>Experiencias | Agencia Nohemi</title>
-    <link rel="icon" href="images/logoqueku.png" type="image/png" />
+    <title>Experiencias | Dunas & Olas</title>
+    <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <!-- Para obtenerlo: analytics.google.com → Crear propiedad → Flujo de datos web -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -47,7 +94,7 @@
       }
 
       .btn-primary {
-        background-color: #2563eb;
+        background-color: #5B3A82;
         color: white;
         font-weight: 600;
         padding: 0.75rem 2rem;
@@ -56,9 +103,27 @@
         display: inline-block;
       }
       .btn-primary:hover {
-        background-color: #1d4ed8;
+        background-color: #3F2761;
         transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
+      }
+
+      .fleet-filter-btn {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        color: #4b5563;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .fleet-filter-btn.active,
+      .fleet-filter-btn:hover {
+        background: #5b3a82;
+        color: #fff;
+        border-color: #5b3a82;
       }
 
       /* --- Estilos WhatsApp Widget Multi-idioma --- */
@@ -182,21 +247,247 @@
           padding: 3px 10px;
         }
       }
+
+      
+      /* Insignias de redes sociales en el footer (placeholders listos para enlazar) */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+/* Estilos del carrito de compras: ver css/cart.css */
     </style>
+    <link rel="stylesheet" href="css/cart.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Tour operator local en Cartagena de Indias. Alquiler de botes privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Experiencias en Cartagena — Dunas & Olas",
+      "url": "https://dunasyolas.com/experiences.html",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Recorrido Gastronómico por Cartagena",
+            "description": "Tour culinario por la gastronomía caribeña, liderado por Nohemi.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "140000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/experiences.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Buceo y Snorkel en las Islas del Rosario",
+            "description": "Aventura submarina en el Parque Natural Corales del Rosario.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "250000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/experiences.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Kitesurf y Deportes Acuáticos en Cartagena",
+            "description": "Clases de kitesurf para todos los niveles.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "750000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/experiences.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Pasadía a las Islas del Rosario",
+            "description": "Día completo en lancha privada con snorkel, playa y almuerzo.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "180000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/experiences.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Tour de Atardeceres en la Bahía",
+            "description": "3 horas de recorrido por la bahía de Cartagena al atardecer.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "120000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/experiences.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Sabores Locales: Experiencia Culinaria Caribeña",
+            "description": "Inmersión en la cocina caribeña colombiana en casa local con Nohemi.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "150000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/experiences.html"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dunasyolas.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Experiencias",
+          "item": "https://dunasyolas.com/experiences.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+      <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Experiencias en Cartagena de Indias | Dunas & Olas"/>
+    <meta property="og:description" content="Kitesurf, buceo, recorridos gastronómicos, atardeceres en la bahía y pasadías a las Islas del Rosario. Experiencias únicas en Cartagena con guía local."/>
+    <meta property="og:url" content="https://dunasyolas.com/experiences.html"/>
+    <meta property="og:image" content="https://dunasyolas.com/images/atardecer.jpg"/>
+    <meta property="og:site_name" content="Dunas & Olas"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Experiencias en Cartagena de Indias | Dunas & Olas"/>
+    <meta name="twitter:description" content="Kitesurf, buceo, recorridos gastronómicos, atardeceres en la bahía y pasadías a las Islas del Rosario. Experiencias únicas en Cartagena con guía local."/>
+    <link rel="canonical" href="https://dunasyolas.com/experiences.html"/>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences.html"/>
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences.html"/>
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences.html"/>
   </head>
   <body class="bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
     <nav
       id="navbar"
-      class="fixed w-full z-50 transition-all duration-300 py-0 text-white bg-gray-900/95 backdrop-blur-md shadow-lg"
+      class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white bg-gray-900/95 backdrop-blur-md shadow-lg"
     >
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-2 z-50">
-          <img
-            src="images/logoqueku.png"
-            alt="Agencia Nohemi Logo"
-            class="h-20 drop-shadow-lg object-contain"
-          />
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
         </a>
         <div
           class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase h-full"
@@ -218,19 +509,36 @@
             href="blog/index.html"
             class="text-white hover:text-blue-400 transition"
             >Blog</a
-          >
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button> <a id="lang-switch" href="en/experiences.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
+
           <a
             href="fleet.html"
             class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
             >Reservar</a
           >
         </div>
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden z-50 focus:outline-none text-white"
-        >
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
+        <div class="flex items-center gap-4 md:gap-5">
+          <button
+            id="nav-cart-btn"
+            class="nav-cart-btn"
+            onclick="toggleCart(true)"
+            aria-label="Ver carrito"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-badge" class="cart-badge hidden">0</span>
+          </button>
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden z-50 focus:outline-none text-white"
+          >
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -373,11 +681,379 @@
             Elige tu Próxima Aventura
           </h2>
           <p class="text-gray-500 mt-2">Planes diseñados para cada ocasión.</p>
+          <p class="text-gray-400 text-xs mt-3 max-w-xl mx-auto">
+            <i class="fas fa-circle-info mr-1"></i>
+            Los precios mostrados son estimados y pueden variar según el
+            número de personas, fecha y disponibilidad. Agrega tus
+            experiencias al carrito para reservar y pagar en línea, o
+            cotiza directamente por WhatsApp.
+          </p>
         </div>
 
-        <div class="space-y-16">
+        <div class="mb-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between bg-white rounded-xl border border-gray-100 shadow-sm p-4">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-bold uppercase text-gray-400 mr-1">Categoría:</span>
+            <button class="fleet-filter-btn active" data-category="all">Todas</button>
+            <button class="fleet-filter-btn" data-category="agua">Acuáticas</button>
+            <button class="fleet-filter-btn" data-category="pasadia">Paseos en Barco</button>
+            <button class="fleet-filter-btn" data-category="gastronomia">Gastronomía</button>
+          </div>
+          <div class="flex items-center gap-2">
+            <label for="experiences-sort" class="text-xs font-bold uppercase text-gray-400">Ordenar por:</label>
+            <select id="experiences-sort" class="text-sm border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:border-blue-500">
+              <option value="default">Recomendados</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+            </select>
+          </div>
+        </div>
+        <p id="experiences-empty-msg" class="hidden text-center text-gray-500 py-10">
+          No tenemos experiencias en esta categoría por ahora. Prueba con otro filtro o
+          <a href="#" onclick="openWhatsApp('Hola, busco una experiencia específica.'); return false;" class="text-blue-600 underline">escríbenos por WhatsApp</a>.
+        </p>
+
+        <div class="space-y-16" id="experiences-grid">
+          <!-- Experiencia 0: Recorrido Gastronómico por la Ciudad -->
+          <div
+            data-category="gastronomia" data-price="140000" data-order="1"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
+          >
+            <div class="md:w-1/2 relative">
+              <img
+                src="images/cocinacaribe.jpg"
+                alt="Recorrido gastronómico por el centro histórico de Cartagena"
+                class="w-full h-full object-cover min-h-[400px]"
+              />
+              <div
+                class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
+              >
+                Nuevo
+              </div>
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Recorrido Gastronómico por la Ciudad
+              </h3>
+              <div
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+              >
+                <i class="fas fa-shield-heart text-[#C9A227]"></i>
+                Acompañamiento directo de Nohemi y respaldo de seguridad de la
+                agencia
+              </div>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Camina por las calles del Centro Histórico y Getsemaní
+                probando lo mejor de la cocina callejera y local: arepas de
+                huevo, butifarras, carimañolas, frutas tropicales, jugos
+                naturales y dulces tradicionales. Nohemi y su equipo te
+                acompañan en cada parada, te explican qué estás comiendo, de
+                dónde viene cada receta, y se aseguran de que pagues siempre
+                el precio justo, sin sorpresas ni cambios de moneda dudosos.
+              </p>
+
+              <div class="mb-4">
+                <span class="text-xs font-bold text-gray-500 uppercase"
+                  >Incluye:</span
+                >
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span
+                    class="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full"
+                    >Recorrido a pie guiado</span
+                  >
+                  <span
+                    class="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full"
+                    >Degustaciones incluidas</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full"
+                    >Historia y cultura local</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full"
+                    >Grupos pequeños o privados</span
+                  >
+                </div>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded-lg">
+                <h4 class="font-bold text-yellow-900 text-sm mb-1">
+                  Por qué hacerlo con Nohemi:
+                </h4>
+                <p class="text-sm text-yellow-800">
+                  Conocemos a los vendedores y dueños de cada parada desde
+                  hace años. Eso significa porciones justas, precios reales
+                  en pesos colombianos y la tranquilidad de explorar la
+                  ciudad sabiendo que alguien de confianza camina contigo.
+                </p>
+              </div>
+              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">Precio estimado / persona</span>
+                  <span class="price-value">$140.000 COP</span>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                >
+                  <button
+                    onclick="addToCart('gastronomico', this)"
+                    class="add-to-cart-btn justify-center"
+                  >
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                  </button>
+                  <button
+                    onclick="openWhatsApp('Hola, quiero reservar el Recorrido Gastronómico por la Ciudad con Nohemi.')"
+                    class="whatsapp-info-btn"
+                  >
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experiencia 0.1: Buceo y Snorkel -->
+          <div
+            data-category="agua" data-price="250000" data-order="2"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
+          >
+            <div class="md:w-1/2 relative">
+              <img
+                src="images/foto%20(10).JPG"
+                alt="Buceo en arrecifes de coral"
+                class="w-full h-full object-cover min-h-[400px]"
+              />
+              <div
+                class="absolute top-4 left-4 bg-cyan-400 text-cyan-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
+              >
+                Nuevo
+              </div>
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Buceo y Snorkel: Aventura Submarina
+              </h3>
+              <div
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+              >
+                <i class="fas fa-shield-heart text-[#C9A227]"></i>
+                Acompañamiento directo de Nohemi y respaldo de seguridad de la
+                agencia
+              </div>
+              <p class="text-gray-600 mb-4 leading-relaxed">
+                Sumérgete en las aguas cristalinas del Parque Nacional Natural
+                Corales del Rosario y San Bernardo. Ofrecemos
+                <strong>tours de buceo guiados</strong> por instructores
+                certificados para todos los niveles, y
+                <strong>snorkel privado con guía experta</strong> que te lleva
+                lejos de las multitudes, directo a los arrecifes y jardines de
+                coral más espectaculares — siempre con Nohemi o su equipo de
+                confianza coordinando cada detalle de tu seguridad.
+              </p>
+
+              <div class="mb-4">
+                <span class="text-xs font-bold text-gray-500 uppercase"
+                  >Incluye:</span
+                >
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span
+                    class="bg-cyan-100 text-cyan-700 text-xs px-3 py-1 rounded-full"
+                    >Equipo completo</span
+                  >
+                  <span
+                    class="bg-cyan-100 text-cyan-700 text-xs px-3 py-1 rounded-full"
+                    >Instructor certificado</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full"
+                    >Guía privado de snorkel</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full"
+                    >Grupos pequeños o privados</span
+                  >
+                </div>
+              </div>
+
+              <div class="bg-cyan-50 p-4 rounded-lg">
+                <h4 class="font-bold text-cyan-900 text-sm mb-1">
+                  Para todos los niveles:
+                </h4>
+                <p class="text-sm text-cyan-800">
+                  Desde quienes bucean por primera vez hasta buzos
+                  certificados, y familias que prefieren explorar la
+                  superficie con un guía que conoce los mejores arrecifes,
+                  las corrientes seguras y la vida marina de cada punto.
+                </p>
+              </div>
+              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">Precio estimado / persona</span>
+                  <span class="price-value">$250.000 COP</span>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                >
+                  <button
+                    onclick="addToCart('buceo', this)"
+                    class="add-to-cart-btn justify-center"
+                  >
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                  </button>
+                  <button
+                    onclick="openWhatsApp('Hola, quiero cotizar el tour de Buceo y Snorkel.')"
+                    class="whatsapp-info-btn"
+                  >
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experiencia 0.2: Kitesurf y Deportes Acuáticos (con tabla de precios) -->
+          <div data-category="agua" data-price="750000" data-order="3" class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/2">
+                <img
+                  src="images/cartagena.jpg"
+                  alt="Kitesurf en las playas de Cartagena"
+                  class="w-full h-full object-cover min-h-[320px]"
+                />
+              </div>
+              <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                  Kitesurf y Deportes Acuáticos
+                </h3>
+                <div
+                  class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                >
+                  <i class="fas fa-shield-heart text-[#C9A227]"></i>
+                  Acompañamiento directo de Nohemi y respaldo de seguridad de
+                  la agencia
+                </div>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  Las playas del norte de Cartagena (La Boquilla) son uno de
+                  los mejores spots del Caribe para el kitesurf: vientos
+                  constantes y aguas cálidas y planas, ideales tanto para
+                  quienes empiezan como para riders avanzados. Te conectamos
+                  con escuelas e instructores certificados de confianza, y
+                  Nohemi coordina junto a ellos el transporte, los horarios y
+                  tu seguridad de principio a fin.
+                </p>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h4 class="font-bold text-blue-900 text-sm mb-1">
+                    Por qué hacerlo con nosotros:
+                  </h4>
+                  <p class="text-sm text-blue-800">
+                    Coordinamos todo: instructores certificados, equipo en
+                    buen estado, hidratación y la logística de transporte
+                    hasta el spot, para que solo te preocupes por disfrutar
+                    el viento del Caribe.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Selector de cursos de Kitesurf -->
+            <div class="px-8 pb-8">
+              <h4
+                class="font-bold text-gray-900 text-sm mb-4 uppercase border-b pb-2 border-gray-100"
+              >
+                Elige tu curso de Kitesurf
+              </h4>
+              <div class="bg-[#F8F6FB] border border-[#E5DFF0] rounded-xl p-5">
+                <div class="grid sm:grid-cols-2 gap-4 mb-1">
+                  <div>
+                    <label
+                      for="kite-course-select"
+                      class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1"
+                      >Curso</label
+                    >
+                    <select
+                      id="kite-course-select"
+                      onchange="updateKiteTotalPreview()"
+                      class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]"
+                    >
+                      <option value="kitesurf_iniciacion" data-price="750000" data-unit="persona">
+                        Clase de Iniciación (2 horas) — $750.000 / persona
+                      </option>
+                      <option value="kitesurf_refuerzo" data-price="400000" data-unit="persona">
+                        Clase de Refuerzo (1 hora) — $400.000 / persona
+                      </option>
+                      <option value="kitesurf_grupal" data-price="320000" data-unit="persona">
+                        Clase Grupal — $320.000 / persona
+                      </option>
+                      <option value="kitesurf_foil" data-price="570000" data-unit="persona">
+                        Kite Foil (sesión) — $570.000 / persona
+                      </option>
+                      <option value="kitesurf_rider" data-price="2850000" data-unit="persona">
+                        Curso Completo "Rider" (8 horas) — $2.850.000 / persona
+                      </option>
+                      <option value="kitesurf_avanzado" data-price="3450000" data-unit="persona">
+                        Curso Avanzado (10 horas) — $3.450.000 / persona
+                      </option>
+                      <option value="kitesurf_elite" data-price="3990000" data-unit="persona">
+                        Experiencia Elite VIP (12 horas) — $3.990.000 / persona
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="kite-people"
+                      class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1"
+                      >Número de personas</label
+                    >
+                    <input
+                      type="number"
+                      id="kite-people"
+                      min="1"
+                      value="1"
+                      oninput="updateKiteTotalPreview()"
+                      class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]"
+                    />
+                    <p
+                      id="kite-couple-note"
+                      class="text-xs text-[#C9A227] font-semibold mt-1.5 hidden"
+                    >
+                      <i class="fas fa-heart mr-1"></i>¡Reserva en pareja! Descuento del 10% aplicado automáticamente.
+                    </p>
+                  </div>
+                </div>
+                <p class="text-xs text-gray-400 mt-3 mb-4">
+                  Si son <strong>2 personas</strong> reservando juntas, aplicamos
+                  automáticamente un <strong>10% de descuento de pareja</strong>
+                  sobre el total. Nohemi y su equipo confirman contigo la
+                  cotización final según fecha y disponibilidad.
+                </p>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                  <div class="price-tag">
+                    <span class="price-label">Total estimado</span>
+                    <span id="kite-total-preview" class="price-value">$750.000 COP</span>
+                  </div>
+                  <div
+                    class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                  >
+                    <button
+                      onclick="addKiteCourseToCart(this)"
+                      class="add-to-cart-btn justify-center"
+                    >
+                      <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                    </button>
+                    <button
+                    onclick="quoteKiteCourseViaWhatsApp()"
+                    class="whatsapp-info-btn"
+                  >
+                    <i class="fab fa-whatsapp"></i> Más información por WhatsApp
+                  </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Experiencia 1: Sunny Day -->
           <div
+            data-category="pasadia" data-price="180000" data-order="4"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
           >
             <div class="md:w-1/2 relative">
@@ -396,6 +1072,13 @@
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
                 Pasadía Islas del Rosario (SUNNY DAY)
               </h3>
+              <div
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+              >
+                <i class="fas fa-shield-heart text-[#C9A227]"></i>
+                Acompañamiento directo de Nohemi y respaldo de seguridad de la
+                agencia
+              </div>
               <p class="text-gray-600 mb-6 leading-relaxed">
                 Te ofrece la oportunidad de conocer el Parque Nacional Natural
                 Corales del Rosario y de San Bernardo a bordo de nuestras
@@ -458,23 +1141,34 @@
                   deberá estar en el muelle a las 5:00 PM.
                 </p>
               </div>
-              <div class="mt-6">
-                <button
-                  onclick="
-                    document
-                      .getElementById('wa-options')
-                      .classList.toggle('active')
-                  "
-                  class="btn-primary w-full md:w-auto text-center cursor-pointer"
+              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">Precio estimado / persona</span>
+                  <span class="price-value">$180.000 COP</span>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
                 >
-                  Cotizar Pasadía
-                </button>
+                  <button
+                    onclick="addToCart('pasadia', this)"
+                    class="add-to-cart-btn justify-center"
+                  >
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                  </button>
+                  <button
+                    onclick="openWhatsApp('Hola, quiero cotizar la Pasadía a las Islas del Rosario.')"
+                    class="whatsapp-info-btn"
+                  >
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Experiencia 2: Bay Tour -->
           <div
+            data-category="pasadia" data-price="120000" data-order="5"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
           >
             <div class="md:w-1/2">
@@ -488,6 +1182,13 @@
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
                 Atardeceres Mágicos en la Bahía (BAY TOUR)
               </h3>
+              <div
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+              >
+                <i class="fas fa-shield-heart text-[#C9A227]"></i>
+                Acompañamiento directo de Nohemi y respaldo de seguridad de la
+                agencia
+              </div>
               <p class="text-gray-600 mb-4 leading-relaxed">
                 Nada mejor que navegar en los mejores botes por las aguas
                 mágicas de la mejor bahía del caribe colombiano llenas de
@@ -540,23 +1241,34 @@
                   disfrutar entre las <strong>6:00 PM y las 12:00 AM</strong>.
                 </p>
               </div>
-              <div class="mt-6">
-                <button
-                  onclick="
-                    document
-                      .getElementById('wa-options')
-                      .classList.toggle('active')
-                  "
-                  class="btn-primary w-full md:w-auto text-center cursor-pointer bg-purple-600 hover:bg-purple-700"
+              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">Precio estimado / persona</span>
+                  <span class="price-value">$120.000 COP</span>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
                 >
-                  Cotizar Atardecer
-                </button>
+                  <button
+                    onclick="addToCart('atardecer', this)"
+                    class="add-to-cart-btn justify-center"
+                  >
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                  </button>
+                  <button
+                    onclick="openWhatsApp('Hola, quiero cotizar el tour de Atardeceres en la Bahía.')"
+                    class="whatsapp-info-btn"
+                  >
+                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Experiencia 3: Sabores Locales -->
           <div
+            data-category="gastronomia" data-price="150000" data-order="6"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
           >
             <div class="md:w-1/2">
@@ -570,6 +1282,13 @@
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
                 Sabores Locales en Casa y Gastronomía
               </h3>
+              <div
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+              >
+                <i class="fas fa-shield-heart text-[#C9A227]"></i>
+                Acompañamiento directo de Nohemi y respaldo de seguridad de la
+                agencia
+              </div>
               <p class="text-gray-600 mb-6 leading-relaxed">
                 Disfruta de banquetes de platos típicos de caribe colombiano
                 (sabores de la cultura negra e indígena caribe) y la fusión del
@@ -603,17 +1322,27 @@
                 </div>
               </div>
 
-              <div class="mt-2">
-                <button
-                  onclick="
-                    document
-                      .getElementById('wa-options')
-                      .classList.toggle('active')
-                  "
-                  class="btn-primary w-full md:w-auto text-center cursor-pointer bg-orange-600 hover:bg-orange-700"
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="price-tag">
+                  <span class="price-label">Precio estimado / persona</span>
+                  <span class="price-value">$150.000 COP</span>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
                 >
-                  Reservar Experiencia Culinaria
-                </button>
+                  <button
+                    onclick="addToCart('sabores', this)"
+                    class="add-to-cart-btn justify-center"
+                  >
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                  </button>
+                  <button
+                    onclick="openWhatsApp('Hola, quiero reservar la Experiencia Culinaria de Sabores Locales.')"
+                    class="whatsapp-info-btn"
+                  >
+                    <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -622,19 +1351,82 @@
     </section>
 
     <!-- Footer (Igual al Index) -->
+    <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            No te pierdas nuestras ofertas
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Déjanos tu correo y te avisaremos por WhatsApp sobre promociones,
+            descuentos de temporada y nuevas experiencias en Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="tucorreo@ejemplo.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Suscribirme
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Por favor ingresa un correo válido.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hola, quiero suscribirme para recibir ofertas y promociones de Dunas & Olas. Mi correo es: " +
+            email
+        );
+        msg.textContent =
+          "¡Gracias! Te contactaremos por WhatsApp para confirmar tu suscripción.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
     <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
       <div class="container mx-auto px-6 text-center md:text-left">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
           <div
             class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
           >
-            <img
-              src="images/logoqueku.png"
-              alt="Agencia Nohemi"
-              class="h-8 mb-4 brightness-0 invert opacity-90"
-            />
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
             <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
-              Brindamos experiencias reales para recuerdos mágicos del caribe.
+              La calidez del norte, la magia del caribe.
             </p>
           </div>
 
@@ -670,17 +1462,16 @@
                 Cartagena
               </li>
               <li class="flex items-center">
-                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 322
-                6452179
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
               </li>
             </ul>
           </div>
 
           <div>
             <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
-            <div class="flex justify-center md:justify-start gap-4">
+            <div class="flex justify-center md:justify-start gap-2">
               <a
-                href="https://www.instagram.com/agencianohemi_ctg?igsh=d3pjNXJtZTIzZHd6"
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
                 target="_blank"
                 class="transition hover:opacity-80 group"
               >
@@ -691,7 +1482,7 @@
                 />
               </a>
               <a
-                href="https://www.facebook.com/agencianohemi"
+                href="https://www.facebook.com/dunasyolas"
                 target="_blank"
                 class="transition hover:opacity-80 group"
               >
@@ -701,18 +1492,45 @@
                   class="w-12 h-12 hover:scale-110 transition transform"
                 />
               </a>
-            </div>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: TikTok de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: YouTube de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: X de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
           </div>
         </div>
 
         <div
           class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
         >
-          <p>&copy; 2024 Agencia Nohemi. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Dunas & Olas. Todos los derechos reservados.</p>
           <div class="mt-2 space-x-3">
             <a href="policies.html" class="hover:text-white"
               >Términos y Condiciones</a
-            >
+            > · <a href="privacy.html" class="hover:text-white">Política de Privacidad</a> · <a href="faq.html" class="hover:text-white">Preguntas Frecuentes</a>
           </div>
         </div>
       </div>
@@ -720,36 +1538,8 @@
 
     <!-- WhatsApp Widget Multi-idioma -->
     <div class="whatsapp-container">
-      <!-- Opciones -->
-      <div id="wa-options" class="wa-options">
-        <!-- Inglés -->
-        <a
-          href="https://wa.me/573245685595?text=Hello,%20I%20am%20interested%20in%20booking%20an%20experience."
-          target="_blank"
-          class="wa-item"
-        >
-          <span class="wa-flag">🇺🇸</span>
-          <div class="wa-info">
-            <span class="wa-title">English Support</span>
-            <span class="wa-number">+57 324 568 5595</span>
-          </div>
-        </a>
-        <!-- Español -->
-        <a
-          href="https://wa.me/573226452179?text=Hola,%20estoy%20interesado%20en%20una%20experiencia."
-          target="_blank"
-          class="wa-item"
-        >
-          <span class="wa-flag">🇨🇴</span>
-          <div class="wa-info">
-            <span class="wa-title">Asesor en Español</span>
-            <span class="wa-number">+57 322 645 2179</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Botón Principal -->
-      <button id="wa-main-btn" class="whatsapp-float group focus:outline-none">
+      
+      <button id="wa-main-btn" onclick="openWhatsApp('Hola, estoy interesado en una experiencia.')" class="whatsapp-float group focus:outline-none">
         <img
           src="images/WhatsApp.svg.webp"
           alt="WhatsApp"
@@ -757,6 +1547,182 @@
         />
         <span class="whatsapp-text">Contactar / Contact</span>
       </button>
+    </div>
+
+    <!-- Carrito: overlay + drawer -->
+    <div
+      id="cart-overlay"
+      class="cart-overlay"
+      onclick="toggleCart(false)"
+    ></div>
+    <aside id="cart-drawer" class="cart-drawer">
+      <div
+        class="flex items-center justify-between px-6 py-5 border-b border-gray-100"
+      >
+        <h3 class="text-lg font-bold text-gray-900">
+          <i class="fas fa-shopping-cart text-[#5B3A82] mr-2"></i>Tu Carrito
+        </h3>
+        <button
+          onclick="toggleCart(false)"
+          class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+          aria-label="Cerrar carrito"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <!-- Renderizado dinámicamente por JS -->
+      </div>
+
+      <div class="px-6 py-5 border-t border-gray-100">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm font-bold uppercase text-gray-500"
+            >Total estimado</span
+          >
+          <span id="cart-total" class="text-2xl font-extrabold text-[#3F2761]"
+            >$0 COP</span
+          >
+        </div>
+        <button
+          id="cart-checkout-btn"
+          onclick="openCheckout()"
+          class="btn-primary w-full justify-center text-center cursor-pointer"
+        >
+          Continuar al Pago
+        </button>
+        <p class="text-xs text-gray-400 mt-3 text-center">
+          Los precios son estimados por persona. El total final se confirma
+          según fecha, número de personas y disponibilidad.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Checkout: formulario + pago -->
+    <div id="checkout-overlay" class="checkout-modal-overlay">
+      <div class="checkout-modal">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-xl font-bold text-gray-900">
+            Finalizar Reserva
+          </h3>
+          <button
+            onclick="closeCheckout()"
+            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+            aria-label="Cerrar checkout"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div
+          id="checkout-summary"
+          class="bg-gray-50 rounded-xl p-4 mb-6 text-sm text-gray-700 space-y-1"
+        >
+          <!-- Resumen del pedido, renderizado por JS -->
+        </div>
+
+        <form id="checkout-form" class="space-y-4" onsubmit="return false;">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ck-name">Nombre completo</label>
+              <input
+                type="text"
+                id="ck-name"
+                required
+                placeholder="Tu nombre"
+              />
+            </div>
+            <div>
+              <label for="ck-phone">WhatsApp / Teléfono</label>
+              <input
+                type="tel"
+                id="ck-phone"
+                required
+                placeholder="+57 300 000 0000"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="ck-email">Correo electrónico</label>
+            <input
+              type="email"
+              id="ck-email"
+              required
+              placeholder="tu@email.com"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ck-date">Fecha deseada</label>
+              <input type="date" id="ck-date" />
+            </div>
+            <div>
+              <label for="ck-people">Número de personas</label>
+              <input
+                type="number"
+                id="ck-people"
+                min="1"
+                value="1"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="ck-notes">Notas adicionales (opcional)</label>
+            <textarea
+              id="ck-notes"
+              rows="2"
+              placeholder="Alergias, ocasión especial, hotel donde te hospedas..."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-lg p-3 text-xs text-gray-600">
+            <i class="fas fa-shield-alt text-blue-600 mt-0.5"></i>
+            <span>
+              Cancelación flexible: reprogramamos sin costo si avisas con
+              anticipación o si el clima no permite navegar de forma segura.
+              <a href="faq.html#cancelaciones" target="_blank" class="text-blue-600 underline hover:text-blue-800">Ver política completa</a>
+            </span>
+          </div>
+
+          <div class="pt-2 space-y-3">
+            <!--
+              Integración Bold (bold.co) — Botón de Pagos
+              Para activar los pagos en línea reales:
+                1. Crea / inicia sesión en tu cuenta de comercio en https://bold.co
+                2. Copia tu "Identity Key" (llave de identidad) desde el panel de Bold
+                3. Reemplaza BOLD_IDENTITY_KEY más abajo por esa llave
+                4. La "Firma de Integridad" (data-integrity-signature) se debe
+                   generar en un servidor (no en el navegador) por seguridad,
+                   firmando el monto + moneda + referencia con tu llave secreta.
+                   Bold ofrece ejemplos de este paso en su documentación.
+              Mientras tanto, el botón de WhatsApp permite confirmar y pagar la
+              reserva de forma manual con Nohemi.
+            -->
+            <button
+              id="bold-pay-btn"
+              type="button"
+              onclick="payWithBold()"
+              class="btn-primary w-full justify-center text-center cursor-pointer"
+              style="background: #5b3a82"
+            >
+              <i class="fas fa-lock mr-2"></i>Pagar en línea con Bold
+            </button>
+            <button
+              type="button"
+              onclick="checkoutViaWhatsApp()"
+              class="w-full justify-center text-center cursor-pointer add-to-cart-btn"
+              style="border-color: #25d366; color: #128c4a"
+            >
+              <i class="fab fa-whatsapp mr-2"></i>Confirmar Reserva por
+              WhatsApp
+            </button>
+            <p class="text-xs text-gray-400 text-center">
+              Al confirmar, Nohemi y su equipo se pondrán en contacto contigo
+              para validar disponibilidad y completar el pago de tu reserva.
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script>
@@ -781,22 +1747,119 @@
           setTimeout(() => menu.classList.add("hidden"), 300);
         });
 
-      // WhatsApp Logic
-      const waBtn = document.getElementById("wa-main-btn");
-      const waOptions = document.getElementById("wa-options");
+      // WhatsApp — número único de contacto
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      }
 
-      waBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        waOptions.classList.toggle("active");
-      });
+      // Selector de cursos de Kitesurf: calcula el precio según el
+      // curso elegido y el número de personas, aplicando el 10% de
+      // descuento de pareja cuando la reserva es para 2 personas.
+      function selectedKiteCourse() {
+        const select = document.getElementById("kite-course-select");
+        const opt = select.options[select.selectedIndex];
+        return {
+          id: select.value,
+          name: opt.textContent.split("—")[0].trim(),
+          price: Number(opt.dataset.price),
+          unit: opt.dataset.unit,
+        };
+      }
 
-      document.addEventListener("click", function (event) {
-        const isClickInside =
-          waBtn.contains(event.target) || waOptions.contains(event.target);
-        if (!isClickInside && waOptions.classList.contains("active")) {
-          waOptions.classList.remove("active");
+      function kitePeopleCount() {
+        const input = document.getElementById("kite-people");
+        return Math.max(1, parseInt(input.value, 10) || 1);
+      }
+
+      function updateKiteTotalPreview() {
+        const course = selectedKiteCourse();
+        const people = kitePeopleCount();
+        const isCouple = people === 2;
+        document
+          .getElementById("kite-couple-note")
+          .classList.toggle("hidden", !isCouple);
+
+        let total = course.price * people;
+        if (isCouple) total = Math.round(total * (1 - COUPLE_DISCOUNT));
+        document.getElementById("kite-total-preview").textContent =
+          formatCOP(total);
+      }
+
+      function addKiteCourseToCart(btnEl) {
+        const course = selectedKiteCourse();
+        const people = kitePeopleCount();
+        const isCouple = people === 2;
+
+        let unitPrice = course.price;
+        let name = course.name;
+        if (isCouple) {
+          unitPrice = Math.round(course.price * (1 - COUPLE_DISCOUNT));
+          name += " (10% dto. pareja)";
         }
-      });
+        addCustomToCart(course.id, name, unitPrice, course.unit, people, btnEl);
+      }
+
+      function quoteKiteCourseViaWhatsApp() {
+        const course = selectedKiteCourse();
+        const people = kitePeopleCount();
+        const isCouple = people === 2;
+        let message = `Hola, quiero más información sobre el curso de Kitesurf "${course.name}" para ${people} persona${people === 1 ? "" : "s"}`;
+        if (isCouple) message += " (vi que aplica el 10% de descuento de pareja)";
+        message += ". ¿Podrían contarme más detalles, fechas y disponibilidad?";
+        openWhatsApp(message);
+      }
+
+      document.addEventListener("DOMContentLoaded", updateKiteTotalPreview);
     </script>
+
+    <!-- Filtro y orden de experiencias -->
+    <script>
+      (function () {
+        var grid = document.getElementById("experiences-grid");
+        var cards = Array.prototype.slice.call(grid.querySelectorAll(":scope > [data-category]"));
+        var filterBtns = document.querySelectorAll(".fleet-filter-btn");
+        var sortSelect = document.getElementById("experiences-sort");
+        var emptyMsg = document.getElementById("experiences-empty-msg");
+        var currentFilter = "all";
+
+        function applyFilter() {
+          var visibleCount = 0;
+          cards.forEach(function (card) {
+            var match = currentFilter === "all" || card.dataset.category === currentFilter;
+            card.style.display = match ? "" : "none";
+            if (match) visibleCount++;
+          });
+          emptyMsg.classList.toggle("hidden", visibleCount > 0);
+        }
+
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            filterBtns.forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            currentFilter = btn.dataset.category;
+            applyFilter();
+          });
+        });
+
+        sortSelect.addEventListener("change", function () {
+          var val = sortSelect.value;
+          var sorted = cards.slice().sort(function (a, b) {
+            if (val === "price-asc") return a.dataset.price - b.dataset.price;
+            if (val === "price-desc") return b.dataset.price - a.dataset.price;
+            return a.dataset.order - b.dataset.order;
+          });
+          sorted.forEach(function (card) { grid.appendChild(card); });
+        });
+      })();
+    </script>
+
+    <!-- Carrito de compras: catálogo y lógica compartidos (ver js/cart.js) -->
+    <script src="js/cart.js"></script>
+      <script src="js/currency.js"></script>
+      <script src="js/cookie-consent.js"></script>
   </body>
 </html>

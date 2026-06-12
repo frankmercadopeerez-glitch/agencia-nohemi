@@ -1,0 +1,449 @@
+/* ======================================================
+   CARRITO DE COMPRAS COMPARTIDO — Dunas & Olas
+   Catálogo único de experiencias, cursos, botes y
+   adicionales. Se usa en experiences.html y fleet.html
+   para que el carrito (guardado en localStorage) se vea
+   igual sin importar desde qué página se agregó un ítem.
+
+   Para ajustar precios, edita el objeto TOURS de abajo.
+   ====================================================== */
+
+const TOURS = {
+  /* ---- Experiencias ---- */
+  gastronomico: {
+    name: "Recorrido Gastronómico por la Ciudad",
+    price: 140000,
+    unit: "persona",
+  },
+  pasadia: {
+    name: "Pasadía Islas del Rosario (Sunny Day)",
+    price: 180000,
+    unit: "persona",
+  },
+  atardecer: {
+    name: "Atardeceres Mágicos en la Bahía",
+    price: 120000,
+    unit: "persona",
+  },
+  sabores: {
+    name: "Sabores Locales – Experiencia Culinaria",
+    price: 150000,
+    unit: "persona",
+  },
+  buceo: {
+    name: "Buceo y Snorkel: Aventura Submarina",
+    price: 250000,
+    unit: "persona",
+  },
+  kitesurf: {
+    name: "Kitesurf y Deportes Acuáticos",
+    price: 200000,
+    unit: "clase",
+  },
+
+  /* ---- Cursos de Kitesurf (precio base, 1 persona) ---- */
+  kitesurf_iniciacion: {
+    name: 'Kitesurf — Clase de Iniciación (2 horas)',
+    price: 750000,
+    unit: "persona",
+  },
+  kitesurf_refuerzo: {
+    name: "Kitesurf — Clase de Refuerzo (1 hora)",
+    price: 400000,
+    unit: "persona",
+  },
+  kitesurf_grupal: {
+    name: "Kitesurf — Clase Grupal",
+    price: 320000,
+    unit: "persona",
+  },
+  kitesurf_foil: {
+    name: "Kitesurf — Kite Foil (sesión)",
+    price: 570000,
+    unit: "persona",
+  },
+  kitesurf_rider: {
+    name: 'Kitesurf — Curso Completo "Rider" (8 horas)',
+    price: 2850000,
+    unit: "persona",
+  },
+  kitesurf_avanzado: {
+    name: "Kitesurf — Curso Avanzado (10 horas)",
+    price: 3450000,
+    unit: "persona",
+  },
+  kitesurf_elite: {
+    name: "Kitesurf — Experiencia Elite VIP (12 horas)",
+    price: 3990000,
+    unit: "persona",
+  },
+
+  /* ---- Flotilla: alquiler de botes (precio por día) ---- */
+  bote_interceptor: {
+    name: "Alquiler Interceptor 38'",
+    price: 3200000,
+    unit: "día completo",
+  },
+  bote_laleona: {
+    name: "Alquiler La Leona",
+    price: 3600000,
+    unit: "día completo",
+  },
+  bote_oly420: {
+    name: "Alquiler Oly 420",
+    price: 3800000,
+    unit: "día completo",
+  },
+  bote_vicky420: {
+    name: "Alquiler Vicky 420",
+    price: 3800000,
+    unit: "día completo",
+  },
+  bote_virginia420: {
+    name: "Alquiler Virginia 420",
+    price: 3900000,
+    unit: "día completo",
+  },
+
+  /* ---- Adicionales a bordo ---- */
+  addon_comida: {
+    name: "Comida típica para tu grupo (por persona)",
+    price: 35000,
+    unit: "persona",
+  },
+  addon_quesos: {
+    name: "Tabla de quesos y embutidos",
+    price: 180000,
+    unit: "tabla",
+  },
+  addon_picada: {
+    name: "Picada criolla o de mariscos",
+    price: 220000,
+    unit: "porción",
+  },
+};
+
+const CART_KEY = "agencia-nohemi-cart";
+const COUPLE_DISCOUNT = 0.1; // 10% de descuento al reservar un curso en pareja
+
+function loadCart() {
+  try {
+    return JSON.parse(localStorage.getItem(CART_KEY)) || {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+function formatCOP(amount) {
+  return (
+    "$" +
+    Math.round(amount).toLocaleString("es-CO", { maximumFractionDigits: 0 }) +
+    " COP"
+  );
+}
+
+/* Una entrada del carrito puede ser:
+   - un número  -> cantidad de un ítem del catálogo TOURS
+   - un objeto  -> { qty, name, unitPrice, unitLabel } para
+                   ítems con precio calculado (p.ej. cursos
+                   reservados para 2 personas con descuento) */
+function entryDetails(id, value) {
+  if (typeof value === "number") {
+    const tour = TOURS[id];
+    if (!tour) return null;
+    return {
+      name: tour.name,
+      unitPrice: tour.price,
+      unitLabel: tour.unit,
+      qty: value,
+      custom: false,
+    };
+  }
+  if (value && typeof value === "object" && value.qty > 0) {
+    return {
+      name: value.name,
+      unitPrice: value.unitPrice,
+      unitLabel: value.unitLabel || "",
+      qty: value.qty,
+      custom: true,
+    };
+  }
+  return null;
+}
+
+function addToCart(tourId, btnEl) {
+  const cart = loadCart();
+  const current = cart[tourId];
+  if (typeof current === "object" && current) {
+    current.qty += 1;
+  } else {
+    cart[tourId] = (current || 0) + 1;
+  }
+  saveCart(cart);
+  renderCart();
+  toggleCart(true);
+  flashAdded(btnEl);
+}
+
+/* Agrega un ítem con precio calculado dinámicamente, por
+   ejemplo un curso de kitesurf reservado para 2 personas
+   con el descuento de pareja ya aplicado. */
+function addCustomToCart(id, name, unitPrice, unitLabel, qty, btnEl) {
+  const cart = loadCart();
+  const current = cart[id];
+  if (current && typeof current === "object") {
+    current.qty += qty;
+    current.unitPrice = unitPrice;
+    current.name = name;
+    current.unitLabel = unitLabel;
+  } else {
+    cart[id] = { qty, name, unitPrice, unitLabel };
+  }
+  saveCart(cart);
+  renderCart();
+  toggleCart(true);
+  flashAdded(btnEl);
+}
+
+function flashAdded(btnEl) {
+  if (!btnEl) return;
+  const original = btnEl.innerHTML;
+  btnEl.classList.add("added");
+  btnEl.innerHTML = '<i class="fas fa-check"></i> Agregado';
+  setTimeout(() => {
+    btnEl.classList.remove("added");
+    btnEl.innerHTML = original;
+  }, 1400);
+}
+
+function changeQty(id, delta) {
+  const cart = loadCart();
+  const value = cart[id];
+  if (value === undefined) return;
+
+  if (typeof value === "object" && value) {
+    value.qty += delta;
+    if (value.qty <= 0) delete cart[id];
+  } else {
+    cart[id] = (value || 0) + delta;
+    if (cart[id] <= 0) delete cart[id];
+  }
+  saveCart(cart);
+  renderCart();
+}
+
+function removeFromCart(id) {
+  const cart = loadCart();
+  delete cart[id];
+  saveCart(cart);
+  renderCart();
+}
+
+function cartEntries(cart) {
+  return Object.entries(cart)
+    .map(([id, value]) => [id, entryDetails(id, value)])
+    .filter(([, details]) => details !== null);
+}
+
+function cartTotal(cart) {
+  return cartEntries(cart).reduce(
+    (sum, [, d]) => sum + d.unitPrice * d.qty,
+    0
+  );
+}
+
+function cartItemCount(cart) {
+  return cartEntries(cart).reduce((sum, [, d]) => sum + d.qty, 0);
+}
+
+function renderCart() {
+  const cart = loadCart();
+  const itemsEl = document.getElementById("cart-items");
+  const totalEl = document.getElementById("cart-total");
+  const badgeEl = document.getElementById("cart-badge");
+  const checkoutBtn = document.getElementById("cart-checkout-btn");
+  if (!itemsEl || !totalEl || !badgeEl || !checkoutBtn) return;
+
+  const entries = cartEntries(cart);
+
+  if (entries.length === 0) {
+    itemsEl.innerHTML =
+      '<div class="text-center text-gray-400 py-16">' +
+      '<i class="fas fa-shopping-cart text-4xl mb-3"></i>' +
+      "<p>Tu carrito está vacío.<br/>Agrega una experiencia, curso o bote para comenzar.</p>" +
+      "</div>";
+    checkoutBtn.disabled = true;
+    checkoutBtn.classList.add("opacity-50", "cursor-not-allowed");
+  } else {
+    itemsEl.innerHTML = entries
+      .map(([id, d]) => {
+        const subtotal = d.unitPrice * d.qty;
+        const unitLabel = d.unitLabel ? ` / ${d.unitLabel}` : "";
+        return (
+          '<div class="cart-line">' +
+          '<div class="flex-1">' +
+          `<p class="font-semibold text-gray-900 text-sm">${d.name}</p>` +
+          `<p class="text-xs text-gray-400 mb-2">${formatCOP(d.unitPrice)}${unitLabel}</p>` +
+          '<div class="flex items-center gap-2">' +
+          `<button class="cart-qty-btn" onclick="changeQty('${id}', -1)">−</button>` +
+          `<span class="text-sm font-bold w-6 text-center">${d.qty}</span>` +
+          `<button class="cart-qty-btn" onclick="changeQty('${id}', 1)">+</button>` +
+          `<button class="text-xs text-red-400 hover:text-red-600 ml-3" onclick="removeFromCart('${id}')"><i class="fas fa-trash-alt"></i></button>` +
+          "</div>" +
+          "</div>" +
+          `<div class="font-bold text-[#3F2761] text-sm whitespace-nowrap">${formatCOP(subtotal)}</div>` +
+          "</div>"
+        );
+      })
+      .join("");
+    checkoutBtn.disabled = false;
+    checkoutBtn.classList.remove("opacity-50", "cursor-not-allowed");
+  }
+
+  const total = cartTotal(cart);
+  const count = cartItemCount(cart);
+  totalEl.textContent = formatCOP(total);
+
+  if (count > 0) {
+    badgeEl.textContent = count;
+    badgeEl.classList.remove("hidden");
+  } else {
+    badgeEl.classList.add("hidden");
+  }
+}
+
+function toggleCart(open) {
+  const overlay = document.getElementById("cart-overlay");
+  const drawer = document.getElementById("cart-drawer");
+  if (!overlay || !drawer) return;
+  if (open) {
+    overlay.classList.add("active");
+    drawer.classList.add("active");
+  } else {
+    overlay.classList.remove("active");
+    drawer.classList.remove("active");
+  }
+}
+
+/* ── Checkout ─────────────────────────────── */
+function buildOrderSummary() {
+  const cart = loadCart();
+  const entries = cartEntries(cart);
+  const lines = entries.map(([, d]) => {
+    const unitLabel = d.unitLabel ? ` / ${d.unitLabel}` : "";
+    return `${d.qty} x ${d.name} (${formatCOP(d.unitPrice)}${unitLabel}) = ${formatCOP(d.unitPrice * d.qty)}`;
+  });
+  return { entries, lines, total: cartTotal(cart) };
+}
+
+function openCheckout() {
+  const { entries, lines, total } = buildOrderSummary();
+  if (entries.length === 0) return;
+
+  document.getElementById("checkout-summary").innerHTML =
+    lines.map((l) => `<div>${l}</div>`).join("") +
+    `<div class="font-bold text-[#3F2761] pt-2 mt-2 border-t border-gray-200">Total estimado: ${formatCOP(total)}</div>`;
+
+  document.getElementById("checkout-overlay").classList.add("active");
+}
+
+function closeCheckout() {
+  document.getElementById("checkout-overlay").classList.remove("active");
+}
+
+function getCheckoutFormData() {
+  return {
+    name: document.getElementById("ck-name").value.trim(),
+    phone: document.getElementById("ck-phone").value.trim(),
+    email: document.getElementById("ck-email").value.trim(),
+    date: document.getElementById("ck-date").value,
+    people: document.getElementById("ck-people").value || "1",
+    notes: document.getElementById("ck-notes").value.trim(),
+  };
+}
+
+function validateCheckoutForm(data) {
+  if (!data.name || !data.phone || !data.email) {
+    alert(
+      "Por favor completa al menos tu nombre, WhatsApp y correo electrónico para continuar."
+    );
+    return false;
+  }
+  return true;
+}
+
+function checkoutViaWhatsApp() {
+  const data = getCheckoutFormData();
+  if (!validateCheckoutForm(data)) return;
+
+  const { lines, total } = buildOrderSummary();
+  const message =
+    `Hola, quiero confirmar mi reserva con Dunas & Olas:\n\n` +
+    lines.join("\n") +
+    `\n\nTotal estimado: ${formatCOP(total)}\n\n` +
+    `Nombre: ${data.name}\n` +
+    `WhatsApp/Teléfono: ${data.phone}\n` +
+    `Correo: ${data.email}\n` +
+    (data.date ? `Fecha deseada: ${data.date}\n` : "") +
+    `Número de personas: ${data.people}\n` +
+    (data.notes ? `Notas: ${data.notes}\n` : "");
+
+  openWhatsApp(message);
+}
+
+function payWithBold() {
+  const data = getCheckoutFormData();
+  if (!validateCheckoutForm(data)) return;
+
+  /*
+    EJEMPLO DE INTEGRACIÓN — Botón de Pagos de Bold (https://bold.co)
+    ------------------------------------------------------------------
+    Bold genera un botón de pago embebido mediante un <script> con
+    atributos data-* que incluyen tu "Identity Key" (llave pública del
+    comercio) y una "Firma de Integridad" (hash de seguridad que debe
+    calcularse en un servidor, nunca en el navegador).
+
+    Pasos para activar pagos reales aquí:
+      1. Reemplaza BOLD_IDENTITY_KEY con tu llave de identidad de Bold.
+      2. Crea un pequeño endpoint en tu servidor (o función serverless)
+         que reciba el monto/orden y devuelva la firma de integridad
+         generada con tu llave secreta (Bold documenta este cálculo).
+      3. Sustituye la simulación de abajo por la creación dinámica del
+         botón de Bold con esos datos, por ejemplo:
+
+         const script = document.createElement('script');
+         script.src = 'https://checkout.bold.co/library/boldPaymentButton.js';
+         script.dataset.apiKey = 'BOLD_IDENTITY_KEY';
+         script.dataset.amount = String(total);
+         script.dataset.currency = 'COP';
+         script.dataset.orderId = orderId;
+         script.dataset.integritySignature = signatureFromYourServer;
+         script.dataset.description = 'Reserva Dunas & Olas';
+         script.dataset.redirectionUrl = window.location.href;
+         document.getElementById('bold-pay-container').appendChild(script);
+
+    Mientras tanto, dejamos el botón visible con esta explicación y
+    ofrecemos la confirmación por WhatsApp como vía de pago manual.
+  */
+  const BOLD_IDENTITY_KEY = "BOLD_IDENTITY_KEY"; // <-- reemplazar con la llave real del comercio
+
+  if (BOLD_IDENTITY_KEY === "BOLD_IDENTITY_KEY") {
+    alert(
+      "El pago en línea con Bold está casi listo: solo falta conectar la " +
+        "llave de identidad del comercio (Identity Key) que se obtiene en " +
+        "el panel de Bold (bold.co). Mientras tanto, puedes confirmar y " +
+        "pagar tu reserva directamente con Nohemi por WhatsApp."
+    );
+    checkoutViaWhatsApp();
+    return;
+  }
+
+  // Aquí iría la creación real del botón/checkout de Bold una vez
+  // configurada la llave de identidad y la firma de integridad.
+}
+
+document.addEventListener("DOMContentLoaded", renderCart);

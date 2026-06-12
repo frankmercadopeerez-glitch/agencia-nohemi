@@ -3,9 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuestra Flotilla | Agencia Nohemi</title>
-    <link rel="icon" href="images/logoqueku.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <title>Nuestra Flotilla | Dunas & Olas</title>
+    <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <!-- Para obtenerlo: analytics.google.com → Crear propiedad → Flujo de datos web -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -95,21 +142,21 @@
       }
 
       .btn-primary {
-        background-color: #2563eb;
+        background-color: #5B3A82;
         color: white;
         font-weight: 600;
         padding: 0.75rem 1rem;
         border-radius: 0.5rem;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+        box-shadow: 0 4px 6px -1px rgba(91, 58, 130, 0.3);
         display: inline-block;
         text-align: center;
         font-size: 0.875rem;
       }
       .btn-primary:hover {
-        background-color: #1d4ed8;
+        background-color: #3F2761;
         transform: translateY(-2px);
-        box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
       }
 
       .btn-secondary {
@@ -128,6 +175,24 @@
       .btn-secondary:hover {
         background-color: #e5e7eb;
         color: #111827;
+      }
+
+      .fleet-filter-btn {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        border: 1px solid #e5e7eb;
+        background: #f9fafb;
+        color: #4b5563;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .fleet-filter-btn.active,
+      .fleet-filter-btn:hover {
+        background: #5b3a82;
+        color: #fff;
+        border-color: #5b3a82;
       }
 
       /* --- Estilos WhatsApp Widget Multi-idioma --- */
@@ -269,7 +334,25 @@
         }
       }
 
-      /* Modal Styles */
+      
+      /* Insignias de redes sociales en el footer (placeholders listos para enlazar) */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+/* Modal Styles */
       .modal-open {
         overflow: hidden;
       }
@@ -285,16 +368,203 @@
         pointer-events: auto;
       }
     </style>
+    <link rel="stylesheet" href="css/cart.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Tour operator local en Cartagena de Indias. Alquiler de botes privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Flotilla de Botes Privados en Cartagena",
+      "url": "https://dunasyolas.com/fleet.html",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Tour en Lancha Interceptor 38 pies",
+            "description": "Lancha de lujo para grupos de hasta 16 personas. 2 motores Yamaha 300 HP.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "3200000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/fleet.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Tour en Lancha La Leona",
+            "description": "42 pies de confort para grupos corporativos. 2 Yamaha 300 HP, 26 pasajeros.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "3600000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/fleet.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Tour en Lancha Oly 420",
+            "description": "Lancha deportiva para 26 pasajeros. Ideal para pasadías y fiestas.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "3800000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/fleet.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Tour en Lancha Vicky 420",
+            "description": "Potencia y espacio para 28 pasajeros.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "3800000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/fleet.html"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Tour en Lancha Virginia 420",
+            "description": "La lancha más espaciosa de la flotilla. 28 pasajeros, 2 Yamaha 300 HP.",
+            "provider": {
+              "@id": "https://dunasyolas.com/#org"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "3900000",
+              "priceCurrency": "COP",
+              "availability": "https://schema.org/InStock",
+              "url": "https://dunasyolas.com/fleet.html"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dunasyolas.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Flotilla",
+          "item": "https://dunasyolas.com/fleet.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+      <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Flotilla de Botes Privados en Cartagena | Dunas & Olas"/>
+    <meta property="og:description" content="Alquila uno de nuestros 5 botes privados en Cartagena. Desde la Leona hasta la Virginia 420, con capitán certificado y equipos de seguridad completos."/>
+    <meta property="og:url" content="https://dunasyolas.com/fleet.html"/>
+    <meta property="og:image" content="https://dunasyolas.com/images/interceptor (1).webp"/>
+    <meta property="og:site_name" content="Dunas & Olas"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Flotilla de Botes Privados en Cartagena | Dunas & Olas"/>
+    <meta name="twitter:description" content="Alquila uno de nuestros 5 botes privados en Cartagena. Desde la Leona hasta la Virginia 420, con capitán certificado y equipos de seguridad completos."/>
+    <link rel="canonical" href="https://dunasyolas.com/fleet.html"/>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/fleet.html"/>
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/fleet.html"/>
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/fleet.html"/>
   </head>
   <body class="bg-gray-50 text-gray-800">
-    <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-0">
+    <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px]">
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-2 z-50">
-          <img
-            src="images/logoqueku.png"
-            alt="Agencia Nohemi Logo"
-            class="h-20 drop-shadow-lg object-contain"
-          />
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
         </a>
         <div
           class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase items-center"
@@ -317,16 +587,28 @@
             href="blog/index.html"
             class="text-gray-300 hover:text-white transition"
             >Blog</a
-          >
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button> <a id="lang-switch" href="en/fleet.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
+
           <a
             href="fleet.html"
             class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
             >Reservar</a
           >
         </div>
-        <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
+        <div class="flex items-center gap-4 md:gap-5">
+          <button id="nav-cart-btn" class="nav-cart-btn" onclick="toggleCart(true)" aria-label="Ver carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-badge" class="cart-badge hidden">0</span>
+          </button>
+          <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -382,20 +664,44 @@
     </div>
 
     <section class="py-20 container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Filtros y Orden -->
+      <div class="mb-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between bg-white rounded-xl border border-gray-100 shadow-sm p-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-xs font-bold uppercase text-gray-400 mr-1">Capacidad:</span>
+          <button class="fleet-filter-btn active" data-capacity="all">Todas</button>
+          <button class="fleet-filter-btn" data-capacity="small">Hasta 16</button>
+          <button class="fleet-filter-btn" data-capacity="medium">17–26</button>
+          <button class="fleet-filter-btn" data-capacity="large">27+</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <label for="fleet-sort" class="text-xs font-bold uppercase text-gray-400">Ordenar por:</label>
+          <select id="fleet-sort" class="text-sm border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:border-blue-500">
+            <option value="default">Recomendados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="capacity-desc">Capacidad: mayor a menor</option>
+          </select>
+        </div>
+      </div>
+      <p id="fleet-empty-msg" class="hidden text-center text-gray-500 py-10">
+        No tenemos botes en esta categoría de capacidad por ahora. Prueba con otro filtro o
+        <a href="#" onclick="openWhatsApp('Hola, busco un bote con una capacidad específica.'); return false;" class="text-blue-600 underline">escríbenos por WhatsApp</a>.
+      </p>
+      <div id="fleet-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- Interceptor -->
         <div
+          data-capacity="small" data-capacity-num="16" data-price="3200000" data-order="1"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
           <div class="slider-wrapper">
             <div class="slider-track">
-              <img src="images/interceptor (1).webp" class="slider-img" />
-              <img src="images/interceptor (2).webp" class="slider-img" />
-              <img src="images/interceptor (3).webp" class="slider-img" />
-              <img src="images/interceptor (4).webp" class="slider-img" />
-              <img src="images/interceptor (5).webp" class="slider-img" />
-              <img src="images/interceptor (6).webp" class="slider-img" />
-              <img src="images/interceptor (7).webp" class="slider-img" />
+              <img src="images/interceptor (1).webp" alt="Bote Interceptor 38' - foto 1" class="slider-img" />
+              <img src="images/interceptor (2).webp" alt="Bote Interceptor 38' - foto 2" class="slider-img" />
+              <img src="images/interceptor (3).webp" alt="Bote Interceptor 38' - foto 3" class="slider-img" />
+              <img src="images/interceptor (4).webp" alt="Bote Interceptor 38' - foto 4" class="slider-img" />
+              <img src="images/interceptor (5).webp" alt="Bote Interceptor 38' - foto 5" class="slider-img" />
+              <img src="images/interceptor (6).webp" alt="Bote Interceptor 38' - foto 6" class="slider-img" />
+              <img src="images/interceptor (7).webp" alt="Bote Interceptor 38' - foto 7" class="slider-img" />
             </div>
             <span
               class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded z-10"
@@ -419,33 +725,62 @@
                 <i class="fas fa-users w-6 text-blue-500"></i> 16 Pasajeros
               </li>
             </ul>
-            <div class="mt-auto grid grid-cols-2 gap-3">
-              <button onclick="openModal('interceptor')" class="btn-secondary">
-                Ver Ficha
+            <div class="mt-auto">
+              <div class="price-tag mb-3">
+                <span class="price-label">Precio del día completo</span>
+                <span class="price-value">$3.200.000 COP</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <button onclick="openModal('interceptor')" class="btn-secondary">
+                  Ver Ficha
+                </button>
+                <button onclick="addToCart('bote_interceptor', this)" class="add-to-cart-btn-solid">
+                  <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+              </div>
+              <button onclick="openWhatsApp('Hola, quiero más información sobre el bote Interceptor (38 pies) 🚤')" class="whatsapp-info-btn w-full mb-4">
+                <i class="fab fa-whatsapp"></i> Más información por WhatsApp
               </button>
-              <a
-                href="https://wa.me/573226452179?text=Cotizar%20Interceptor"
-                target="_blank"
-                class="btn-primary"
-                >Cotizar</a
-              >
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">
+                  Adicionales para tu día en el agua
+                </p>
+                <div class="flex flex-col gap-2">
+                  <button
+                    onclick="addCustomToCart('addon_comida_interceptor', 'Comida típica para tu grupo (16 personas)', 560000, 'grupo completo', 1, this)"
+                    class="addon-btn"
+                  >
+                    <span><i class="fas fa-utensils mr-2 text-yellow-600"></i>Comida típica para 16 personas</span>
+                    <span class="font-bold whitespace-nowrap">$560.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_quesos', this)" class="addon-btn">
+                    <span><i class="fas fa-cheese mr-2 text-yellow-600"></i>Tabla de quesos y embutidos</span>
+                    <span class="font-bold whitespace-nowrap">$180.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_picada', this)" class="addon-btn">
+                    <span><i class="fas fa-shrimp mr-2 text-yellow-600"></i>Picada criolla o de mariscos</span>
+                    <span class="font-bold whitespace-nowrap">$220.000</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- La Leona -->
         <div
+          data-capacity="medium" data-capacity-num="26" data-price="3600000" data-order="2"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
           <div class="slider-wrapper">
             <div class="slider-track">
-              <img src="images/la leona (1).webp" class="slider-img" />
-              <img src="images/la leona (3).webp" class="slider-img" />
-              <img src="images/la leona (4).webp" class="slider-img" />
-              <img src="images/la leona (5).webp" class="slider-img" />
-              <img src="images/la leona (6).webp" class="slider-img" />
-              <img src="images/la leona (7).webp" class="slider-img" />
-              <img src="images/la leona (8).webp" class="slider-img" />
+              <img src="images/la leona (1).webp" alt="Yate La Leona - foto 1" class="slider-img" />
+              <img src="images/la leona (3).webp" alt="Yate La Leona - foto 3" class="slider-img" />
+              <img src="images/la leona (4).webp" alt="Yate La Leona - foto 4" class="slider-img" />
+              <img src="images/la leona (5).webp" alt="Yate La Leona - foto 5" class="slider-img" />
+              <img src="images/la leona (6).webp" alt="Yate La Leona - foto 6" class="slider-img" />
+              <img src="images/la leona (7).webp" alt="Yate La Leona - foto 7" class="slider-img" />
+              <img src="images/la leona (8).webp" alt="Yate La Leona - foto 8" class="slider-img" />
             </div>
             <span
               class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded z-10"
@@ -466,33 +801,62 @@
                 <i class="fas fa-users w-6 text-blue-500"></i> 26 Pasajeros
               </li>
             </ul>
-            <div class="mt-auto grid grid-cols-2 gap-3">
-              <button onclick="openModal('laleona')" class="btn-secondary">
-                Ver Ficha
+            <div class="mt-auto">
+              <div class="price-tag mb-3">
+                <span class="price-label">Precio del día completo</span>
+                <span class="price-value">$3.600.000 COP</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <button onclick="openModal('laleona')" class="btn-secondary">
+                  Ver Ficha
+                </button>
+                <button onclick="addToCart('bote_laleona', this)" class="add-to-cart-btn-solid">
+                  <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+              </div>
+              <button onclick="openWhatsApp('Hola, quiero más información sobre el bote La Leona 🚤')" class="whatsapp-info-btn w-full mb-4">
+                <i class="fab fa-whatsapp"></i> Más información por WhatsApp
               </button>
-              <a
-                href="https://wa.me/573226452179?text=Cotizar%20La%20Leona"
-                target="_blank"
-                class="btn-primary"
-                >Cotizar</a
-              >
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">
+                  Adicionales para tu día en el agua
+                </p>
+                <div class="flex flex-col gap-2">
+                  <button
+                    onclick="addCustomToCart('addon_comida_laleona', 'Comida típica para tu grupo (26 personas)', 910000, 'grupo completo', 1, this)"
+                    class="addon-btn"
+                  >
+                    <span><i class="fas fa-utensils mr-2 text-yellow-600"></i>Comida típica para 26 personas</span>
+                    <span class="font-bold whitespace-nowrap">$910.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_quesos', this)" class="addon-btn">
+                    <span><i class="fas fa-cheese mr-2 text-yellow-600"></i>Tabla de quesos y embutidos</span>
+                    <span class="font-bold whitespace-nowrap">$180.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_picada', this)" class="addon-btn">
+                    <span><i class="fas fa-shrimp mr-2 text-yellow-600"></i>Picada criolla o de mariscos</span>
+                    <span class="font-bold whitespace-nowrap">$220.000</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Oly 420 -->
         <div
+          data-capacity="large" data-capacity-num="28" data-price="3800000" data-order="3"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
           <div class="slider-wrapper">
             <div class="slider-track">
-              <img src="images/oly420 (1).webp" class="slider-img" />
-              <img src="images/oly420 (2).webp" class="slider-img" />
-              <img src="images/oly420 (3).webp" class="slider-img" />
-              <img src="images/oly420 (4).webp" class="slider-img" />
-              <img src="images/oly420 (5).webp" class="slider-img" />
-              <img src="images/oly420 (6).webp" class="slider-img" />
-              <img src="images/oly420 (7).webp" class="slider-img" />
+              <img src="images/oly420 (1).webp" alt="Yate Oly 420 - foto 1" class="slider-img" />
+              <img src="images/oly420 (2).webp" alt="Yate Oly 420 - foto 2" class="slider-img" />
+              <img src="images/oly420 (3).webp" alt="Yate Oly 420 - foto 3" class="slider-img" />
+              <img src="images/oly420 (4).webp" alt="Yate Oly 420 - foto 4" class="slider-img" />
+              <img src="images/oly420 (5).webp" alt="Yate Oly 420 - foto 5" class="slider-img" />
+              <img src="images/oly420 (6).webp" alt="Yate Oly 420 - foto 6" class="slider-img" />
+              <img src="images/oly420 (7).webp" alt="Yate Oly 420 - foto 7" class="slider-img" />
             </div>
             <span
               class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded z-10"
@@ -513,33 +877,62 @@
                 <i class="fas fa-users w-6 text-blue-500"></i> 28 Pasajeros
               </li>
             </ul>
-            <div class="mt-auto grid grid-cols-2 gap-3">
-              <button onclick="openModal('oly')" class="btn-secondary">
-                Ver Ficha
+            <div class="mt-auto">
+              <div class="price-tag mb-3">
+                <span class="price-label">Precio del día completo</span>
+                <span class="price-value">$3.800.000 COP</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <button onclick="openModal('oly')" class="btn-secondary">
+                  Ver Ficha
+                </button>
+                <button onclick="addToCart('bote_oly420', this)" class="add-to-cart-btn-solid">
+                  <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+              </div>
+              <button onclick="openWhatsApp('Hola, quiero más información sobre el bote Oly 420 🚤')" class="whatsapp-info-btn w-full mb-4">
+                <i class="fab fa-whatsapp"></i> Más información por WhatsApp
               </button>
-              <a
-                href="https://wa.me/573226452179?text=Cotizar%20Oly%20420"
-                target="_blank"
-                class="btn-primary"
-                >Cotizar</a
-              >
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">
+                  Adicionales para tu día en el agua
+                </p>
+                <div class="flex flex-col gap-2">
+                  <button
+                    onclick="addCustomToCart('addon_comida_oly420', 'Comida típica para tu grupo (28 personas)', 980000, 'grupo completo', 1, this)"
+                    class="addon-btn"
+                  >
+                    <span><i class="fas fa-utensils mr-2 text-yellow-600"></i>Comida típica para 28 personas</span>
+                    <span class="font-bold whitespace-nowrap">$980.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_quesos', this)" class="addon-btn">
+                    <span><i class="fas fa-cheese mr-2 text-yellow-600"></i>Tabla de quesos y embutidos</span>
+                    <span class="font-bold whitespace-nowrap">$180.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_picada', this)" class="addon-btn">
+                    <span><i class="fas fa-shrimp mr-2 text-yellow-600"></i>Picada criolla o de mariscos</span>
+                    <span class="font-bold whitespace-nowrap">$220.000</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Vicky 420 -->
         <div
+          data-capacity="large" data-capacity-num="28" data-price="3800000" data-order="4"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
           <div class="slider-wrapper">
             <div class="slider-track">
-              <img src="images/vicky (1).webp" class="slider-img" />
-              <img src="images/vicky (2).webp" class="slider-img" />
-              <img src="images/vicky (3).webp" class="slider-img" />
-              <img src="images/vicky (4).webp" class="slider-img" />
-              <img src="images/vicky (5).webp" class="slider-img" />
-              <img src="images/vicky (6).webp" class="slider-img" />
-              <img src="images/vicky (7).webp" class="slider-img" />
+              <img src="images/vicky (1).webp" alt="Yate Vicky 420 - foto 1" class="slider-img" />
+              <img src="images/vicky (2).webp" alt="Yate Vicky 420 - foto 2" class="slider-img" />
+              <img src="images/vicky (3).webp" alt="Yate Vicky 420 - foto 3" class="slider-img" />
+              <img src="images/vicky (4).webp" alt="Yate Vicky 420 - foto 4" class="slider-img" />
+              <img src="images/vicky (5).webp" alt="Yate Vicky 420 - foto 5" class="slider-img" />
+              <img src="images/vicky (6).webp" alt="Yate Vicky 420 - foto 6" class="slider-img" />
+              <img src="images/vicky (7).webp" alt="Yate Vicky 420 - foto 7" class="slider-img" />
             </div>
             <span
               class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded z-10"
@@ -560,33 +953,62 @@
                 <i class="fas fa-users w-6 text-blue-500"></i> 28 Pasajeros
               </li>
             </ul>
-            <div class="mt-auto grid grid-cols-2 gap-3">
-              <button onclick="openModal('vicky')" class="btn-secondary">
-                Ver Ficha
+            <div class="mt-auto">
+              <div class="price-tag mb-3">
+                <span class="price-label">Precio del día completo</span>
+                <span class="price-value">$3.800.000 COP</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <button onclick="openModal('vicky')" class="btn-secondary">
+                  Ver Ficha
+                </button>
+                <button onclick="addToCart('bote_vicky420', this)" class="add-to-cart-btn-solid">
+                  <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+              </div>
+              <button onclick="openWhatsApp('Hola, quiero más información sobre el bote Vicky 420 🚤')" class="whatsapp-info-btn w-full mb-4">
+                <i class="fab fa-whatsapp"></i> Más información por WhatsApp
               </button>
-              <a
-                href="https://wa.me/573226452179?text=Cotizar%20Vicky"
-                target="_blank"
-                class="btn-primary"
-                >Cotizar</a
-              >
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">
+                  Adicionales para tu día en el agua
+                </p>
+                <div class="flex flex-col gap-2">
+                  <button
+                    onclick="addCustomToCart('addon_comida_vicky420', 'Comida típica para tu grupo (28 personas)', 980000, 'grupo completo', 1, this)"
+                    class="addon-btn"
+                  >
+                    <span><i class="fas fa-utensils mr-2 text-yellow-600"></i>Comida típica para 28 personas</span>
+                    <span class="font-bold whitespace-nowrap">$980.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_quesos', this)" class="addon-btn">
+                    <span><i class="fas fa-cheese mr-2 text-yellow-600"></i>Tabla de quesos y embutidos</span>
+                    <span class="font-bold whitespace-nowrap">$180.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_picada', this)" class="addon-btn">
+                    <span><i class="fas fa-shrimp mr-2 text-yellow-600"></i>Picada criolla o de mariscos</span>
+                    <span class="font-bold whitespace-nowrap">$220.000</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Virginia 420 -->
         <div
+          data-capacity="large" data-capacity-num="28" data-price="3900000" data-order="5"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
           <div class="slider-wrapper">
             <div class="slider-track">
-              <img src="images/virginia (1).webp" class="slider-img" />
-              <img src="images/virginia (2).webp" class="slider-img" />
-              <img src="images/virginia (3).webp" class="slider-img" />
-              <img src="images/virginia (4).webp" class="slider-img" />
-              <img src="images/virginia (5).webp" class="slider-img" />
-              <img src="images/virginia (6).webp" class="slider-img" />
-              <img src="images/virginia (7).webp" class="slider-img" />
+              <img src="images/virginia (1).webp" alt="Yate Virginia 420 - foto 1" class="slider-img" />
+              <img src="images/virginia (2).webp" alt="Yate Virginia 420 - foto 2" class="slider-img" />
+              <img src="images/virginia (3).webp" alt="Yate Virginia 420 - foto 3" class="slider-img" />
+              <img src="images/virginia (4).webp" alt="Yate Virginia 420 - foto 4" class="slider-img" />
+              <img src="images/virginia (5).webp" alt="Yate Virginia 420 - foto 5" class="slider-img" />
+              <img src="images/virginia (6).webp" alt="Yate Virginia 420 - foto 6" class="slider-img" />
+              <img src="images/virginia (7).webp" alt="Yate Virginia 420 - foto 7" class="slider-img" />
             </div>
             <span
               class="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded z-10"
@@ -607,16 +1029,44 @@
                 <i class="fas fa-users w-6 text-blue-500"></i> 28 Pasajeros
               </li>
             </ul>
-            <div class="mt-auto grid grid-cols-2 gap-3">
-              <button onclick="openModal('virginia')" class="btn-secondary">
-                Ver Ficha
+            <div class="mt-auto">
+              <div class="price-tag mb-3">
+                <span class="price-label">Precio del día completo</span>
+                <span class="price-value">$3.900.000 COP</span>
+              </div>
+              <div class="grid grid-cols-2 gap-3 mb-3">
+                <button onclick="openModal('virginia')" class="btn-secondary">
+                  Ver Ficha
+                </button>
+                <button onclick="addToCart('bote_virginia420', this)" class="add-to-cart-btn-solid">
+                  <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+              </div>
+              <button onclick="openWhatsApp('Hola, quiero más información sobre el bote Virginia 420 🚤')" class="whatsapp-info-btn w-full mb-4">
+                <i class="fab fa-whatsapp"></i> Más información por WhatsApp
               </button>
-              <a
-                href="https://wa.me/573226452179?text=Cotizar%20Virginia"
-                target="_blank"
-                class="btn-primary"
-                >Cotizar</a
-              >
+              <div class="border-t border-gray-100 pt-4">
+                <p class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">
+                  Adicionales para tu día en el agua
+                </p>
+                <div class="flex flex-col gap-2">
+                  <button
+                    onclick="addCustomToCart('addon_comida_virginia420', 'Comida típica para tu grupo (28 personas)', 980000, 'grupo completo', 1, this)"
+                    class="addon-btn"
+                  >
+                    <span><i class="fas fa-utensils mr-2 text-yellow-600"></i>Comida típica para 28 personas</span>
+                    <span class="font-bold whitespace-nowrap">$980.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_quesos', this)" class="addon-btn">
+                    <span><i class="fas fa-cheese mr-2 text-yellow-600"></i>Tabla de quesos y embutidos</span>
+                    <span class="font-bold whitespace-nowrap">$180.000</span>
+                  </button>
+                  <button onclick="addToCart('addon_picada', this)" class="addon-btn">
+                    <span><i class="fas fa-shrimp mr-2 text-yellow-600"></i>Picada criolla o de mariscos</span>
+                    <span class="font-bold whitespace-nowrap">$220.000</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -624,19 +1074,82 @@
     </section>
 
     <!-- Footer Compacto -->
+    <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            No te pierdas nuestras ofertas
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Déjanos tu correo y te avisaremos por WhatsApp sobre promociones,
+            descuentos de temporada y nuevas experiencias en Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="tucorreo@ejemplo.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Suscribirme
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Por favor ingresa un correo válido.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hola, quiero suscribirme para recibir ofertas y promociones de Dunas & Olas. Mi correo es: " +
+            email
+        );
+        msg.textContent =
+          "¡Gracias! Te contactaremos por WhatsApp para confirmar tu suscripción.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
     <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
       <div class="container mx-auto px-6 text-center md:text-left">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
           <div
             class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
           >
-            <img
-              src="images/logoqueku.png"
-              alt="Agencia Nohemi"
-              class="h-8 mb-4 brightness-0 invert opacity-90"
-            />
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
             <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
-              Transformamos días ordinarios en memorias extraordinarias.
+              La calidez del norte, la magia del caribe.
             </p>
           </div>
           <div class="hidden md:block">
@@ -665,16 +1178,15 @@
                 Cartagena
               </li>
               <li class="flex items-center">
-                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 322
-                6452179
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
               </li>
             </ul>
           </div>
           <div>
             <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
-            <div class="flex justify-center md:justify-start gap-4">
+            <div class="flex justify-center md:justify-start gap-2">
               <a
-                href="https://www.instagram.com/agencianohemi_ctg?igsh=d3pjNXJtZTIzZHd6"
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
                 target="_blank"
                 class="transition hover:opacity-80 group"
               >
@@ -685,7 +1197,7 @@
                 />
               </a>
               <a
-                href="https://www.facebook.com/agencianohemi"
+                href="https://www.facebook.com/dunasyolas"
                 target="_blank"
                 class="transition hover:opacity-80 group"
               >
@@ -695,17 +1207,44 @@
                   class="w-12 h-12 hover:scale-110 transition transform"
                 />
               </a>
-            </div>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: TikTok de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: YouTube de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: X de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
           </div>
         </div>
         <div
           class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
         >
-          <p>&copy; 2024 Agencia Nohemi. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Dunas & Olas. Todos los derechos reservados.</p>
           <div class="mt-2 space-x-3">
             <a href="policies.html" class="hover:text-white"
               >Términos y Condiciones</a
-            >
+            > · <a href="privacy.html" class="hover:text-white">Política de Privacidad</a> · <a href="faq.html" class="hover:text-white">Preguntas Frecuentes</a>
           </div>
         </div>
       </div>
@@ -713,32 +1252,7 @@
 
     <!-- WhatsApp Widget Multi-idioma -->
     <div class="whatsapp-container">
-      <!-- Opciones -->
-      <div id="wa-options" class="wa-options">
-        <a
-          href="https://wa.me/573245685595?text=Hello,%20I%20am%20interested%20in%20booking%20a%20boat."
-          target="_blank"
-          class="wa-item"
-        >
-          <span class="wa-flag">🇺🇸</span>
-          <div class="wa-info">
-            <span class="wa-title">English Support</span>
-            <span class="wa-number">+57 324 568 5595</span>
-          </div>
-        </a>
-        <a
-          href="https://wa.me/573226452179?text=Hola,%20estoy%20interesado%20en%20alquilar%20un%20bote."
-          target="_blank"
-          class="wa-item"
-        >
-          <span class="wa-flag">🇨🇴</span>
-          <div class="wa-info">
-            <span class="wa-title">Asesor en Español</span>
-            <span class="wa-number">+57 322 645 2179</span>
-          </div>
-        </a>
-      </div>
-      <button id="wa-main-btn" class="whatsapp-float group focus:outline-none">
+      <button id="wa-main-btn" onclick="openWhatsApp('Hola, estoy interesado en alquilar un bote.')" class="whatsapp-float group focus:outline-none">
         <img
           src="images/WhatsApp.svg.webp"
           alt="WhatsApp"
@@ -849,6 +1363,157 @@
       </div>
     </div>
 
+    <!-- Carrito: overlay + drawer -->
+    <div
+      id="cart-overlay"
+      class="cart-overlay"
+      onclick="toggleCart(false)"
+    ></div>
+    <aside id="cart-drawer" class="cart-drawer">
+      <div
+        class="flex items-center justify-between px-6 py-5 border-b border-gray-100"
+      >
+        <h3 class="text-lg font-bold text-gray-900">
+          <i class="fas fa-shopping-cart text-[#5B3A82] mr-2"></i>Tu Carrito
+        </h3>
+        <button
+          onclick="toggleCart(false)"
+          class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+          aria-label="Cerrar carrito"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <!-- Renderizado dinámicamente por JS -->
+      </div>
+
+      <div class="px-6 py-5 border-t border-gray-100">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-sm font-bold uppercase text-gray-500"
+            >Total estimado</span
+          >
+          <span id="cart-total" class="text-2xl font-extrabold text-[#3F2761]"
+            >$0 COP</span
+          >
+        </div>
+        <button
+          id="cart-checkout-btn"
+          onclick="openCheckout()"
+          class="btn-primary w-full justify-center text-center cursor-pointer"
+        >
+          Continuar al Pago
+        </button>
+        <p class="text-xs text-gray-400 mt-3 text-center">
+          Los precios son estimados. El total final se confirma según fecha,
+          número de personas y disponibilidad.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Checkout: formulario + pago -->
+    <div id="checkout-overlay" class="checkout-modal-overlay">
+      <div class="checkout-modal">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-xl font-bold text-gray-900">Finalizar Reserva</h3>
+          <button
+            onclick="closeCheckout()"
+            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+            aria-label="Cerrar checkout"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div
+          id="checkout-summary"
+          class="bg-gray-50 rounded-xl p-4 mb-6 text-sm text-gray-700 space-y-1"
+        >
+          <!-- Resumen del pedido, renderizado por JS -->
+        </div>
+
+        <form id="checkout-form" class="space-y-4" onsubmit="return false;">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ck-name">Nombre completo</label>
+              <input type="text" id="ck-name" required placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label for="ck-phone">WhatsApp / Teléfono</label>
+              <input
+                type="tel"
+                id="ck-phone"
+                required
+                placeholder="+57 300 000 0000"
+              />
+            </div>
+          </div>
+          <div>
+            <label for="ck-email">Correo electrónico</label>
+            <input
+              type="email"
+              id="ck-email"
+              required
+              placeholder="tu@email.com"
+            />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="ck-date">Fecha deseada</label>
+              <input type="date" id="ck-date" />
+            </div>
+            <div>
+              <label for="ck-people">Número de personas</label>
+              <input type="number" id="ck-people" min="1" value="1" />
+            </div>
+          </div>
+          <div>
+            <label for="ck-notes">Notas adicionales (opcional)</label>
+            <textarea
+              id="ck-notes"
+              rows="2"
+              placeholder="Punto de embarque, ocasión especial, hotel donde te hospedas..."
+            ></textarea>
+          </div>
+
+          <div class="flex items-start gap-2 bg-blue-50 border border-blue-100 rounded-lg p-3 text-xs text-gray-600">
+            <i class="fas fa-shield-alt text-blue-600 mt-0.5"></i>
+            <span>
+              Cancelación flexible: reprogramamos sin costo si avisas con
+              anticipación o si el clima no permite navegar de forma segura.
+              <a href="faq.html#cancelaciones" target="_blank" class="text-blue-600 underline hover:text-blue-800">Ver política completa</a>
+            </span>
+          </div>
+
+          <div class="pt-2 space-y-3">
+            <button
+              id="bold-pay-btn"
+              type="button"
+              onclick="payWithBold()"
+              class="btn-primary w-full justify-center text-center cursor-pointer"
+              style="background: #5b3a82"
+            >
+              <i class="fas fa-lock mr-2"></i>Pagar en línea con Bold
+            </button>
+            <button
+              type="button"
+              onclick="checkoutViaWhatsApp()"
+              class="w-full justify-center text-center cursor-pointer add-to-cart-btn"
+              style="border-color: #25d366; color: #128c4a"
+            >
+              <i class="fab fa-whatsapp mr-2"></i>Confirmar Reserva por
+              WhatsApp
+            </button>
+            <p class="text-xs text-gray-400 text-center">
+              Al confirmar, Nohemi y su equipo se pondrán en contacto contigo
+              para validar disponibilidad y completar el pago de tu reserva.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script>
       // Menu movil
       document
@@ -873,114 +1538,61 @@
           setTimeout(() => menu.classList.add("hidden"), 300);
         });
 
-      // WhatsApp Logic
-      const waBtn = document.getElementById("wa-main-btn");
-      const waOptions = document.getElementById("wa-options");
-      if (waBtn && waOptions) {
-        waBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          waOptions.classList.toggle("active");
-        });
-        document.addEventListener("click", function (event) {
-          const isClickInside =
-            waBtn.contains(event.target) || waOptions.contains(event.target);
-          if (!isClickInside && waOptions.classList.contains("active")) {
-            waOptions.classList.remove("active");
-          }
-        });
+      // WhatsApp — número único de contacto
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
       }
-
-      // Data de Botes
-      const boats = {
-        laleona: {
-          title: "La Leona",
-          desc: "LA LEONA es una embarcación muy cómoda, perfecta para eventos corporativos, excursiones o grupos grandes. Cuenta con amplias áreas de estar y de descanso, cojinería de lujo, baño interno, escaleras para bajar al mar cómodamente, asoleadoras con espaldar en la proa, un moderno equipo de sonido y nevera con hielo.",
-          specs: [
-            { label: "Eslora", value: "42 Pies" },
-            { label: "Motores", value: "2 Yamaha 4T 300 HP" },
-            { label: "Capacidad", value: "26 Pasajeros" },
-          ],
-        },
-        vicky: {
-          title: "Vicky 420",
-          desc: "VICKY420 es una embarcación muy cómoda, perfecta para eventos corporativos, excursiones o grupos grandes. Esta cuenta con amplias áreas de estar y de descanso, cuenta con cojinería de lujo, baño interno, escaleras para bajar al mar cómodamente, asoleadoras con espaldar en la proa, un moderno equipo de sonido y nevera con hielo.",
-          specs: [
-            { label: "Eslora", value: "42 Pies" },
-            { label: "Motores", value: "2 Yamaha 4T 300 HP" },
-            { label: "Capacidad", value: "28 Pasajeros" },
-          ],
-        },
-        oly: {
-          title: "Oly 420",
-          desc: "OLY420 es una embarcación muy cómoda, perfecta para eventos corporativos, excursiones o grupos grandes. Cuenta con amplias áreas de estar y de descanso, cojinería de lujo, baño interno, escaleras para bajar al mar cómodamente, asoleadoras con espaldar en la proa, un moderno equipo de sonido y nevera con hielo.",
-          specs: [
-            { label: "Eslora", value: "42 Pies" },
-            { label: "Motores", value: "2 Yamaha 4T 300 HP" },
-            { label: "Capacidad", value: "28 Pasajeros" },
-          ],
-        },
-        virginia: {
-          title: "Virginia 420",
-          desc: "VIRGINIA420 es una embarcación muy cómoda, perfecta para eventos corporativos, excursiones o grupos grandes. Esta cuenta con amplias áreas de estar y de descanso, cuenta con cojinería de lujo, baño interno, escaleras para bajar al mar cómodamente, asoleadoras con espaldar en la proa, un moderno equipo de sonido y nevera con hielo.",
-          specs: [
-            { label: "Eslora", value: "42 Pies" },
-            { label: "Motores", value: "2 Yamaha 4T 300 HP" },
-            { label: "Capacidad", value: "28 Pasajeros" },
-          ],
-        },
-        interceptor: {
-          title: "Interceptor 38'",
-          desc: "INTERCEPTOR es una lancha perfecta para compartir con tus familiares y amigos, con cojinería de lujo, baño interno, escaleras para bajar al mar cómodamente, asoleadoras con espaldar en la proa, un moderno equipo de sonido y nevera con hielo.",
-          specs: [
-            { label: "Eslora", value: "38 Pies" },
-            { label: "Motores", value: "2 Yamaha 4T 300 HP" },
-            { label: "Capacidad", value: "16 Pasajeros" },
-          ],
-        },
-      };
-
-      const modal = document.getElementById("boatModal");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalDesc = document.getElementById("modalDesc");
-      const modalSpecs = document.getElementById("modalSpecs");
-      const modalWhatsapp = document.getElementById("modalWhatsapp");
-
-      function openModal(boatId) {
-        const data = boats[boatId];
-        if (!data) return;
-
-        modalTitle.innerText = data.title;
-        modalDesc.innerText = data.desc;
-
-        // Build Specs HTML
-        modalSpecs.innerHTML = data.specs
-          .map(
-            (spec) =>
-              `<li class="flex justify-between border-b border-gray-100 pb-1 last:border-0">
-                    <span class="font-semibold text-gray-600">${spec.label}:</span>
-                    <span class="text-gray-800">${spec.value}</span>
-                </li>`,
-          )
-          .join("");
-
-        // Update WhatsApp Link
-        modalWhatsapp.href = `https://wa.me/573226452179?text=Hola,%20me%20interesa%20cotizar%20el%20bote%20${encodeURIComponent(data.title)}`;
-
-        modal.classList.remove("hidden");
-        document.body.classList.add("modal-open");
-      }
-
-      function closeModal() {
-        modal.classList.add("hidden");
-        document.body.classList.remove("modal-open");
-      }
-
-      // Close on ESC key
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-          closeModal();
-        }
-      });
     </script>
+
+    <!-- Filtro y orden de la flotilla -->
+    <script>
+      (function () {
+        var grid = document.getElementById("fleet-grid");
+        var cards = Array.prototype.slice.call(grid.querySelectorAll(":scope > [data-capacity]"));
+        var filterBtns = document.querySelectorAll(".fleet-filter-btn");
+        var sortSelect = document.getElementById("fleet-sort");
+        var emptyMsg = document.getElementById("fleet-empty-msg");
+        var currentFilter = "all";
+
+        function applyFilter() {
+          var visibleCount = 0;
+          cards.forEach(function (card) {
+            var match = currentFilter === "all" || card.dataset.capacity === currentFilter;
+            card.style.display = match ? "" : "none";
+            if (match) visibleCount++;
+          });
+          emptyMsg.classList.toggle("hidden", visibleCount > 0);
+        }
+
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            filterBtns.forEach(function (b) { b.classList.remove("active"); });
+            btn.classList.add("active");
+            currentFilter = btn.dataset.capacity;
+            applyFilter();
+          });
+        });
+
+        sortSelect.addEventListener("change", function () {
+          var val = sortSelect.value;
+          var sorted = cards.slice().sort(function (a, b) {
+            if (val === "price-asc") return a.dataset.price - b.dataset.price;
+            if (val === "price-desc") return b.dataset.price - a.dataset.price;
+            if (val === "capacity-desc") return b.dataset.capacityNum - a.dataset.capacityNum;
+            return a.dataset.order - b.dataset.order;
+          });
+          sorted.forEach(function (card) { grid.appendChild(card); });
+        });
+      })();
+    </script>
+
+    <!-- Carrito de compras: catálogo y lógica compartidos (ver js/cart.js) -->
+    <script src="js/cart.js"></script>
+      <script src="js/currency.js"></script>
+      <script src="js/cookie-consent.js"></script>
   </body>
 </html>

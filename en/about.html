@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <meta
+      name="description"
+      content="Meet Dunas & Olas: a local-led nautical tourism agency in Cartagena. Specialists in the Rosario Islands and premium experiences."
+    />
+    <title>About Us | Dunas & Olas</title>
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+    <!-- To get it: analytics.google.com → Create property → Web data stream -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="canonical" href="https://dunasyolas.com/en/about.html"/>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/about.html" />
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/about.html" />
+    <link rel="icon" href="../images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .page-header {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("../images/foto (6).JPG");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .btn-primary {
+        background-color: #5B3A82;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(91, 58, 130, 0.3);
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #3F2761;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
+      }
+
+      /* --- Multi-language WhatsApp Widget Styles --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      .wa-options {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+      .wa-options.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .wa-item {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        min-width: 210px;
+        border-left: 4px solid #25d366;
+      }
+      .wa-item:hover {
+        transform: translateX(-5px);
+        background-color: #f0fdf4;
+      }
+      .wa-flag {
+        font-size: 24px;
+        margin-right: 12px;
+      }
+      .wa-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .wa-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+      }
+      .wa-number {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .wa-options.active + .whatsapp-float {
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+
+      /* Social network badges in the footer (placeholders ready to link) */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Local tour operator in Cartagena de Indias. Private boat rentals, kitesurfing, culinary tours, day trips to the Rosario Islands, and unique experiences led by Nohemi, a local guide.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "Person",
+      "name": "Nohemi",
+      "jobTitle": "Local tour guide and founder",
+      "worksFor": {
+        "@id": "https://dunasyolas.com/#org"
+      },
+      "description": "Local Cartagena-born guide with deep knowledge of the culture, gastronomy and history of Cartagena de Indias."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dunasyolas.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://dunasyolas.com/about.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+      <meta property="og:type" content="profile"/>
+    <meta property="og:title" content="Meet Nohemi — Your Local Guide in Cartagena | Dunas & Olas"/>
+    <meta property="og:description" content="Nohemi is a Cartagena-born guide who has spent years showing her city to travelers from all over the world. Discover the story behind Dunas & Olas."/>
+    <meta property="og:url" content="https://dunasyolas.com/en/about.html"/>
+    <meta property="og:image" content="https://dunasyolas.com/images/cartagenacentro.jpg"/>
+    <meta property="og:site_name" content="Dunas & Olas"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Meet Nohemi — Your Local Guide in Cartagena | Dunas & Olas"/>
+    <meta name="twitter:description" content="Nohemi is a Cartagena-born guide who has spent years showing her city to travelers from all over the world. Discover the story behind Dunas & Olas."/>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px] transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
+        </a>
+        <div
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase h-full items-center"
+        >
+          <a href="index.html" class="text-gray-300 hover:text-white transition"
+            >Home</a
+          >
+          <a href="fleet.html" class="text-gray-300 hover:text-white transition"
+            >Fleet</a
+          >
+          <a
+            href="experiences.html"
+            class="text-gray-300 hover:text-white transition"
+            >Experiences</a
+          >
+          <a href="about.html" class="text-white border-b-2 border-blue-500"
+            >About Us</a
+          >
+          <a
+            href="blog/index.html"
+            class="text-gray-300 hover:text-white transition"
+            >Blog</a
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button>
+
+          <a
+            href="fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Book Now</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-white"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Home</a
+      >
+      <a
+        href="fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Our Fleet</a
+      >
+      <a
+        href="experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiences</a
+      >
+      <a
+        href="about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >About Us</a
+      >
+      <a
+        href="blog/index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- HEADER WITH IMAGE -->
+    <div class="page-header pt-36 pb-20 text-center text-white px-4">
+      <span
+        class="text-blue-400 font-bold tracking-widest uppercase text-xs mb-3 block drop-shadow-md"
+        >The Person Behind Every Trip</span
+      >
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+        Meet Nohemi
+      </h1>
+      <p
+        class="text-lg text-gray-200 max-w-2xl mx-auto font-light drop-shadow-md"
+      >
+        A Cartagena local at heart, a host by profession, and the mind behind
+        every detail of your trip.
+      </p>
+    </div>
+
+    <!-- About Us Content -->
+    <section class="py-20 container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Side Image -->
+        <div class="relative lg:sticky lg:top-32">
+          <div
+            class="absolute -bottom-4 -right-4 w-full h-full border-2 border-blue-100 rounded-lg -z-10"
+          ></div>
+          <img
+            src="../images/foto (1).JPG"
+            alt="Nohemi in Cartagena de Indias"
+            class="rounded-lg shadow-2xl w-full object-cover h-96 lg:h-[600px]"
+          />
+        </div>
+
+        <!-- Main Text -->
+        <div
+          class="space-y-6 text-lg text-gray-600 leading-relaxed text-justify"
+        >
+          <div>
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">
+              Who is Nohemi?
+            </h2>
+            <div class="w-20 h-1 bg-blue-600 mb-8"></div>
+          </div>
+
+          <p>
+            Nohemi has spent <strong>several years living in Cartagena</strong>,
+            walking its streets, beaches and islands almost daily. She isn't a
+            guide who passed through on her way somewhere else: she chose to
+            build her life here, in the Corralito de Piedra, and she knows the
+            city the way you know your own home.
+          </p>
+
+          <p>
+            Before creating her own project, Nohemi
+            <strong>worked at several tourism agencies</strong> in the city.
+            Those years taught her something you can't learn in a course: she
+            saw firsthand how this industry really works behind the scenes,
+            and — most importantly — she was able to identify
+            <strong
+              >the number one problem faced by tourists visiting
+              Cartagena</strong
+            >: arriving with no one trustworthy to guide them, and ending up
+            overpaying, exchanging money at unfair rates, or experiencing a
+            "generic" version of the city that has nothing to do with what
+            they actually came looking for.
+          </p>
+
+          <!-- Quote from Nohemi -->
+          <div
+            class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 my-8"
+          >
+            <p class="italic text-gray-700">
+              "I want every person who travels with me to feel that someone
+              thought through every detail of their day, because I truly did.
+              That's the difference between just another tour... and a memory
+              that stays with you for life."
+            </p>
+            <div class="mt-4 flex items-center">
+              <div
+                class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-bold mr-3 text-sm"
+              >
+                N
+              </div>
+              <div>
+                <p class="font-bold text-blue-900 text-sm">Nohemi</p>
+                <p class="text-xs text-gray-500">Founder &amp; Host</p>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            There's something else that makes this project deeply personal:
+            Nohemi is <strong>neurodivergent, on the autism spectrum</strong>,
+            and she loves having
+            <strong>systems planned for everything</strong>. Itineraries
+            detailed down to the minute, checklists so nothing is left to
+            chance, clear processes for every experience, every transfer,
+            every booking. What others might see as "too much organization" is,
+            for her, simply the natural way to take care of people — and it's
+            exactly that structured, observant and meticulous outlook that
+            makes every trip she organizes go smoothly, without unpleasant
+            surprises.
+          </p>
+
+          <p>
+            That's why this project has
+            <strong>her whole heart in it</strong>: it's not just a business,
+            it's the way Nohemi channels what she loves most — order, detail,
+            genuine care for people — into creating,
+            for every visitor who comes to Cartagena,
+            <strong>the most unforgettable experience possible</strong>.
+          </p>
+
+          <p
+            class="font-semibold text-gray-900 border-t border-gray-100 pt-4 mt-4"
+          >
+            When you travel with Nohemi, you're not traveling with just
+            another agency: you're traveling with someone who lives here, who
+            has already been through what you want to avoid, and who designed
+            a complete system so that your only job is to enjoy.
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-2 gap-8 pt-4">
+            <div>
+              <span class="block text-4xl font-bold text-blue-600 mb-1"
+                >100%</span
+              >
+              <span
+                class="text-xs text-gray-400 uppercase tracking-wide font-bold"
+                >Personal Support</span
+              >
+            </div>
+            <div>
+              <span class="block text-4xl font-bold text-blue-600 mb-1"
+                >+1</span
+              >
+              <span
+                class="text-xs text-gray-400 uppercase tracking-wide font-bold"
+                >System for Every Experience</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Section (Summary) -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <div class="text-center mb-12">
+          <i class="fas fa-life-ring text-4xl text-blue-600 mb-4"></i>
+          <h2 class="text-3xl font-bold text-gray-900">
+            Safety and Trust
+          </h2>
+          <p class="mt-4 text-gray-500">
+            Your safety is our priority on every departure.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md space-y-4">
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Active insurance policies for all passengers.
+            </p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Certified crew with expertise in local navigation.
+            </p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Well-maintained boats with up-to-date DIMAR permits.
+            </p>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+            <p class="text-gray-600 text-sm">
+              Direct support from Nohemi or her trusted team on every
+              experience, following her own review process so that nothing
+              is left to chance.
+            </p>
+          </div>
+          <div
+            class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-600"
+          >
+            <h4 class="font-bold text-blue-800 text-sm mb-1">
+              Local Commitment
+            </h4>
+            <p class="text-blue-700 text-xs">
+              We support sustainable tourism that respects the environment
+              and local communities.
+            </p>
+          </div>
+
+          <!-- Certification Badges -->
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-gray-100">
+            <div class="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-gray-50">
+              <i class="fas fa-anchor text-2xl text-blue-600"></i>
+              <span class="text-xs font-bold text-gray-700">DIMAR Registration</span>
+              <span class="text-[10px] text-gray-400">Maritime Authority</span>
+            </div>
+            <div class="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-gray-50">
+              <i class="fas fa-file-shield text-2xl text-blue-600"></i>
+              <span class="text-xs font-bold text-gray-700">Accident Insurance Policy</span>
+              <span class="text-[10px] text-gray-400">Coverage for passengers</span>
+            </div>
+            <div class="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-gray-50">
+              <i class="fas fa-user-shield text-2xl text-blue-600"></i>
+              <span class="text-xs font-bold text-gray-700">Certified Crew</span>
+              <span class="text-[10px] text-gray-400">Local experts</span>
+            </div>
+            <div class="flex flex-col items-center text-center gap-2 p-3 rounded-lg bg-gray-50">
+              <i class="fas fa-leaf text-2xl text-blue-600"></i>
+              <span class="text-xs font-bold text-gray-700">Sustainable Tourism</span>
+              <span class="text-[10px] text-gray-400">Respect for the Caribbean</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compact Footer -->
+    <!-- Newsletter: WhatsApp offer subscription -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            Don't miss our offers
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Leave us your email and we'll notify you via WhatsApp about
+            promotions, seasonal discounts and new experiences in Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="youremail@example.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Subscribe
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Please enter a valid email address.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hi, I'd like to subscribe to receive offers and promotions from Dunas & Olas. My email is: " +
+            email
+        );
+        msg.textContent =
+          "Thank you! We'll contact you via WhatsApp to confirm your subscription.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              The warmth of the north, the magic of the Caribbean.
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explore</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="fleet.html" class="hover:text-blue-400">Fleet</a>
+              </li>
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400"
+                  >Experiences</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">About Us</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contact</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Social</h4>
+            <div class="flex justify-center md:justify-start gap-2">
+              <a
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/dunasyolas"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on TikTok"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on YouTube"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on X"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2026 Dunas & Olas. All rights reserved.</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white"
+              >Terms and Conditions</a
+            > · <a href="privacy.html" class="hover:text-white">Privacy Policy</a> · <a href="faq.html" class="hover:text-white">Frequently Asked Questions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Multi-language WhatsApp Widget -->
+    <div class="whatsapp-container">
+      <button id="wa-main-btn" onclick="openWhatsApp('Hi, I would like more information.')" class="whatsapp-float group focus:outline-none">
+        <img
+          src="../images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // WhatsApp — single contact number
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      }
+    </script>
+      <script src="../js/currency.js"></script>
+      <script src="../js/cookie-consent.js"></script>
+  </body>
+</html>

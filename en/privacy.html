@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <title>Privacy Policy | Dunas & Olas</title>
+    <meta name="description" content="Privacy policy and personal data processing of Dunas & Olas, in accordance with Colombian Law 1581 of 2012."/>
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+    <!-- To get it: analytics.google.com → Create property → Web data stream -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="canonical" href="https://dunasyolas.com/en/privacy.html"/>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/privacy.html" />
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/privacy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/privacy.html" />
+    <link rel="icon" href="../images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .page-header {
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+          url("../images/foto (6).JPG");
+        background-size: cover;
+        background-position: center;
+      }
+      .btn-primary {
+        background-color: #5b3a82;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(91, 58, 130, 0.3);
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #3f2761;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
+      }
+
+      /* --- WhatsApp Styles --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        white-space: nowrap;
+      }
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+
+      /* Social network badges in the footer */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+
+      /* FAQ accordion */
+      .faq-toggle summary { cursor: pointer; list-style: none; }
+      .faq-toggle summary::-webkit-details-marker { display: none; }
+      .faq-toggle summary i { transition: transform 0.2s ease; }
+      .faq-toggle[open] summary i { transform: rotate(180deg); }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Local tour operator in Cartagena de Indias. Private boat rentals, kitesurfing, culinary tours, day trips to the Rosario Islands, and unique experiences led by Nohemi, a local guide.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Privacy Policy — Dunas & Olas",
+      "url": "https://dunasyolas.com/en/privacy.html",
+      "description": "Privacy policy and personal data processing of Dunas & Olas in accordance with Colombian Law 1581 of 2012."
+    }
+  ]
+}
+</script>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Privacy Policy | Dunas & Olas"/>
+    <meta property="og:description" content="Privacy policy and personal data processing of Dunas & Olas, in accordance with Colombian Law 1581 of 2012."/>
+    <meta property="og:url" content="https://dunasyolas.com/en/privacy.html"/>
+    <meta property="og:image" content="https://dunasyolas.com/images/cartagena.jpg"/>
+    <meta property="og:site_name" content="Dunas & Olas"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Privacy Policy | Dunas & Olas"/>
+    <meta name="twitter:description" content="Privacy policy and personal data processing of Dunas & Olas, in accordance with Colombian Law 1581 of 2012."/>
+  </head>
+  <body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px] transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
+        </a>
+        <div
+          class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase h-full items-center"
+        >
+          <a href="index.html" class="text-gray-300 hover:text-white transition"
+            >Home</a
+          >
+          <a href="fleet.html" class="text-gray-300 hover:text-white transition"
+            >Fleet</a
+          >
+          <a
+            href="experiences.html"
+            class="text-gray-300 hover:text-white transition"
+            >Experiences</a
+          >
+          <a href="about.html" class="text-gray-300 hover:text-white transition"
+            >About Us</a
+          >
+          <a
+            href="blog/index.html"
+            class="text-gray-300 hover:text-white transition"
+            >Blog</a
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button>
+
+          <a
+            href="fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Book Now</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden focus:outline-none text-white"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Home</a
+      >
+      <a
+        href="fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Our Fleet</a
+      >
+      <a
+        href="experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiences</a
+      >
+      <a
+        href="about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >About Us</a
+      >
+      <a
+        href="blog/index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- HEADER WITH IMAGE -->
+    <div class="page-header pt-36 pb-16 text-center text-white px-4">
+      <span
+        class="text-blue-400 font-bold tracking-widest uppercase text-xs mb-3 block drop-shadow-md"
+        >Your Information, Protected</span
+      >
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+        Privacy Policy
+      </h1>
+      <p class="text-gray-200 max-w-2xl mx-auto font-light drop-shadow-md">
+        How we collect, use and protect your personal data when you browse our site or book with us.
+      </p>
+    </div>
+
+    <section class="py-12 md:py-16 container mx-auto px-4 md:px-6 max-w-5xl">
+      <div class="bg-white p-6 md:p-14 rounded-xl shadow-lg border border-gray-100 space-y-8 md:space-y-12 break-words overflow-hidden">
+
+        <div>
+          <p class="text-sm text-gray-500 mb-6">Last updated: June 2026</p>
+          <p class="text-gray-700 leading-relaxed">
+            At <strong>Dunas & Olas</strong> we respect your privacy
+            and are committed to protecting the personal data you share with
+            us when browsing our website or requesting a booking. This policy
+            explains what information we collect, how we use it, and what
+            your rights are, in compliance with the
+            <strong>Colombian Data Protection Law (Law 1581 of 2012, "Habeas Data")</strong>
+            and international best practices for data protection.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            When you fill out a booking form or contact us via WhatsApp, we
+            may collect:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Full name</li>
+            <li>WhatsApp number / phone number</li>
+            <li>Email address</li>
+            <li>Tour date and number of people</li>
+            <li>Payment information (processed securely by our payment gateway, never stored by us)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Use of Cookies</h2>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            Our site uses cookies and local browser storage to:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Remember your currency preference (COP / USD)</li>
+            <li>Remember that you accepted the cookie notice</li>
+            <li>Measure traffic and improve the site through Google Analytics (when active)</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            You can delete these cookies at any time from your browser
+            settings. This does not affect your ability to book; it will only
+            reset your preferences.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. How We Use Your Information</h2>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Manage and confirm your booking</li>
+            <li>Communicate with you via WhatsApp, email or phone about your experience</li>
+            <li>Send relevant information before your tour (meeting point, recommendations, weather)</li>
+            <li>Improve our services and website content</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            <strong>We do not sell or rent your personal data to third parties.</strong>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Sharing Information with Third Parties</h2>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            Some of our service providers may have access to limited data,
+            solely to deliver the service:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li><strong>WhatsApp / Meta:</strong> to communicate with you about your booking</li>
+            <li><strong>Payment gateway (Bold):</strong> to process online payments securely</li>
+            <li><strong>Google Analytics:</strong> to understand how the site is used (anonymous, aggregated data)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Your Rights (Habeas Data)</h2>
+          <p class="text-gray-700 leading-relaxed mb-3">
+            As the owner of your personal data, you have the right to:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>Know, update and correct your personal data</li>
+            <li>Request proof of the authorization granted</li>
+            <li>Be informed about how your data has been used</li>
+            <li>Request the deletion of your data when it is no longer necessary</li>
+            <li>Revoke the authorization for the processing of your data</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            To exercise any of these rights, message us on WhatsApp at
+            <strong>+57 316 303 0589</strong> indicating your request.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Information Security</h2>
+          <p class="text-gray-700 leading-relaxed">
+            We take reasonable measures to protect your information against
+            unauthorized access, loss or alteration. Online payments are
+            processed through certified gateways; we never store card numbers
+            on our systems.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Changes to This Policy</h2>
+          <p class="text-gray-700 leading-relaxed">
+            We may update this policy occasionally to reflect changes in our
+            practices or legal requirements. The "last updated" date at the
+            top of this page indicates the current version.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Contact</h2>
+          <p class="text-gray-700 leading-relaxed">
+            If you have questions about this Privacy Policy or about the
+            processing of your data, contact us:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 mt-3">
+            <li>WhatsApp: +57 316 303 0589</li>
+            <li>Location: Manga, Cartagena de Indias, Bolívar, Colombia</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+    <!-- Newsletter: WhatsApp offer subscription -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            Don't miss our offers
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Leave us your email and we'll notify you via WhatsApp about
+            promotions, seasonal discounts and new experiences in Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="youremail@example.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Subscribe
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Please enter a valid email address.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hi, I'd like to subscribe to receive offers and promotions from Dunas & Olas. My email is: " +
+            email
+        );
+        msg.textContent =
+          "Thank you! We'll contact you via WhatsApp to confirm your subscription.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              The warmth of the north, the magic of the Caribbean.
+            </p>
+          </div>
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explore</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="fleet.html" class="hover:text-blue-400">Fleet</a>
+              </li>
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400"
+                  >Experiences</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">About Us</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contact</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Social</h4>
+            <div class="flex justify-center md:justify-start gap-2">
+              <a
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/dunasyolas"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on TikTok"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on YouTube"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on X"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2026 Dunas & Olas. All rights reserved.</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white"
+              >Terms and Conditions</a
+            > · <a href="privacy.html" class="hover:text-white">Privacy Policy</a> · <a href="faq.html" class="hover:text-white">Frequently Asked Questions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget -->
+    <div class="whatsapp-container">
+      <button
+        id="wa-main-btn"
+        onclick="openWhatsApp('Hi, I have a question about your privacy policy.')"
+        class="whatsapp-float group focus:outline-none"
+      >
+        <img
+          src="../images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // WhatsApp — single contact number
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      }
+    </script>
+      <script src="../js/currency.js"></script>
+      <script src="../js/cookie-consent.js"></script>
+  </body>
+</html>

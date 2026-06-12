@@ -3,9 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Náutico | Agencia Nohemi</title>
-    <link rel="icon" href="../images/logoqueku.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <title>Blog Náutico | Dunas & Olas</title>
+    <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <!-- Para obtenerlo: analytics.google.com → Crear propiedad → Flujo de datos web -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="icon" href="../images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -143,7 +190,25 @@
         }
       }
 
-      .card-image-container {
+      
+      /* Insignias de redes sociales en el footer (placeholders listos para enlazar) */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+.card-image-container {
         overflow: hidden;
       }
       .card-image {
@@ -153,16 +218,105 @@
         transform: scale(1.05);
       }
     </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Tour operator local en Cartagena de Indias. Alquiler de botes privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": "Blog",
+      "name": "Bitácora de Viaje — Dunas & Olas",
+      "url": "https://dunasyolas.com/blog/index.html",
+      "description": "Guías de viaje, consejos de seguridad, gastronomía y cultura caribeña en Cartagena de Indias."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://dunasyolas.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://dunasyolas.com/blog/index.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+      <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Blog de Viajes — Cartagena de Indias | Dunas & Olas"/>
+    <meta property="og:description" content="Guías de viaje, consejos de seguridad, gastronomía caribeña e historia de Cartagena de Indias. El blog de la agencia de tours local más auténtica del Caribe colombiano."/>
+    <meta property="og:url" content="https://dunasyolas.com/blog/index.html"/>
+    <meta property="og:image" content="https://dunasyolas.com/images/cartagenacentro.jpg"/>
+    <meta property="og:site_name" content="Dunas & Olas"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Blog de Viajes — Cartagena de Indias | Dunas & Olas"/>
+    <meta name="twitter:description" content="Guías de viaje, consejos de seguridad, gastronomía caribeña e historia de Cartagena de Indias. El blog de la agencia de tours local más auténtica del Caribe colombiano."/>
+    <link rel="canonical" href="https://dunasyolas.com/blog/index.html"/>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/index.html"/>
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/index.html"/>
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/index.html"/>
   </head>
   <body class="bg-gray-50 text-gray-800">
-    <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-0">
+    <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px]">
       <div class="container mx-auto px-6 flex justify-between items-center">
-        <a href="../index.html" class="flex items-center gap-2 z-50">
-          <img
-            src="../images/logoqueku.png"
-            alt="Agencia Nohemi Logo"
-            class="h-12 md:h-20 drop-shadow-lg object-contain transition-all duration-300"
-          />
+        <a href="../index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
         </a>
         <div
           class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase items-center"
@@ -189,7 +343,13 @@
           >
           <a href="index.html" class="text-white border-b-2 border-blue-500"
             >Blog</a
-          >
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button> <a id="lang-switch" href="../en/blog/index.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
+
           <a
             href="../fleet.html"
             class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
@@ -261,6 +421,144 @@
 
     <section class="py-20 container mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Articulo Nuevo 1: Cambio de Moneda -->
+        <article
+          class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full ring-2 ring-yellow-400/60"
+        >
+          <div class="h-56 overflow-hidden card-image-container relative">
+            <img
+              src="../images/cartagenasunset.jpg"
+              alt="Cambio de moneda en Cartagena"
+              class="w-full h-full object-cover card-image"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <span
+              class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide"
+              >Guía Esencial</span
+            >
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span
+              class="text-yellow-600 text-xs font-bold uppercase tracking-wider mb-2 block"
+              >Seguridad & Dinero</span
+            >
+            <h2
+              class="text-xl font-bold mb-3 text-gray-900 group-hover:text-yellow-600 transition"
+            >
+              <a href="cambio-de-moneda-cartagena/index.html"
+                >Cambio de Moneda en Cartagena: la Guía para no Perder ni un
+                Peso</a
+              >
+            </h2>
+            <p
+              class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow"
+            >
+              El problema número uno del turista en Cartagena no es un robo a
+              mano armada: es una mala tasa de cambio. Aprende a evitarlo.
+            </p>
+            <a
+              href="cambio-de-moneda-cartagena/index.html"
+              class="text-yellow-600 font-bold text-sm hover:text-yellow-800 flex items-center mt-auto"
+              >Leer Artículo
+              <i
+                class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"
+              ></i
+            ></a>
+          </div>
+        </article>
+
+        <!-- Articulo Nuevo 2: Viajar con un Local -->
+        <article
+          class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full ring-2 ring-blue-400/60"
+        >
+          <div class="h-56 overflow-hidden card-image-container relative">
+            <img
+              src="../images/cartagenacentro.jpg"
+              alt="Viajar con un local en Cartagena"
+              class="w-full h-full object-cover card-image"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+            <span
+              class="absolute top-4 left-4 bg-blue-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wide"
+              >Guía Esencial</span
+            >
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span
+              class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2 block"
+              >Experiencias Locales</span
+            >
+            <h2
+              class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition"
+            >
+              <a href="viajar-con-un-local-cartagena/index.html"
+                >Viajar con un Local en Cartagena: Por Qué lo Cambia Todo</a
+              >
+            </h2>
+            <p
+              class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow"
+            >
+              La diferencia entre ver una ciudad y vivirla está en quién
+              camina a tu lado. Así es viajar con tu Acompañante Nohemi.
+            </p>
+            <a
+              href="viajar-con-un-local-cartagena/index.html"
+              class="text-blue-600 font-bold text-sm hover:text-blue-800 flex items-center mt-auto"
+              >Leer Artículo
+              <i
+                class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"
+              ></i
+            ></a>
+          </div>
+        </article>
+
+        <!-- Articulo Nuevo 3: Atardeceres Mágicos -->
+        <article
+          class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full"
+        >
+          <div class="h-56 overflow-hidden card-image-container relative">
+            <img
+              src="../images/atardecer.jpg"
+              alt="Atardeceres mágicos en la Bahía de Cartagena"
+              class="w-full h-full object-cover card-image"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+            ></div>
+          </div>
+          <div class="p-8 flex flex-col flex-grow">
+            <span
+              class="text-yellow-600 text-xs font-bold uppercase tracking-wider mb-2 block"
+              >Experiencias Inolvidables</span
+            >
+            <h2
+              class="text-xl font-bold mb-3 text-gray-900 group-hover:text-yellow-600 transition"
+            >
+              <a href="atardeceres-magicos/index.html"
+                >Atardeceres Mágicos en la Bahía de Cartagena</a
+              >
+            </h2>
+            <p
+              class="text-gray-500 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow"
+            >
+              Cuando el sol baja, la ciudad amurallada se viste de oro. Así es
+              navegar la bahía al atardecer, acompañado por Nohemi.
+            </p>
+            <a
+              href="atardeceres-magicos/index.html"
+              class="text-yellow-600 font-bold text-sm hover:text-yellow-800 flex items-center mt-auto"
+              >Leer Artículo
+              <i
+                class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"
+              ></i
+            ></a>
+          </div>
+        </article>
+
         <!-- Articulo 1: Cocinas (IMAGEN ACTUALIZADA) -->
         <article
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full"
@@ -518,23 +816,146 @@
             ></a>
           </div>
         </article>
-      </div>
+      
+      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="h-52 overflow-hidden bg-gray-800 relative">
+          <img src="cartagenasunset.jpg" alt="Kitesurf en Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
+          <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Deportes Acuáticos</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-blue-700 transition">Kitesurf en Cartagena: Guía Completa para Principiantes y Avanzados</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Los mejores spots, temporadas de viento, niveles de cursos y precios. Todo lo que necesitas para volar en el Caribe colombiano.</p>
+          <a href="kitesurf-cartagena/index.html" class="text-blue-700 font-bold text-sm hover:text-blue-900 flex items-center mt-auto">Leer Artículo <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i></a>
+        </div>
+      </article>
+
+      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="h-52 overflow-hidden bg-gray-800 relative">
+          <img src="cartagenacentro.jpg" alt="Cartagena de Indias planes turísticos" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
+          <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Guías de Viaje</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-blue-700 transition">25 Planes Imperdibles en Cartagena de Indias: Guía Local</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Desde el Castillo de San Felipe hasta el kitesurf y los comedores de palafito. Los mejores planes según una cartagenera de nacimiento.</p>
+          <a href="que-hacer-cartagena/index.html" class="text-blue-700 font-bold text-sm hover:text-blue-900 flex items-center mt-auto">Leer Artículo <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i></a>
+        </div>
+      </article>
+
+      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="h-52 overflow-hidden bg-gray-800 relative">
+          <img src="cartagena.jpg" alt="Presupuesto viaje Cartagena Colombia" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
+          <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Presupuesto</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-blue-700 transition">¿Cuánto Cuesta un Viaje a Cartagena? Presupuesto Real 2025-2026</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Vuelos, alojamiento, comida, tours y transporte. La guía de presupuesto más completa y honesta para planificar tu viaje.</p>
+          <a href="costo-viaje-cartagena/index.html" class="text-blue-700 font-bold text-sm hover:text-blue-900 flex items-center mt-auto">Leer Artículo <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i></a>
+        </div>
+      </article>
+
+      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="h-52 overflow-hidden bg-gray-800 relative">
+          <img src="acuario.jpg" alt="Playas de Cartagena Colombia" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
+          <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Islas y Playas</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-blue-700 transition">Las Mejores Playas de Cartagena: Guía Completa con Cómo Llegar</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">Bocagrande, Playa Blanca, Islas del Rosario, La Boquilla y Manzanillo del Mar. Cuál elegir según lo que buscas.</p>
+          <a href="playas-cartagena/index.html" class="text-blue-700 font-bold text-sm hover:text-blue-900 flex items-center mt-auto">Leer Artículo <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i></a>
+        </div>
+      </article>
+
+      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="h-52 overflow-hidden bg-gray-800 relative">
+          <img src="acuario.jpg" alt="Cartagena con niños familia" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
+          <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Viajes en Familia</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug group-hover:text-blue-700 transition">Cartagena con Niños: Los Mejores Planes para Familias en el Caribe</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">El Acuario del Rosario, paseos en lancha, playas seguras y plan de 3 días perfecto para familias. Todo lo que necesitas saber.</p>
+          <a href="cartagena-con-ninos/index.html" class="text-blue-700 font-bold text-sm hover:text-blue-900 flex items-center mt-auto">Leer Artículo <i class="fas fa-arrow-right ml-2 text-xs transition-transform group-hover:translate-x-1"></i></a>
+        </div>
+      </article>
+</div>
     </section>
 
     <!-- Footer -->
+    <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            No te pierdas nuestras ofertas
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Déjanos tu correo y te avisaremos por WhatsApp sobre promociones,
+            descuentos de temporada y nuevas experiencias en Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="tucorreo@ejemplo.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Suscribirme
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Por favor ingresa un correo válido.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hola, quiero suscribirme para recibir ofertas y promociones de Dunas & Olas. Mi correo es: " +
+            email
+        );
+        msg.textContent =
+          "¡Gracias! Te contactaremos por WhatsApp para confirmar tu suscripción.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
     <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
       <div class="container mx-auto px-6 text-center md:text-left">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
           <div
             class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
           >
-            <img
-              src="../images/logoqueku.png"
-              alt="Agencia Nohemi"
-              class="h-8 mb-4 brightness-0 invert opacity-90"
-            />
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
             <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
-              Transformamos días ordinarios en memorias extraordinarias.
+              La calidez del norte, la magia del caribe.
             </p>
           </div>
           <div class="hidden md:block">
@@ -565,16 +986,15 @@
                 Cartagena
               </li>
               <li class="flex items-center">
-                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 322
-                6452179
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
               </li>
             </ul>
           </div>
           <div>
             <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
-            <div class="flex justify-center md:justify-start gap-4">
+            <div class="flex justify-center md:justify-start gap-2">
               <a
-                href="https://www.instagram.com/agencianohemi_ctg?igsh=d3pjNXJtZTIzZHd6"
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
                 target="_blank"
                 class="transition hover:opacity-80 group"
               >
@@ -585,7 +1005,7 @@
                 />
               </a>
               <a
-                href="https://www.facebook.com/agencianohemi"
+                href="https://www.facebook.com/dunasyolas"
                 target="_blank"
                 class="transition hover:opacity-80 group"
               >
@@ -595,17 +1015,44 @@
                   class="w-12 h-12 hover:scale-110 transition transform"
                 />
               </a>
-            </div>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: TikTok de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: YouTube de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Próximamente: X de Dunas & Olas"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
           </div>
         </div>
         <div
           class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
         >
-          <p>&copy; 2024 Agencia Nohemi. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Dunas & Olas. Todos los derechos reservados.</p>
           <div class="mt-2 space-x-3">
             <a href="../policies.html" class="hover:text-white"
               >Términos y Condiciones</a
-            >
+            > · <a href="../privacy.html" class="hover:text-white">Política de Privacidad</a> · <a href="../faq.html" class="hover:text-white">Preguntas Frecuentes</a>
           </div>
         </div>
       </div>
@@ -613,31 +1060,7 @@
 
     <!-- WhatsApp Widget -->
     <div class="whatsapp-container">
-      <div id="wa-options" class="wa-options">
-        <a
-          href="https://wa.me/573245685595?text=Hello,%20I%20am%20interested%20in%20your%20blog%20content."
-          target="_blank"
-          class="wa-item"
-        >
-          <span class="wa-flag">🇺🇸</span>
-          <div class="wa-info">
-            <span class="wa-title">English Support</span>
-            <span class="wa-number">+57 324 568 5595</span>
-          </div>
-        </a>
-        <a
-          href="https://wa.me/573226452179?text=Hola,%20me%20gustaría%20más%20información."
-          target="_blank"
-          class="wa-item"
-        >
-          <span class="wa-flag">🇨🇴</span>
-          <div class="wa-info">
-            <span class="wa-title">Asesor en Español</span>
-            <span class="wa-number">+57 322 645 2179</span>
-          </div>
-        </a>
-      </div>
-      <button id="wa-main-btn" class="whatsapp-float group focus:outline-none">
+      <button id="wa-main-btn" onclick="openWhatsApp('Hola, me gustaría más información.')" class="whatsapp-float group focus:outline-none">
         <img
           src="../images/WhatsApp.svg.webp"
           alt="WhatsApp"
@@ -669,20 +1092,16 @@
           setTimeout(() => menu.classList.add("hidden"), 300);
         });
 
-      // WhatsApp Logic
-      const waBtn = document.getElementById("wa-main-btn");
-      const waOptions = document.getElementById("wa-options");
-      waBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        waOptions.classList.toggle("active");
-      });
-      document.addEventListener("click", function (event) {
-        const isClickInside =
-          waBtn.contains(event.target) || waOptions.contains(event.target);
-        if (!isClickInside && waOptions.classList.contains("active")) {
-          waOptions.classList.remove("active");
-        }
-      });
+      // WhatsApp — número único de contacto
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      }
     </script>
+      <script src="../js/currency.js"></script>
+      <script src="../js/cookie-consent.js"></script>
   </body>
 </html>

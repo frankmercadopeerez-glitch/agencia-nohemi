@@ -1,0 +1,1680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <meta
+      name="description"
+      content="Dunas & Olas: Stay and event planning in the Caribbean. Sport boat and luxury yacht rentals in Cartagena."
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dunasyolas.com/en/" />
+    <meta
+      property="og:title"
+      content="Dunas & Olas | Cartagena with Nohemi, your local guide"
+    />
+    <meta
+      property="og:description"
+      content="Stay and event planning in the Caribbean. Sport boat and luxury yacht rentals in Cartagena."
+    />
+    <meta
+      property="og:image"
+      content="https://dunasyolas.com/images/favicon-dunas-olas.png"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dunasyolas.com/en/" />
+    <meta
+      property="twitter:title"
+      content="Dunas & Olas | Cartagena with Nohemi, your local guide"
+    />
+    <meta
+      property="twitter:description"
+      content="Stay and event planning in the Caribbean. Sport boat and luxury yacht rentals in Cartagena."
+    />
+    <meta
+      property="twitter:image"
+      content="https://dunasyolas.com/images/favicon-dunas-olas.png"
+    />
+    <title>Dunas & Olas | Cartagena with Nohemi, your local guide</title>
+    <link rel="alternate" hreflang="es" href="https://dunasyolas.com/" />
+    <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/" />
+    <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
+    <!-- Para obtenerlo: analytics.google.com → Crear propiedad → Flujo de datos web -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <link rel="icon" href="../images/favicon-dunas-olas.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../images/favicon-dunas-olas.png"/>
+    <meta name="theme-color" content="#5B3A82"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                50: "#F3EFFA",
+                100: "#E6DCF2",
+                200: "#CDB8E5",
+                300: "#B194D8",
+                400: "#9B7BC9",
+                500: "#7C5BA6",
+                600: "#5B3A82",
+                700: "#3F2761",
+                800: "#34204F",
+                900: "#2A1A40",
+              },
+              yellow: {
+                50: "#FBF6E8",
+                100: "#F5EBC9",
+                200: "#EAD68E",
+                300: "#DEC065",
+                400: "#D4AE45",
+                500: "#C9A227",
+                600: "#A9871F",
+                700: "#8A6D19",
+                800: "#6B5413",
+                900: "#4D3D0E",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Hero con Fade suave */
+      .hero-section {
+        position: relative;
+        height: 95vh;
+        overflow: hidden;
+      }
+      @media (max-width: 768px) {
+        .hero-section {
+          height: 100svh;
+          min-height: 560px;
+        }
+      }
+      .hero-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: 0;
+      }
+      .hero-slide.active {
+        opacity: 1;
+      }
+
+      .hero-bg-image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+
+      .btn-primary {
+        background-color: #5B3A82;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(91, 58, 130, 0.3);
+        display: inline-block;
+      }
+      .btn-primary:hover {
+        background-color: #3F2761;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(91, 58, 130, 0.4);
+      }
+
+      .btn-outline {
+        border: 2px solid #5B3A82;
+        color: #5B3A82;
+        font-weight: 600;
+        padding: 0.6rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+        background-color: transparent;
+      }
+      .btn-outline:hover {
+        background-color: #5B3A82;
+        color: white;
+      }
+
+      /* --- Estilos WhatsApp Widget Multi-idioma --- */
+      .whatsapp-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: end; /* Alinea el menú a la derecha sobre el botón */
+      }
+
+      /* Menú de opciones (Oculto por defecto) */
+      .wa-options {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+
+      .wa-options.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Items del menú */
+      .wa-item {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 10px 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 0.2s,
+          background-color 0.2s;
+        min-width: 210px;
+        border-left: 4px solid #25d366; /* Borde verde WhatsApp */
+      }
+
+      .wa-item:hover {
+        transform: translateX(-5px);
+        background-color: #f0fdf4;
+      }
+
+      .wa-flag {
+        font-size: 24px;
+        margin-right: 12px;
+        filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+      }
+
+      .wa-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .wa-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.2;
+      }
+
+      .wa-number {
+        font-size: 11px;
+        color: #6b7280;
+        margin-top: 2px;
+      }
+
+      /* Botón Flotante Principal + Animación */
+      @keyframes bounce-slow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+
+      .whatsapp-float {
+        background: transparent;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+        animation: bounce-slow 3s infinite ease-in-out;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.05);
+        animation: none;
+      }
+      .wa-options.active + .whatsapp-float {
+        animation: none;
+      } /* Detener animación si menú abierto */
+
+      .whatsapp-icon {
+        width: 65px;
+        height: 65px;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+      }
+
+      .whatsapp-text {
+        background-color: #fff;
+        color: #111827;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-container {
+          bottom: 20px;
+          right: 20px;
+        }
+        .whatsapp-float {
+          transform: scale(0.9);
+        }
+        .whatsapp-text {
+          font-size: 10px;
+          padding: 3px 10px;
+        }
+      }
+
+
+
+      /* Botón verde WhatsApp reutilizable (cotizar / más info) */
+      .whatsapp-info-btn {
+        width: 100%;
+        background: #25d366;
+        color: #fff;
+        border: none;
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 0.85rem 1rem;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.92rem;
+        text-align: center;
+      }
+      .whatsapp-info-btn:hover { background: #1ebd5a; }
+/* Insignias de redes sociales en el footer (placeholders listos para enlazar) */
+      .social-badge {
+        width: 48px;
+        flex-shrink: 0;
+        height: 48px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: #fff;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+      .social-badge:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+/* --- Carrusel Infinito de Reseñas --- */
+      .reviews-slider {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+      }
+      .reviews-track {
+        display: flex;
+        width: calc(350px * 16);
+        animation: scroll 70s linear infinite;
+      }
+      .review-card {
+        width: 350px;
+        padding: 0 15px;
+        flex-shrink: 0;
+      }
+      .reviews-track:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-350px * 8));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .review-card {
+          width: 300px;
+        }
+        .reviews-track {
+          width: calc(300px * 16);
+        }
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(calc(-300px * 8));
+          }
+        }
+      }
+    </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "TravelAgency",
+        "LocalBusiness"
+      ],
+      "@id": "https://dunasyolas.com/#org",
+      "name": "Dunas & Olas",
+      "url": "https://dunasyolas.com",
+      "logo": "https://dunasyolas.com/images/favicon-dunas-olas.png",
+      "description": "Local tour operator in Cartagena de Indias. Private boat rentals, kitesurfing, food tours, day trips to the Rosario Islands, and unique experiences led by Nohemi, local guide.",
+      "telephone": "+573163030589",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Manga",
+        "addressLocality": "Cartagena de Indias",
+        "addressRegion": "Bolívar",
+        "postalCode": "130015",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.3976,
+        "longitude": -75.5162
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Cartagena de Indias"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "openingHours": "Mo-Su 08:00-20:00",
+      "sameAs": [
+        "https://www.instagram.com/dunasyolas_ctg",
+        "https://www.facebook.com/dunasyolas"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dunasyolas.com/#website",
+      "url": "https://dunasyolas.com",
+      "name": "Dunas & Olas",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dunasyolas.com/en/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+      <link rel="canonical" href="https://dunasyolas.com/en/"/>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900"
+  >
+    <nav
+      id="navbar"
+      class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white border-b border-white/10"
+    >
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+          <span class="leading-none select-none">
+            <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">
+              Dunas <span class="text-yellow-500">&amp; Olas</span>
+            </span>
+            <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
+              Cartagena de Indias
+            </span>
+          </span>
+        </a>
+        <div
+          class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide uppercase h-full"
+        >
+          <a
+            href="index.html"
+            class="text-white hover:text-blue-400 transition shadow-black drop-shadow-md"
+            >Home</a
+          >
+          <a
+            href="fleet.html"
+            class="text-white hover:text-blue-400 transition drop-shadow-md"
+            >Fleet</a
+          >
+          <a
+            href="experiences.html"
+            class="text-white hover:text-blue-400 transition drop-shadow-md"
+            >Experiences</a
+          >
+          <a
+            href="about.html"
+            class="text-white hover:text-blue-400 transition drop-shadow-md"
+            >About Us</a
+          >
+          <a
+            href="blog/index.html"
+            class="text-white hover:text-blue-400 transition drop-shadow-md"
+            >Blog</a
+          >          <button
+            id="currency-toggle"
+            onclick="toggleCurrency()"
+            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
+            title="Cambiar moneda / Switch currency"
+          ><span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span></button>
+
+          <a
+            href="fleet.html"
+            class="btn-primary py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 border-none shadow-none text-white rounded"
+            >Book Now</a
+          >
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden z-50 focus:outline-none text-white drop-shadow-md"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300"
+    >
+      <a
+        href="index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Home</a
+      >
+      <a
+        href="fleet.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Our Fleet</a
+      >
+      <a
+        href="experiences.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Experiences</a
+      >
+      <a
+        href="about.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >About Us</a
+      >
+      <a
+        href="blog/index.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Blog</a
+      >
+      <button
+        id="close-menu-btn"
+        class="absolute top-6 right-6 text-white text-3xl"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Hero Section -->
+    <header
+      class="hero-section flex items-center justify-center text-center px-4"
+    >
+      <!-- Reordered Slides: Images first, Video last -->
+
+      <!-- Slide 1: Imagen Atardecer (Start here) -->
+      <div class="hero-slide active">
+        <div
+          class="hero-bg-image"
+          style="background-image: url(&quot;../images/cartagenasunset.jpg&quot;)"
+        ></div>
+      </div>
+      <!-- Slide 2: Imagen Acuario -->
+      <div class="hero-slide">
+        <div
+          class="hero-bg-image"
+          style="background-image: url(&quot;../images/acuario.jpg&quot;)"
+        ></div>
+      </div>
+      <!-- Slide 3: Imagen Cartagena -->
+      <div class="hero-slide">
+        <div
+          class="hero-bg-image"
+          style="background-image: url(&quot;../images/cartagena.jpg&quot;)"
+        ></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <!-- Contenedor del texto (Añadido ID para controlarlo con JS y animación de opacidad) -->
+      <div
+        id="hero-content"
+        class="max-w-5xl text-white relative z-10 pt-20 transition-opacity duration-1000"
+      >
+        <!-- FRASE CAMBIANTE -->
+        <div class="mb-10 flex justify-center animate-fade-in-up">
+          <div
+            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 shadow-lg"
+          >
+            <p class="text-white text-xs md:text-sm font-medium tracking-wide">
+              ✨ "The secret to getting ahead is getting started"
+            </p>
+          </div>
+        </div>
+        <!-- FIN FRASE CAMBIANTE -->
+
+        <span
+          class="text-blue-400 font-bold tracking-widest uppercase text-sm md:text-base mb-4 block drop-shadow-lg"
+          >Cartagena de Indias</span
+        >
+        <h1
+          class="text-4xl md:text-6xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg"
+        >
+          Discover Cartagena <br />
+          <span class="text-white">with Nohemi by your side</span>
+        </h1>
+        <p
+          class="text-lg md:text-xl mb-10 font-light text-gray-100 max-w-3xl mx-auto drop-shadow-md"
+        >
+          We plan your stays and events (private and corporate) across the
+          Colombian Caribbean and Cartagena. Luxury yacht and sport boat
+          rentals.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a href="fleet.html" class="btn-primary text-lg px-10 py-4"
+            >View Fleet</a
+          >
+          <a
+            href="experiences.html"
+            class="px-10 py-4 rounded-lg border border-white/30 hover:bg-white/10 backdrop-blur-sm text-white font-semibold transition duration-300"
+          >
+            View Experiences
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50 z-20"
+      >
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </div>
+    </header>
+
+    <!-- Tira de Confianza -->
+    <section class="bg-white border-b border-gray-100 py-5">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="flex flex-col items-center gap-1">
+            <div class="text-yellow-500 text-sm">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <span class="text-xs font-semibold text-gray-700">4.9/5 in traveler experience</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <i class="fas fa-anchor text-blue-600"></i>
+            <span class="text-xs font-semibold text-gray-700">DIMAR-registered vessels</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <i class="fas fa-file-shield text-blue-600"></i>
+            <span class="text-xs font-semibold text-gray-700">Passengers covered by accident insurance</span>
+          </div>
+          <div class="flex flex-col items-center gap-1">
+            <i class="fas fa-map-marker-alt text-blue-600"></i>
+            <span class="text-xs font-semibold text-gray-700">100% local guides in Cartagena</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciador: Acompañante Nohemi -->
+    <section
+      class="py-20 bg-gradient-to-br from-blue-900 to-gray-900 text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute -top-24 -left-24 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute -bottom-24 -right-24 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"
+      ></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span
+            class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-3 block"
+            >The Nohemi Difference</span
+          >
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            More than an agency: your trusted companion in Cartagena
+          </h2>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Nohemi and her team don't just plan your trip, they experience it
+            with you. With every experience you get
+            <strong class="text-white"
+              >Nohemi's direct, personal companionship and the agency's
+              security backing</strong
+            >: she herself shows you where to shop and how to exchange your
+            money at a fair local rate, and takes you to the best places while
+            protecting you from the number one danger for tourists in
+            Cartagena:
+            <strong class="text-white">currency-exchange scams and theft</strong>.
+            That's what makes us different.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-white/10 transition"
+          >
+            <div
+              class="bg-blue-600/20 w-14 h-14 rounded-lg flex items-center justify-center text-blue-400 mb-5"
+            >
+              <i class="fas fa-money-bill-wave text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Safe Currency Exchange</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              We take you to the right places to exchange your money at a
+              fair rate, with no surprises, no markups, and no risk.
+            </p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-white/10 transition"
+          >
+            <div
+              class="bg-blue-600/20 w-14 h-14 rounded-lg flex items-center justify-center text-blue-400 mb-5"
+            >
+              <i class="fas fa-shield-alt text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Protection from Risk #1</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Currency-exchange theft is the most common danger for tourists
+              in Cartagena. We stay by your side so it never happens to you.
+            </p>
+          </div>
+          <div
+            class="bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm hover:bg-white/10 transition"
+          >
+            <div
+              class="bg-blue-600/20 w-14 h-14 rounded-lg flex items-center justify-center text-blue-400 mb-5"
+            >
+              <i class="fas fa-map-signs text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">Trusted Local Guide</h3>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              We take you to the best places to eat, shop, and experience
+              Cartagena the way a local would, not like just another tourist.
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            onclick="openWhatsApp('Hi, I would like information about my Nohemi Companion service for my visit to Cartagena.')"
+            class="whatsapp-info-btn" style="padding:1rem 2.5rem;font-size:1rem;"
+          >
+            <i class="fab fa-whatsapp"></i> I want my Nohemi Companion
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flotilla Destacada -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Our Featured Fleet
+          </h2>
+          <p class="text-gray-500 mt-2">
+            Sport and luxury boats for every occasion.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-80"
+          >
+            <img
+              src="../images/la%20leona%20(1).webp"
+              alt="La Leona"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 text-white">
+              <h3 class="text-2xl font-bold">La Leona</h3>
+              <p class="text-sm opacity-90">Ideal for groups and parties.</p>
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-80"
+          >
+            <img
+              src="../images/oly.JPG"
+              alt="Oly"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 text-white">
+              <h3 class="text-2xl font-bold">Oly 420</h3>
+              <p class="text-sm opacity-90">Speed and sporty style.</p>
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-80"
+          >
+            <img
+              src="../images/virginia%20(1).webp"
+              alt="Virginia"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 text-white">
+              <h3 class="text-2xl font-bold">Virginia</h3>
+              <p class="text-sm opacity-90">Elegance and premium comfort.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a href="fleet.html" class="btn-outline">View the entire fleet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencias -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">Live the Experience</h2>
+          <p class="text-gray-500 mt-2">Unique moments in the Caribbean.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col md:flex-row h-auto md:h-64"
+          >
+            <div class="md:w-1/2">
+              <img
+                src="../images/acuario.jpg"
+                alt="Rosario Islands Day Trip"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="font-bold text-xl mb-2">Rosario Islands Day Trip</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                A full day sailing through crystal-clear waters and the best
+                spots to enjoy, dance, or relax (hotels, cabins, restaurants,
+                native communities).
+              </p>
+              <a
+                href="experiences.html"
+                class="text-blue-600 font-bold text-sm hover:underline"
+                >See details</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col md:flex-row h-auto md:h-64"
+          >
+            <div class="md:w-1/2">
+              <img
+                src="../images/cartagenasunset.jpg"
+                alt="Magical Sunsets"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-8 md:w-1/2 flex flex-col justify-center">
+              <h3 class="font-bold text-xl mb-2">Magical Sunsets</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                End the day with the best view of our city (MI CORRALITO DE
+                PIEDRA) ❤️, sailing under the magical glow of a Caribbean
+                sunset.
+              </p>
+              <a
+                href="experiences.html"
+                class="text-blue-600 font-bold text-sm hover:underline"
+                >See details</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="experiences.html" class="btn-primary"
+            >Discover all our experiences</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrusel Infinito de Reseñas -->
+    <section class="py-16 bg-white overflow-hidden border-t border-gray-100">
+      <div class="container mx-auto px-6 mb-10 text-center">
+        <h2 class="text-2xl font-bold text-gray-900">
+          What Our Guests Say
+        </h2>
+      </div>
+
+      <div class="reviews-slider">
+        <div class="reviews-track">
+          <!-- 1. Carlos -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "Simply spectacular. We rented the Oly boat for my wife's
+                birthday and the service was first-class."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Carlos Mendoza</strong
+                  ><span class="text-xs text-gray-500">México 🇲🇽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2. Sarah -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "The best experience in Cartagena. Everything was super
+                organized, the food delicious, and the boat very comfortable."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Sarah Johnson</strong
+                  ><span class="text-xs text-gray-500">USA 🇺🇸</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3. Andrea & Felipe -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "Excellent customer service. They helped us plan everything
+                before we even arrived. Highly recommended."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Andrea & Felipe</strong
+                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4. Martina -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "An unforgettable experience. The sunset from the boat was
+                magical. We'll definitely be back."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block">Martina G.</strong
+                  ><span class="text-xs text-gray-500">Argentina 🇦🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5. James -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "The Rosario Islands tour exceeded our expectations.
+                Crystal-clear water and absolutely luxurious service on
+                board."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >James Wilson</strong
+                  ><span class="text-xs text-gray-500">Reino Unido 🇬🇧</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 6. Camila -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "I took my first kitesurfing lesson with them in La Boquilla
+                and the instructor was super patient. I can't wait to go
+                back!"
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Camila Torres</strong
+                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 7. Lucas & Marie -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "We booked the private boat for our anniversary. The crew
+                thought of every detail, incredible service."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Lucas & Marie Dubois</strong
+                  ><span class="text-xs text-gray-500">Francia 🇫🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 8. Roberto -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "The food tour with Nohemi was the best part of the trip. We
+                tried dishes we never would have found on our own."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Roberto Fernández</strong
+                  ><span class="text-xs text-gray-500">España 🇪🇸</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 9. Carlos (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "Simply spectacular. We rented the Oly boat for my wife's
+                birthday and the service was first-class."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Carlos Mendoza</strong
+                  ><span class="text-xs text-gray-500">México 🇲🇽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 10. Sarah (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "The best experience in Cartagena. Everything was super
+                organized, the food delicious, and the boat very comfortable."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Sarah Johnson</strong
+                  ><span class="text-xs text-gray-500">USA 🇺🇸</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 11. Andrea & Felipe (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "Excellent customer service. They helped us plan everything
+                before we even arrived. Highly recommended."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Andrea & Felipe</strong
+                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 12. Martina (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "An unforgettable experience. The sunset from the boat was
+                magical. We'll definitely be back."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block">Martina G.</strong
+                  ><span class="text-xs text-gray-500">Argentina 🇦🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 13. James (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "The Rosario Islands tour exceeded our expectations.
+                Crystal-clear water and absolutely luxurious service on
+                board."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >James Wilson</strong
+                  ><span class="text-xs text-gray-500">Reino Unido 🇬🇧</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 14. Camila (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "I took my first kitesurfing lesson with them in La Boquilla
+                and the instructor was super patient. I can't wait to go
+                back!"
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Camila Torres</strong
+                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 15. Lucas & Marie (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "We booked the private boat for our anniversary. The crew
+                thought of every detail, incredible service."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Lucas & Marie Dubois</strong
+                  ><span class="text-xs text-gray-500">Francia 🇫🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 16. Roberto (Copia) -->
+          <div class="review-card">
+            <div
+              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
+            >
+              <div class="text-yellow-400 text-xs mb-3">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                ><i class="fas fa-star"></i>
+              </div>
+              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                "The food tour with Nohemi was the best part of the trip. We
+                tried dishes we never would have found on our own."
+              </p>
+              <div class="flex items-center">
+                <div>
+                  <strong class="text-gray-900 text-sm block"
+                    >Roberto Fernández</strong
+                  ><span class="text-xs text-gray-500">España 🇪🇸</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Inspiration for your trip
+          </h2>
+          <p class="text-gray-500 mt-2">
+            Discover the secrets of the Caribbean on our blog.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-10"
+        >
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="../images/cocinacaribe.jpg"
+              alt="Caribbean Kitchens"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                <a href="blog/cocinas-del-caribe/index.html"
+                  >Caribbean Kitchens</a
+                >
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Stories served on a plate: tales of resilience and flavor.
+              </p>
+            </div>
+          </article>
+          <article
+            class="bg-gray-50 rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+          >
+            <img
+              src="../images/foto%20(6).JPG"
+              alt="History of Cartagena"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                <a href="blog/historia-nombre-cartagena/index.html"
+                  >What was Cartagena called before?</a
+                >
+              </h3>
+              <p class="text-gray-600 text-sm">
+                Curious facts about the founding of our walled city.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="text-center">
+          <a href="blog/index.html" class="btn-outline px-8"
+            >View entire Blog</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Compacto -->
+    <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
+    <section class="py-12" style="background: linear-gradient(135deg, #2A1A40, #5B3A82);">
+      <div class="container mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-2">
+            <i class="fas fa-envelope-open-text text-yellow-400 mr-2"></i>
+            Don't miss our offers
+          </h3>
+          <p class="text-gray-200 text-sm mb-6">
+            Leave us your email and we'll let you know via WhatsApp about
+            promotions, seasonal discounts, and new experiences in Cartagena.
+          </p>
+          <form
+            id="newsletter-form"
+            class="flex flex-col sm:flex-row gap-3 justify-center"
+            onsubmit="return submitNewsletter(event)"
+          >
+            <input
+              type="email"
+              id="newsletter-email"
+              required
+              placeholder="youremail@example.com"
+              class="flex-1 sm:max-w-xs rounded-lg px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            />
+            <button
+              type="submit"
+              class="bg-yellow-500 hover:bg-yellow-400 text-purple-900 font-bold px-6 py-3 rounded-lg transition whitespace-nowrap"
+            >
+              <i class="fas fa-paper-plane mr-1"></i> Subscribe
+            </button>
+          </form>
+          <p id="newsletter-msg" class="text-xs text-yellow-300 mt-3 hidden"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      function submitNewsletter(e) {
+        e.preventDefault();
+        var emailInput = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-msg");
+        var email = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          msg.textContent = "Please enter a valid email address.";
+          msg.classList.remove("hidden");
+          return false;
+        }
+        openWhatsApp(
+          "Hi, I'd like to subscribe to receive offers and promotions from Dunas & Olas. My email is: " +
+            email
+        );
+        msg.textContent =
+          "Thank you! We'll contact you on WhatsApp to confirm your subscription.";
+        msg.classList.remove("hidden");
+        emailInput.value = "";
+        return false;
+      }
+    </script>
+
+
+    <footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+          <div
+            class="col-span-1 md:col-span-1 flex flex-col items-center md:items-start"
+          >
+            <span class="block mb-4 leading-none select-none">
+              <span class="block font-extrabold tracking-tight text-xl text-white">
+                Dunas <span class="text-yellow-500">&amp; Olas</span>
+              </span>
+              <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">
+                Cartagena de Indias
+              </span>
+            </span>
+            <p class="text-gray-400 text-xs leading-relaxed max-w-xs">
+              The warmth of the north, the magic of the Caribbean.
+            </p>
+          </div>
+
+          <div class="hidden md:block">
+            <h4 class="text-white font-bold mb-4 text-sm">Explore</h4>
+            <ul class="space-y-2 text-gray-400 text-xs">
+              <li>
+                <a href="fleet.html" class="hover:text-blue-400"
+                  >Our Fleet</a
+                >
+              </li>
+              <li>
+                <a href="experiences.html" class="hover:text-blue-400"
+                  >Experiences</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="hover:text-blue-400">About Us</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="hover:text-blue-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Contact</h4>
+            <ul
+              class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start"
+            >
+              <li class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-2 text-blue-500"></i> Manga,
+                Cartagena
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-whatsapp mr-2 text-blue-500"></i> +57 316 303 0589
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white font-bold mb-4 text-sm">Social</h4>
+            <div class="flex justify-center md:justify-start gap-2">
+              <a
+                href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../images/instagram-logo.png"
+                  alt="Instagram"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/dunasyolas"
+                target="_blank"
+                class="transition hover:opacity-80 group"
+              >
+                <img
+                  src="../images/logo-facebook.png"
+                  alt="Facebook"
+                  class="w-12 h-12 hover:scale-110 transition transform"
+                />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on TikTok"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on YouTube"
+                class="social-badge transition hover:opacity-80"
+                style="background:#FF0000;"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                title="Coming soon: Dunas & Olas on X"
+                class="social-badge transition hover:opacity-80"
+                style="background:#000000;"
+              >
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path></svg>
+              </a>
+                        </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
+        >
+          <p>&copy; 2026 Dunas & Olas. All rights reserved.</p>
+          <div class="mt-2 space-x-3">
+            <a href="policies.html" class="hover:text-white"
+              >Terms and Conditions</a
+            > · <a href="privacy.html" class="hover:text-white">Privacy Policy</a> · <a href="faq.html" class="hover:text-white">Frequently Asked Questions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Widget Multi-idioma -->
+    <div class="whatsapp-container">
+      <button id="wa-main-btn" onclick="openWhatsApp('Hi, I am interested in renting a boat.')" class="whatsapp-float group focus:outline-none">
+        <img
+          src="../images/WhatsApp.svg.webp"
+          alt="WhatsApp"
+          class="whatsapp-icon"
+        />
+        <span class="whatsapp-text">Contactar / Contact</span>
+      </button>
+    </div>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
+          navbar.classList.add(
+            "bg-gray-900/95",
+            "backdrop-blur-md",
+            "shadow-lg",
+          );
+          navbar.classList.remove("border-white/10");
+        } else {
+          navbar.classList.remove(
+            "bg-gray-900/95",
+            "backdrop-blur-md",
+            "shadow-lg",
+          );
+          navbar.classList.add("border-white/10");
+        }
+      });
+
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            setTimeout(() => menu.classList.remove("opacity-0"), 10);
+          } else {
+            menu.classList.add("opacity-0");
+            setTimeout(() => menu.classList.add("hidden"), 300);
+          }
+        });
+
+      document
+        .getElementById("close-menu-btn")
+        ?.addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("opacity-0");
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        });
+
+      // Carrusel logic (Video + Images + Auto-hide Text)
+      const slides = document.querySelectorAll(".hero-slide");
+      const heroContent = document.getElementById("hero-content"); // ID agregado al texto
+      let currentSlide = 0;
+      const slideDuration = 3000; // 3 segundos por imagen (solicitado)
+      let slideInterval;
+
+      function updateContentVisibility(slideElement) {
+        // Si el slide tiene un video, ocultamos el texto. Si no, lo mostramos.
+        if (slideElement.querySelector("video")) {
+          heroContent.classList.add("opacity-0", "pointer-events-none");
+          heroContent.classList.remove("opacity-100", "pointer-events-auto");
+        } else {
+          heroContent.classList.remove("opacity-0", "pointer-events-none");
+          heroContent.classList.add("opacity-100", "pointer-events-auto");
+        }
+      }
+
+      function nextSlide() {
+        const currentEl = slides[currentSlide];
+        currentEl.classList.remove("active");
+
+        // Pausar video anterior si existe
+        const video = currentEl.querySelector("video");
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+
+        currentSlide = (currentSlide + 1) % slides.length;
+        const nextEl = slides[currentSlide];
+        nextEl.classList.add("active");
+
+        // Actualizar visibilidad del texto
+        updateContentVisibility(nextEl);
+
+        // Verificar si el nuevo slide es video
+        const nextVideo = nextEl.querySelector("video");
+        if (nextVideo) {
+          clearInterval(slideInterval); // Detener loop automático
+          nextVideo.play();
+          nextVideo.onended = function () {
+            nextSlide(); // Avanzar al terminar
+            startImageLoop(); // Reiniciar loop
+          };
+        }
+      }
+
+      function startImageLoop() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, slideDuration);
+      }
+
+      // Inicialización
+      if (slides.length > 0) {
+        const firstSlide = slides[0];
+        updateContentVisibility(firstSlide); // Verificar estado inicial
+
+        const firstVideo = firstSlide.querySelector("video");
+        if (firstVideo) {
+          // IMPORTANT: removed loop attribute in HTML to ensure onended fires
+          firstVideo.play();
+          firstVideo.onended = function () {
+            nextSlide();
+            startImageLoop();
+          };
+        } else {
+          startImageLoop();
+        }
+      }
+
+      // WhatsApp — número único de contacto
+      const WHATSAPP_NUMBER = "573163030589";
+      function openWhatsApp(message) {
+        window.open(
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      }
+    </script>
+      <script src="../js/currency.js"></script>
+      <script src="../js/cookie-consent.js"></script>
+  </body>
+</html>
