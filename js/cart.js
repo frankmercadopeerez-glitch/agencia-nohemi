@@ -123,7 +123,7 @@ const TOURS = {
   },
 };
 
-const CART_KEY = "agencia-nohemi-cart";
+const CART_KEY = "dunas-olas-cart";
 const COUPLE_DISCOUNT = 0.1; // 10% de descuento al reservar un curso en pareja
 
 function loadCart() {
@@ -144,6 +144,16 @@ function formatCOP(amount) {
     Math.round(amount).toLocaleString("es-CO", { maximumFractionDigits: 0 }) +
     " COP"
   );
+}
+
+/* Formatea un monto (en COP) según la moneda seleccionada en el
+   selector de moneda (COP/USD/MXN, ver js/currency.js). Si ese
+   script no está disponible, se muestra siempre en COP. */
+function displayAmount(amount) {
+  if (typeof window.formatPrice === "function") {
+    return window.formatPrice(amount);
+  }
+  return formatCOP(amount);
 }
 
 /* Una entrada del carrito puede ser:
@@ -287,7 +297,7 @@ function renderCart() {
           '<div class="cart-line">' +
           '<div class="flex-1">' +
           `<p class="font-semibold text-gray-900 text-sm">${d.name}</p>` +
-          `<p class="text-xs text-gray-400 mb-2">${formatCOP(d.unitPrice)}${unitLabel}</p>` +
+          `<p class="text-xs text-gray-400 mb-2">${displayAmount(d.unitPrice)}${unitLabel}</p>` +
           '<div class="flex items-center gap-2">' +
           `<button class="cart-qty-btn" onclick="changeQty('${id}', -1)">−</button>` +
           `<span class="text-sm font-bold w-6 text-center">${d.qty}</span>` +
@@ -295,7 +305,7 @@ function renderCart() {
           `<button class="text-xs text-red-400 hover:text-red-600 ml-3" onclick="removeFromCart('${id}')"><i class="fas fa-trash-alt"></i></button>` +
           "</div>" +
           "</div>" +
-          `<div class="font-bold text-[#3F2761] text-sm whitespace-nowrap">${formatCOP(subtotal)}</div>` +
+          `<div class="font-bold text-[#3F2761] text-sm whitespace-nowrap">${displayAmount(subtotal)}</div>` +
           "</div>"
         );
       })
@@ -306,7 +316,7 @@ function renderCart() {
 
   const total = cartTotal(cart);
   const count = cartItemCount(cart);
-  totalEl.textContent = formatCOP(total);
+  totalEl.textContent = displayAmount(total);
 
   if (count > 0) {
     badgeEl.textContent = count;
@@ -335,7 +345,7 @@ function buildOrderSummary() {
   const entries = cartEntries(cart);
   const lines = entries.map(([, d]) => {
     const unitLabel = d.unitLabel ? ` / ${d.unitLabel}` : "";
-    return `${d.qty} x ${d.name} (${formatCOP(d.unitPrice)}${unitLabel}) = ${formatCOP(d.unitPrice * d.qty)}`;
+    return `${d.qty} x ${d.name} (${displayAmount(d.unitPrice)}${unitLabel}) = ${displayAmount(d.unitPrice * d.qty)}`;
   });
   return { entries, lines, total: cartTotal(cart) };
 }
@@ -346,7 +356,7 @@ function openCheckout() {
 
   document.getElementById("checkout-summary").innerHTML =
     lines.map((l) => `<div>${l}</div>`).join("") +
-    `<div class="font-bold text-[#3F2761] pt-2 mt-2 border-t border-gray-200">Total estimado: ${formatCOP(total)}</div>`;
+    `<div class="font-bold text-[#3F2761] pt-2 mt-2 border-t border-gray-200">Total estimado: ${displayAmount(total)}</div>`;
 
   document.getElementById("checkout-overlay").classList.add("active");
 }
@@ -381,10 +391,18 @@ function checkoutViaWhatsApp() {
   if (!validateCheckoutForm(data)) return;
 
   const { lines, total } = buildOrderSummary();
+  const currency =
+    typeof window.getCurrentCurrency === "function"
+      ? window.getCurrentCurrency()
+      : "COP";
+  const totalLine =
+    currency === "COP"
+      ? `Total estimado: ${formatCOP(total)}`
+      : `Total estimado: ${displayAmount(total)} (${formatCOP(total)})`;
   const message =
     `Hola, quiero confirmar mi reserva con Dunas & Olas:\n\n` +
     lines.join("\n") +
-    `\n\nTotal estimado: ${formatCOP(total)}\n\n` +
+    `\n\n${totalLine}\n\n` +
     `Nombre: ${data.name}\n` +
     `WhatsApp/Teléfono: ${data.phone}\n` +
     `Correo: ${data.email}\n` +
@@ -444,6 +462,61 @@ function payWithBold() {
 
   // Aquí iría la creación real del botón/checkout de Bold una vez
   // configurada la llave de identidad y la firma de integridad.
+}
+
+function payWithMercadoPago() {
+  const data = getCheckoutFormData();
+  if (!validateCheckoutForm(data)) return;
+
+  /*
+    EJEMPLO DE INTEGRACIÓN — Checkout Pro de Mercado Pago
+    (https://www.mercadopago.com.mx/developers)
+    ------------------------------------------------------------------
+    Mercado Pago procesa el pago mediante una "preferencia" (preference):
+    un objeto con los ítems, el monto y las URLs de retorno, que se debe
+    crear desde un servidor usando el Access Token PRIVADO del comercio
+    (nunca debe exponerse en el navegador). El servidor devuelve un
+    "preference id" (o "init_point") que el frontend usa para abrir el
+    Checkout, ya sea con el SDK de JS o redirigiendo directamente.
+
+    Pasos para activar pagos reales aquí:
+      1. Reemplaza MERCADOPAGO_PUBLIC_KEY con la Public Key del comercio
+         (panel de Mercado Pago > Tus integraciones > Credenciales).
+      2. Crea un endpoint en tu servidor (o función serverless) que,
+         usando el Access Token privado, llame a la API de Mercado Pago
+         (POST https://api.mercadopago.com/checkout/preferences) con los
+         datos del carrito (buildOrderSummary()) y devuelva el
+         "preference id" generado.
+      3. Incluye el SDK de Mercado Pago en la página:
+         <script src="https://sdk.mercadopago.com/js/v2"></script>
+      4. Sustituye la simulación de abajo por la inicialización real:
+
+         const mp = new MercadoPago('MERCADOPAGO_PUBLIC_KEY', { locale: 'es-CO' });
+         const preferenceId = await fetch('/api/crear-preferencia', {
+           method: 'POST',
+           headers: { 'Content-Type': 'application/json' },
+           body: JSON.stringify({ items: entries, total, customer: data }),
+         }).then((r) => r.json());
+         mp.checkout({ preference: { id: preferenceId.id }, autoOpen: true });
+
+    Mientras tanto, dejamos el botón visible con esta explicación y
+    ofrecemos la confirmación por WhatsApp como vía de pago manual.
+  */
+  const MERCADOPAGO_PUBLIC_KEY = "MERCADOPAGO_PUBLIC_KEY"; // <-- reemplazar con la Public Key real del comercio
+
+  if (MERCADOPAGO_PUBLIC_KEY === "MERCADOPAGO_PUBLIC_KEY") {
+    alert(
+      "El pago en línea con Mercado Pago está casi listo: solo falta " +
+        "conectar la Public Key del comercio y el endpoint que crea la " +
+        "preferencia de pago (panel de Mercado Pago). Mientras tanto, " +
+        "puedes confirmar y pagar tu reserva directamente con Nohemi por WhatsApp."
+    );
+    checkoutViaWhatsApp();
+    return;
+  }
+
+  // Aquí iría la apertura real del Checkout de Mercado Pago una vez
+  // configurada la Public Key y el endpoint que crea la preferencia.
 }
 
 document.addEventListener("DOMContentLoaded", renderCart);

@@ -1,33 +1,44 @@
 // =====================================================
-// Dunas & Olas — Toggle de Moneda COP / USD
+// Dunas & Olas — Selector de Moneda COP / USD / MXN
 // =====================================================
 (function () {
-  var CURRENCY_KEY = "nohemi_currency";
-  var RATE_KEY = "nohemi_usd_rate";
-  var RATE_TS_KEY = "nohemi_usd_ts";
+  var CURRENCY_KEY = "dunas_currency";
+  var RATES_KEY = "dunas_usd_rates";
+  var RATES_TS_KEY = "dunas_usd_rates_ts";
   var CACHE_TTL = 86400000; // 24 horas
-  var FALLBACK_RATE = 4200; // COP por 1 USD (respaldo si falla la API)
+  var FALLBACK_COP_RATE = 4200; // COP por 1 USD (respaldo si falla la API)
+  var FALLBACK_MXN_RATE = 18.5; // MXN por 1 USD (respaldo si falla la API)
+  var CURRENCIES = ["COP", "USD", "MXN"];
 
-  var rate = FALLBACK_RATE;
+  var copRate = FALLBACK_COP_RATE;
+  var mxnRate = FALLBACK_MXN_RATE;
   var current = localStorage.getItem(CURRENCY_KEY) || "COP";
+  if (CURRENCIES.indexOf(current) === -1) current = "COP";
 
-  async function loadRate() {
-    var ts = parseInt(localStorage.getItem(RATE_TS_KEY) || "0");
-    var cached = parseFloat(localStorage.getItem(RATE_KEY) || "0");
-    if (cached && Date.now() - ts < CACHE_TTL) {
-      rate = cached;
+  async function loadRates() {
+    var ts = parseInt(localStorage.getItem(RATES_TS_KEY) || "0");
+    var cached = null;
+    try {
+      cached = JSON.parse(localStorage.getItem(RATES_KEY) || "null");
+    } catch (_) {
+      cached = null;
+    }
+    if (cached && cached.COP && cached.MXN && Date.now() - ts < CACHE_TTL) {
+      copRate = cached.COP;
+      mxnRate = cached.MXN;
       return;
     }
     try {
       var res = await fetch("https://open.er-api.com/v6/latest/USD");
       var data = await res.json();
-      if (data.result === "success" && data.rates && data.rates.COP) {
-        rate = data.rates.COP;
-        localStorage.setItem(RATE_KEY, rate);
-        localStorage.setItem(RATE_TS_KEY, Date.now());
+      if (data.result === "success" && data.rates && data.rates.COP && data.rates.MXN) {
+        copRate = data.rates.COP;
+        mxnRate = data.rates.MXN;
+        localStorage.setItem(RATES_KEY, JSON.stringify({ COP: copRate, MXN: mxnRate }));
+        localStorage.setItem(RATES_TS_KEY, Date.now());
       }
     } catch (_) {
-      /* usa tasa de respaldo */
+      /* usa tasas de respaldo */
     }
   }
 
@@ -36,8 +47,13 @@
   }
 
   function formatUSD(cop) {
-    var usd = Math.round(cop / rate);
+    var usd = Math.round(cop / copRate);
     return "$" + usd.toLocaleString("en-US") + " USD";
+  }
+
+  function formatMXN(cop) {
+    var mxn = Math.round((cop / copRate) * mxnRate);
+    return "$" + mxn.toLocaleString("es-MX") + " MXN";
   }
 
   function formatCOP(n) {
@@ -47,6 +63,12 @@
       n.toLocaleString("es-CO", { minimumFractionDigits: 0 }).replace(/,/g, ".") +
       " COP"
     );
+  }
+
+  function formatPrice(cop) {
+    if (current === "USD") return formatUSD(cop);
+    if (current === "MXN") return formatMXN(cop);
+    return formatCOP(cop);
   }
 
   function scanAndTag() {
@@ -63,15 +85,9 @@
 
   function applyDisplay() {
     scanAndTag();
-    var toUSD = current === "USD";
     document.querySelectorAll("[data-cop-val]").forEach(function (el) {
       var cop = parseInt(el.dataset.copVal);
-      // Evitar doble escritura si ya está convertido
-      if (toUSD) {
-        el.textContent = formatUSD(cop);
-      } else {
-        el.textContent = formatCOP(cop);
-      }
+      el.textContent = formatPrice(cop);
     });
 
     // Precio dinámico del selector de kitesurf (experiences.html)
@@ -81,48 +97,38 @@
       if (!kitePreview.dataset.copVal && cop)
         kitePreview.dataset.copVal = cop;
       if (kitePreview.dataset.copVal) {
-        kitePreview.textContent = toUSD
-          ? formatUSD(parseInt(kitePreview.dataset.copVal))
-          : formatCOP(parseInt(kitePreview.dataset.copVal));
+        kitePreview.textContent = formatPrice(parseInt(kitePreview.dataset.copVal));
       }
     }
 
     updateToggleBtn();
+
+    // Refresca el carrito (si está presente) para que también
+    // muestre los montos en la moneda seleccionada
+    if (typeof window.renderCart === "function") window.renderCart();
   }
 
   function updateToggleBtn() {
     var btn = document.getElementById("currency-toggle");
     if (!btn) return;
-    if (current === "COP") {
-      btn.innerHTML =
-        '<span class="font-bold text-white">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span>';
-    } else {
-      btn.innerHTML =
-        '<span class="opacity-50">COP</span><span class="opacity-40 mx-0.5">/</span><span class="font-bold text-yellow-400">USD</span>';
-    }
+    btn.innerHTML = CURRENCIES.map(function (code) {
+      return code === current
+        ? '<span class="font-bold text-yellow-400">' + code + "</span>"
+        : '<span class="opacity-50">' + code + "</span>";
+    }).join('<span class="opacity-40 mx-0.5">/</span>');
   }
 
   // Expuesto globalmente
   window.toggleCurrency = function () {
-    current = current === "COP" ? "USD" : "COP";
+    var idx = CURRENCIES.indexOf(current);
+    current = CURRENCIES[(idx + 1) % CURRENCIES.length];
     localStorage.setItem(CURRENCY_KEY, current);
-    // Resetear data-cop-val para que vuelva a parsear limpio en COP
-    if (current === "COP") {
-      document.querySelectorAll("[data-cop-val]").forEach(function (el) {
-        var cop = parseInt(el.dataset.copVal);
-        el.textContent = formatCOP(cop);
-      });
-      var kite = document.getElementById("kite-total-preview");
-      if (kite && kite.dataset.copVal)
-        kite.textContent = formatCOP(parseInt(kite.dataset.copVal));
-    } else {
-      applyDisplay();
-    }
-    updateToggleBtn();
+    applyDisplay();
   };
 
+  window.formatPrice = formatPrice;
   window.getCurrencyRate = function () {
-    return rate;
+    return copRate;
   };
   window.getCurrentCurrency = function () {
     return current;
@@ -130,7 +136,7 @@
 
   // Parchar updateKiteTotalPreview para que respete la moneda seleccionada
   document.addEventListener("DOMContentLoaded", async function () {
-    await loadRate();
+    await loadRates();
     applyDisplay();
 
     // Parchar el preview de kitesurf después de cada recalculación
@@ -146,7 +152,7 @@
           var cop = parseCOP(kite.textContent);
           if (cop) {
             kite.dataset.copVal = cop;
-            if (current === "USD") kite.textContent = formatUSD(cop);
+            kite.textContent = formatPrice(cop);
           }
         }
       };
