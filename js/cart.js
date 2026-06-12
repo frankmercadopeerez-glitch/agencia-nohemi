@@ -350,14 +350,22 @@ function buildOrderSummary() {
   return { entries, lines, total: cartTotal(cart) };
 }
 
-function openCheckout() {
+function renderCheckoutSummary() {
+  const summaryEl = document.getElementById("checkout-summary");
+  if (!summaryEl) return;
   const { entries, lines, total } = buildOrderSummary();
   if (entries.length === 0) return;
 
-  document.getElementById("checkout-summary").innerHTML =
+  summaryEl.innerHTML =
     lines.map((l) => `<div>${l}</div>`).join("") +
     `<div class="font-bold text-[#3F2761] pt-2 mt-2 border-t border-gray-200">Total estimado: ${displayAmount(total)}</div>`;
+}
 
+function openCheckout() {
+  const { entries } = buildOrderSummary();
+  if (entries.length === 0) return;
+
+  renderCheckoutSummary();
   document.getElementById("checkout-overlay").classList.add("active");
 }
 
@@ -411,57 +419,6 @@ function checkoutViaWhatsApp() {
     (data.notes ? `Notas: ${data.notes}\n` : "");
 
   openWhatsApp(message);
-}
-
-function payWithBold() {
-  const data = getCheckoutFormData();
-  if (!validateCheckoutForm(data)) return;
-
-  /*
-    EJEMPLO DE INTEGRACIÓN — Botón de Pagos de Bold (https://bold.co)
-    ------------------------------------------------------------------
-    Bold genera un botón de pago embebido mediante un <script> con
-    atributos data-* que incluyen tu "Identity Key" (llave pública del
-    comercio) y una "Firma de Integridad" (hash de seguridad que debe
-    calcularse en un servidor, nunca en el navegador).
-
-    Pasos para activar pagos reales aquí:
-      1. Reemplaza BOLD_IDENTITY_KEY con tu llave de identidad de Bold.
-      2. Crea un pequeño endpoint en tu servidor (o función serverless)
-         que reciba el monto/orden y devuelva la firma de integridad
-         generada con tu llave secreta (Bold documenta este cálculo).
-      3. Sustituye la simulación de abajo por la creación dinámica del
-         botón de Bold con esos datos, por ejemplo:
-
-         const script = document.createElement('script');
-         script.src = 'https://checkout.bold.co/library/boldPaymentButton.js';
-         script.dataset.apiKey = 'BOLD_IDENTITY_KEY';
-         script.dataset.amount = String(total);
-         script.dataset.currency = 'COP';
-         script.dataset.orderId = orderId;
-         script.dataset.integritySignature = signatureFromYourServer;
-         script.dataset.description = 'Reserva Dunas & Olas';
-         script.dataset.redirectionUrl = window.location.href;
-         document.getElementById('bold-pay-container').appendChild(script);
-
-    Mientras tanto, dejamos el botón visible con esta explicación y
-    ofrecemos la confirmación por WhatsApp como vía de pago manual.
-  */
-  const BOLD_IDENTITY_KEY = "BOLD_IDENTITY_KEY"; // <-- reemplazar con la llave real del comercio
-
-  if (BOLD_IDENTITY_KEY === "BOLD_IDENTITY_KEY") {
-    alert(
-      "El pago en línea con Bold está casi listo: solo falta conectar la " +
-        "llave de identidad del comercio (Identity Key) que se obtiene en " +
-        "el panel de Bold (bold.co). Mientras tanto, puedes confirmar y " +
-        "pagar tu reserva directamente con Nohemi por WhatsApp."
-    );
-    checkoutViaWhatsApp();
-    return;
-  }
-
-  // Aquí iría la creación real del botón/checkout de Bold una vez
-  // configurada la llave de identidad y la firma de integridad.
 }
 
 function payWithMercadoPago() {
@@ -518,5 +475,7 @@ function payWithMercadoPago() {
   // Aquí iría la apertura real del Checkout de Mercado Pago una vez
   // configurada la Public Key y el endpoint que crea la preferencia.
 }
+
+window.renderCheckoutSummary = renderCheckoutSummary;
 
 document.addEventListener("DOMContentLoaded", renderCart);

@@ -74,7 +74,7 @@
   function scanAndTag() {
     // Etiqueta elementos de precio estáticos con su valor COP original
     document
-      .querySelectorAll(".price-value, .addon-btn .font-bold")
+      .querySelectorAll(".price-value, .addon-btn .font-bold, .food-price-value")
       .forEach(function (el) {
         if (!el.dataset.copVal) {
           var v = parseCOP(el.textContent);
@@ -103,19 +103,23 @@
 
     updateToggleBtn();
 
-    // Refresca el carrito (si está presente) para que también
-    // muestre los montos en la moneda seleccionada
+    // Refresca el carrito y el resumen de checkout (si están presentes)
+    // para que también muestren los montos en la moneda seleccionada
     if (typeof window.renderCart === "function") window.renderCart();
+    if (typeof window.renderCheckoutSummary === "function")
+      window.renderCheckoutSummary();
   }
 
   function updateToggleBtn() {
-    var btn = document.getElementById("currency-toggle");
-    if (!btn) return;
-    btn.innerHTML = CURRENCIES.map(function (code) {
+    var html = CURRENCIES.map(function (code) {
       return code === current
         ? '<span class="font-bold text-yellow-400">' + code + "</span>"
         : '<span class="opacity-50">' + code + "</span>";
     }).join('<span class="opacity-40 mx-0.5">/</span>');
+    ["currency-toggle", "currency-toggle-checkout"].forEach(function (id) {
+      var btn = document.getElementById(id);
+      if (btn) btn.innerHTML = html;
+    });
   }
 
   // Expuesto globalmente
