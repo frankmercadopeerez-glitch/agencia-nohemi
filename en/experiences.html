@@ -501,10 +501,6 @@
           <a href="../index.html" class="text-white hover:text-blue-400 transition"
             >Home</a
           >
-          <!-- CAMBIO: Flotilla -->
-          <a href="fleet.html" class="text-white hover:text-blue-400 transition"
-            >Fleet</a
-          >
           <a href="experiences.html" class="text-blue-400 transition"
             >Experiences</a
           >
@@ -515,12 +511,8 @@
             href="blog/index.html"
             class="text-white hover:text-blue-400 transition"
             >Blog</a
-          >          <button
-            id="currency-toggle"
-            onclick="toggleCurrency()"
-            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
-            title="Cambiar moneda / Switch currency"
-          ><span class="font-bold text-yellow-400">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">MXN</span></button> <a id="lang-switch" href="../experiences.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="Versión en español">ES</a>
+          >
+          <a id="lang-switch" href="../experiences.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="Versión en español">ES</a>
 
           <a
             href="experiences.html"
@@ -557,12 +549,6 @@
         href="../index.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Home</a
-      >
-      <!-- CAMBIO: Flotilla -->
-      <a
-        href="fleet.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Our Fleet</a
       >
       <a
         href="experiences.html"
@@ -729,46 +715,33 @@
               <img
                 src="../images/cartagenasunset.jpg"
                 alt="Sunset boat tour over Cartagena Bay, Colombia"
-                class="w-full h-full object-cover min-h-[400px]"
+                class="w-full h-64 md:h-full object-cover"
               />
             </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Magical Sunsets in the Bay (BAY TOUR)
               </h3>
               <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
               >
                 <i class="fas fa-shield-heart text-[#C9A227]"></i>
                 Personally guided by Nohemi, with the agency's safety
                 backing
               </div>
-              <p class="text-gray-600 mb-4 leading-relaxed">
-                There's nothing better than sailing on the best boats
-                through the magical waters of the finest bay in the
-                Colombian Caribbean, filled with fantastic sunsets and
-                romantic, enchanting nights. Live unique experiences with
-                your closest friends, family, or declare eternal love to
-                that someone special.
-              </p>
-              <p class="text-gray-600 mb-6 font-medium italic">
-                "Sailing the waters of the Cartagena bay is magical and
-                mysterious for your dreams, and we are the vessel that makes
-                it real."
-              </p>
-              <p class="text-gray-500 text-sm mb-6">
-                The inner bay of Cartagena de Indias is framed by the Manga
-                neighborhood, Manzanillo Island, the historic center,
-                Bocagrande, and Castillogrande. Enjoy one of the most
-                beautiful sunsets from the sea and take in the contrast
-                between the modern and the old in the city.
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
+                Sail on the best boats through the inner bay of Cartagena —
+                framed by Manga, the Historic Center, Bocagrande and
+                Castillogrande — for an unforgettable sunset. Perfect for
+                proposals, birthdays or a special night with the people you
+                love most.
               </p>
 
-              <div class="mb-4">
+              <div class="mb-2">
                 <span class="text-xs font-bold text-gray-500 uppercase"
                   >Perfect for:</span
                 >
-                <div class="flex flex-wrap gap-2 mt-2">
+                <div class="flex flex-wrap gap-2 mt-1.5">
                   <span
                     class="bg-pink-100 text-pink-600 text-xs px-3 py-1 rounded-full"
                     >Marriage proposals</span
@@ -788,8 +761,8 @@
                 </div>
               </div>
 
-              <div class="bg-purple-50 p-4 rounded-lg">
-                <h4 class="font-bold text-purple-900 text-sm mb-1">
+              <div class="bg-purple-50 p-3 rounded-lg mb-2">
+                <h4 class="font-bold text-purple-900 text-sm mb-0.5">
                   Schedule:
                 </h4>
                 <p class="text-sm text-purple-800">
@@ -797,13 +770,72 @@
                   enjoyed between <strong>6:00 PM and 12:00 AM</strong>.
                 </p>
               </div>
-              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+
+              <div class="mb-2">
+                <h4 class="font-bold text-gray-900 text-sm mb-1.5">
+                  <i class="fas fa-ship text-blue-600 mr-1"></i> Choose your
+                  boat for this tour:
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <a href="fleet.html#bote-interceptor" class="boat-pick-btn">
+                    <img src="../images/interceptor%20(1).webp" alt="Interceptor 38' boat" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Interceptor 38'</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>16 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-laleona" class="boat-pick-btn">
+                    <img src="../images/la%20leona%20(1).webp" alt="La Leona yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">La Leona</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>26 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-oly" class="boat-pick-btn">
+                    <img src="../images/oly420%20(1).webp" alt="Oly 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Oly 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-vicky" class="boat-pick-btn">
+                    <img src="../images/vicky%20(1).webp" alt="Vicky 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Vicky 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-virginia" class="boat-pick-btn">
+                    <img src="../images/virginia%20(1).webp" alt="Virginia 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Virginia 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">
+                  <i class="fas fa-circle-info text-[#5B3A82] mr-1"></i>
+                  Per-person price is for the shared bay tour. Want full
+                  privacy? Rent the whole boat from
+                  <strong class="text-[#3F2761]">$3,200,000 COP</strong>
+                  (Interceptor, 16 pax) up to
+                  <strong class="text-[#3F2761]">$3,900,000 COP</strong>
+                  (Virginia 420, 28 pax).
+                </p>
+              </div>
+
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
                   <span class="price-label">Estimated price / person</span>
                   <span class="price-value">$120.000 COP</span>
                 </div>
                 <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
                 >
                   <button
                     onclick="addToCart('atardecer', this)"
@@ -831,7 +863,7 @@
               <img
                 src="../images/acuario.jpg"
                 alt="Rosario Islands day trip from Cartagena, Colombia"
-                class="w-full h-full object-cover min-h-[400px]"
+                class="w-full h-64 md:h-full object-cover"
               />
               <div
                 class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
@@ -839,85 +871,139 @@
                 Most Popular
               </div>
             </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Rosario Islands Full-Day Trip (SUNNY DAY)
               </h3>
               <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
               >
                 <i class="fas fa-shield-heart text-[#C9A227]"></i>
                 Personally guided by Nohemi, with the agency's safety
                 backing
               </div>
-              <p class="text-gray-600 mb-6 leading-relaxed">
-                This experience gives you the chance to explore the Corales
-                del Rosario y de San Bernardo National Natural Park aboard
-                our boats. We have a wide fleet of boats, specially designed
-                to meet our clients' needs and fully equipped so you can
-                enjoy the different destinations we offer.
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
+                Explore the Corales del Rosario y de San Bernardo National
+                Natural Park aboard our boats, fully equipped to enjoy every
+                destination we offer.
               </p>
 
-              <div class="mb-6">
+              <div class="mb-2">
                 <h4
-                  class="font-bold text-gray-900 text-sm mb-2 uppercase border-b pb-1 border-gray-100"
+                  class="font-bold text-gray-900 text-xs mb-1 uppercase border-b pb-1 border-gray-100"
                 >
                   Available Destinations:
                 </h4>
-                <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                <ul class="grid grid-cols-2 gap-1 text-xs text-gray-600 mt-1.5">
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
                     >Rosario Islands
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Barú
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Barú
                     – Cholón
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Barú
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Barú
                     – Playa Blanca
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
                     >Tierra Bomba
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
                     >Punta Arena
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
                     >Bocachica
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
                     >San Bernardo Archipelago
                   </li>
                   <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>Isla
+                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Isla
                     Fuerte
                   </li>
                 </ul>
               </div>
 
-              <div class="bg-blue-50 p-4 rounded-lg">
-                <h4 class="font-bold text-blue-900 text-sm mb-1">Schedule:</h4>
+              <div class="bg-blue-50 p-3 rounded-lg mb-2">
+                <h4 class="font-bold text-blue-900 text-sm mb-0.5">Schedule:</h4>
                 <p class="text-sm text-blue-800">
-                  <span class="font-semibold">Departure:</span> Subject to
-                  the client's request (after 8:00 AM).
-                </p>
-                <p class="text-sm text-blue-800">
-                  <span class="font-semibold">Return:</span> The boat must be
-                  back at the dock by 5:00 PM.
+                  <span class="font-semibold">Departure:</span> on request
+                  (after 8:00 AM) ·
+                  <span class="font-semibold">Return:</span> dock by 5:00 PM.
                 </p>
               </div>
-              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+
+              <div class="mb-2">
+                <h4 class="font-bold text-gray-900 text-sm mb-1.5">
+                  <i class="fas fa-ship text-blue-600 mr-1"></i> Choose your
+                  boat for this tour:
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <a href="fleet.html#bote-interceptor" class="boat-pick-btn">
+                    <img src="../images/interceptor%20(1).webp" alt="Interceptor 38' boat" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Interceptor 38'</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>16 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-laleona" class="boat-pick-btn">
+                    <img src="../images/la%20leona%20(1).webp" alt="La Leona yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">La Leona</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>26 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-oly" class="boat-pick-btn">
+                    <img src="../images/oly420%20(1).webp" alt="Oly 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Oly 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-vicky" class="boat-pick-btn">
+                    <img src="../images/vicky%20(1).webp" alt="Vicky 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Vicky 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-virginia" class="boat-pick-btn">
+                    <img src="../images/virginia%20(1).webp" alt="Virginia 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Virginia 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">
+                  <i class="fas fa-circle-info text-[#5B3A82] mr-1"></i>
+                  Per-person price is for the shared bay tour. Want full
+                  privacy? Rent the whole boat from
+                  <strong class="text-[#3F2761]">$3,200,000 COP</strong>
+                  (Interceptor, 16 pax) up to
+                  <strong class="text-[#3F2761]">$3,900,000 COP</strong>
+                  (Virginia 420, 28 pax).
+                </p>
+              </div>
+
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
                   <span class="price-label">Estimated price / person</span>
                   <span class="price-value">$180.000 COP</span>
                 </div>
                 <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
                 >
                   <button
                     onclick="addToCart('pasadia', this)"
@@ -938,55 +1024,53 @@
 
           <!-- Experiencia 3: Kitesurf y Deportes Acuáticos (con tabla de precios) -->
           <div data-category="agua" data-price="750000" data-order="3" class="bg-white rounded-2xl overflow-hidden shadow-lg">
-            <div class="flex flex-col md:flex-row">
+            <div class="flex flex-col md:flex-row md:items-center">
               <div class="md:w-1/2">
                 <img
                   src="../images/cartagena.jpg"
                   alt="Kitesurfing on the beaches of Cartagena"
-                  class="w-full h-full object-cover min-h-[320px]"
+                  class="w-full h-64 md:h-[380px] object-cover"
                 />
               </div>
-              <div class="p-8 md:w-1/2 flex flex-col justify-center">
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-1">
                   Kitesurfing and Water Sports
                 </h3>
                 <div
-                  class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                  class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
                 >
                   <i class="fas fa-shield-heart text-[#C9A227]"></i>
                   Personally guided by Nohemi, with the agency's safety
                   backing
                 </div>
-                <p class="text-gray-600 mb-4 leading-relaxed">
+                <p class="text-gray-600 mb-2 text-sm leading-relaxed">
                   The beaches north of Cartagena (La Boquilla) are one of
                   the best kitesurfing spots in the Caribbean: steady winds
                   and warm, flat waters, ideal for both beginners and
                   advanced riders. We connect you with trusted certified
-                  schools and instructors, and Nohemi coordinates transport,
-                  schedules, and your safety from start to finish.
+                  schools and instructors.
                 </p>
-                <div class="bg-blue-50 p-4 rounded-lg">
-                  <h4 class="font-bold text-blue-900 text-sm mb-1">
+                <div class="bg-blue-50 p-3 rounded-lg">
+                  <h4 class="font-bold text-blue-900 text-sm mb-0.5">
                     Why do it with us:
                   </h4>
                   <p class="text-sm text-blue-800">
-                    We coordinate everything: certified instructors, gear in
-                    great condition, hydration, and transport logistics to
-                    the spot, so all you have to worry about is enjoying the
-                    Caribbean wind.
+                    We coordinate certified instructors, gear in great
+                    condition, and transport to the spot, so all you have to
+                    worry about is enjoying the Caribbean wind.
                   </p>
                 </div>
               </div>
             </div>
 
             <!-- Selector de cursos de Kitesurf -->
-            <div class="px-8 pb-8 pt-6 border-t border-gray-100">
+            <div class="px-6 md:px-7 pb-6 pt-4 border-t border-gray-100">
               <h4
-                class="font-bold text-gray-900 text-sm mb-4 uppercase border-b pb-2 border-gray-100"
+                class="font-bold text-gray-900 text-sm mb-2 uppercase border-b pb-2 border-gray-100"
               >
                 Choose Your Kitesurf Course
               </h4>
-              <div class="bg-[#F8F6FB] border border-[#E5DFF0] rounded-xl p-5">
+              <div class="bg-[#F8F6FB] border border-[#E5DFF0] rounded-xl p-4">
                 <div class="grid sm:grid-cols-2 gap-4 mb-1">
                   <div>
                     <label
@@ -1044,19 +1128,19 @@
                     </p>
                   </div>
                 </div>
-                <p class="text-xs text-gray-400 mt-3 mb-4">
+                <p class="text-xs text-gray-400 mt-2 mb-2">
                   If <strong>2 people</strong> book together, we
                   automatically apply a <strong>10% couples discount</strong>
                   to the total. Nohemi and her team will confirm the final
                   quote with you based on date and availability.
                 </p>
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                   <div class="price-tag">
                     <span class="price-label">Estimated total</span>
                     <span id="kite-total-preview" class="price-value">$750.000 COP</span>
                   </div>
                   <div
-                    class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                    class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
                   >
                     <button
                       onclick="addKiteCourseToCart(this)"
@@ -1079,13 +1163,13 @@
           <!-- Experiencia 4: Recorrido Gastronómico por la Ciudad -->
           <div
             data-category="gastronomia" data-price="140000" data-order="4"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
           >
             <div class="md:w-1/2 relative">
               <img
                 src="../images/cocinacaribe.jpg"
                 alt="Gastronomic tour through the historic center of Cartagena"
-                class="w-full h-full object-cover min-h-[400px]"
+                class="w-full h-64 md:h-[420px] object-cover"
               />
               <div
                 class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
@@ -1093,103 +1177,88 @@
                 New
               </div>
             </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Gastronomic Tour of the City
               </h3>
               <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
               >
                 <i class="fas fa-shield-heart text-[#C9A227]"></i>
                 Personally guided by Nohemi, with the agency's safety
                 backing
               </div>
-              <p class="text-gray-600 mb-4 leading-relaxed">
-                Walk through the streets of the Historic Center and
-                Getsemaní, tasting the best of local street food: arepas de
-                huevo, butifarras, carimañolas, tropical fruits, fresh
-                juices, and traditional sweets. Nohemi and her team
-                accompany you at every stop, explain what you're eating and
-                where each recipe comes from, and make sure you always pay
-                the fair price, with no surprises or shady currency
-                exchanges.
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
+                Walk through the Historic Center and Getsemaní tasting
+                arepas de huevo, butifarras, carimañolas, and traditional
+                sweets. Nohemi and her team accompany you at every stop,
+                always making sure you pay the fair price, with no
+                surprises.
               </p>
 
-              <div class="mb-4">
+              <div class="mb-2">
                 <span class="text-xs font-bold text-gray-500 uppercase"
                   >Includes:</span
                 >
-                <div class="flex flex-wrap gap-2 mt-2">
+                <div class="flex flex-wrap gap-1.5 mt-1.5">
                   <span
-                    class="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full"
+                    class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-0.5 rounded-full"
                     >Guided walking tour</span
                   >
                   <span
-                    class="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full"
+                    class="bg-yellow-100 text-yellow-700 text-xs px-2.5 py-0.5 rounded-full"
                     >Tastings included</span
                   >
                   <span
-                    class="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full"
+                    class="bg-orange-100 text-orange-700 text-xs px-2.5 py-0.5 rounded-full"
                     >Local history and culture</span
                   >
                   <span
-                    class="bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full"
+                    class="bg-orange-100 text-orange-700 text-xs px-2.5 py-0.5 rounded-full"
                     >Small or private groups</span
                   >
                 </div>
               </div>
 
-              <div class="bg-yellow-50 p-4 rounded-lg">
-                <h4 class="font-bold text-yellow-900 text-sm mb-1">
-                  Why do it with Nohemi:
-                </h4>
-                <p class="text-sm text-yellow-800">
-                  We've known the vendors and owners at each stop for years.
-                  That means fair portions, real prices in Colombian pesos,
-                  and the peace of mind of exploring the city knowing
-                  someone you can trust is walking alongside you.
-                </p>
-              </div>
-
-              <div class="mt-4">
+              <div class="mb-2">
                 <span class="text-xs font-bold text-gray-500 uppercase">
                   Reference prices per bite:
                 </span>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2">
-                  <div class="flex items-center justify-between gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm text-gray-700">
+                <div class="grid grid-cols-3 gap-1.5 mt-1.5">
+                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
                     <span>Egg arepa</span>
                     <span class="font-bold food-price-value whitespace-nowrap">$4.000</span>
                   </div>
-                  <div class="flex items-center justify-between gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm text-gray-700">
+                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
                     <span>Butifarra</span>
                     <span class="font-bold food-price-value whitespace-nowrap">$3.000</span>
                   </div>
-                  <div class="flex items-center justify-between gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm text-gray-700">
+                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
                     <span>Carimañola</span>
                     <span class="font-bold food-price-value whitespace-nowrap">$3.500</span>
                   </div>
-                  <div class="flex items-center justify-between gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm text-gray-700">
+                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
                     <span>Tropical fruit</span>
                     <span class="font-bold food-price-value whitespace-nowrap">$3.000</span>
                   </div>
-                  <div class="flex items-center justify-between gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm text-gray-700">
+                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
                     <span>Fresh juice</span>
                     <span class="font-bold food-price-value whitespace-nowrap">$5.000</span>
                   </div>
-                  <div class="flex items-center justify-between gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-sm text-gray-700">
+                  <div class="flex flex-col gap-0.5 bg-gray-50 border border-gray-100 rounded-lg px-2 py-1.5 text-xs text-gray-700">
                     <span>Traditional sweet</span>
                     <span class="font-bold food-price-value whitespace-nowrap">$2.500</span>
                   </div>
                 </div>
               </div>
 
-              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
                   <span class="price-label">Estimated price / person</span>
                   <span class="price-value">$140.000 COP</span>
                 </div>
                 <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
                 >
                   <button
                     onclick="addToCart('gastronomico', this)"
@@ -1217,7 +1286,7 @@
               <img
                 src="../images/foto%20(10).JPG"
                 alt="Diving and snorkeling on coral reefs near Cartagena"
-                class="w-full h-full object-cover min-h-[400px]"
+                class="w-full h-64 md:h-full object-cover"
               />
               <div
                 class="absolute top-4 left-4 bg-cyan-400 text-cyan-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
@@ -1225,33 +1294,30 @@
                 New
               </div>
             </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Diving and Snorkeling: An Underwater Adventure
               </h3>
               <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
               >
                 <i class="fas fa-shield-heart text-[#C9A227]"></i>
                 Personally guided by Nohemi, with the agency's safety
                 backing
               </div>
-              <p class="text-gray-600 mb-4 leading-relaxed">
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
                 Dive into the crystal-clear waters of the Corales del
-                Rosario y San Bernardo National Natural Park. We offer
-                <strong>guided diving tours</strong> with certified
-                instructors for all levels, and
-                <strong>private snorkeling with an expert guide</strong>
-                that takes you away from the crowds, straight to the most
-                spectacular reefs and coral gardens — always with Nohemi or
-                her trusted team coordinating every detail of your safety.
+                Rosario y San Bernardo National Natural Park with
+                <strong>guided diving</strong> for all levels or
+                <strong>private snorkeling</strong> straight to the best
+                reefs, always with Nohemi coordinating your safety.
               </p>
 
-              <div class="mb-4">
+              <div class="mb-2">
                 <span class="text-xs font-bold text-gray-500 uppercase"
                   >Includes:</span
                 >
-                <div class="flex flex-wrap gap-2 mt-2">
+                <div class="flex flex-wrap gap-2 mt-1.5">
                   <span
                     class="bg-cyan-100 text-cyan-700 text-xs px-3 py-1 rounded-full"
                     >Full gear</span
@@ -1271,24 +1337,71 @@
                 </div>
               </div>
 
-              <div class="bg-cyan-50 p-4 rounded-lg">
-                <h4 class="font-bold text-cyan-900 text-sm mb-1">
-                  For all levels:
+              <div class="mb-2">
+                <h4 class="font-bold text-gray-900 text-sm mb-1.5">
+                  <i class="fas fa-ship text-blue-600 mr-1"></i> Choose your
+                  boat for this tour:
                 </h4>
-                <p class="text-sm text-cyan-800">
-                  From first-time divers to certified divers, and families
-                  who prefer to explore the surface with a guide who knows
-                  the best reefs, the safest currents, and the marine life
-                  at each spot.
+                <div class="flex flex-wrap gap-2">
+                  <a href="fleet.html#bote-interceptor" class="boat-pick-btn">
+                    <img src="../images/interceptor%20(1).webp" alt="Interceptor 38' boat" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Interceptor 38'</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>16 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-laleona" class="boat-pick-btn">
+                    <img src="../images/la%20leona%20(1).webp" alt="La Leona yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">La Leona</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>26 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-oly" class="boat-pick-btn">
+                    <img src="../images/oly420%20(1).webp" alt="Oly 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Oly 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-vicky" class="boat-pick-btn">
+                    <img src="../images/vicky%20(1).webp" alt="Vicky 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Vicky 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                  <a href="fleet.html#bote-virginia" class="boat-pick-btn">
+                    <img src="../images/virginia%20(1).webp" alt="Virginia 420 yacht" class="boat-pick-img" loading="lazy" />
+                    <span class="boat-pick-text">
+                      <span class="boat-pick-name">Virginia 420</span>
+                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
+                    </span>
+                    <span class="boat-pick-info">More info</span>
+                  </a>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">
+                  <i class="fas fa-circle-info text-[#5B3A82] mr-1"></i>
+                  Per-person price is for the shared bay tour. Want full
+                  privacy? Rent the whole boat from
+                  <strong class="text-[#3F2761]">$3,200,000 COP</strong>
+                  (Interceptor, 16 pax) up to
+                  <strong class="text-[#3F2761]">$3,900,000 COP</strong>
+                  (Virginia 420, 28 pax).
                 </p>
               </div>
-              <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-4">
+
+              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
                   <span class="price-label">Estimated price / person</span>
                   <span class="price-value">$250.000 COP</span>
                 </div>
                 <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
                 >
                   <button
                     onclick="addToCart('buceo', this)"
@@ -1310,41 +1423,37 @@
           <!-- Experiencia 6: Sabores Locales -->
           <div
             data-category="gastronomia" data-price="150000" data-order="6"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
           >
             <div class="md:w-1/2">
               <img
                 src="../images/cartagenacentro.jpg"
                 alt="Local gastronomy and Caribbean flavors in Cartagena"
-                class="w-full h-full object-cover min-h-[400px]"
+                class="w-full h-64 md:h-[420px] object-cover"
               />
             </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Local Flavors at Home & Gastronomy
               </h3>
               <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-3 py-1.5 rounded-full mb-4 w-fit"
+                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
               >
                 <i class="fas fa-shield-heart text-[#C9A227]"></i>
                 Personally guided by Nohemi, with the agency's safety
                 backing
               </div>
-              <p class="text-gray-600 mb-6 leading-relaxed">
-                Enjoy banquets of traditional Colombian Caribbean dishes
-                (flavors from Afro-Colombian and indigenous Caribbean
-                culture) along with the fusion of Mediterranean and Arab
-                migration influences in Caribbean lands.
-                <br /><br />
+              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
+                Enjoy banquets of traditional Colombian Caribbean dishes,
+                with Afro-Colombian, indigenous and Arab-Mediterranean
+                influences.
                 <strong>A unique experience:</strong> hosted in local homes,
-                in harmony with their owners and customs. Immerse yourself
-                in the true culture of Cartagena with a culinary experience
-                prepared by local cooks in the privacy and warmth of a
-                traditional home.
+                in harmony with their owners, immersing you in the true
+                culture of Cartagena with food prepared by local cooks.
               </p>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <div class="border border-gray-200 p-4 rounded-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+                <div class="border border-gray-200 p-3 rounded-lg">
                   <h4 class="font-bold text-gray-900 text-sm mb-1">
                     <i class="fas fa-users text-orange-500 mr-2"></i>Perfect
                     for Groups
@@ -1354,7 +1463,7 @@
                     authenticity away from conventional tourism.
                   </p>
                 </div>
-                <div class="border border-gray-200 p-4 rounded-lg">
+                <div class="border border-gray-200 p-3 rounded-lg">
                   <h4 class="font-bold text-gray-900 text-sm mb-1">
                     <i class="fas fa-home text-orange-500 mr-2"></i>Atmosphere
                   </h4>
@@ -1364,13 +1473,13 @@
                 </div>
               </div>
 
-              <div class="mt-2 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div class="mt-1 flex flex-col sm:flex-row sm:items-center gap-4">
                 <div class="price-tag">
                   <span class="price-label">Estimated price / person</span>
                   <span class="price-value">$150.000 COP</span>
                 </div>
                 <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center"
+                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
                 >
                   <button
                     onclick="addToCart('sabores', this)"
@@ -1570,6 +1679,7 @@
           class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
         >
           <p>&copy; 2026 Dunas & Olas. All rights reserved.</p>
+          <p class="mt-1">RNT No. 187452</p>
           <div class="mt-2 space-x-3">
             <a href="policies.html" class="hover:text-white"
               >Terms and Conditions</a
@@ -1605,13 +1715,15 @@
         <h3 class="text-lg font-bold text-gray-900">
           <i class="fas fa-shopping-cart text-[#5B3A82] mr-2"></i>Your Cart
         </h3>
-        <button
-          onclick="toggleCart(false)"
-          class="text-gray-400 hover:text-gray-700 text-xl leading-none"
-          aria-label="Close cart"
-        >
-          <i class="fas fa-times"></i>
-        </button>
+        <div class="flex items-center gap-2">
+          <button
+            onclick="toggleCart(false)"
+            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+            aria-label="Close cart"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
       </div>
 
       <div id="cart-items" class="cart-items">
@@ -1619,6 +1731,15 @@
       </div>
 
       <div class="px-6 py-5 border-t border-gray-100">
+        <button
+          onclick="toggleCurrency()"
+          class="currency-switch-btn mb-4"
+          title="Cambiar moneda / Switch currency"
+        >
+          <i class="fas fa-money-bill-transfer"></i>
+          Change payment currency:
+          <span id="currency-toggle-cart" class="currency-switch-value"></span>
+        </button>
         <div class="flex items-center justify-between mb-4">
           <span class="text-sm font-bold uppercase text-gray-500"
             >Estimated total</span
@@ -1648,22 +1769,24 @@
           <h3 class="text-xl font-bold text-gray-900">
             Complete Your Booking
           </h3>
-          <div class="flex items-center gap-2">
-            <button
-              id="currency-toggle-checkout"
-              onclick="toggleCurrency()"
-              class="text-xs text-gray-500 hover:text-gray-800 font-semibold border border-gray-300 rounded-md px-2.5 py-1.5 transition hover:border-gray-400 hover:bg-gray-50"
-              title="Cambiar moneda / Switch currency"
-            ></button>
-            <button
-              onclick="closeCheckout()"
-              class="text-gray-400 hover:text-gray-700 text-xl leading-none"
-              aria-label="Close checkout"
-              >
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
+          <button
+            onclick="closeCheckout()"
+            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+            aria-label="Close checkout"
+            >
+            <i class="fas fa-times"></i>
+          </button>
         </div>
+
+        <button
+          onclick="toggleCurrency()"
+          class="currency-switch-btn mb-4"
+          title="Cambiar moneda / Switch currency"
+        >
+          <i class="fas fa-money-bill-transfer"></i>
+          Change payment currency:
+          <span id="currency-toggle-checkout" class="currency-switch-value"></span>
+        </button>
 
         <div
           id="checkout-summary"

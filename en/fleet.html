@@ -586,9 +586,6 @@
           <a href="index.html" class="text-gray-300 hover:text-white transition"
             >Home</a
           >
-          <a href="fleet.html" class="text-white border-b-2 border-blue-500"
-            >Fleet</a
-          >
           <a
             href="experiences.html"
             class="text-gray-300 hover:text-white transition"
@@ -601,12 +598,8 @@
             href="blog/index.html"
             class="text-gray-300 hover:text-white transition"
             >Blog</a
-          >          <button
-            id="currency-toggle"
-            onclick="toggleCurrency()"
-            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
-            title="Cambiar moneda / Switch currency"
-          ><span class="font-bold text-yellow-400">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">MXN</span></button> <a id="lang-switch" href="../fleet.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="Versión en español">ES</a>
+          >
+          <a id="lang-switch" href="../fleet.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="Versión en español">ES</a>
 
           <a
             href="experiences.html"
@@ -635,12 +628,6 @@
         href="index.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Home</a
-      >
-      <!-- CAMBIO: Flotilla -->
-      <a
-        href="fleet.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Our Fleet</a
       >
       <a
         href="experiences.html"
@@ -704,6 +691,7 @@
       <div id="fleet-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- Interceptor -->
         <div
+          id="bote-interceptor"
           data-capacity="small" data-capacity-num="16" data-price="3200000" data-order="1"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
@@ -783,6 +771,7 @@
 
         <!-- La Leona -->
         <div
+          id="bote-laleona"
           data-capacity="medium" data-capacity-num="26" data-price="3600000" data-order="2"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
@@ -859,6 +848,7 @@
 
         <!-- Oly 420 -->
         <div
+          id="bote-oly"
           data-capacity="large" data-capacity-num="28" data-price="3800000" data-order="3"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
@@ -935,6 +925,7 @@
 
         <!-- Vicky 420 -->
         <div
+          id="bote-vicky"
           data-capacity="large" data-capacity-num="28" data-price="3800000" data-order="4"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
@@ -1011,6 +1002,7 @@
 
         <!-- Virginia 420 -->
         <div
+          id="bote-virginia"
           data-capacity="large" data-capacity-num="28" data-price="3900000" data-order="5"
           class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden flex flex-col hover:shadow-2xl transition duration-300"
         >
@@ -1255,6 +1247,7 @@
           class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
         >
           <p>&copy; 2026 Dunas & Olas. All rights reserved.</p>
+          <p class="mt-1">RNT No. 187452</p>
           <div class="mt-2 space-x-3">
             <a href="policies.html" class="hover:text-white"
               >Terms and Conditions</a
@@ -1391,13 +1384,15 @@
         <h3 class="text-lg font-bold text-gray-900">
           <i class="fas fa-shopping-cart text-[#5B3A82] mr-2"></i>Your Cart
         </h3>
-        <button
-          onclick="toggleCart(false)"
-          class="text-gray-400 hover:text-gray-700 text-xl leading-none"
-          aria-label="Close cart"
-        >
-          <i class="fas fa-times"></i>
-        </button>
+        <div class="flex items-center gap-2">
+          <button
+            onclick="toggleCart(false)"
+            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+            aria-label="Close cart"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
       </div>
 
       <div id="cart-items" class="cart-items">
@@ -1405,6 +1400,15 @@
       </div>
 
       <div class="px-6 py-5 border-t border-gray-100">
+        <button
+          onclick="toggleCurrency()"
+          class="currency-switch-btn mb-4"
+          title="Cambiar moneda / Switch currency"
+        >
+          <i class="fas fa-money-bill-transfer"></i>
+          Change payment currency:
+          <span id="currency-toggle-cart" class="currency-switch-value"></span>
+        </button>
         <div class="flex items-center justify-between mb-4">
           <span class="text-sm font-bold uppercase text-gray-500"
             >Estimated total</span
@@ -1432,22 +1436,24 @@
       <div class="checkout-modal">
         <div class="flex items-center justify-between mb-6">
           <h3 class="text-xl font-bold text-gray-900">Complete Your Booking</h3>
-          <div class="flex items-center gap-2">
-            <button
-              id="currency-toggle-checkout"
-              onclick="toggleCurrency()"
-              class="text-xs text-gray-500 hover:text-gray-800 font-semibold border border-gray-300 rounded-md px-2.5 py-1.5 transition hover:border-gray-400 hover:bg-gray-50"
-              title="Cambiar moneda / Switch currency"
-            ></button>
-            <button
-              onclick="closeCheckout()"
-              class="text-gray-400 hover:text-gray-700 text-xl leading-none"
-              aria-label="Close checkout"
-              >
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
+          <button
+            onclick="closeCheckout()"
+            class="text-gray-400 hover:text-gray-700 text-xl leading-none"
+            aria-label="Close checkout"
+            >
+            <i class="fas fa-times"></i>
+          </button>
         </div>
+
+        <button
+          onclick="toggleCurrency()"
+          class="currency-switch-btn mb-4"
+          title="Cambiar moneda / Switch currency"
+        >
+          <i class="fas fa-money-bill-transfer"></i>
+          Change payment currency:
+          <span id="currency-toggle-checkout" class="currency-switch-value"></span>
+        </button>
 
         <div
           id="checkout-summary"
@@ -1612,6 +1618,21 @@
           });
           sorted.forEach(function (card) { grid.appendChild(card); });
         });
+      })();
+    </script>
+
+    <!-- Resalta el bote elegido al llegar desde "More info" en experiencias -->
+    <script>
+      (function () {
+        if (location.hash.indexOf("#bote-") !== 0) return;
+        var target = document.querySelector(location.hash);
+        if (!target) return;
+        setTimeout(function () {
+          target.classList.add("boat-highlight");
+          setTimeout(function () {
+            target.classList.remove("boat-highlight");
+          }, 3600);
+        }, 300);
       })();
     </script>
 

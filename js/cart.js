@@ -78,6 +78,43 @@ const TOURS = {
     unit: "persona",
   },
 
+  /* ---- Kitesurf: aventuras y alquileres ---- */
+  kitesurf_wingfoil: {
+    name: "Kitesurf — Clase de Wing Foil (1 hora)",
+    price: 400000,
+    unit: "hora",
+  },
+  kitesurf_sup: {
+    name: "Alquiler de Tabla SUP (Stand Up Paddle)",
+    price: 100000,
+    unit: "hora",
+  },
+  kitesurf_downwind: {
+    name: "Kitesurf — Expedición Downwind (Barú-Rosario)",
+    price: 1250000,
+    unit: "persona",
+  },
+  kitesurf_fotos: {
+    name: "Kitesurf — Sesión de Fotos Profesional",
+    price: 150000,
+    unit: "sesión",
+  },
+  kitesurf_alquiler_supervisado: {
+    name: "Kitesurf — Alquiler de Equipo + Supervisión",
+    price: 250000,
+    unit: "hora",
+  },
+  kitesurf_alquiler_equipo: {
+    name: "Kitesurf — Alquiler de Equipo Completo",
+    price: 200000,
+    unit: "hora",
+  },
+  kitesurf_supervision: {
+    name: "Kitesurf — Supervisión en Playa (equipo propio)",
+    price: 100000,
+    unit: "hora",
+  },
+
   /* ---- Flotilla: alquiler de botes (precio por día) ---- */
   bote_interceptor: {
     name: "Alquiler Interceptor 38'",

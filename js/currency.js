@@ -116,7 +116,7 @@
         ? '<span class="font-bold text-yellow-400">' + code + "</span>"
         : '<span class="opacity-50">' + code + "</span>";
     }).join('<span class="opacity-40 mx-0.5">/</span>');
-    ["currency-toggle", "currency-toggle-checkout"].forEach(function (id) {
+    ["currency-toggle", "currency-toggle-checkout", "currency-toggle-cart"].forEach(function (id) {
       var btn = document.getElementById(id);
       if (btn) btn.innerHTML = html;
     });

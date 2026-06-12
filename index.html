@@ -495,11 +495,6 @@
             >Inicio</a
           >
           <a
-            href="fleet.html"
-            class="text-white hover:text-blue-400 transition drop-shadow-md"
-            >Flotilla</a
-          >
-          <a
             href="experiences.html"
             class="text-white hover:text-blue-400 transition drop-shadow-md"
             >Experiencias</a
@@ -513,12 +508,8 @@
             href="blog/index.html"
             class="text-white hover:text-blue-400 transition drop-shadow-md"
             >Blog</a
-          >          <button
-            id="currency-toggle"
-            onclick="toggleCurrency()"
-            class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1"
-            title="Cambiar moneda / Switch currency"
-          ><span class="font-bold text-yellow-400">COP</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">USD</span><span class="opacity-40 mx-0.5">/</span><span class="opacity-50">MXN</span></button> <a id="lang-switch" href="en/index.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
+          >
+          <a id="lang-switch" href="en/index.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 mr-1" title="English version">EN</a>
 
           <a
             href="experiences.html"
@@ -544,11 +535,6 @@
         href="index.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Inicio</a
-      >
-      <a
-        href="fleet.html"
-        class="text-2xl font-bold text-white hover:text-blue-400"
-        >Nuestra Flotilla</a
       >
       <a
         href="experiences.html"
@@ -641,16 +627,16 @@
           lujo.
         </p>
         <div class="flex flex-col md:flex-row gap-4 justify-center">
-          <a href="fleet.html" class="btn-primary text-lg px-10 py-4"
-            >Ver Flotilla</a
+          <a href="experiences.html" class="btn-primary text-lg px-10 py-4"
+            >Ver Experiencias</a
           >
-          <a
-            href="experiences.html"
-            class="px-10 py-4 rounded-lg border border-white/30 hover:bg-white/10 backdrop-blur-sm text-white font-semibold transition duration-300"
-          >
-            Ver Experiencias
-          </a>
         </div>
+        <p class="mt-5 text-sm text-white/70">
+          ¿Buscas alquilar un bote?
+          <a href="fleet.html" class="underline hover:text-white transition"
+            >Conoce nuestra flotilla</a
+          >
+        </p>
       </div>
 
       <div
@@ -673,8 +659,8 @@
             <span class="text-xs font-semibold text-gray-700">4.9/5 en experiencia de viajeros</span>
           </div>
           <div class="flex flex-col items-center gap-1">
-            <i class="fas fa-anchor text-blue-600"></i>
-            <span class="text-xs font-semibold text-gray-700">Embarcaciones registradas DIMAR</span>
+            <i class="fas fa-user-friends text-blue-600"></i>
+            <span class="text-xs font-semibold text-gray-700">Acompañamiento personal de Nohemi en cada tour</span>
           </div>
           <div class="flex flex-col items-center gap-1">
             <i class="fas fa-lock text-blue-600"></i>
@@ -773,132 +759,161 @@
       </div>
     </section>
 
-    <!-- Flotilla Destacada -->
-    <section class="py-20 bg-white">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-900">
-            Nuestra Flotilla Destacada
-          </h2>
-          <p class="text-gray-500 mt-2">
-            Botes deportivos y de lujo para cada ocasión.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div
-            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-80"
-          >
-            <img
-              src="images/la%20leona%20(1).webp"
-              alt="Yate La Leona, alquiler de botes de lujo en Cartagena"
-              loading="lazy"
-              class="w-full h-full object-cover transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
-            ></div>
-            <div class="absolute bottom-0 left-0 p-8 text-white">
-              <h3 class="text-2xl font-bold">La Leona</h3>
-              <p class="text-sm opacity-90">Ideal para grupos y fiestas.</p>
-            </div>
-          </div>
-          <div
-            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-80"
-          >
-            <img
-              src="images/oly.JPG"
-              alt="Yate Oly 420 para pasadías privadas en Cartagena"
-              loading="lazy"
-              class="w-full h-full object-cover transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
-            ></div>
-            <div class="absolute bottom-0 left-0 p-8 text-white">
-              <h3 class="text-2xl font-bold">Oly 420</h3>
-              <p class="text-sm opacity-90">Velocidad y estilo deportivo.</p>
-            </div>
-          </div>
-          <div
-            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-80"
-          >
-            <img
-              src="images/virginia%20(1).webp"
-              alt="Yate Virginia 420, charter náutico en Cartagena de Indias"
-              loading="lazy"
-              class="w-full h-full object-cover transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
-            ></div>
-            <div class="absolute bottom-0 left-0 p-8 text-white">
-              <h3 class="text-2xl font-bold">Virginia</h3>
-              <p class="text-sm opacity-90">Elegancia y confort premium.</p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-10">
-          <a href="fleet.html" class="btn-outline">Ver toda la flotilla</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Experiencias -->
     <section class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900">Vive la Experiencia</h2>
-          <p class="text-gray-500 mt-2">Momentos únicos en el Caribe.</p>
+          <p class="text-gray-500 mt-2">
+            Momentos únicos en el Caribe. Elige tu aventura.
+          </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div
-            class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col md:flex-row h-auto md:h-64"
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
-            <div class="md:w-1/2">
-              <img
-                src="images/acuario.jpg"
-                alt="Pasadía a las Islas del Rosario desde Cartagena"
-                loading="lazy"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="font-bold text-xl mb-2">Pasadía Islas del Rosario</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Un día completo navegando por aguas cristalinas y los mejores
-                sitios para disfrutar, bailar o descansar (hoteles, cabañas,
-                restaurantes, comunidades nativas).
+            <img
+              src="images/cartagenasunset.jpg"
+              alt="Atardecer en bote por la Bahía de Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-bold">Atardeceres Mágicos (Bay Tour)</h3>
+              <p class="text-sm opacity-90 mb-2">
+                Navega bajo el mágico ocaso del sol caribe con la mejor vista
+                de la ciudad.
               </p>
               <a
                 href="experiences.html"
-                class="text-blue-600 font-bold text-sm hover:underline"
+                class="text-yellow-400 font-bold text-sm hover:underline"
                 >Ver detalles</a
               >
             </div>
           </div>
           <div
-            class="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition flex flex-col md:flex-row h-auto md:h-64"
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
-            <div class="md:w-1/2">
-              <img
-                src="images/cartagenasunset.jpg"
-                alt="Atardecer en bote por la Bahía de Cartagena"
-                loading="lazy"
-                class="w-full h-full object-cover"
-              />
-            </div>
-            <div class="p-8 md:w-1/2 flex flex-col justify-center">
-              <h3 class="font-bold text-xl mb-2">Atardeceres Mágicos</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Despide el día con la mejor vista de nuestra ciudad, (MI
-                CORRALITO DE PIEDRA) ❤️, navegando bajo el mágico ocaso de un
-                sol caribe.
+            <img
+              src="images/acuario.jpg"
+              alt="Pasadía a las Islas del Rosario desde Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-bold">Pasadía Islas del Rosario</h3>
+              <p class="text-sm opacity-90 mb-2">
+                Un día completo en aguas cristalinas, playas y comunidades
+                nativas.
               </p>
               <a
                 href="experiences.html"
-                class="text-blue-600 font-bold text-sm hover:underline"
+                class="text-yellow-400 font-bold text-sm hover:underline"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
+          >
+            <img
+              src="images/cartagena.jpg"
+              alt="Kitesurf en las playas de Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-bold">Kitesurf y Deportes Acuáticos</h3>
+              <p class="text-sm opacity-90 mb-2">
+                Adrenalina y diversión en las mejores playas para practicar
+                kitesurf.
+              </p>
+              <a
+                href="experiences.html"
+                class="text-yellow-400 font-bold text-sm hover:underline"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
+          >
+            <img
+              src="images/foto%20(10).JPG"
+              alt="Buceo y snorkel en arrecifes de coral cerca de Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-bold">Buceo y Snorkel</h3>
+              <p class="text-sm opacity-90 mb-2">
+                Explora los arrecifes de coral y la vida marina del Caribe.
+              </p>
+              <a
+                href="experiences.html"
+                class="text-yellow-400 font-bold text-sm hover:underline"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
+          >
+            <img
+              src="images/cocinacaribe.jpg"
+              alt="Recorrido gastronómico por el centro histórico de Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-bold">Recorrido Gastronómico</h3>
+              <p class="text-sm opacity-90 mb-2">
+                Descubre los sabores y la historia del centro histórico de
+                Cartagena.
+              </p>
+              <a
+                href="experiences.html"
+                class="text-yellow-400 font-bold text-sm hover:underline"
+                >Ver detalles</a
+              >
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
+          >
+            <img
+              src="images/cartagenacentro.jpg"
+              alt="Gastronomía local y sabores del Caribe en Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-6 text-white">
+              <h3 class="text-xl font-bold">Sabores Locales</h3>
+              <p class="text-sm opacity-90 mb-2">
+                Vive la gastronomía local auténtica como en casa.
+              </p>
+              <a
+                href="experiences.html"
+                class="text-yellow-400 font-bold text-sm hover:underline"
                 >Ver detalles</a
               >
             </div>
@@ -909,6 +924,76 @@
           <a href="experiences.html" class="btn-primary"
             >Conoce todas nuestras experiencias</a
           >
+        </div>
+      </div>
+    </section>
+
+    <!-- Flotilla -->
+    <section class="py-14 bg-white border-t border-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold text-gray-900">Nuestra Flotilla</h2>
+          <p class="text-gray-500 mt-2 text-sm">
+            ¿Prefieres tu propio bote? Alquila yates y botes deportivos para
+            tu tour.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-56"
+          >
+            <img
+              src="images/la%20leona%20(1).webp"
+              alt="Yate La Leona, alquiler de botes de lujo en Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-5 text-white">
+              <h3 class="text-lg font-bold">La Leona</h3>
+              <p class="text-xs opacity-90">Ideal para grupos y fiestas.</p>
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-56"
+          >
+            <img
+              src="images/oly.JPG"
+              alt="Yate Oly 420 para pasadías privadas en Cartagena"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-5 text-white">
+              <h3 class="text-lg font-bold">Oly 420</h3>
+              <p class="text-xs opacity-90">Velocidad y estilo deportivo.</p>
+            </div>
+          </div>
+          <div
+            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-56"
+          >
+            <img
+              src="images/virginia%20(1).webp"
+              alt="Yate Virginia 420, charter náutico en Cartagena de Indias"
+              loading="lazy"
+              class="w-full h-full object-cover transition duration-700"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-5 text-white">
+              <h3 class="text-lg font-bold">Virginia</h3>
+              <p class="text-xs opacity-90">Elegancia y confort premium.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="fleet.html" class="btn-outline">Ver toda la flotilla</a>
         </div>
       </div>
     </section>
@@ -1537,6 +1622,7 @@
           class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center"
         >
           <p>&copy; 2026 Dunas & Olas. Todos los derechos reservados.</p>
+          <p class="mt-1">RNT No. 187452</p>
           <div class="mt-2 space-x-3">
             <a href="policies.html" class="hover:text-white"
               >Términos y Condiciones</a
