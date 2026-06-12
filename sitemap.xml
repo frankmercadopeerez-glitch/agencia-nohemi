@@ -179,6 +179,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/cartagena-vs-cancun/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-vs-cancun/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- English version -->
   <!-- Páginas principales (English) -->
@@ -356,6 +396,46 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-con-ninos/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-con-ninos/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-con-ninos/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/cartagena-vs-cancun/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-vs-cancun/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

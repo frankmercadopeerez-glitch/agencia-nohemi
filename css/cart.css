@@ -189,6 +189,7 @@
   font-size: 1.45rem;
   font-weight: 800;
   color: #3f2761;
+  white-space: nowrap;
 }
 
 /* Botón estilo WhatsApp para agregar botes al carrito */
