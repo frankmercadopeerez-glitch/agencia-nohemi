@@ -309,8 +309,8 @@
       } /* Detener animación si menú abierto */
 
       .whatsapp-icon {
-        width: 65px;
-        height: 65px;
+        width: 58px;
+        height: 58px;
         filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
       }
 
@@ -330,15 +330,17 @@
 
       @media (max-width: 768px) {
         .whatsapp-container {
-          bottom: 20px;
-          right: 20px;
+          bottom: 14px;
+          right: 14px;
         }
-        .whatsapp-float {
-          transform: scale(0.9);
+        .whatsapp-icon {
+          width: 40px;
+          height: 40px;
         }
         .whatsapp-text {
-          font-size: 10px;
-          padding: 3px 10px;
+          font-size: 8px;
+          padding: 2px 7px;
+          margin-top: 4px;
         }
       }
 
@@ -591,6 +593,11 @@
             class="text-gray-300 hover:text-white transition"
             >Experiencias</a
           >
+          <a
+            href="kitesurf.html"
+            class="text-gray-300 hover:text-white transition"
+            >Kitesurf</a
+          >
           <a href="about.html" class="text-gray-300 hover:text-white transition"
             >Nosotros</a
           >
@@ -633,6 +640,11 @@
         href="experiences.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Experiencias</a
+      >
+      <a
+        href="kitesurf.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Kitesurf</a
       >
       <a
         href="about.html"
@@ -1170,6 +1182,9 @@
                 >
               </li>
               <li>
+                <a href="kitesurf.html" class="hover:text-blue-400">Kitesurf</a>
+              </li>
+              <li>
                 <a href="about.html" class="hover:text-blue-400">Nosotros</a>
               </li>
             </ul>
@@ -1214,9 +1229,9 @@
                 />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@mexicanaencartagena"
                 target="_blank"
-                title="Próximamente: TikTok de Dunas & Olas"
+                title="Síguenos en TikTok: Mexicana en Cartagena" rel="noopener"
                 class="social-badge transition hover:opacity-80"
                 style="background:#000000;"
               >
@@ -1574,6 +1589,103 @@
           "_blank"
         );
       }
+    </script>
+
+    <!-- Ficha técnica de cada bote (modal "Ver Ficha") -->
+    <script>
+      const boatData = {
+        interceptor: {
+          title: "Interceptor 38'",
+          desc: "Perfecta para compartir con familiares. Cojinería de lujo y baño interno.",
+          specs: [
+            "Eslora: 38 pies",
+            "Motores: 2 Yamaha 300 HP",
+            "Capacidad: 16 pasajeros",
+            "Baño interno",
+            "Cojinería de lujo",
+          ],
+          whatsapp:
+            "Hola, quiero más información sobre el bote Interceptor (38 pies) 🚤",
+        },
+        laleona: {
+          title: "La Leona",
+          desc: "Cómoda para eventos corporativos. Amplias áreas de estar.",
+          specs: [
+            "Eslora: 42 pies",
+            "Motores: 2 Yamaha 300 HP",
+            "Capacidad: 26 pasajeros",
+            "Amplias áreas de estar",
+            "Ideal para eventos corporativos",
+          ],
+          whatsapp: "Hola, quiero más información sobre el bote La Leona 🚤",
+        },
+        oly: {
+          title: "Oly 420",
+          desc: "Perfecta para excursiones. Escaleras cómodas y asoleadoras.",
+          specs: [
+            "Eslora: 42 pies",
+            "Motores: 2 Yamaha 300 HP",
+            "Capacidad: 28 pasajeros",
+            "Escaleras cómodas",
+            "Asoleadoras",
+          ],
+          whatsapp: "Hola, quiero más información sobre el bote Oly 420 🚤",
+        },
+        vicky: {
+          title: "Vicky 420",
+          desc: "Cojinería de lujo y amplias áreas de descanso.",
+          specs: [
+            "Eslora: 42 pies",
+            "Motores: 2 Yamaha 300 HP",
+            "Capacidad: 28 pasajeros",
+            "Cojinería de lujo",
+            "Amplias áreas de descanso",
+          ],
+          whatsapp: "Hola, quiero más información sobre el bote Vicky 420 🚤",
+        },
+        virginia: {
+          title: "Virginia 420",
+          desc: "Diseñada para grupos grandes con todo el equipamiento.",
+          specs: [
+            "Eslora: 42 pies",
+            "Motores: 2 Yamaha 300 HP",
+            "Capacidad: 28 pasajeros",
+            "Equipamiento completo",
+            "Diseñada para grupos grandes",
+          ],
+          whatsapp:
+            "Hola, quiero más información sobre el bote Virginia 420 🚤",
+        },
+      };
+
+      function openModal(boatId) {
+        const data = boatData[boatId];
+        if (!data) return;
+        document.getElementById("modalTitle").textContent = data.title;
+        document.getElementById("modalDesc").textContent = data.desc;
+        const specsList = document.getElementById("modalSpecs");
+        specsList.innerHTML = "";
+        data.specs.forEach(function (spec) {
+          const li = document.createElement("li");
+          li.className = "flex items-center";
+          li.innerHTML =
+            '<i class="fas fa-check w-6 text-blue-500"></i> ' + spec;
+          specsList.appendChild(li);
+        });
+        document.getElementById("modalWhatsapp").href =
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(data.whatsapp)}`;
+        document.getElementById("boatModal").classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeModal() {
+        document.getElementById("boatModal").classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+      });
     </script>
 
     <!-- Filtro y orden de la flotilla -->

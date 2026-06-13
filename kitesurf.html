@@ -9,6 +9,10 @@
       name="description"
       content="Aprende kitesurf en La Boquilla, Cartagena, con instructores certificados. Cursos para todos los niveles, alquiler de equipo, wing foil, SUP, fotos profesionales y expediciones downwind. Reserva en línea o por WhatsApp."
     />
+    <meta
+      name="keywords"
+      content="kitesurf Cartagena, clases de kitesurf Cartagena, escuela de kitesurf La Boquilla, curso de kitesurf Cartagena, alquiler de equipo de kitesurf Cartagena, kite Cartagena, wing foil Cartagena, kitesurf Colombia, kitesurf La Boquilla, instructores de kitesurf certificados Cartagena"
+    />
     <title>Kitesurf en Cartagena: Cursos, Clases y Alquiler de Equipo | Dunas & Olas</title>
     <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
     <!-- Para obtenerlo: analytics.google.com → Crear propiedad → Flujo de datos web -->
@@ -217,8 +221,8 @@
         animation: none;
       }
       .whatsapp-icon {
-        width: 65px;
-        height: 65px;
+        width: 58px;
+        height: 58px;
         filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
       }
       .whatsapp-text {
@@ -236,15 +240,17 @@
 
       @media (max-width: 768px) {
         .whatsapp-container {
-          bottom: 20px;
-          right: 20px;
+          bottom: 14px;
+          right: 14px;
         }
-        .whatsapp-float {
-          transform: scale(0.9);
+        .whatsapp-icon {
+          width: 40px;
+          height: 40px;
         }
         .whatsapp-text {
-          font-size: 10px;
-          padding: 3px 10px;
+          font-size: 8px;
+          padding: 2px 7px;
+          margin-top: 4px;
         }
       }
 
@@ -591,7 +597,371 @@
         </p>
 
         <div class="grid md:grid-cols-2 gap-8" id="kitesurf-grid">
-          <!-- KITESURF_CARDS_PLACEHOLDER -->
+          <!-- 1. Clase de Iniciación -->
+          <div data-category="curso" data-price="750000" data-order="1" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/class.webp" alt="Clase de iniciación de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Clase de Iniciación (2 horas)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Perfecta para quienes nunca han practicado kitesurf. Aprende los fundamentos: control de cometa en tierra, seguridad, lectura del viento y tus primeros intentos en el agua, con un instructor certificado.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">2 horas</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Para principiantes</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Equipo incluido</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$750.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_iniciacion', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Clase de Iniciación de Kitesurf (2 horas).')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Clase de Refuerzo -->
+          <div data-category="curso" data-price="400000" data-order="2" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/kite.webp" alt="Clase de refuerzo de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Clase de Refuerzo (1 hora)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Ideal si ya tomaste una clase de iniciación y quieres practicar y afinar tu técnica con la supervisión de un instructor certificado.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">1 hora</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Nivel intermedio</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Equipo incluido</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$400.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_refuerzo', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Clase de Refuerzo de Kitesurf (1 hora).')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Clase Grupal -->
+          <div data-category="curso" data-price="320000" data-order="3" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/grupal.webp" alt="Clase grupal de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Clase Grupal</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Aprende junto a amigos o familia en un ambiente divertido y económico, con la misma seguridad y atención personalizada de nuestros instructores certificados.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Grupos de 2 a 4</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Para principiantes</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Equipo incluido</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$320.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_grupal', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Clase Grupal de Kitesurf.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Kite Foil -->
+          <div data-category="curso" data-price="570000" data-order="4" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/foil.webp" alt="Sesión de kite foil en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Kite Foil (sesión)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Para riders con experiencia que quieren dar el salto al kite foil: vuela sobre el agua con menos viento y mayor velocidad gracias a la tabla con quilla hidrodinámica.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Nivel avanzado</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Equipo de foil incluido</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Sesión personalizada</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$570.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_foil', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la sesión de Kite Foil.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Curso Completo Rider -->
+          <div data-category="curso" data-price="2850000" data-order="5" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col relative">
+            <span class="absolute top-3 right-3 bg-yellow-500 text-yellow-900 text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full shadow z-10">Más Popular</span>
+            <img src="images/kitesurf/pro.webp" alt="Curso completo Rider de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Curso Completo "Rider" (8 horas)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Nuestro curso insignia: de cero a independiente. 8 horas distribuidas en varios días para dominar el manejo de cometa, body drag, water start y tus primeras "rides".
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">8 horas</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Curso completo</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Certificación incluida</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$2.850.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_rider', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre el Curso Completo Rider de Kitesurf (8 horas).')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Curso Avanzado -->
+          <div data-category="curso" data-price="3450000" data-order="6" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/avanzado.webp" alt="Curso avanzado de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Curso Avanzado (10 horas)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Perfecciona transiciones, saltos y trucos básicos con coaching personalizado de nuestros instructores certificados, ex oficiales de la Armada.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">10 horas</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Nivel avanzado</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Coaching personalizado</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$3.450.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_avanzado', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre el Curso Avanzado de Kitesurf (10 horas).')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Experiencia Elite VIP -->
+          <div data-category="curso" data-price="3990000" data-order="7" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/salto.webp" alt="Experiencia Elite VIP de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Experiencia Elite VIP (12 horas)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                La experiencia más exclusiva: 12 horas de entrenamiento personalizado, equipo premium, transporte privado y fotos/video profesional de tu sesión.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">12 horas</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">VIP</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Transporte privado</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Foto y video incluido</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$3.990.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_elite', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Experiencia Elite VIP de Kitesurf (12 horas).')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Wing Foil -->
+          <div data-category="curso" data-price="400000" data-order="8" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/transicion.webp" alt="Clase de wing foil en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Clase de Wing Foil (1 hora)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Descubre el wing foil, la disciplina más nueva de los deportes de viento: combina un ala inflable con una tabla de foil para volar literalmente sobre el agua.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">1 hora</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Todos los niveles</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Equipo incluido</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / hora</span>
+                  <span class="price-value">$400.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_wingfoil', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Clase de Wing Foil (1 hora).')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Alquiler de Tabla SUP -->
+          <div data-category="alquiler" data-price="100000" data-order="9" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/sup.webp" alt="Alquiler de tabla SUP en La Boquilla, Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Alquiler de Tabla SUP (Stand Up Paddle)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Explora la costa de La Boquilla a tu ritmo en tabla de Stand Up Paddle. Incluye remo, chaleco salvavidas y una breve inducción de manejo.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Por hora</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Incluye chaleco</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Apto para principiantes</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / hora</span>
+                  <span class="price-value">$100.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_sup', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre el alquiler de Tabla SUP.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Expedición Downwind -->
+          <div data-category="aventura" data-price="1250000" data-order="10" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/downwind.webp" alt="Expedición downwind de kitesurf entre Barú y las Islas del Rosario" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Expedición Downwind (Barú-Rosario)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Para riders con experiencia: una expedición downwind a lo largo de la costa entre Barú y las Islas del Rosario, con lancha de apoyo y guía durante todo el recorrido.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Nivel intermedio-avanzado</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Lancha de apoyo</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Guía incluido</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / persona</span>
+                  <span class="price-value">$1.250.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_downwind', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Expedición Downwind Barú-Rosario.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Sesión de Fotos Profesional -->
+          <div data-category="aventura" data-price="150000" data-order="11" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/jump.webp" alt="Sesión de fotos profesional de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Sesión de Fotos Profesional</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Inmortaliza tus saltos y trucos con un fotógrafo profesional en la playa. Recibe tus mejores fotos editadas en alta resolución.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">1 sesión</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Fotógrafo profesional</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Fotos editadas en HD</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / sesión</span>
+                  <span class="price-value">$150.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_fotos', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Sesión de Fotos Profesional de Kitesurf.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Alquiler de Equipo + Supervisión -->
+          <div data-category="alquiler" data-price="250000" data-order="12" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/gear.webp" alt="Alquiler de equipo de kitesurf con supervisión en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Alquiler de Equipo + Supervisión</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Alquila equipo de kitesurf de última generación con la supervisión en playa de uno de nuestros instructores, ideal si ya tienes experiencia pero quieres respaldo.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Por hora</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Equipo premium</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Supervisión incluida</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / hora</span>
+                  <span class="price-value">$250.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_alquiler_supervisado', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre el Alquiler de Equipo de Kitesurf con Supervisión.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Alquiler de Equipo Completo -->
+          <div data-category="alquiler" data-price="200000" data-order="13" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/pareja.webp" alt="Alquiler de equipo completo de kitesurf en Cartagena" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Alquiler de Equipo Completo</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                Si ya eres independiente, alquila cometa, tabla, arnés y traje de neopreno para practicar libremente en La Boquilla.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Por hora</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Cometa, tabla y arnés</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Para riders independientes</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / hora</span>
+                  <span class="price-value">$200.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_alquiler_equipo', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre el Alquiler de Equipo Completo de Kitesurf.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14. Supervisión en Playa -->
+          <div data-category="alquiler" data-price="100000" data-order="14" class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col">
+            <img src="images/kitesurf/truco.webp" alt="Supervisión en playa para riders de kitesurf con equipo propio" class="w-full h-56 object-cover" loading="lazy" />
+            <div class="p-5 md:p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Supervisión en Playa (equipo propio)</h3>
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                ¿Tienes tu propio equipo? Contrata supervisión en playa de nuestro equipo para mayor seguridad mientras practicas.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full">Por hora</span>
+                <span class="bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full">Equipo propio</span>
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Seguridad en playa</span>
+              </div>
+              <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3">
+                <div class="price-tag">
+                  <span class="price-label">Precio / hora</span>
+                  <span class="price-value">$100.000 COP</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-2 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('kitesurf_supervision', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al Carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero más información sobre la Supervisión en Playa para Kitesurf con equipo propio.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -681,9 +1051,9 @@
                 />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@mexicanaencartagena"
                 target="_blank"
-                title="Próximamente: TikTok de Dunas & Olas"
+                title="Síguenos en TikTok: Mexicana en Cartagena" rel="noopener"
                 class="social-badge transition hover:opacity-80"
                 style="background:#000000;"
               >

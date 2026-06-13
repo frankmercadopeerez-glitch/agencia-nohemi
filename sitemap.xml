@@ -27,6 +27,54 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://dunasyolas.com/kitesurf.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/kitesurf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/kitesurf.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/atardeceres-bahia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/atardeceres-bahia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/atardeceres-bahia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/atardeceres-bahia.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/pasadia-islas-rosario.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/recorrido-gastronomico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/recorrido-gastronomico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/buceo-snorkel.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/sabores-locales.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/sabores-locales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/sabores-locales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/sabores-locales.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dunasyolas.com/about.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about.html"/>
@@ -219,6 +267,38 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- English version -->
   <!-- Páginas principales (English) -->
@@ -245,6 +325,54 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/kitesurf.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/kitesurf.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/kitesurf.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/atardeceres-bahia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/atardeceres-bahia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/atardeceres-bahia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/atardeceres-bahia.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/pasadia-islas-rosario.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/recorrido-gastronomico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/recorrido-gastronomico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/buceo-snorkel.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/sabores-locales.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/sabores-locales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/sabores-locales.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/sabores-locales.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dunasyolas.com/en/about.html</loc>
@@ -436,6 +564,38 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

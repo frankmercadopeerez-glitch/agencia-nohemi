@@ -221,8 +221,8 @@
         animation: none;
       }
       .whatsapp-icon {
-        width: 65px;
-        height: 65px;
+        width: 58px;
+        height: 58px;
         filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
       }
       .whatsapp-text {
@@ -240,15 +240,17 @@
 
       @media (max-width: 768px) {
         .whatsapp-container {
-          bottom: 20px;
-          right: 20px;
+          bottom: 14px;
+          right: 14px;
         }
-        .whatsapp-float {
-          transform: scale(0.9);
+        .whatsapp-icon {
+          width: 40px;
+          height: 40px;
         }
         .whatsapp-text {
-          font-size: 10px;
-          padding: 3px 10px;
+          font-size: 8px;
+          padding: 2px 7px;
+          margin-top: 4px;
         }
       }
 
@@ -504,6 +506,9 @@
           <a href="experiences.html" class="text-blue-400 transition"
             >Experiences</a
           >
+          <a href="kitesurf.html" class="text-white hover:text-blue-400 transition"
+            >Kitesurf</a
+          >
           <a href="about.html" class="text-white hover:text-blue-400 transition"
             >About Us</a
           >
@@ -554,6 +559,11 @@
         href="experiences.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Experiences</a
+      >
+      <a
+        href="kitesurf.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Kitesurf</a
       >
       <a
         href="about.html"
@@ -708,17 +718,18 @@
         <div class="space-y-16" id="experiences-grid">
           <!-- Experiencia 1: Bay Tour -->
           <div
+            id="experiencia-atardecer"
             data-category="pasadia" data-price="120000" data-order="1"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-2/5">
               <img
                 src="../images/cartagenasunset.jpg"
                 alt="Sunset boat tour over Cartagena Bay, Colombia"
-                class="w-full h-64 md:h-full object-cover"
+                class="w-full h-56 md:h-full object-cover"
               />
             </div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+            <div class="p-5 md:p-6 md:w-3/5 flex flex-col justify-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Magical Sunsets in the Bay (BAY TOUR)
               </h3>
@@ -856,6 +867,7 @@
 
           <!-- Experiencia 2: Sunny Day -->
           <div
+            id="experiencia-pasadia"
             data-category="pasadia" data-price="180000" data-order="2"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
           >
@@ -863,7 +875,7 @@
               <img
                 src="../images/acuario.jpg"
                 alt="Rosario Islands day trip from Cartagena, Colombia"
-                class="w-full h-64 md:h-full object-cover"
+                class="w-full h-56 md:h-full object-cover"
               />
               <div
                 class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
@@ -1027,9 +1039,9 @@
             <div class="flex flex-col md:flex-row md:items-center">
               <div class="md:w-1/2">
                 <img
-                  src="../images/cartagena.jpg"
+                  src="../images/kitesurf/salto.webp"
                   alt="Kitesurfing on the beaches of Cartagena"
-                  class="w-full h-64 md:h-[380px] object-cover"
+                  class="w-full h-56 md:h-[320px] object-cover"
                 />
               </div>
               <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1060,6 +1072,11 @@
                     worry about is enjoying the Caribbean wind.
                   </p>
                 </div>
+                <a
+                  href="kitesurf.html"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-[#5B3A82] hover:text-[#3F2761] mt-3"
+                  >View the full Kitesurf portal <i class="fas fa-arrow-right"></i
+                ></a>
               </div>
             </div>
 
@@ -1078,33 +1095,36 @@
                       class="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1"
                       >Course</label
                     >
-                    <select
-                      id="kite-course-select"
-                      onchange="updateKiteTotalPreview()"
-                      class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]"
-                    >
-                      <option value="kitesurf_iniciacion" data-price="750000" data-unit="persona">
-                        Beginner Class (2 hours) — $750,000 / person
-                      </option>
-                      <option value="kitesurf_refuerzo" data-price="400000" data-unit="persona">
-                        Refresher Class (1 hour) — $400,000 / person
-                      </option>
-                      <option value="kitesurf_grupal" data-price="320000" data-unit="persona">
-                        Group Class — $320,000 / person
-                      </option>
-                      <option value="kitesurf_foil" data-price="570000" data-unit="persona">
-                        Kite Foil (session) — $570,000 / person
-                      </option>
-                      <option value="kitesurf_rider" data-price="2850000" data-unit="persona">
-                        Full "Rider" Course (8 hours) — $2,850,000 / person
-                      </option>
-                      <option value="kitesurf_avanzado" data-price="3450000" data-unit="persona">
-                        Advanced Course (10 hours) — $3,450,000 / person
-                      </option>
-                      <option value="kitesurf_elite" data-price="3990000" data-unit="persona">
-                        Elite VIP Experience (12 hours) — $3,990,000 / person
-                      </option>
-                    </select>
+                    <div class="relative">
+                      <select
+                        id="kite-course-select"
+                        onchange="updateKiteTotalPreview()"
+                        class="w-full appearance-none border border-gray-200 rounded-lg pl-3 pr-9 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/30 focus:border-[#5B3A82]"
+                      >
+                        <option value="kitesurf_iniciacion" data-price="750000" data-unit="persona">
+                          Beginner Class (2 hours) — $750,000 / person
+                        </option>
+                        <option value="kitesurf_refuerzo" data-price="400000" data-unit="persona">
+                          Refresher Class (1 hour) — $400,000 / person
+                        </option>
+                        <option value="kitesurf_grupal" data-price="320000" data-unit="persona">
+                          Group Class — $320,000 / person
+                        </option>
+                        <option value="kitesurf_foil" data-price="570000" data-unit="persona">
+                          Kite Foil (session) — $570,000 / person
+                        </option>
+                        <option value="kitesurf_rider" data-price="2850000" data-unit="persona">
+                          Full "Rider" Course (8 hours) — $2,850,000 / person
+                        </option>
+                        <option value="kitesurf_avanzado" data-price="3450000" data-unit="persona">
+                          Advanced Course (10 hours) — $3,450,000 / person
+                        </option>
+                        <option value="kitesurf_elite" data-price="3990000" data-unit="persona">
+                          Elite VIP Experience (12 hours) — $3,990,000 / person
+                        </option>
+                      </select>
+                      <i class="fas fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs pointer-events-none"></i>
+                    </div>
                   </div>
                   <div>
                     <label
@@ -1162,6 +1182,7 @@
 
           <!-- Experiencia 4: Recorrido Gastronómico por la Ciudad -->
           <div
+            id="experiencia-gastronomico"
             data-category="gastronomia" data-price="140000" data-order="4"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
           >
@@ -1169,7 +1190,7 @@
               <img
                 src="../images/cocinacaribe.jpg"
                 alt="Gastronomic tour through the historic center of Cartagena"
-                class="w-full h-64 md:h-[420px] object-cover"
+                class="w-full h-56 md:h-[340px] object-cover"
               />
               <div
                 class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
@@ -1279,14 +1300,15 @@
 
           <!-- Experiencia 5: Buceo y Snorkel -->
           <div
+            id="experiencia-buceo"
             data-category="agua" data-price="250000" data-order="5"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
           >
-            <div class="md:w-1/2 relative">
+            <div class="md:w-2/5 relative">
               <img
                 src="../images/foto%20(10).JPG"
                 alt="Diving and snorkeling on coral reefs near Cartagena"
-                class="w-full h-64 md:h-full object-cover"
+                class="w-full h-56 md:h-full object-cover"
               />
               <div
                 class="absolute top-4 left-4 bg-cyan-400 text-cyan-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
@@ -1294,7 +1316,7 @@
                 New
               </div>
             </div>
-            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+            <div class="p-5 md:p-6 md:w-3/5 flex flex-col justify-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-1">
                 Diving and Snorkeling: An Underwater Adventure
               </h3>
@@ -1422,6 +1444,7 @@
 
           <!-- Experiencia 6: Sabores Locales -->
           <div
+            id="experiencia-sabores"
             data-category="gastronomia" data-price="150000" data-order="6"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
           >
@@ -1429,7 +1452,7 @@
               <img
                 src="../images/cartagenacentro.jpg"
                 alt="Local gastronomy and Caribbean flavors in Cartagena"
-                class="w-full h-64 md:h-[420px] object-cover"
+                class="w-full h-56 md:h-[340px] object-cover"
               />
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1596,6 +1619,9 @@
                 >
               </li>
               <li>
+                <a href="kitesurf.html" class="hover:text-blue-400">Kitesurf</a>
+              </li>
+              <li>
                 <a href="about.html" class="hover:text-blue-400">About Us</a>
               </li>
               <li>
@@ -1645,9 +1671,9 @@
                 />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@mexicanaencartagena"
                 target="_blank"
-                title="Coming soon: Dunas & Olas on TikTok"
+                title="Follow us on TikTok: Mexicana en Cartagena" rel="noopener"
                 class="social-badge transition hover:opacity-80"
                 style="background:#000000;"
               >

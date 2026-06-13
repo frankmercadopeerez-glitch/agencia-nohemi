@@ -7,18 +7,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <meta
       name="description"
-      content="Dunas & Olas: multicultural travel agency — the warmth of the north, the magic of the Caribbean. Stay and event planning in the Caribbean. Sport boat and luxury yacht rentals in Cartagena."
+      content="Dunas & Olas: multicultural travel agency — the warmth of the north, the magic of the Caribbean. Sport boat and luxury yacht rentals, kitesurf lessons in La Boquilla, and unforgettable experiences in Cartagena."
+    />
+    <meta
+      name="keywords"
+      content="Cartagena tours, boat rental Cartagena, luxury yacht Cartagena, kitesurf Cartagena, kitesurf La Boquilla, kitesurf lessons Cartagena, boat tours Cartagena, Mexicana en Cartagena, Cartagena Colombia tours"
     />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dunasyolas.com/en/" />
     <meta
       property="og:title"
-      content="Dunas & Olas | Cartagena with Nohemi, your local guide"
+      content="Mexicana en Cartagena | Dunas & Olas — Cartagena with Nohemi, your local guide"
     />
     <meta
       property="og:description"
-      content="The warmth of the north, the magic of the Caribbean. Stay and event planning in the Caribbean. Sport boat and luxury yacht rentals in Cartagena."
+      content="The warmth of the north, the magic of the Caribbean. Sport boat and luxury yacht rentals, kitesurf lessons in La Boquilla, and unforgettable experiences in Cartagena."
     />
     <meta
       property="og:image"
@@ -29,11 +33,11 @@
     <meta property="twitter:url" content="https://dunasyolas.com/en/" />
     <meta
       property="twitter:title"
-      content="Dunas & Olas | Cartagena with Nohemi, your local guide"
+      content="Mexicana en Cartagena | Dunas & Olas — Cartagena with Nohemi, your local guide"
     />
     <meta
       property="twitter:description"
-      content="The warmth of the north, the magic of the Caribbean. Stay and event planning in the Caribbean. Sport boat and luxury yacht rentals in Cartagena."
+      content="The warmth of the north, the magic of the Caribbean. Sport boat and luxury yacht rentals, kitesurf lessons in La Boquilla, and unforgettable experiences in Cartagena."
     />
     <meta
       property="twitter:image"
@@ -282,8 +286,8 @@
       } /* Detener animación si menú abierto */
 
       .whatsapp-icon {
-        width: 65px;
-        height: 65px;
+        width: 58px;
+        height: 58px;
         filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
       }
 
@@ -303,15 +307,17 @@
 
       @media (max-width: 768px) {
         .whatsapp-container {
-          bottom: 20px;
-          right: 20px;
+          bottom: 14px;
+          right: 14px;
         }
-        .whatsapp-float {
-          transform: scale(0.9);
+        .whatsapp-icon {
+          width: 40px;
+          height: 40px;
         }
         .whatsapp-text {
-          font-size: 10px;
-          padding: 3px 10px;
+          font-size: 8px;
+          padding: 2px 7px;
+          margin-top: 4px;
         }
       }
 
@@ -353,24 +359,33 @@
         transform: scale(1.1);
         opacity: 0.85;
       }
-/* --- Carrusel Infinito de Reseñas --- */
-      .reviews-slider {
+/* --- Carrusel Doble de Reseñas --- */
+      .reviews-row {
         overflow: hidden;
         width: 100%;
         position: relative;
       }
+      .reviews-row + .reviews-row {
+        margin-top: 1rem;
+      }
       .reviews-track {
         display: flex;
-        width: calc(350px * 16);
-        animation: scroll 70s linear infinite;
+        width: calc(280px * 12);
+        animation: scroll 50s linear infinite;
+      }
+      .reviews-track.reverse {
+        animation-direction: reverse;
       }
       .review-card {
-        width: 350px;
-        padding: 0 15px;
+        width: 280px;
+        padding: 0 10px;
         flex-shrink: 0;
       }
-      .reviews-track:hover {
-        animation-play-state: paused;
+      .review-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
 
       @keyframes scroll {
@@ -378,26 +393,32 @@
           transform: translateX(0);
         }
         100% {
-          transform: translateX(calc(-350px * 8));
+          transform: translateX(calc(-280px * 6));
         }
       }
 
       @media (max-width: 768px) {
         .review-card {
-          width: 300px;
+          width: 240px;
         }
         .reviews-track {
-          width: calc(300px * 16);
+          width: calc(240px * 12);
         }
         @keyframes scroll {
           0% {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(calc(-300px * 8));
+            transform: translateX(calc(-240px * 6));
           }
         }
       }
+
+      /* FAQ accordion */
+      .faq-toggle summary { cursor: pointer; list-style: none; }
+      .faq-toggle summary::-webkit-details-marker { display: none; }
+      .faq-toggle summary i { transition: transform 0.2s ease; }
+      .faq-toggle[open] summary i { transform: rotate(180deg); }
     </style>
   <script type="application/ld+json">
 {
@@ -462,6 +483,83 @@
           "item": "https://dunasyolas.com/en/"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it safe to travel to Cartagena de Indias?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Cartagena is one of the safest destinations in the Caribbean for tourism, as long as you take basic precautions like choosing operators with official permits and avoiding unauthorized boats. We have a full guide on safety in Cartagena with practical tips for a worry-free trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I spot a pirate boat before getting on board?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pirate boats don't have DIMAR permits, don't carry enough life jackets, and often have prices that seem too good to be true. We explain all the warning signs in our article on how to identify a pirate boat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a trip to Cartagena cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your budget depends on accommodation, the experiences you choose and the season. We have a cost guide for a trip to Cartagena to help you plan your budget with real numbers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I exchange dollars or Mexican pesos in Cartagena?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend using authorized exchange houses in the Historic Center or Bocagrande and avoiding street money changers. Our currency exchange guide for Cartagena covers the best spots and tips for a good rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best beaches near Cartagena?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The city beaches are nice, but the real gems are the Rosario Islands and Barú. Check out our guides to the best beaches near Cartagena and to the Rosario Islands."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where should I stay: Bocagrande, the Old City or Getsemaní?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bocagrande is great for beach and modern comforts, the Historic Center for history and romance, and Getsemaní for a bohemian vibe. Our guide on where to stay in Cartagena helps you choose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need to travel to Colombia in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entry requirements vary by nationality and include a valid passport and, in some cases, a visa or Check-Mig. Check our updated guide to travel requirements for Colombia in 2026 before your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I learn kitesurfing in Cartagena?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Boquilla is the perfect spot to learn kitesurfing thanks to its steady winds and shallow waters. We offer kitesurf lessons in Cartagena with certified instructors, and you can read more in our article on kitesurfing in Cartagena."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cartagena a good destination for traveling with kids?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Cartagena offers plenty of family-friendly activities, from calm boat rides to beaches with gentle waters. Find ideas in our guide to Cartagena with kids."
+          }
+        }
+      ]
     }
   ]
 }
@@ -498,6 +596,11 @@
             href="experiences.html"
             class="text-white hover:text-blue-400 transition drop-shadow-md"
             >Experiences</a
+          >
+          <a
+            href="kitesurf.html"
+            class="text-white hover:text-blue-400 transition drop-shadow-md"
+            >Kitesurf</a
           >
           <a
             href="about.html"
@@ -540,6 +643,11 @@
         href="experiences.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Experiences</a
+      >
+      <a
+        href="kitesurf.html"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Kitesurf</a
       >
       <a
         href="about.html"
@@ -774,6 +882,7 @@
           <div
             class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
+            <a href="atardeceres-bahia.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
               src="../images/cartagenasunset.jpg"
               alt="Sunset boat tour over Cartagena Bay"
@@ -790,7 +899,7 @@
                 best view of the city.
               </p>
               <a
-                href="experiences.html"
+                href="atardeceres-bahia.html"
                 class="text-yellow-400 font-bold text-sm hover:underline"
                 >See details</a
               >
@@ -799,6 +908,7 @@
           <div
             class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
+            <a href="pasadia-islas-rosario.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
               src="../images/acuario.jpg"
               alt="Rosario Islands day trip from Cartagena, Colombia"
@@ -815,7 +925,7 @@
                 communities.
               </p>
               <a
-                href="experiences.html"
+                href="pasadia-islas-rosario.html"
                 class="text-yellow-400 font-bold text-sm hover:underline"
                 >See details</a
               >
@@ -824,8 +934,9 @@
           <div
             class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
+            <a href="kitesurf.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
-              src="../images/cartagena.jpg"
+              src="../images/kitesurf/salto.webp"
               alt="Kitesurfing on Cartagena beaches"
               loading="lazy"
               class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
@@ -839,15 +950,16 @@
                 Adrenaline and fun on the best beaches for kitesurfing.
               </p>
               <a
-                href="experiences.html"
+                href="kitesurf.html"
                 class="text-yellow-400 font-bold text-sm hover:underline"
-                >See details</a
+                >View Kitesurf portal</a
               >
             </div>
           </div>
           <div
             class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
+            <a href="buceo-snorkel.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
               src="../images/foto%20(10).JPG"
               alt="Diving and snorkeling on coral reefs near Cartagena"
@@ -863,7 +975,7 @@
                 Explore the coral reefs and marine life of the Caribbean.
               </p>
               <a
-                href="experiences.html"
+                href="buceo-snorkel.html"
                 class="text-yellow-400 font-bold text-sm hover:underline"
                 >See details</a
               >
@@ -872,6 +984,7 @@
           <div
             class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
+            <a href="recorrido-gastronomico.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
               src="../images/cocinacaribe.jpg"
               alt="Gastronomic tour through downtown Cartagena"
@@ -887,7 +1000,7 @@
                 Discover the flavors and history of downtown Cartagena.
               </p>
               <a
-                href="experiences.html"
+                href="recorrido-gastronomico.html"
                 class="text-yellow-400 font-bold text-sm hover:underline"
                 >See details</a
               >
@@ -896,6 +1009,7 @@
           <div
             class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-72"
           >
+            <a href="sabores-locales.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
             <img
               src="../images/cartagenacentro.jpg"
               alt="Local flavors and Caribbean gastronomy in Cartagena"
@@ -911,7 +1025,7 @@
                 Experience authentic local gastronomy like a local.
               </p>
               <a
-                href="experiences.html"
+                href="sabores-locales.html"
                 class="text-yellow-400 font-bold text-sm hover:underline"
                 >See details</a
               >
@@ -923,6 +1037,58 @@
           <a href="experiences.html" class="btn-primary"
             >Discover all our experiences</a
           >
+        </div>
+      </div>
+    </section>
+
+    <!-- Kitesurf -->
+    <section class="py-20 bg-blue-50">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="order-2 md:order-1 grid grid-cols-2 gap-4">
+            <img
+              src="../images/kitesurf/jump.webp"
+              alt="Kitesurf jump in La Boquilla, Cartagena"
+              loading="lazy"
+              class="w-full h-48 md:h-56 object-cover rounded-2xl shadow-lg"
+            />
+            <img
+              src="../images/kitesurf/woman.webp"
+              alt="Woman practicing kitesurf in Cartagena"
+              loading="lazy"
+              class="w-full h-48 md:h-56 object-cover rounded-2xl shadow-lg mt-8"
+            />
+            <img
+              src="../images/kitesurf/class.webp"
+              alt="Beginner kitesurf lesson in La Boquilla"
+              loading="lazy"
+              class="w-full h-48 md:h-56 object-cover rounded-2xl shadow-lg"
+            />
+            <img
+              src="../images/kitesurf/truco.webp"
+              alt="Rider performing kitesurf tricks in Cartagena"
+              loading="lazy"
+              class="w-full h-48 md:h-56 object-cover rounded-2xl shadow-lg mt-8"
+            />
+          </div>
+          <div class="order-1 md:order-2">
+            <span class="text-blue-600 font-bold text-sm uppercase tracking-wide mb-2 block"
+              >La Boquilla, Cartagena</span
+            >
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Fly Over the Caribbean: Kitesurfing in Cartagena
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Steady wind, flat water and certified instructors. We offer
+              courses for all levels, gear rental, wing foil, SUP and
+              downwind expeditions through the Rosario Islands and Barú.
+              Experience the adrenaline of kitesurfing with the safety and
+              warmth of our team.
+            </p>
+            <a href="kitesurf.html" class="btn-primary"
+              >Explore the Kitesurf portal</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -996,7 +1162,7 @@
       </div>
     </section>
 
-    <!-- Carrusel Infinito de Reseñas -->
+    <!-- Carrusel Doble de Reseñas -->
     <section class="py-16 bg-white overflow-hidden border-t border-gray-100">
       <div class="container mx-auto px-6 mb-10 text-center">
         <h2 class="text-2xl font-bold text-gray-900">
@@ -1004,374 +1170,392 @@
         </h2>
       </div>
 
-      <div class="reviews-slider">
+      <div class="reviews-row">
         <div class="reviews-track">
-          <!-- 1. Carlos -->
+          <!-- Carlos Mendoza -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "Simply spectacular. We rented the Oly boat for my wife's
-                birthday and the service was first-class."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "Simply spectacular. We rented the Oly boat for my wife's birthday and the service was first-class."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Carlos Mendoza</strong
-                  ><span class="text-xs text-gray-500">México 🇲🇽</span>
+                  <strong class="text-gray-900 text-xs block">Carlos Mendoza</strong><span class="text-[11px] text-gray-500">México 🇲🇽</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 2. Sarah -->
+          <!-- Sarah Johnson -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "The best experience in Cartagena. Everything was super
-                organized, the food delicious, and the boat very comfortable."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The best experience in Cartagena. Everything was super organized, the food delicious, and the boat very comfortable."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Sarah Johnson</strong
-                  ><span class="text-xs text-gray-500">USA 🇺🇸</span>
+                  <strong class="text-gray-900 text-xs block">Sarah Johnson</strong><span class="text-[11px] text-gray-500">USA 🇺🇸</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 3. Andrea & Felipe -->
+          <!-- Andrea & Felipe -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "Excellent customer service. They helped us plan everything
-                before we even arrived. Highly recommended."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "Excellent customer service. They helped us plan everything before we even arrived. Highly recommended."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Andrea & Felipe</strong
-                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                  <strong class="text-gray-900 text-xs block">Andrea & Felipe</strong><span class="text-[11px] text-gray-500">Colombia 🇨🇴</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 4. Martina -->
+          <!-- Camila Torres -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "An unforgettable experience. The sunset from the boat was
-                magical. We'll definitely be back."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "I took my first kitesurfing lesson with them in La Boquilla and the instructor was super patient. I can't wait to go back!"
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block">Martina G.</strong
-                  ><span class="text-xs text-gray-500">Argentina 🇦🇷</span>
+                  <strong class="text-gray-900 text-xs block">Camila Torres</strong><span class="text-[11px] text-gray-500">Colombia 🇨🇴</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 5. James -->
+          <!-- James Wilson -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "The Rosario Islands tour exceeded our expectations.
-                Crystal-clear water and absolutely luxurious service on
-                board."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The Rosario Islands tour exceeded our expectations. Crystal-clear water and absolutely luxurious service on board."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >James Wilson</strong
-                  ><span class="text-xs text-gray-500">Reino Unido 🇬🇧</span>
+                  <strong class="text-gray-900 text-xs block">James Wilson</strong><span class="text-[11px] text-gray-500">Reino Unido 🇬🇧</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 6. Camila -->
+          <!-- Markus Weber -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "I took my first kitesurfing lesson with them in La Boquilla
-                and the instructor was super patient. I can't wait to go
-                back!"
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "I took the full kitesurf course in La Boquilla and within a week I was riding on my own. Excellent value for money and the gear was in great condition."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Camila Torres</strong
-                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                  <strong class="text-gray-900 text-xs block">Markus Weber</strong><span class="text-[11px] text-gray-500">Alemania 🇩🇪</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 7. Lucas & Marie -->
+          <!-- Carlos Mendoza -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "We booked the private boat for our anniversary. The crew
-                thought of every detail, incredible service."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "Simply spectacular. We rented the Oly boat for my wife's birthday and the service was first-class."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Lucas & Marie Dubois</strong
-                  ><span class="text-xs text-gray-500">Francia 🇫🇷</span>
+                  <strong class="text-gray-900 text-xs block">Carlos Mendoza</strong><span class="text-[11px] text-gray-500">México 🇲🇽</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 8. Roberto -->
+          <!-- Sarah Johnson -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "The food tour with Nohemi was the best part of the trip. We
-                tried dishes we never would have found on our own."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The best experience in Cartagena. Everything was super organized, the food delicious, and the boat very comfortable."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Roberto Fernández</strong
-                  ><span class="text-xs text-gray-500">España 🇪🇸</span>
+                  <strong class="text-gray-900 text-xs block">Sarah Johnson</strong><span class="text-[11px] text-gray-500">USA 🇺🇸</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 9. Carlos (Copia) -->
+          <!-- Andrea & Felipe -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "Simply spectacular. We rented the Oly boat for my wife's
-                birthday and the service was first-class."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "Excellent customer service. They helped us plan everything before we even arrived. Highly recommended."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Carlos Mendoza</strong
-                  ><span class="text-xs text-gray-500">México 🇲🇽</span>
+                  <strong class="text-gray-900 text-xs block">Andrea & Felipe</strong><span class="text-[11px] text-gray-500">Colombia 🇨🇴</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 10. Sarah (Copia) -->
+          <!-- Camila Torres -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "The best experience in Cartagena. Everything was super
-                organized, the food delicious, and the boat very comfortable."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "I took my first kitesurfing lesson with them in La Boquilla and the instructor was super patient. I can't wait to go back!"
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Sarah Johnson</strong
-                  ><span class="text-xs text-gray-500">USA 🇺🇸</span>
+                  <strong class="text-gray-900 text-xs block">Camila Torres</strong><span class="text-[11px] text-gray-500">Colombia 🇨🇴</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 11. Andrea & Felipe (Copia) -->
+          <!-- James Wilson -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "Excellent customer service. They helped us plan everything
-                before we even arrived. Highly recommended."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The Rosario Islands tour exceeded our expectations. Crystal-clear water and absolutely luxurious service on board."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Andrea & Felipe</strong
-                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                  <strong class="text-gray-900 text-xs block">James Wilson</strong><span class="text-[11px] text-gray-500">Reino Unido 🇬🇧</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 12. Martina (Copia) -->
+          <!-- Markus Weber -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "An unforgettable experience. The sunset from the boat was
-                magical. We'll definitely be back."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "I took the full kitesurf course in La Boquilla and within a week I was riding on my own. Excellent value for money and the gear was in great condition."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block">Martina G.</strong
-                  ><span class="text-xs text-gray-500">Argentina 🇦🇷</span>
+                  <strong class="text-gray-900 text-xs block">Markus Weber</strong><span class="text-[11px] text-gray-500">Alemania 🇩🇪</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 13. James (Copia) -->
+        </div>
+      </div>
+      <div class="reviews-row">
+        <div class="reviews-track reverse">
+          <!-- Martina G. -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "The Rosario Islands tour exceeded our expectations.
-                Crystal-clear water and absolutely luxurious service on
-                board."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "An unforgettable experience. The sunset from the boat was magical. We'll definitely be back."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >James Wilson</strong
-                  ><span class="text-xs text-gray-500">Reino Unido 🇬🇧</span>
+                  <strong class="text-gray-900 text-xs block">Martina G.</strong><span class="text-[11px] text-gray-500">Argentina 🇦🇷</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 14. Camila (Copia) -->
+          <!-- Lucas & Marie Dubois -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "I took my first kitesurfing lesson with them in La Boquilla
-                and the instructor was super patient. I can't wait to go
-                back!"
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "We booked the private boat for our anniversary. The crew thought of every detail, incredible service."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Camila Torres</strong
-                  ><span class="text-xs text-gray-500">Colombia 🇨🇴</span>
+                  <strong class="text-gray-900 text-xs block">Lucas & Marie Dubois</strong><span class="text-[11px] text-gray-500">Francia 🇫🇷</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 15. Lucas & Marie (Copia) -->
+          <!-- Roberto Fernández -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "We booked the private boat for our anniversary. The crew
-                thought of every detail, incredible service."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The food tour with Nohemi was the best part of the trip. We tried dishes we never would have found on our own."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Lucas & Marie Dubois</strong
-                  ><span class="text-xs text-gray-500">Francia 🇫🇷</span>
+                  <strong class="text-gray-900 text-xs block">Roberto Fernández</strong><span class="text-[11px] text-gray-500">España 🇪🇸</span>
                 </div>
               </div>
             </div>
           </div>
-          <!-- 16. Roberto (Copia) -->
+          <!-- Jenny Park -->
           <div class="review-card">
-            <div
-              class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100 h-full"
-            >
-              <div class="text-yellow-400 text-xs mb-3">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                ><i class="fas fa-star"></i>
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
               </div>
-              <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
-                "The food tour with Nohemi was the best part of the trip. We
-                tried dishes we never would have found on our own."
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "We rented wing foil gear for a day and they explained everything perfectly. The wind in La Boquilla is amazing for beginners."
               </p>
-              <div class="flex items-center">
+              <div class="flex items-center mt-auto">
                 <div>
-                  <strong class="text-gray-900 text-sm block"
-                    >Roberto Fernández</strong
-                  ><span class="text-xs text-gray-500">España 🇪🇸</span>
+                  <strong class="text-gray-900 text-xs block">Jenny Park</strong><span class="text-[11px] text-gray-500">Corea del Sur 🇰🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Diego Ramírez -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "We combined a boat day with a kitesurf lesson in the afternoon. Nohemi organized everything perfectly — an unforgettable full day!"
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Diego Ramírez</strong><span class="text-[11px] text-gray-500">México 🇲🇽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Laura Smith -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The kitesurf instructors are super patient and certified. I felt safe the whole time, even as a complete beginner."
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Laura Smith</strong><span class="text-[11px] text-gray-500">Canadá 🇨🇦</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Martina G. -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "An unforgettable experience. The sunset from the boat was magical. We'll definitely be back."
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Martina G.</strong><span class="text-[11px] text-gray-500">Argentina 🇦🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Lucas & Marie Dubois -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "We booked the private boat for our anniversary. The crew thought of every detail, incredible service."
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Lucas & Marie Dubois</strong><span class="text-[11px] text-gray-500">Francia 🇫🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Roberto Fernández -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The food tour with Nohemi was the best part of the trip. We tried dishes we never would have found on our own."
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Roberto Fernández</strong><span class="text-[11px] text-gray-500">España 🇪🇸</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Jenny Park -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "We rented wing foil gear for a day and they explained everything perfectly. The wind in La Boquilla is amazing for beginners."
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Jenny Park</strong><span class="text-[11px] text-gray-500">Corea del Sur 🇰🇷</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Diego Ramírez -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "We combined a boat day with a kitesurf lesson in the afternoon. Nohemi organized everything perfectly — an unforgettable full day!"
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Diego Ramírez</strong><span class="text-[11px] text-gray-500">México 🇲🇽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Laura Smith -->
+          <div class="review-card">
+            <div class="bg-gray-50 p-4 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <div class="text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="review-text text-gray-600 italic text-xs mb-3 leading-relaxed">
+                "The kitesurf instructors are super patient and certified. I felt safe the whole time, even as a complete beginner."
+              </p>
+              <div class="flex items-center mt-auto">
+                <div>
+                  <strong class="text-gray-900 text-xs block">Laura Smith</strong><span class="text-[11px] text-gray-500">Canadá 🇨🇦</span>
                 </div>
               </div>
             </div>
@@ -1437,6 +1621,88 @@
           <a href="blog/index.html" class="btn-outline px-8"
             >View entire Blog</a
           >
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SEO -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-gray-500 mt-2">
+            Everything you need to know before your trip to Cartagena.
+          </p>
+        </div>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-3">
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>Is it safe to travel to Cartagena de Indias?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">Yes, Cartagena is one of the safest destinations in the Caribbean for tourism, as long as you choose operators with official permits and avoid unauthorized boats. Read our <a href="blog/seguridad-cartagena/index.html" class="text-blue-600 underline">safety guide for Cartagena</a>.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>How do I spot a pirate boat before getting on board?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">Pirate boats don't have DIMAR permits, don't carry enough life jackets, and often have suspiciously low prices. Learn the warning signs in our article on <a href="blog/identificar-lancha-pirata/index.html" class="text-blue-600 underline">how to identify a pirate boat</a>.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>How much does a trip to Cartagena cost?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">Your budget depends on accommodation, the experiences you choose and the season. Check our <a href="blog/costo-viaje-cartagena/index.html" class="text-blue-600 underline">cost guide for a trip to Cartagena</a> to plan your budget.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>Where can I exchange dollars or Mexican pesos in Cartagena?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">We recommend authorized exchange houses in the Historic Center or Bocagrande, and avoiding street money changers. Find the best spots in our <a href="blog/cambio-de-moneda-cartagena/index.html" class="text-blue-600 underline">currency exchange guide for Cartagena</a>.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>What are the best beaches near Cartagena?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">The city beaches are nice, but the real gems are the Rosario Islands and Barú. Check out our guides to the <a href="blog/playas-cartagena/index.html" class="text-blue-600 underline">best beaches near Cartagena</a> and the <a href="blog/mejores-islas-rosario/index.html" class="text-blue-600 underline">Rosario Islands</a>.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>Where should I stay: Bocagrande, the Old City or Getsemaní?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">Bocagrande is great for beach and modern comforts, the Historic Center for history and romance, and Getsemaní for a bohemian vibe. Our <a href="blog/donde-alojarse-en-cartagena/index.html" class="text-blue-600 underline">guide on where to stay in Cartagena</a> helps you choose.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>What documents do I need to travel to Colombia in 2026?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">Entry requirements vary by nationality and include a valid passport and, in some cases, a visa or Check-Mig. Check our updated <a href="blog/requisitos-viajar-colombia-2026/index.html" class="text-blue-600 underline">travel requirements guide for Colombia in 2026</a>.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>Where can I learn kitesurfing in Cartagena?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">La Boquilla is the perfect spot to learn kitesurfing thanks to its steady winds and shallow waters. Check out our <a href="kitesurf.html" class="text-blue-600 underline">kitesurf lessons in Cartagena</a> with certified instructors, or read more in our <a href="blog/kitesurf-cartagena/index.html" class="text-blue-600 underline">article on kitesurfing in Cartagena</a>.</p>
+          </details>
+          <details class="faq-toggle bg-white rounded-lg border border-gray-100 px-5 py-4 shadow-sm">
+            <summary class="flex justify-between items-center gap-4 font-semibold text-gray-800 text-sm md:text-base">
+              <span>Is Cartagena a good destination for traveling with kids?</span>
+              <i class="fas fa-chevron-down text-blue-500 text-sm flex-shrink-0"></i>
+            </summary>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">Yes, Cartagena offers plenty of family-friendly activities, from calm boat rides to beaches with gentle waters. Find ideas in our <a href="blog/cartagena-con-ninos/index.html" class="text-blue-600 underline">guide to Cartagena with kids</a>.</p>
+          </details>
+        </div>
+        <div class="text-center mt-8">
+          <a href="faq.html" class="btn-outline px-8">See all FAQs</a>
         </div>
       </div>
     </section>
@@ -1535,6 +1801,9 @@
                 >
               </li>
               <li>
+                <a href="kitesurf.html" class="hover:text-blue-400">Kitesurf</a>
+              </li>
+              <li>
                 <a href="about.html" class="hover:text-blue-400">About Us</a>
               </li>
               <li>
@@ -1584,9 +1853,9 @@
                 />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@mexicanaencartagena"
                 target="_blank"
-                title="Coming soon: Dunas & Olas on TikTok"
+                title="Follow us on TikTok: Mexicana en Cartagena" rel="noopener"
                 class="social-badge transition hover:opacity-80"
                 style="background:#000000;"
               >
