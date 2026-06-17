@@ -413,10 +413,23 @@
       </p>
     </div>
 
-    <section class="py-20 container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- Filtros de categoría -->
+    <div class="container mx-auto px-6 pt-10 pb-2">
+      <div id="filter-bar" class="flex flex-wrap gap-2 justify-center">
+        <button data-filter="todos" class="filter-btn active-filter px-5 py-2 rounded-full text-sm font-bold border-2 border-blue-600 bg-blue-600 text-white transition">Todos</button>
+        <button data-filter="destacado" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border-2 border-yellow-500 text-yellow-700 bg-yellow-50 hover:bg-yellow-500 hover:text-white transition">Destacados</button>
+        <button data-filter="islas" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border-2 border-blue-300 text-blue-700 bg-blue-50 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition">Islas y Playas</button>
+        <button data-filter="guia" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border-2 border-gray-300 text-gray-700 bg-gray-50 hover:bg-gray-700 hover:text-white hover:border-gray-700 transition">Guías de Viaje</button>
+        <button data-filter="deportes" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border-2 border-purple-300 text-purple-700 bg-purple-50 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition">Deportes Acuáticos</button>
+        <button data-filter="gastronomia" class="filter-btn px-5 py-2 rounded-full text-sm font-bold border-2 border-orange-300 text-orange-700 bg-orange-50 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition">Gastronomía</button>
+      </div>
+      <p id="filter-count" class="text-center text-xs text-gray-400 mt-3"></p>
+    </div>
+
+    <section class="py-10 container mx-auto px-6">
+      <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- Articulo Nuevo 1: Cambio de Moneda -->
-        <article
+        <article data-category="guia"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full ring-2 ring-yellow-400/60 relative"
         >
           <a href="cambio-de-moneda-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -465,7 +478,7 @@
         </article>
 
         <!-- Articulo Nuevo 2: Viajar con un Local -->
-        <article
+        <article data-category="guia"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full ring-2 ring-blue-400/60 relative"
         >
           <a href="viajar-con-un-local-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -513,7 +526,7 @@
         </article>
 
         <!-- Articulo Nuevo 3: Atardeceres Mágicos -->
-        <article
+        <article data-category="islas"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="atardeceres-magicos/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -557,7 +570,7 @@
         </article>
 
         <!-- Articulo 1: Cocinas (IMAGEN ACTUALIZADA) -->
-        <article
+        <article data-category="gastronomia"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="cocinas-del-caribe/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -601,7 +614,7 @@
         </article>
 
         <!-- Articulo 2: Langosta (TITULO ACTUALIZADO) -->
-        <article
+        <article data-category="gastronomia destacado"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="gastronomia-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -645,7 +658,7 @@
         </article>
 
         <!-- Articulo 3: Historia -->
-        <article
+        <article data-category="guia"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="historia-nombre-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -689,7 +702,7 @@
         </article>
 
         <!-- Articulo 4: Top 5 Islas -->
-        <article
+        <article data-category="islas destacado"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="mejores-islas-rosario/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -733,7 +746,7 @@
         </article>
 
         <!-- Articulo 5: Seguridad Personal -->
-        <article
+        <article data-category="guia"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="seguridad-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -777,7 +790,7 @@
         </article>
 
         <!-- Articulo 6: Seguridad de Botes -->
-        <article
+        <article data-category="guia"
           class="group bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-2xl transition duration-300 flex flex-col h-full relative"
         >
           <a href="identificar-lancha-pirata/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
@@ -820,7 +833,7 @@
           </div>
         </article>
       
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="deportes" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="kitesurf-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagenasunset.jpg" alt="Kitesurf en Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -833,7 +846,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="que-hacer-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagenacentro.jpg" alt="Cartagena de Indias planes turísticos" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -846,7 +859,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="costo-viaje-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagena.jpg" alt="Presupuesto viaje Cartagena Colombia" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -859,7 +872,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="islas" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="playas-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/acuario.jpg" alt="Playas de Cartagena Colombia" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -872,7 +885,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="cartagena-con-ninos/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/acuario.jpg" alt="Cartagena con niños familia" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -885,7 +898,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="cartagena-vs-cancun/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagena.jpg" alt="Cartagena vs Cancún comparación de destinos" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -898,7 +911,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="guia-viajeros-estados-unidos-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagenacentro.jpg" alt="Guía para viajeros de Estados Unidos en Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -911,7 +924,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="cartagena-en-un-dia-crucero/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagenasunset.jpg" alt="Cartagena desde el crucero, qué hacer en un día" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -924,7 +937,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="donde-alojarse-en-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/atardecer.jpg" alt="Dónde alojarse en Cartagena: Bocagrande, Centro Histórico o Getsemaní" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -937,7 +950,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="requisitos-viajar-colombia-2026/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/acuario.jpg" alt="Requisitos para viajar a Colombia desde México o Estados Unidos en 2026" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -950,7 +963,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="mejor-epoca-para-visitar-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/atardecer.jpg" alt="Mejor época para visitar Cartagena de Indias" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -963,10 +976,10 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="islas destacado" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="plan-finde-islas-rosario/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
-          <img src="../images/islas-rosario.jpg" alt="Aguas turquesas de las Islas del Rosario, Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
+          <img src="../images/acuario.jpg" alt="Aguas turquesas de las Islas del Rosario, Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
           <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Guía de Viaje · Low Cost</span>
         </div>
         <div class="p-6 flex flex-col flex-1">
@@ -976,7 +989,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="itinerario-3-dias-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagena.jpg" alt="Itinerario de 3 días en Cartagena de Indias" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -989,7 +1002,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="guia" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="como-llegar-aeropuerto-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/cartagenacentro.jpg" alt="Cómo llegar del aeropuerto al hotel en Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -1002,7 +1015,7 @@
         </div>
       </article>
 
-      <article class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
+      <article data-category="deportes" class="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col relative">
           <a href="wing-foil-vs-kitesurf-cartagena/index.html" class="absolute inset-0 z-10" aria-hidden="true" tabindex="-1"></a>
         <div class="h-52 overflow-hidden bg-gray-800 relative">
           <img src="../images/kitesurf/foil.webp" alt="Wing foil vs kitesurf en La Boquilla, Cartagena" class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"/>
@@ -1015,7 +1028,93 @@
         </div>
       </article>
 </div>
+
+      <!-- Paginación -->
+      <div id="pagination" class="flex justify-center items-center gap-2 mt-12 flex-wrap"></div>
     </section>
+
+    <script>
+      (function () {
+        const PER_PAGE = 9;
+        let currentFilter = 'todos';
+        let currentPage = 1;
+
+        const grid = document.getElementById('articles-grid');
+        const pagination = document.getElementById('pagination');
+        const countEl = document.getElementById('filter-count');
+        const allArticles = Array.from(grid.querySelectorAll('article[data-category]'));
+
+        function getVisible() {
+          if (currentFilter === 'todos') return allArticles;
+          return allArticles.filter(a => a.dataset.category.split(' ').includes(currentFilter));
+        }
+
+        function render() {
+          const visible = getVisible();
+          const totalPages = Math.max(1, Math.ceil(visible.length / PER_PAGE));
+          if (currentPage > totalPages) currentPage = 1;
+
+          const start = (currentPage - 1) * PER_PAGE;
+          const pageItems = visible.slice(start, start + PER_PAGE);
+
+          allArticles.forEach(a => { a.style.display = 'none'; });
+          pageItems.forEach(a => { a.style.display = ''; });
+
+          countEl.textContent = visible.length === allArticles.length
+            ? allArticles.length + ' artículos'
+            : visible.length + ' artículos en esta categoría';
+
+          renderPagination(totalPages);
+        }
+
+        function renderPagination(totalPages) {
+          pagination.innerHTML = '';
+          if (totalPages <= 1) return;
+
+          const btn = (label, page, disabled, active) => {
+            const b = document.createElement('button');
+            b.textContent = label;
+            b.className = [
+              'px-4 py-2 rounded-lg text-sm font-bold transition border-2',
+              active ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-700 border-gray-300 hover:border-blue-600 hover:text-blue-600',
+              disabled ? 'opacity-40 pointer-events-none' : ''
+            ].join(' ');
+            if (!disabled) b.addEventListener('click', () => { currentPage = page; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+            return b;
+          };
+
+          pagination.appendChild(btn('← Anterior', currentPage - 1, currentPage === 1, false));
+          for (let i = 1; i <= totalPages; i++) {
+            pagination.appendChild(btn(i, i, false, i === currentPage));
+          }
+          pagination.appendChild(btn('Siguiente →', currentPage + 1, currentPage === totalPages, false));
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.addEventListener('click', () => {
+            currentFilter = b.dataset.filter;
+            currentPage = 1;
+            document.querySelectorAll('.filter-btn').forEach(x => {
+              x.classList.remove('active-filter', 'bg-blue-600', 'text-white', 'border-blue-600',
+                'bg-yellow-500', 'border-yellow-500',
+                'bg-blue-600', 'bg-gray-700', 'bg-purple-600', 'bg-orange-500');
+              x.classList.add('bg-white');
+            });
+            b.classList.remove('bg-white');
+            b.classList.add('active-filter');
+            if (currentFilter === 'todos') b.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+            else if (currentFilter === 'destacado') b.classList.add('bg-yellow-500', 'text-white', 'border-yellow-500');
+            else if (currentFilter === 'islas') b.classList.add('bg-blue-500', 'text-white', 'border-blue-500');
+            else if (currentFilter === 'guia') b.classList.add('bg-gray-700', 'text-white', 'border-gray-700');
+            else if (currentFilter === 'deportes') b.classList.add('bg-purple-600', 'text-white', 'border-purple-600');
+            else if (currentFilter === 'gastronomia') b.classList.add('bg-orange-500', 'text-white', 'border-orange-500');
+            render();
+          });
+        });
+
+        render();
+      })();
+    </script>
 
     <!-- Footer -->
     <!-- Newsletter: suscripción a ofertas vía WhatsApp -->
