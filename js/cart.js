@@ -10,6 +10,16 @@
 
 const TOURS = {
   /* ---- Experiencias ---- */
+  citytour: {
+    name: "City Tour Histórico por Cartagena",
+    price: 90000,
+    unit: "persona",
+  },
+  acuario: {
+    name: "Acuario & Vida Marina (Islas del Rosario)",
+    price: 80000,
+    unit: "persona",
+  },
   gastronomico: {
     name: "Recorrido Gastronómico por la Ciudad",
     price: 140000,

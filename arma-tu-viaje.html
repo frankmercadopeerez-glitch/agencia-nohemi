@@ -1,0 +1,1693 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <meta name="description" content="Planifica tu viaje perfecto a Cartagena de Indias con Dunas & Olas. Arma tu itinerario día a día: city tour, acuario, atardecer en bote, pasadía a las Islas del Rosario y más." />
+  <meta name="keywords" content="arma tu viaje Cartagena, planificador viaje Cartagena, itinerario Cartagena Colombia, tours personalizados Cartagena, experiencias Cartagena de Indias" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dunasyolas.com/arma-tu-viaje" />
+  <meta property="og:title" content="Arma tu viaje perfecto a Cartagena | Dunas & Olas" />
+  <meta property="og:description" content="Planifica tu itinerario día a día, combina experiencias únicas y reserva con Nohemi tu guía local en Cartagena." />
+  <meta property="og:image" content="https://dunasyolas.com/images/favicon-dunas-olas.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://dunasyolas.com/arma-tu-viaje" />
+  <meta property="twitter:title" content="Arma tu viaje perfecto a Cartagena | Dunas & Olas" />
+  <meta property="twitter:description" content="Planifica tu itinerario día a día, combina experiencias únicas y reserva con Nohemi." />
+  <title>Arma tu viaje a Cartagena | Dunas &amp; Olas — Agencia Turística Multicultural</title>
+  <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
+  <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
+  <meta name="theme-color" content="#5B3A82"/>
+  <link rel="canonical" href="https://dunasyolas.com/arma-tu-viaje"/>
+  <link rel="alternate" hreflang="es" href="https://dunasyolas.com/arma-tu-viaje"/>
+  <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/arma-tu-viaje"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: { 50:"#F3EFFA",100:"#E6DCF2",200:"#CDB8E5",300:"#B194D8",400:"#9B7BC9",500:"#7C5BA6",600:"#5B3A82",700:"#3F2761",800:"#34204F",900:"#2A1A40" },
+            yellow: { 50:"#FBF6E8",100:"#F5EBC9",200:"#EAD68E",300:"#DEC065",400:"#D4AE45",500:"#C9A227",600:"#A9871F",700:"#8A6D19",800:"#6B5413",900:"#4D3D0E" },
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+
+    /* --- Slot add button --- */
+    .slot-add-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 2px dashed #d1d5db;
+      border-radius: 0.75rem;
+      padding: 0.6rem 1rem;
+      color: #9ca3af;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+    }
+    .slot-add-btn:hover {
+      border-color: #5B3A82;
+      color: #5B3A82;
+      background: #F3EFFA;
+    }
+
+    /* --- Activity card in picker --- */
+    .act-card { display: block; width: 100%; transition: transform 0.15s, box-shadow 0.15s; }
+    .act-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.13); }
+
+    /* --- Filter buttons in picker --- */
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.9rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 99px;
+      background: transparent;
+      color: #6b7280;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: #5B3A82; color: #5B3A82; }
+    .filter-btn.active { background: #5B3A82; color: #fff; border-color: #5B3A82; }
+
+    /* --- Package cards --- */
+    .pkg-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .pkg-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.16); }
+
+    /* --- Drag handle & drop zones --- */
+    .drag-handle { cursor:grab; font-size:.85rem; padding:.45rem .4rem; color:#d1d5db; line-height:1; transition:color .15s; user-select:none; }
+    .drag-handle:hover { color:#6b7280; }
+    .drag-handle:active { cursor:grabbing; }
+    .slot-dropzone { transition: background-color .1s, border-left .1s; border-left: 3px solid transparent; }
+    .slot-dropzone.drag-over-empty { background-color:#dcfce7!important; border-left-color:#22c55e!important; }
+    .slot-dropzone.drag-over-occupied { background-color:#fee2e2!important; border-left-color:#ef4444!important; }
+    .act-being-dragged { opacity: 0.45; }
+
+    /* --- WhatsApp widget — idéntico a index.html --- */
+    .whatsapp-container { position:fixed;bottom:30px;right:30px;z-index:1000;display:flex;flex-direction:column;align-items:end; }
+    @keyframes bounce-slow { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
+    .whatsapp-float { background:transparent;cursor:pointer;border:none;display:flex;flex-direction:column;align-items:center;transition:transform .3s;animation:bounce-slow 3s infinite ease-in-out; }
+    .whatsapp-float:hover { transform:scale(1.05);animation:none; }
+    .whatsapp-icon { width:58px;height:58px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.2)); }
+    .whatsapp-text { background-color:#fff;color:#111827;padding:4px 12px;border-radius:50px;font-size:12px;font-weight:700;margin-top:8px;box-shadow:0 4px 12px rgba(0,0,0,.15);text-align:center;white-space:nowrap; }
+
+    /* --- Social badge (footer) --- */
+    .social-badge { width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; font-size:22px; color:#fff; transition:transform .2s ease,opacity .2s ease; }
+    .social-badge:hover { transform:scale(1.1); opacity:.85; }
+
+    /* --- Modal animation --- */
+    .modal-box { animation: modalIn 0.22s ease; }
+    @keyframes modalIn { from { opacity:0; transform:scale(0.95) translateY(8px); } to { opacity:1; transform:scale(1) translateY(0); } }
+
+    /* --- Highlight day card after applying package --- */
+    @keyframes cardPulse {
+      0%   { box-shadow: 0 0 0 0 rgba(91,58,130,0); }
+      30%  { box-shadow: 0 0 0 6px rgba(91,58,130,0.35); }
+      100% { box-shadow: 0 0 0 0 rgba(91,58,130,0); }
+    }
+    .card-applied { animation: cardPulse 1.1s ease forwards; }
+
+    /* --- Toast --- */
+    #toast {
+      position: fixed;
+      bottom: 88px;
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      background: #1f2937;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      border-radius: 99px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* --- Activity image in picker --- */
+    .act-img { height: 120px; object-fit: cover; width: 100%; }
+
+    /* line-clamp */
+    .line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+    /* Checkout input */
+    .ck-input {
+      width: 100%;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 0.625rem;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.875rem;
+      font-family: 'Montserrat', sans-serif;
+      color: #1f2937;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .ck-input:focus { border-color: #5B3A82; }
+
+    /* --- Mobile sticky checkout bar --- */
+    #mobile-bar {
+      display: none;
+    }
+    @media (max-width: 1024px) {
+      #mobile-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        background: #fff;
+        border-top: 1.5px solid #e5e7eb;
+        padding: 0.75rem 1.25rem;
+        z-index: 80;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+      }
+      /* space for the bottom bar so footer doesn't hide behind it */
+      footer { padding-bottom: 72px !important; }
+      /* WhatsApp above the mobile bar */
+      .whatsapp-container { bottom: 80px !important; right: 14px; }
+      .whatsapp-icon { width: 40px; height: 40px; }
+      .whatsapp-text { font-size: 8px; padding: 2px 7px; margin-top: 4px; }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- Toast de confirmación -->
+<div id="toast"><i class="fas fa-check-circle text-green-400"></i><span id="toast-msg">Paquete aplicado</span></div>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-[2.5px] text-white border-b border-white/10">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1">
+      <picture><source srcset="images/logo-icon.webp" type="image/webp"/><img src="images/logo-icon.png" alt="Dunas & Olas" width="291" height="153" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"/></picture>
+      <span class="leading-none select-none">
+        <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">Dunas <span class="text-yellow-500">&amp; Olas</span></span>
+        <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">Cartagena de Indias</span>
+      </span>
+    </a>
+    <div class="hidden md:flex items-center space-x-7 text-sm font-semibold tracking-wide uppercase h-full">
+      <a href="index.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Inicio</a>
+      <a href="experiences.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Experiencias</a>
+      <a href="kitesurf.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Kitesurf</a>
+      <a href="about.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Nosotros</a>
+      <a href="blog/index.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Blog</a>
+      <a id="lang-switch" href="en/index.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5" title="English version">EN</a>
+      <a href="arma-tu-viaje.html" class="py-2 px-5 text-xs bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded drop-shadow-none transition">✦ Arma tu viaje</a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden z-50 focus:outline-none text-white drop-shadow-md">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- MENÚ MÓVIL -->
+<div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[60] hidden flex flex-col justify-center items-center space-y-7 opacity-0 transition-opacity duration-300">
+  <a href="index.html" class="text-2xl font-bold text-white hover:text-blue-400">Inicio</a>
+  <a href="experiences.html" class="text-2xl font-bold text-white hover:text-blue-400">Experiencias</a>
+  <a href="kitesurf.html" class="text-2xl font-bold text-white hover:text-blue-400">Kitesurf</a>
+  <a href="about.html" class="text-2xl font-bold text-white hover:text-blue-400">Nosotros</a>
+  <a href="blog/index.html" class="text-2xl font-bold text-white hover:text-blue-400">Blog</a>
+  <a href="arma-tu-viaje.html" class="text-2xl font-bold text-yellow-400 hover:text-yellow-300">✦ Arma tu viaje</a>
+  <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fas fa-times"></i></button>
+</div>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="relative flex items-center justify-center text-center px-4 overflow-hidden" style="min-height:58vh;background:linear-gradient(135deg,#1e0f30 0%,#3F2761 55%,#5B3A82 100%)">
+  <div class="absolute inset-0 bg-center bg-cover opacity-20" style="background-image:url('images/cartagena.jpg')"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(30,15,48,0.6) 100%)"></div>
+  <div class="relative z-10 text-white pt-28 pb-14 max-w-3xl mx-auto">
+    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-6 text-sm font-medium">
+      <i class="fas fa-globe-americas text-yellow-400"></i>
+      <span>Agencia turística multicultural · Cartagena de Indias</span>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight">
+      Arma tu viaje<br><span class="text-yellow-400">perfecto</span>
+    </h1>
+    <p class="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8">
+      Elige tus fechas, combina experiencias únicas y Nohemi se encarga del resto
+    </p>
+    <a href="#planificador" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-xl px-8 py-3 transition text-sm md:text-base">
+      <i class="fas fa-calendar-plus"></i> Comenzar a planificar
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════ BARRA DE FECHAS (sticky) ══════════════════ -->
+<section id="planificador" class="bg-white border-b border-gray-200 py-4 sticky top-14 z-40 shadow-sm">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <div class="flex flex-wrap gap-3 items-end justify-center">
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Llegada</label>
+        <input type="date" id="trip-arrival" oninput="refreshPlanner()"
+          class="border border-gray-200 rounded-lg px-3 py-2 text-sm font-semibold text-gray-800 focus:outline-none focus:border-blue-600 cursor-pointer" style="font-family:Montserrat,sans-serif"/>
+      </div>
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Salida</label>
+        <input type="date" id="trip-departure" oninput="refreshPlanner()"
+          class="border border-gray-200 rounded-lg px-3 py-2 text-sm font-semibold text-gray-800 focus:outline-none focus:border-blue-600 cursor-pointer" style="font-family:Montserrat,sans-serif"/>
+      </div>
+      <div class="flex flex-col gap-1">
+        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Viajeros</label>
+        <select id="trip-travelers" onchange="refreshPlanner()"
+          class="border border-gray-200 rounded-lg px-3 py-2 text-sm font-semibold text-gray-800 focus:outline-none focus:border-blue-600 cursor-pointer" style="font-family:Montserrat,sans-serif">
+          <option value="1">1 persona</option>
+          <option value="2" selected>2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+          <option value="6">6 personas</option>
+          <option value="8">8 personas</option>
+          <option value="10">10 personas</option>
+          <option value="12">12 personas</option>
+          <option value="15">15 personas</option>
+        </select>
+      </div>
+    </div>
+    <p class="text-center text-[11px] text-gray-400 mt-2">
+      <i class="fas fa-info-circle mr-1"></i>Precios por persona · Los días se generan automáticamente según tus fechas
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ PAQUETES RECOMENDADOS ══════════════════ -->
+<section class="py-8 bg-white border-b border-gray-100">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="mb-4">
+      <h2 class="text-base font-bold text-gray-800 flex items-center gap-2 mb-1">
+        <i class="fas fa-bolt text-yellow-500"></i>Paquetes recomendados
+      </h2>
+      <p class="text-xs text-gray-400">Aplícalos con un clic y personaliza tu itinerario después</p>
+    </div>
+    <div class="flex gap-4 overflow-x-auto pb-2 -mx-4 px-4" style="scrollbar-width:none">
+      <!-- Paquete 1 -->
+      <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#3F2761,#5B3A82)">
+        <div class="p-5 text-white">
+          <div class="text-2xl mb-2">🌴</div>
+          <h3 class="font-extrabold text-base mb-1">Fin de Semana Caribeño</h3>
+          <p class="text-xs text-white/70 mb-4">Historia, gastronomía y un atardecer mágico</p>
+          <ul class="space-y-1 text-xs text-white/90 mb-3">
+            <li>🏛️ City Tour Histórico</li>
+            <li>🍽️ Recorrido Gastronómico</li>
+            <li>🌅 Atardecer en Bote</li>
+          </ul>
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+            <span class="text-xs text-white/60">Desde</span>
+            <div class="text-right">
+              <div class="text-xl font-extrabold text-white leading-none">$350.000</div>
+              <div class="text-[10px] text-white/60 mt-0.5">por persona</div>
+            </div>
+          </div>
+          <button onclick="applyPackage('fin-semana')"
+            class="w-full bg-white/20 hover:bg-white/30 text-white font-bold text-xs py-2 rounded-lg transition border border-white/30">
+            <i class="fas fa-magic mr-1"></i>Aplicar paquete
+          </button>
+        </div>
+      </div>
+      <!-- Paquete 2 -->
+      <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#0e7490,#0891b2)">
+        <div class="p-5 text-white">
+          <div class="text-2xl mb-2">🤿</div>
+          <h3 class="font-extrabold text-base mb-1">Aventura Total</h3>
+          <p class="text-xs text-white/70 mb-4">Islas, buceo y kitesurf — adrenalina pura</p>
+          <ul class="space-y-1 text-xs text-white/90 mb-3">
+            <li>🏝️ Pasadía Islas del Rosario</li>
+            <li>🤿 Buceo y Snorkel</li>
+            <li>🪁 Kitesurf Iniciación</li>
+          </ul>
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+            <span class="text-xs text-white/60">Desde</span>
+            <div class="text-right">
+              <div class="text-xl font-extrabold text-white leading-none">$1.180.000</div>
+              <div class="text-[10px] text-white/60 mt-0.5">por persona</div>
+            </div>
+          </div>
+          <button onclick="applyPackage('aventura')"
+            class="w-full bg-white/20 hover:bg-white/30 text-white font-bold text-xs py-2 rounded-lg transition border border-white/30">
+            <i class="fas fa-magic mr-1"></i>Aplicar paquete
+          </button>
+        </div>
+      </div>
+      <!-- Paquete 3 -->
+      <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#8a6d19,#C9A227)">
+        <div class="p-5 text-white">
+          <div class="text-2xl mb-2">☀️</div>
+          <h3 class="font-extrabold text-base mb-1">Sabor &amp; Sol</h3>
+          <p class="text-xs text-white/70 mb-4">Acuario, cocina local y atardecer en bote</p>
+          <ul class="space-y-1 text-xs text-white/90 mb-3">
+            <li>🐠 Acuario &amp; Vida Marina</li>
+            <li>🥘 Sabores Locales</li>
+            <li>🌅 Atardecer en Bote</li>
+          </ul>
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+            <span class="text-xs text-white/60">Desde</span>
+            <div class="text-right">
+              <div class="text-xl font-extrabold text-white leading-none">$350.000</div>
+              <div class="text-[10px] text-white/60 mt-0.5">por persona</div>
+            </div>
+          </div>
+          <button onclick="applyPackage('sabor-sol')"
+            class="w-full bg-white/20 hover:bg-white/30 text-white font-bold text-xs py-2 rounded-lg transition border border-white/30">
+            <i class="fas fa-magic mr-1"></i>Aplicar paquete
+          </button>
+        </div>
+      </div>
+      <!-- Paquete 4 -->
+      <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#1e3a2f,#0f766e)">
+        <div class="p-5 text-white">
+          <div class="text-2xl mb-2">🏛️</div>
+          <h3 class="font-extrabold text-base mb-1">Islas &amp; Cultura</h3>
+          <p class="text-xs text-white/70 mb-4">Ciudad histórica, islas tropicales y gastronomía</p>
+          <ul class="space-y-1 text-xs text-white/90 mb-3">
+            <li>🏛️ City Tour Histórico</li>
+            <li>🏝️ Pasadía Islas del Rosario</li>
+            <li>🍽️ Recorrido Gastronómico</li>
+          </ul>
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+            <span class="text-xs text-white/60">Desde</span>
+            <div class="text-right">
+              <div class="text-xl font-extrabold text-white leading-none">$410.000</div>
+              <div class="text-[10px] text-white/60 mt-0.5">por persona</div>
+            </div>
+          </div>
+          <button onclick="applyPackage('islas-cultura')"
+            class="w-full bg-white/20 hover:bg-white/30 text-white font-bold text-xs py-2 rounded-lg transition border border-white/30">
+            <i class="fas fa-magic mr-1"></i>Aplicar paquete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PLANNER PRINCIPAL ══════════════════ -->
+<main class="py-8 pb-24 lg:pb-8">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="flex flex-col lg:flex-row gap-6">
+
+      <!-- Días -->
+      <div class="flex-1 min-w-0">
+        <!-- Placeholder -->
+        <div id="planner-placeholder" class="bg-white rounded-2xl border border-gray-200 p-12 text-center">
+          <i class="fas fa-calendar-alt text-5xl mb-4 text-blue-200"></i>
+          <p class="text-lg font-bold text-gray-500 mb-2">Selecciona tus fechas</p>
+          <p class="text-sm text-gray-400">Elige tu llegada y salida arriba para ver el planificador día a día</p>
+        </div>
+        <!-- Cards de días (generadas por JS) -->
+        <div id="day-cards" class="space-y-4 hidden"></div>
+      </div>
+
+      <!-- Sidebar resumen -->
+      <div class="lg:w-80 xl:w-96 flex-shrink-0">
+        <div class="sticky top-36" style="max-height:calc(100vh - 160px);display:flex;flex-direction:column;">
+          <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col flex-1 min-h-0">
+            <div class="px-5 py-4 shrink-0" style="background:linear-gradient(135deg,#3F2761,#5B3A82)">
+              <h3 class="font-bold text-lg text-white flex items-center gap-2"><i class="fas fa-route text-yellow-400"></i> Tu viaje</h3>
+              <p class="text-blue-200 text-xs mt-0.5">Resumen e itinerario</p>
+            </div>
+            <div id="summary-content" class="p-4 overflow-y-auto flex-1">
+              <div class="text-center text-gray-400 py-8">
+                <i class="fas fa-route text-3xl mb-3 text-gray-200"></i>
+                <p class="text-sm">Agrega actividades para ver el resumen aquí</p>
+              </div>
+            </div>
+            <div class="p-4 border-t border-gray-100 shrink-0">
+              <div class="flex justify-between items-center mb-1">
+                <span class="font-bold text-gray-800 text-sm">Total estimado</span>
+                <button id="currency-toggle"
+                  onclick="window.toggleCurrency && window.toggleCurrency()"
+                  class="text-[10px] font-bold text-gray-400 hover:text-blue-600 bg-gray-100 hover:bg-blue-50 px-2.5 py-1 rounded-full transition">
+                  COP / USD / MXN
+                </button>
+              </div>
+              <div class="flex justify-end mb-3">
+                <span id="summary-total" class="font-extrabold text-xl text-blue-700">$0 COP</span>
+              </div>
+              <button onclick="openCheckout()" id="checkout-btn"
+                class="w-full bg-blue-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm opacity-50 cursor-not-allowed transition"
+                disabled>
+                <i class="fas fa-check-circle"></i> Reservar mi viaje
+              </button>
+            </div>
+          </div>
+          <!-- Garantía -->
+          <div class="mt-3 flex items-center gap-2 text-xs text-gray-400 justify-center">
+            <i class="fas fa-shield-alt text-green-500"></i>
+            <span>50% anticipo · Resto antes del tour · Confirmación por WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ══════════════════ MODAL: SELECTOR DE ACTIVIDAD ══════════════════ -->
+<div id="picker-modal" class="fixed inset-0 z-[100] hidden">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closePicker()"></div>
+  <div class="relative z-10 flex items-start sm:items-center justify-center min-h-full p-4 overflow-y-auto">
+    <div class="modal-box bg-white rounded-2xl w-full max-w-2xl flex flex-col shadow-2xl" style="max-height:min(85vh,600px)">
+      <!-- Header -->
+      <div class="flex items-start justify-between px-6 py-4 border-b border-gray-100 shrink-0">
+        <div>
+          <h3 class="font-bold text-lg text-gray-900">Elige una actividad</h3>
+          <p id="picker-slot-label" class="text-xs text-gray-400 mt-0.5"></p>
+        </div>
+        <button onclick="closePicker()" class="text-gray-300 hover:text-gray-600 text-2xl leading-none ml-4">&times;</button>
+      </div>
+      <!-- Filtros -->
+      <div class="flex gap-2 px-6 py-3 border-b border-gray-100 overflow-x-auto shrink-0" style="scrollbar-width:none">
+        <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Todas</button>
+        <button class="filter-btn" data-filter="cultural" onclick="setFilter('cultural')">Cultural</button>
+        <button class="filter-btn" data-filter="water" onclick="setFilter('water')">Mar &amp; Playas</button>
+        <button class="filter-btn" data-filter="food" onclick="setFilter('food')">Gastronomía</button>
+        <button class="filter-btn" data-filter="sport" onclick="setFilter('sport')">Deportes</button>
+      </div>
+      <!-- Grid de actividades -->
+      <div id="picker-activity-grid" class="overflow-y-auto p-4 grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1" style="min-height:0"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ MODAL: MOVER ACTIVIDAD ══════════════════ -->
+<div id="move-modal" class="fixed inset-0 z-[110] hidden">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeMoveModal()"></div>
+  <div class="relative z-10 flex items-end sm:items-center justify-center min-h-full p-0 sm:p-4">
+    <div class="modal-box bg-white rounded-t-2xl sm:rounded-2xl w-full sm:max-w-lg shadow-2xl flex flex-col" style="max-height:85vh">
+      <!-- Header -->
+      <div class="flex items-start justify-between px-5 py-4 border-b border-gray-100 shrink-0">
+        <div>
+          <h3 class="font-bold text-base text-gray-900">Mover actividad</h3>
+          <p id="move-act-label" class="text-sm text-gray-500 mt-0.5 font-medium"></p>
+        </div>
+        <button onclick="closeMoveModal()" class="text-gray-300 hover:text-gray-600 text-2xl leading-none ml-4">&times;</button>
+      </div>
+      <!-- Instrucción -->
+      <p class="text-xs text-gray-400 px-5 pt-3 pb-1 shrink-0">
+        <span class="text-green-600 font-semibold">Verde</span> = mover aquí ·
+        <span class="text-red-500 font-semibold">Rojo</span> = reemplazar actividad existente
+      </p>
+      <!-- Grid de días -->
+      <div id="move-grid" class="overflow-y-auto px-5 pb-5 pt-2 space-y-2 flex-1"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ MODAL: CHECKOUT ══════════════════ -->
+<div id="checkout-modal" class="fixed inset-0 z-[100] hidden">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCheckout()"></div>
+  <div class="relative z-10 flex items-center justify-center min-h-full p-4">
+    <div class="modal-box bg-white rounded-2xl w-full max-w-lg max-h-[92vh] overflow-y-auto shadow-2xl">
+      <!-- Header -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+        <div>
+          <h3 class="font-bold text-lg text-gray-900">Reservar mi viaje</h3>
+          <p class="text-xs text-gray-400 mt-0.5">Confirmaremos disponibilidad por WhatsApp</p>
+        </div>
+        <button onclick="closeCheckout()" class="text-gray-300 hover:text-gray-600 text-2xl leading-none">&times;</button>
+      </div>
+
+      <div class="p-6 space-y-4">
+        <!-- Resumen itinerario -->
+        <div id="checkout-itinerary" class="bg-gray-50 rounded-xl p-4 text-sm text-gray-700 space-y-1"></div>
+
+        <!-- Opción de pago -->
+        <div class="bg-blue-50 border border-blue-100 rounded-xl p-4">
+          <h4 class="text-xs font-bold text-gray-700 uppercase tracking-wide mb-3 flex items-center gap-1.5">
+            <i class="fas fa-credit-card text-blue-500"></i> Opción de pago
+          </h4>
+          <div class="space-y-2.5">
+            <label class="flex items-start gap-2.5 cursor-pointer">
+              <input type="radio" name="payment-option" value="half" id="pay-half" checked class="mt-0.5 accent-blue-600 shrink-0"/>
+              <div class="text-xs leading-relaxed">
+                <div class="font-bold text-gray-800">50% anticipo + 50% antes del tour</div>
+                <div class="text-gray-500 mt-0.5">Anticipo: <span id="pay-half-amount" class="font-semibold text-blue-700"></span>. El resto se paga en efectivo o transferencia directamente a Nohemi antes de cada experiencia.</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-2.5 cursor-pointer">
+              <input type="radio" name="payment-option" value="full" id="pay-full" class="mt-0.5 accent-blue-600 shrink-0"/>
+              <div class="text-xs leading-relaxed">
+                <div class="font-bold text-gray-800">100% pago completo por adelantado</div>
+                <div class="text-gray-500 mt-0.5">Total: <span id="pay-full-amount" class="font-semibold text-blue-700"></span></div>
+              </div>
+            </label>
+          </div>
+          <p class="text-[10px] text-gray-400 mt-3 border-t border-blue-100 pt-2">
+            <i class="fas fa-info-circle mr-1 text-blue-400"></i>
+            Pago por transferencia bancaria o efectivo · Se requiere anticipo para confirmar con operadores
+          </p>
+        </div>
+
+        <!-- Términos y condiciones -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs">
+          <h4 class="font-bold text-gray-800 mb-2 flex items-center gap-1.5">
+            <i class="fas fa-file-contract text-amber-600"></i> Términos y Condiciones
+          </h4>
+          <ul class="space-y-1.5 text-gray-600 mb-3 list-none">
+            <li><strong>Puntualidad:</strong> Preséntate 15 min antes. No hay reembolso por llegadas tardías.</li>
+            <li><strong>No presentación:</strong> Sin devolución del anticipo si el cliente no se presenta al tour confirmado.</li>
+            <li><strong>Cancelación:</strong> Más de 48h de anticipación — se reembolsa el anticipo. Menos de 48h — sin reembolso.</li>
+            <li><strong>Clima:</strong> Tours acuáticos pueden reprogramarse por condiciones del mar sin cargo adicional.</li>
+            <li><strong>Anticipo obligatorio:</strong> El 50% es necesario para confirmar la reserva con los operadores turísticos.</li>
+          </ul>
+          <label class="flex items-start gap-2 cursor-pointer">
+            <input type="checkbox" id="ck-terms" class="mt-0.5 accent-blue-600 shrink-0"/>
+            <span class="text-gray-700">He leído y acepto los <a href="policies.html" target="_blank" class="text-blue-600 underline font-semibold">Términos y Condiciones</a> de Dunas &amp; Olas</span>
+          </label>
+        </div>
+
+        <!-- Formulario -->
+        <form onsubmit="sendToWhatsApp(event)" class="space-y-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wider">Nombre completo *</label>
+            <input type="text" id="ck-name" class="ck-input" placeholder="Tu nombre" required/>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wider">WhatsApp *</label>
+            <input type="tel" id="ck-phone" class="ck-input" placeholder="+57 300 000 0000" required/>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wider">Correo electrónico *</label>
+            <input type="email" id="ck-email" class="ck-input" placeholder="tu@correo.com" required/>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-500 mb-1 uppercase tracking-wider">Notas especiales</label>
+            <textarea id="ck-notes" class="ck-input" rows="2" placeholder="Restricciones alimenticias, necesidades especiales…" style="resize:vertical"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition text-sm">
+            <i class="fab fa-whatsapp text-xl"></i> Confirmar por WhatsApp con Nohemi
+          </button>
+          <p class="text-[11px] text-gray-400 text-center">Al confirmar, Nohemi te contactará para coordinar el pago del anticipo.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════ WHATSAPP WIDGET ══════════════════ -->
+<div class="whatsapp-container">
+  <button id="wa-main-btn" onclick="openWhatsApp('Hola, quiero armar mi viaje a Cartagena con Dunas & Olas.')" class="whatsapp-float group focus:outline-none">
+    <img src="images/WhatsApp.svg.webp" alt="WhatsApp" class="whatsapp-icon"/>
+    <span class="whatsapp-text">Contactar / Contact</span>
+  </button>
+</div>
+
+<!-- ══════════════════ BARRA MÓVIL STICKY ══════════════════ -->
+<div id="mobile-bar">
+  <div class="flex items-center gap-2">
+    <div>
+      <div class="text-[10px] text-gray-400 font-medium">Total estimado</div>
+      <div id="mobile-total" class="font-extrabold text-blue-700 text-base leading-tight">$0 COP</div>
+    </div>
+    <button onclick="window.toggleCurrency && window.toggleCurrency()"
+      title="Cambiar moneda"
+      class="text-[9px] font-bold text-gray-400 hover:text-blue-600 bg-gray-100 px-2 py-1 rounded-full leading-none shrink-0">
+      💱
+    </button>
+  </div>
+  <button onclick="openCheckout()" id="mobile-checkout-btn"
+    class="bg-blue-700 text-white font-bold py-2.5 px-5 rounded-xl text-sm flex items-center gap-2 opacity-50 cursor-not-allowed transition"
+    disabled>
+    <i class="fas fa-check-circle"></i> Reservar
+  </button>
+</div>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="bg-gray-900 text-white pt-12 pb-8 border-t border-gray-800">
+  <div class="container mx-auto px-6 text-center md:text-left">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 md:mb-12">
+      <div class="col-span-1 flex flex-col items-center md:items-start">
+        <picture><source srcset="images/logo-master.webp" type="image/webp"/><img src="images/logo-master.png" alt="Dunas & Olas" width="315" height="148" class="h-12 w-auto object-contain mb-2" loading="lazy" decoding="async"/></picture>
+        <span class="block mb-4 leading-none select-none">
+          <span class="block font-extrabold tracking-tight text-xl text-white">Dunas <span class="text-yellow-500">&amp; Olas</span></span>
+          <span class="block text-[9px] uppercase tracking-[0.25em] text-gray-400 font-semibold mt-0.5">Cartagena de Indias</span>
+        </span>
+        <p class="text-gray-400 text-xs leading-relaxed max-w-xs">La calidez del norte, la magia del caribe.</p>
+      </div>
+      <div class="hidden md:block">
+        <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
+        <ul class="space-y-2 text-gray-400 text-xs">
+          <li><a href="arma-tu-viaje.html" class="hover:text-yellow-400">✦ Arma tu viaje</a></li>
+          <li><a href="fleet.html" class="hover:text-blue-400">Nuestra Flotilla</a></li>
+          <li><a href="experiences.html" class="hover:text-blue-400">Experiencias</a></li>
+          <li><a href="kitesurf.html" class="hover:text-blue-400">Kitesurf</a></li>
+          <li><a href="about.html" class="hover:text-blue-400">Nosotros</a></li>
+          <li><a href="blog/index.html" class="hover:text-blue-400">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm">Contacto</h4>
+        <ul class="space-y-2 text-gray-400 text-xs flex flex-col items-center md:items-start">
+          <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-500"></i>Manga, Cartagena</li>
+          <li class="flex items-center"><i class="fab fa-whatsapp mr-2 text-blue-500"></i>+57 316 303 0589</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
+        <div class="flex justify-center md:justify-start gap-2">
+          <a href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6" target="_blank" class="transition hover:opacity-80">
+            <img src="images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform"/>
+          </a>
+          <a href="https://www.facebook.com/dunasyolas" target="_blank" class="transition hover:opacity-80">
+            <img src="images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform"/>
+          </a>
+          <a href="https://www.tiktok.com/@mexicanaencartagena" target="_blank" class="social-badge" style="background:#000">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-[10px] md:text-xs text-gray-500 text-center">
+      <p>&copy; 2026 Dunas &amp; Olas. Todos los derechos reservados.</p>
+      <p class="mt-1">RNT No. 187452</p>
+      <div class="mt-2 space-x-3">
+        <a href="policies.html" class="hover:text-white">Términos y Condiciones</a> ·
+        <a href="privacy.html" class="hover:text-white">Política de Privacidad</a> ·
+        <a href="faq.html" class="hover:text-white">Preguntas Frecuentes</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════════════ SCRIPT ══════════════════ -->
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// CATÁLOGO DE ACTIVIDADES
+// ─────────────────────────────────────────────────────────────────────────────
+const ACTIVITIES = {
+  citytour: {
+    name: 'City Tour Histórico',
+    emoji: '🏛️',
+    price: 90000,
+    duration: '3 horas',
+    description: 'Murallas, plazas históricas y el mágico Getsemaní con guía local',
+    category: 'cultural',
+    image: 'images/cartagenacentro.jpg',
+    slots: ['morning', 'afternoon'],
+    link: null,
+  },
+  acuario: {
+    name: 'Acuario & Vida Marina',
+    emoji: '🐠',
+    price: 80000,
+    duration: '2 horas',
+    description: 'El fascinante mundo submarino del Caribe colombiano en las Islas del Rosario',
+    category: 'water',
+    image: 'images/acuario.jpg',
+    slots: ['morning', 'afternoon'],
+    link: null,
+  },
+  atardecer: {
+    name: 'Atardecer en Bote',
+    emoji: '🌅',
+    price: 120000,
+    duration: '2.5 horas',
+    description: 'El cielo se pinta de naranjas y rosas sobre la Bahía de Cartagena',
+    category: 'water',
+    image: 'images/cartagenasunset.jpg',
+    slots: ['afternoon', 'night'],
+    link: 'atardeceres-bahia.html',
+  },
+  pasadia: {
+    name: 'Pasadía Islas del Rosario',
+    emoji: '🏝️',
+    price: 180000,
+    duration: 'Todo el día',
+    description: 'Aguas cristalinas, snorkel y playas paradisíacas en el Parque Corales del Rosario',
+    category: 'water',
+    image: 'images/cartagena.jpg',
+    slots: ['morning'],
+    allDay: true,
+    link: 'pasadia-islas-rosario.html',
+  },
+  buceo: {
+    name: 'Buceo y Snorkel',
+    emoji: '🤿',
+    price: 250000,
+    duration: 'Todo el día',
+    description: 'Incluye 3 inmersiones en arrecifes de coral, almuerzo en las islas y regreso a las 16:00 h al Muelle La Bodeguita',
+    category: 'water',
+    image: 'images/cartagena.jpg',
+    slots: ['morning'],
+    allDay: true,
+    link: 'buceo-snorkel.html',
+  },
+  gastronomico: {
+    name: 'Recorrido Gastronómico',
+    emoji: '🍽️',
+    price: 140000,
+    duration: '2.5 horas',
+    description: 'Los sabores más auténticos de Cartagena: friche, carimañola, coctel de camarón',
+    category: 'food',
+    image: 'images/cocinacaribe.jpg',
+    slots: ['afternoon', 'night'],
+    link: 'recorrido-gastronomico.html',
+  },
+  sabores: {
+    name: 'Sabores Locales',
+    emoji: '🥘',
+    price: 150000,
+    duration: '2 horas',
+    description: 'Mercados, cocinas tradicionales y chefs de la gastronomía caribeña',
+    category: 'food',
+    image: 'images/cocinacaribe.jpg',
+    slots: ['afternoon', 'night'],
+    link: 'sabores-locales.html',
+  },
+  kitesurf: {
+    name: 'Kitesurf Iniciación',
+    emoji: '🪁',
+    price: 750000,
+    duration: '2 horas',
+    description: 'Aprende a volar sobre el agua en La Boquilla con instructores certificados',
+    category: 'sport',
+    image: 'images/kitesurf/jump.webp',
+    slots: ['morning', 'afternoon'],
+    link: 'kitesurf.html',
+  },
+  chiva: {
+    name: 'Chiva Rumbera',
+    emoji: '🚌',
+    price: 70000,
+    duration: '2 horas',
+    description: 'El tour más cartagenero: baile, música en vivo y la mejor rumba nocturna a bordo de la chiva típica',
+    category: 'cultural',
+    image: 'images/cartagenacentro.jpg',
+    slots: ['night'],
+    link: 'chiva-rumbera.html',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PAQUETES
+// ─────────────────────────────────────────────────────────────────────────────
+const PACKAGES = {
+  'fin-semana': {
+    activities: ['citytour', 'gastronomico', 'atardecer'],
+    slotPrefs: { citytour: 'morning', gastronomico: 'night', atardecer: 'afternoon' },
+    days: 2,
+  },
+  'aventura': {
+    activities: ['buceo', 'atardecer', 'kitesurf'],
+    slotPrefs: { buceo: 'morning', atardecer: 'night', kitesurf: 'morning' },
+    days: 2,
+  },
+  'sabor-sol': {
+    activities: ['acuario', 'sabores', 'atardecer'],
+    slotPrefs: { acuario: 'morning', sabores: 'night', atardecer: 'afternoon' },
+    days: 2,
+  },
+  'islas-cultura': {
+    activities: ['citytour', 'pasadia', 'gastronomico'],
+    slotPrefs: { citytour: 'morning', pasadia: 'morning', gastronomico: 'night' },
+    days: 2,
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SLOT CONFIG
+// ─────────────────────────────────────────────────────────────────────────────
+const SLOT_CONFIG = {
+  morning:   { label: 'Mañana', time: '8:00 – 12:00', icon: 'fa-sun',       color: 'text-yellow-500', bg: 'bg-amber-50',  border: 'border-amber-100' },
+  afternoon: { label: 'Tarde',  time: '12:00 – 18:00', icon: 'fa-cloud-sun', color: 'text-orange-400', bg: 'bg-orange-50', border: 'border-orange-100' },
+  night:     { label: 'Noche',  time: '18:00 – 23:00', icon: 'fa-moon',      color: 'text-indigo-500', bg: 'bg-indigo-50', border: 'border-indigo-100' },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ESTADO
+// ─────────────────────────────────────────────────────────────────────────────
+const STATE_KEY = 'trip-builder-v1';
+let state = loadState() || { arrival: '', departure: '', travelers: 2, itinerary: {} };
+let pickerTarget = null; // { day, slot }
+let activeFilter = 'all';
+
+function saveState() {
+  localStorage.setItem(STATE_KEY, JSON.stringify(state));
+}
+function loadState() {
+  try { return JSON.parse(localStorage.getItem(STATE_KEY)); } catch { return null; }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// UTILIDADES DE FECHA
+// ─────────────────────────────────────────────────────────────────────────────
+function getDays() {
+  if (!state.arrival || !state.departure) return [];
+  const start = new Date(state.arrival + 'T00:00:00');
+  const end   = new Date(state.departure + 'T00:00:00');
+  if (end <= start) return [];
+  const days = [];
+  const d = new Date(start);
+  while (d < end) {
+    days.push(d.toISOString().split('T')[0]);
+    d.setDate(d.getDate() + 1);
+  }
+  return days;
+}
+
+function formatDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('es-CO', { weekday: 'long', day: 'numeric', month: 'long' });
+}
+
+function formatDateShort(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('es-CO', { day: 'numeric', month: 'short' });
+}
+
+function formatCOP(n) {
+  return '$' + Math.round(n).toLocaleString('es-CO') + ' COP';
+}
+
+// Usa currency.js si está disponible (COP / USD / MXN)
+function displayPrice(cop) {
+  return typeof window.formatPrice === 'function' ? window.formatPrice(cop) : formatCOP(cop);
+}
+
+// Hook para que currency.js re-renderice el planner al cambiar moneda
+window.renderCart = function() {
+  renderSummary();
+  renderPlanner();
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PLANNER
+// ─────────────────────────────────────────────────────────────────────────────
+function refreshPlanner() {
+  const arrival   = document.getElementById('trip-arrival').value;
+  const departure = document.getElementById('trip-departure').value;
+  const travelers = parseInt(document.getElementById('trip-travelers').value) || 2;
+
+  if (departure && arrival && departure <= arrival) {
+    document.getElementById('trip-departure').setCustomValidity('La salida debe ser posterior a la llegada');
+    document.getElementById('trip-departure').reportValidity();
+    return;
+  }
+  document.getElementById('trip-departure') && document.getElementById('trip-departure').setCustomValidity('');
+
+  state.arrival   = arrival;
+  state.departure = departure;
+  state.travelers = travelers;
+
+  // Purge days no longer in range
+  const days = getDays();
+  for (const key of Object.keys(state.itinerary)) {
+    if (!days.includes(key)) delete state.itinerary[key];
+  }
+
+  saveState();
+  renderPlanner();
+  renderSummary();
+}
+
+function renderPlanner() {
+  const days = getDays();
+  const placeholder = document.getElementById('planner-placeholder');
+  const dayCards    = document.getElementById('day-cards');
+
+  if (!days.length) {
+    placeholder.classList.remove('hidden');
+    dayCards.classList.add('hidden');
+    dayCards.innerHTML = '';
+    return;
+  }
+
+  placeholder.classList.add('hidden');
+  dayCards.classList.remove('hidden');
+  dayCards.innerHTML = days.map((day, i) => renderDayCard(day, i + 1, state.itinerary[day] || {})).join('');
+}
+
+function renderDayCard(day, num, it) {
+  return `
+    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+      <div class="flex items-center gap-3 px-5 py-3 text-white" style="background:linear-gradient(90deg,#3F2761,#5B3A82)">
+        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center font-bold text-sm shrink-0">${num}</div>
+        <div>
+          <div class="font-bold capitalize text-sm">${formatDate(day)}</div>
+          <div class="text-xs text-blue-200">Día ${num} de tu viaje</div>
+        </div>
+      </div>
+      <div class="divide-y divide-gray-100">
+        ${renderSlot(day, 'morning',   it.morning)}
+        ${renderSlot(day, 'afternoon', it.afternoon)}
+        ${renderSlot(day, 'night',     it.night)}
+      </div>
+    </div>`;
+}
+
+function renderSlot(day, slot, actId) {
+  const cfg = SLOT_CONFIG[slot];
+  const act = actId ? ACTIVITIES[actId] : null;
+  const header = `
+    <div class="flex items-center gap-1.5 w-[88px] shrink-0">
+      <i class="fas ${cfg.icon} ${cfg.color} text-xs"></i>
+      <div>
+        <div class="text-xs font-bold text-gray-700">${cfg.label}</div>
+        <div class="text-[10px] text-gray-400 leading-none mt-0.5">${cfg.time}</div>
+      </div>
+    </div>`;
+
+  if (act) {
+    const isAllDay = act.allDay ? '<span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-1.5 py-0.5 rounded ml-1">Todo el día</span>' : '';
+    const nameHtml = act.link
+      ? `<a href="${act.link}" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-600 hover:underline">${act.name}</a>`
+      : act.name;
+    return `
+      <div class="slot-dropzone flex items-center gap-3 px-4 py-3 ${cfg.bg} border-b ${cfg.border}"
+           data-day="${day}" data-slot="${slot}"
+           ondragover="onSlotDragOver(event,this)"
+           ondragleave="onSlotDragLeave(event,this)"
+           ondrop="onSlotDrop(event,this)">
+        ${header}
+        <div class="flex-1 flex items-center gap-1 bg-white rounded-xl border border-gray-200 min-w-0"
+             draggable="true"
+             ondragstart="onActivityDragStart(event,'${day}','${slot}','${actId}')"
+             ondragend="onActivityDragEnd(event,this.parentElement)">
+          <button onclick="openMoveModal('${day}','${slot}','${actId}')"
+            title="Mantén pulsado para arrastrar · Toca para abrir menú de mover"
+            class="drag-handle shrink-0 touch-pan-y">
+            <i class="fas fa-grip-vertical"></i>
+          </button>
+          <span class="text-xl shrink-0">${act.emoji}</span>
+          <div class="flex-1 min-w-0 py-2 pr-1">
+            <div class="text-sm font-bold text-gray-800 truncate">${nameHtml}${isAllDay}</div>
+            <div class="text-xs text-gray-400">${act.duration} · ${displayPrice(act.price)}/p</div>
+          </div>
+          <button onclick="removeActivity('${day}','${slot}')" title="Quitar"
+            class="text-gray-300 hover:text-red-400 transition text-xl leading-none w-7 h-7 flex items-center justify-center rounded-full hover:bg-red-50 shrink-0 mr-1">
+            &times;
+          </button>
+        </div>
+      </div>`;
+  }
+
+  // Afternoon (and morning) blocked when another slot on this day has an allDay activity
+  if ((slot === 'morning' || slot === 'afternoon') && dayHasAllDay(day)) {
+    return `
+      <div class="flex items-center gap-3 px-4 py-3 bg-blue-50/60 border-b border-blue-100"
+           data-day="${day}" data-slot="${slot}">
+        ${header}
+        <div class="flex items-center gap-1.5 text-blue-400">
+          <i class="fas fa-clock text-xs"></i>
+          <span class="text-xs">Incluido en actividad de día completo</span>
+        </div>
+      </div>`;
+  }
+
+  return `
+    <div class="slot-dropzone flex items-center gap-3 px-4 py-3"
+         data-day="${day}" data-slot="${slot}"
+         ondragover="onSlotDragOver(event,this)"
+         ondragleave="onSlotDragLeave(event,this)"
+         ondrop="onSlotDrop(event,this)">
+      ${header}
+      <button onclick="openPicker('${day}','${slot}')" class="slot-add-btn">
+        <i class="fas fa-plus-circle text-sm"></i>
+        <span>Agregar actividad</span>
+      </button>
+    </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DRAG AND DROP
+// ─────────────────────────────────────────────────────────────────────────────
+let dragSource = null;
+
+function onActivityDragStart(e, day, slot, actId) {
+  dragSource = { day, slot, actId };
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', actId);
+  setTimeout(() => e.target.classList.add('act-being-dragged'), 0);
+}
+
+function onActivityDragEnd(e, slotEl) {
+  e.target.classList.remove('act-being-dragged');
+  document.querySelectorAll('.slot-dropzone').forEach(el => {
+    el.classList.remove('drag-over-empty', 'drag-over-occupied');
+  });
+}
+
+function onSlotDragOver(e, el) {
+  if (!dragSource) return;
+  const act = ACTIVITIES[dragSource.actId];
+  const targetSlot = el.dataset.slot;
+  const targetDay  = el.dataset.day;
+  if (!act || !act.slots.includes(targetSlot)) {
+    e.dataTransfer.dropEffect = 'none';
+    return;
+  }
+  // Block morning/afternoon if target day has an allDay activity from a different slot
+  if (targetSlot === 'morning' || targetSlot === 'afternoon') {
+    const hasOtherAllDay = Object.entries(state.itinerary[targetDay] || {}).some(([sk, id]) =>
+      id && id !== dragSource.actId && ACTIVITIES[id]?.allDay
+    );
+    if (hasOtherAllDay) {
+      e.dataTransfer.dropEffect = 'none';
+      return;
+    }
+  }
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  const it = state.itinerary[targetDay] || {};
+  const sameSpot = targetDay === dragSource.day && targetSlot === dragSource.slot;
+  const occupied = !sameSpot && it[targetSlot];
+  el.classList.remove('drag-over-empty', 'drag-over-occupied');
+  if (!sameSpot) el.classList.add(occupied ? 'drag-over-occupied' : 'drag-over-empty');
+}
+
+function onSlotDragLeave(e, el) {
+  if (!el.contains(e.relatedTarget)) {
+    el.classList.remove('drag-over-empty', 'drag-over-occupied');
+  }
+}
+
+function onSlotDrop(e, el) {
+  e.preventDefault();
+  if (!dragSource) return;
+  const { day: srcDay, slot: srcSlot, actId } = dragSource;
+  const targetDay  = el.dataset.day;
+  const targetSlot = el.dataset.slot;
+  const act = ACTIVITIES[actId];
+  if (!act || !act.slots.includes(targetSlot)) return;
+  if (targetDay === srcDay && targetSlot === srcSlot) return;
+
+  // Block morning/afternoon drop if target day has another allDay activity
+  if (targetSlot === 'morning' || targetSlot === 'afternoon') {
+    const hasOtherAllDay = Object.entries(state.itinerary[targetDay] || {}).some(([sk, id]) =>
+      id && id !== actId && ACTIVITIES[id]?.allDay
+    );
+    if (hasOtherAllDay) {
+      showToast('⚠️ Ese día ya tiene una actividad de día completo', true);
+      dragSource = null;
+      return;
+    }
+  }
+
+  // Quitar del origen
+  if (state.itinerary[srcDay]) state.itinerary[srcDay][srcSlot] = null;
+  // Poner en destino (reemplaza si ocupado)
+  if (!state.itinerary[targetDay]) state.itinerary[targetDay] = { morning: null, afternoon: null, night: null };
+  state.itinerary[targetDay][targetSlot] = actId;
+  // If dropped activity is allDay, clear afternoon of target day
+  if (act.allDay) state.itinerary[targetDay].afternoon = null;
+
+  saveState();
+  renderPlanner();
+  renderSummary();
+
+  el.classList.remove('drag-over-empty', 'drag-over-occupied');
+  dragSource = null;
+
+  const dayNum  = getDays().indexOf(targetDay) + 1;
+  const slotLbl = SLOT_CONFIG[targetSlot].label;
+  showToast(`✓ Movido al Día ${dayNum} — ${slotLbl}`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ACTIVITY PICKER
+// ─────────────────────────────────────────────────────────────────────────────
+function dayHasAllDay(day) {
+  const it = state.itinerary[day] || {};
+  return Object.values(it).some(id => id && ACTIVITIES[id]?.allDay);
+}
+
+function openPicker(day, slot) {
+  // Guard: afternoon is blocked when day has an allDay activity
+  if ((slot === 'morning' || slot === 'afternoon') && dayHasAllDay(day)) {
+    showToast('⚠️ Ese día tiene una actividad de todo el día. Solo puedes agregar actividades nocturnas.', true);
+    return;
+  }
+  pickerTarget = { day, slot };
+  activeFilter = 'all';
+  const cfg = SLOT_CONFIG[slot];
+  document.getElementById('picker-slot-label').textContent =
+    `Selecciona para el ${cfg.label.toLowerCase()} (${cfg.time})`;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+  renderPickerGrid();
+  document.getElementById('picker-modal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePicker() {
+  document.getElementById('picker-modal').classList.add('hidden');
+  document.body.style.overflow = '';
+  pickerTarget = null;
+}
+
+function setFilter(filter) {
+  activeFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
+  renderPickerGrid();
+}
+
+function renderPickerGrid() {
+  const slot = pickerTarget?.slot;
+  const day  = pickerTarget?.day;
+  const grid = document.getElementById('picker-activity-grid');
+
+  // If this day already has an allDay activity, morning/afternoon slots are blocked
+  if (day && slot && (slot === 'morning' || slot === 'afternoon') && dayHasAllDay(day)) {
+    grid.innerHTML = `
+      <div class="col-span-2 text-center py-10 text-gray-400">
+        <i class="fas fa-sun text-3xl mb-3 text-blue-200"></i>
+        <p class="text-sm font-medium text-gray-600 mb-1">Este día ya tiene una actividad de día completo</p>
+        <p class="text-xs">Solo puedes agregar actividades nocturnas (Chiva Rumbera, etc.)</p>
+      </div>`;
+    return;
+  }
+
+  const visible = Object.entries(ACTIVITIES).filter(([, act]) => {
+    if (slot && !act.slots.includes(slot)) return false;
+    if (activeFilter !== 'all' && act.category !== activeFilter) return false;
+    return true;
+  });
+
+  if (!visible.length) {
+    grid.innerHTML = `
+      <div class="col-span-2 text-center py-10 text-gray-400">
+        <i class="fas fa-search text-3xl mb-3 text-gray-200"></i>
+        <p class="text-sm">No hay actividades disponibles para este horario y filtro</p>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = visible.map(([id, act]) => `
+    <button onclick="pickActivity('${id}')"
+      class="act-card text-left bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-500 group">
+      <div class="relative" style="height:120px;overflow:hidden;">
+        <img src="${act.image}" alt="${act.name}" style="display:block;width:100%;height:100%;object-fit:cover;" class="group-hover:scale-105 transition-transform duration-300"/>
+        <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,0.5),transparent)"></div>
+        <div class="absolute bottom-2 left-3 flex items-center gap-1.5">
+          <span class="text-xl leading-none">${act.emoji}</span>
+          <span class="text-[10px] text-white/90 font-bold bg-black/30 rounded px-1.5 py-0.5 backdrop-blur-sm">${act.duration}</span>
+        </div>
+        ${act.allDay ? '<div class="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Todo el día</div>' : ''}
+      </div>
+      <div class="p-3 bg-white">
+        <div class="font-bold text-gray-900 text-sm mb-0.5">${act.name}</div>
+        <div class="text-xs text-gray-400 mb-2 line-clamp-2">${act.description}</div>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-extrabold text-blue-700">${displayPrice(act.price)}<span class="text-xs font-normal text-gray-400">/p</span></span>
+          <span class="text-xs font-bold text-blue-600 group-hover:underline">Agregar →</span>
+        </div>
+      </div>
+    </button>`).join('');
+}
+
+function pickActivity(actId) {
+  if (!pickerTarget) return;
+  const { day, slot } = pickerTarget;
+  if (!state.itinerary[day]) state.itinerary[day] = { morning: null, afternoon: null, night: null };
+  // If placing an allDay activity, clear the afternoon slot
+  if (ACTIVITIES[actId]?.allDay) {
+    state.itinerary[day].afternoon = null;
+  }
+  state.itinerary[day][slot] = actId;
+  saveState();
+  closePicker();
+  renderPlanner();
+  renderSummary();
+}
+
+function removeActivity(day, slot) {
+  if (state.itinerary[day]) state.itinerary[day][slot] = null;
+  saveState();
+  renderPlanner();
+  renderSummary();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PACKAGES
+// ─────────────────────────────────────────────────────────────────────────────
+function applyPackage(pkgId) {
+  const pkg = PACKAGES[pkgId];
+  if (!pkg) return;
+  const days = getDays();
+  if (!days.length) {
+    showToast('⚠️ Selecciona las fechas de tu viaje primero', true);
+    document.getElementById('trip-arrival').focus();
+    document.getElementById('planificador').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const queue = [...pkg.activities];
+  const daysCopy = [...days];
+  const allDayDays = new Set(); // Track days with allDay activities
+
+  for (const actId of queue) {
+    const pref = pkg.slotPrefs[actId] || 'morning';
+    const act  = ACTIVITIES[actId];
+    if (!act) continue;
+
+    let placed = false;
+    for (const day of daysCopy) {
+      if (!state.itinerary[day]) state.itinerary[day] = { morning: null, afternoon: null, night: null };
+      const candidates = [pref, ...act.slots.filter(s => s !== pref)];
+      for (const slot of candidates) {
+        // Skip morning/afternoon on days that already have an allDay activity
+        if ((slot === 'morning' || slot === 'afternoon') && allDayDays.has(day)) continue;
+        if (act.slots.includes(slot) && !state.itinerary[day][slot]) {
+          state.itinerary[day][slot] = actId;
+          if (act.allDay) {
+            allDayDays.add(day);
+            state.itinerary[day].afternoon = null; // Clear afternoon for allDay
+          }
+          placed = true;
+          break;
+        }
+      }
+      if (placed) break;
+    }
+  }
+
+  saveState();
+  renderPlanner();
+  renderSummary();
+
+  // Scroll al planificador y resaltar las cards
+  setTimeout(() => {
+    const target = document.getElementById('day-cards');
+    if (target) {
+      const y = target.getBoundingClientRect().top + window.scrollY - 160;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      // Pulso en todas las cards del día
+      setTimeout(() => {
+        target.querySelectorAll(':scope > div').forEach(card => {
+          card.classList.remove('card-applied');
+          void card.offsetWidth; // reflow para reiniciar animación
+          card.classList.add('card-applied');
+          card.addEventListener('animationend', () => card.classList.remove('card-applied'), { once: true });
+        });
+      }, 400);
+    }
+  }, 50);
+
+  const pkgNames = { 'fin-semana': 'Fin de Semana Caribeño', 'aventura': 'Aventura Total', 'sabor-sol': 'Sabor & Sol', 'islas-cultura': 'Islas & Cultura' };
+  showToast(`✓ Paquete "${pkgNames[pkgId]}" aplicado a tu itinerario`);
+}
+
+let toastTimer = null;
+function showToast(msg, isWarn = false) {
+  const toast = document.getElementById('toast');
+  const msgEl = document.getElementById('toast-msg');
+  msgEl.textContent = msg;
+  toast.querySelector('i').className = isWarn
+    ? 'fas fa-exclamation-circle text-yellow-400'
+    : 'fas fa-check-circle text-green-400';
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RESUMEN
+// ─────────────────────────────────────────────────────────────────────────────
+function getTotal() {
+  const travelers = state.travelers || 1;
+  return Object.values(state.itinerary)
+    .flatMap(slots => Object.values(slots))
+    .filter(id => id && ACTIVITIES[id])
+    .reduce((sum, id) => sum + ACTIVITIES[id].price * travelers, 0);
+}
+
+function hasActivities() {
+  return Object.values(state.itinerary).some(slots => Object.values(slots).some(Boolean));
+}
+
+function renderSummary() {
+  const days     = getDays();
+  const travelers = state.travelers || 1;
+  const total    = getTotal();
+  const totalEl   = document.getElementById('summary-total');
+  const btn       = document.getElementById('checkout-btn');
+  const mobileBtn = document.getElementById('mobile-checkout-btn');
+  const mobileTotal = document.getElementById('mobile-total');
+  const content   = document.getElementById('summary-content');
+
+  totalEl.textContent = displayPrice(total);
+  if (mobileTotal) mobileTotal.textContent = displayPrice(total);
+
+  const enable = hasActivities() && days.length > 0;
+
+  // desktop sidebar button
+  btn.disabled = !enable;
+  btn.classList.toggle('opacity-50', !enable);
+  btn.classList.toggle('cursor-not-allowed', !enable);
+  btn.classList.toggle('hover:bg-blue-800', enable);
+
+  // mobile bottom bar button
+  if (mobileBtn) {
+    mobileBtn.disabled = !enable;
+    mobileBtn.classList.toggle('opacity-50', !enable);
+    mobileBtn.classList.toggle('cursor-not-allowed', !enable);
+    mobileBtn.classList.toggle('hover:bg-blue-800', enable);
+  }
+
+  if (!enable) {
+    content.innerHTML = `
+      <div class="text-center text-gray-400 py-8">
+        <i class="fas fa-route text-3xl mb-3 text-gray-200"></i>
+        <p class="text-sm">Agrega actividades a tu itinerario para ver el resumen</p>
+      </div>`;
+    return;
+  }
+
+  let html = '';
+
+  if (state.arrival) {
+    html += `<div class="flex items-center gap-2 text-xs text-gray-500 mb-1">
+      <i class="fas fa-calendar-check text-blue-400 w-3"></i>
+      <span>${formatDateShort(state.arrival)} → ${formatDateShort(state.departure)}</span>
+    </div>
+    <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+      <i class="fas fa-users text-blue-400 w-3"></i>
+      <span>${travelers} ${travelers === 1 ? 'viajero' : 'viajeros'}</span>
+    </div>`;
+  }
+
+  for (const [i, day] of days.entries()) {
+    const slots = state.itinerary[day] || {};
+    const dayActs = Object.entries(SLOT_CONFIG)
+      .map(([sk, cfg]) => ({ sk, cfg, act: slots[sk] ? ACTIVITIES[slots[sk]] : null }))
+      .filter(x => x.act);
+    if (!dayActs.length) continue;
+
+    html += `<div class="mb-3 pb-3 border-b border-gray-100 last:border-0 last:mb-0 last:pb-0">
+      <div class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Día ${i+1} — ${formatDateShort(day)}</div>
+      ${dayActs.map(({ cfg, act }) => `
+        <div class="flex items-start gap-1.5 mb-1 text-xs text-gray-700">
+          <i class="fas ${cfg.icon} ${cfg.color} mt-0.5 w-3 shrink-0"></i>
+          <div class="flex-1 min-w-0">
+            <span class="font-semibold">${act.name}</span>
+            <span class="text-gray-400 ml-1">×${travelers} = ${displayPrice(act.price * travelers)}</span>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  }
+
+  content.innerHTML = html;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MOVER ACTIVIDAD
+// ─────────────────────────────────────────────────────────────────────────────
+let moveSource = null; // { day, slot, actId }
+
+function openMoveModal(day, slot, actId) {
+  moveSource = { day, slot, actId };
+  const act = ACTIVITIES[actId];
+  document.getElementById('move-act-label').textContent = `${act.emoji} ${act.name}`;
+  renderMoveGrid();
+  document.getElementById('move-modal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMoveModal() {
+  document.getElementById('move-modal').classList.add('hidden');
+  document.body.style.overflow = '';
+  moveSource = null;
+}
+
+function renderMoveGrid() {
+  const { day: srcDay, slot: srcSlot, actId } = moveSource;
+  const act  = ACTIVITIES[actId];
+  const days = getDays();
+  const grid = document.getElementById('move-grid');
+
+  if (!days.length) {
+    grid.innerHTML = '<p class="text-sm text-gray-400 text-center py-6">No hay días en tu itinerario todavía.</p>';
+    return;
+  }
+
+  grid.innerHTML = days.map((day, i) => {
+    const it = state.itinerary[day] || {};
+
+    const slotCells = Object.entries(SLOT_CONFIG).map(([sk, cfg]) => {
+      const isHere     = day === srcDay && sk === srcSlot;
+      const canReceive = act.slots.includes(sk);
+      const occupied   = it[sk] && it[sk] !== actId && !(day === srcDay && sk === srcSlot);
+      const occupier   = occupied ? ACTIVITIES[it[sk]] : null;
+
+      if (isHere) {
+        return `<div class="flex-1 min-w-0 flex flex-col items-center gap-1 border-2 border-blue-400 bg-blue-50 rounded-xl py-2.5 px-1 text-center">
+          <i class="fas ${cfg.icon} ${cfg.color} text-sm"></i>
+          <span class="text-[10px] font-bold text-blue-600">${cfg.label}</span>
+          <span class="text-[9px] text-blue-500 font-semibold leading-tight">Aquí</span>
+        </div>`;
+      }
+      if (!canReceive) {
+        return `<div class="flex-1 min-w-0 flex flex-col items-center gap-1 border border-gray-100 bg-gray-50 rounded-xl py-2.5 px-1 text-center opacity-40">
+          <i class="fas ${cfg.icon} text-gray-300 text-sm"></i>
+          <span class="text-[10px] text-gray-400">${cfg.label}</span>
+          <span class="text-[9px] text-gray-300">N/A</span>
+        </div>`;
+      }
+      if (occupied) {
+        // Ocupado pero puede recibir → permite reemplazar (rojo)
+        return `<button onclick="moveActivityTo('${day}','${sk}')"
+          class="flex-1 min-w-0 flex flex-col items-center gap-1 border-2 border-red-200 bg-red-50 hover:border-red-400 hover:bg-red-100 active:bg-red-200 rounded-xl py-2.5 px-1 text-center transition cursor-pointer">
+          <i class="fas ${cfg.icon} ${cfg.color} text-sm"></i>
+          <span class="text-[10px] font-bold text-gray-500">${cfg.label}</span>
+          <span class="text-[9px] text-red-500 font-bold leading-tight">${occupier ? occupier.emoji : ''} Reemplazar</span>
+        </button>`;
+      }
+      // Disponible — verde
+      return `<button onclick="moveActivityTo('${day}','${sk}')"
+        class="flex-1 min-w-0 flex flex-col items-center gap-1 border-2 border-green-200 bg-green-50 hover:border-green-500 hover:bg-green-100 active:bg-green-200 rounded-xl py-2.5 px-1 text-center transition cursor-pointer">
+        <i class="fas ${cfg.icon} ${cfg.color} text-sm"></i>
+        <span class="text-[10px] font-bold text-gray-700">${cfg.label}</span>
+        <span class="text-[9px] text-green-600 font-bold">Mover aquí</span>
+      </button>`;
+    }).join('');
+
+    return `
+      <div class="flex items-center gap-2">
+        <div class="shrink-0 w-14 text-right pr-1">
+          <div class="text-xs font-extrabold text-gray-700">Día ${i + 1}</div>
+          <div class="text-[10px] text-gray-400 capitalize leading-tight">${formatDateShort(day)}</div>
+        </div>
+        <div class="flex gap-1.5 flex-1 min-w-0">${slotCells}</div>
+      </div>`;
+  }).join('');
+}
+
+function moveActivityTo(targetDay, targetSlot) {
+  if (!moveSource) return;
+  const { day: srcDay, slot: srcSlot, actId } = moveSource;
+
+  // Quitar del origen
+  if (state.itinerary[srcDay]) state.itinerary[srcDay][srcSlot] = null;
+  // Poner en destino
+  if (!state.itinerary[targetDay]) state.itinerary[targetDay] = { morning: null, afternoon: null, night: null };
+  state.itinerary[targetDay][targetSlot] = actId;
+
+  saveState();
+  closeMoveModal();
+  renderPlanner();
+  renderSummary();
+
+  const dayNum  = getDays().indexOf(targetDay) + 1;
+  const slotLbl = SLOT_CONFIG[targetSlot].label;
+  showToast(`✓ Movido al Día ${dayNum} — ${slotLbl}`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CHECKOUT
+// ─────────────────────────────────────────────────────────────────────────────
+function openCheckout() {
+  if (!hasActivities()) return;
+  const days     = getDays();
+  const travelers = state.travelers || 1;
+  let html = '';
+
+  if (state.arrival) {
+    html += `<div class="font-bold text-gray-700 mb-2 flex items-center gap-2">
+      <i class="fas fa-calendar text-blue-500"></i>
+      ${formatDateShort(state.arrival)} → ${formatDateShort(state.departure)} · ${travelers} ${travelers===1?'viajero':'viajeros'}
+    </div>`;
+  }
+
+  for (const [i, day] of days.entries()) {
+    const slots = state.itinerary[day] || {};
+    const hasDay = Object.values(slots).some(Boolean);
+    if (!hasDay) continue;
+
+    html += `<div class="pt-2 mt-2 border-t border-gray-200 first:border-0 first:pt-0 first:mt-0">
+      <div class="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1">Día ${i+1} · ${formatDate(day)}</div>`;
+    for (const [sk, cfg] of Object.entries(SLOT_CONFIG)) {
+      const id = slots[sk];
+      if (!id) continue;
+      const act = ACTIVITIES[id];
+      html += `<div class="flex items-center gap-2 text-xs text-gray-700 mb-0.5">
+        <span>${act.emoji}</span>
+        <span class="font-semibold capitalize">${cfg.label}:</span>
+        <span>${act.name}</span>
+        <span class="ml-auto text-gray-400">${displayPrice(act.price * travelers)}</span>
+      </div>`;
+    }
+    html += `</div>`;
+  }
+
+  const total = getTotal();
+  html += `<div class="flex justify-between font-bold text-gray-800 mt-3 pt-3 border-t border-gray-300">
+    <span>Total estimado:</span><span>${displayPrice(total)}</span>
+  </div>`;
+
+  document.getElementById('checkout-itinerary').innerHTML = html;
+
+  // Rellenar montos de pago
+  const halfEl = document.getElementById('pay-half-amount');
+  const fullEl = document.getElementById('pay-full-amount');
+  if (halfEl) halfEl.textContent = displayPrice(total / 2);
+  if (fullEl) fullEl.textContent = displayPrice(total);
+
+  document.getElementById('checkout-modal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCheckout() {
+  document.getElementById('checkout-modal').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+function sendToWhatsApp(e) {
+  e.preventDefault();
+  const termsEl = document.getElementById('ck-terms');
+  if (termsEl && !termsEl.checked) {
+    termsEl.parentElement.style.outline = '2px solid #ef4444';
+    termsEl.parentElement.style.borderRadius = '6px';
+    showToast('⚠️ Debes aceptar los Términos y Condiciones para continuar', true);
+    return;
+  }
+  const name  = document.getElementById('ck-name').value.trim();
+  const phone = document.getElementById('ck-phone').value.trim();
+  const email = document.getElementById('ck-email').value.trim();
+  const notes = document.getElementById('ck-notes').value.trim();
+  if (!name || !phone || !email) {
+    alert('Por favor completa nombre, WhatsApp y correo para continuar.');
+    return;
+  }
+
+  const paymentVal = document.querySelector('input[name="payment-option"]:checked')?.value || 'half';
+  const total      = getTotal();
+  const travelers  = state.travelers || 1;
+  const days       = getDays();
+
+  let msg = `¡Hola Nohemi! Quiero armar mi viaje a Cartagena 🌴\n\n`;
+  if (state.arrival) msg += `📅 Fechas: ${state.arrival} → ${state.departure}\n`;
+  msg += `👥 Viajeros: ${travelers} ${travelers===1?'persona':'personas'}\n\n📍 MI ITINERARIO:\n`;
+
+  for (const [i, day] of days.entries()) {
+    const slots = state.itinerary[day] || {};
+    const hasDay = Object.values(slots).some(Boolean);
+    if (!hasDay) continue;
+    msg += `\n🗓 Día ${i+1} — ${day}:\n`;
+    for (const [sk, cfg] of Object.entries(SLOT_CONFIG)) {
+      const id = slots[sk];
+      if (!id) continue;
+      const act = ACTIVITIES[id];
+      msg += `  ${act.emoji} ${cfg.label}: ${act.name} (${travelers}×${formatCOP(act.price)} = ${formatCOP(act.price*travelers)})\n`;
+    }
+  }
+
+  msg += `\n💰 TOTAL ESTIMADO: ${formatCOP(total)}\n`;
+
+  if (paymentVal === 'half') {
+    msg += `💳 PAGO ELEGIDO: 50% anticipo (${formatCOP(total/2)}) + 50% antes del tour (${formatCOP(total/2)})\n`;
+  } else {
+    msg += `💳 PAGO ELEGIDO: 100% por adelantado (${formatCOP(total)})\n`;
+  }
+
+  msg += `✅ He leído y acepto los Términos y Condiciones de Dunas & Olas\n`;
+  msg += `\n—\nNombre: ${name}\nWhatsApp: ${phone}\nCorreo: ${email}`;
+  if (notes) msg += `\nNotas: ${notes}`;
+
+  window.open(`https://wa.me/573163030589?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// WHATSAPP
+// ─────────────────────────────────────────────────────────────────────────────
+function openWhatsApp(msg) {
+  window.open(`https://wa.me/573163030589?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  // Set min date to today
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('trip-arrival').min   = today;
+  document.getElementById('trip-departure').min  = today;
+
+  // Restore saved state
+  if (state.arrival)   document.getElementById('trip-arrival').value    = state.arrival;
+  if (state.departure) document.getElementById('trip-departure').value  = state.departure;
+  document.getElementById('trip-travelers').value = state.travelers || 2;
+
+  renderPlanner();
+  renderSummary();
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('bg-gray-900/95','backdrop-blur-md','shadow-lg');
+      navbar.classList.remove('border-white/10');
+    } else {
+      navbar.classList.remove('bg-gray-900/95','backdrop-blur-md','shadow-lg');
+      navbar.classList.add('border-white/10');
+    }
+  });
+
+  // Mobile menu
+  document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+    const m = document.getElementById('mobile-menu');
+    if (m.classList.contains('hidden')) {
+      m.classList.remove('hidden');
+      setTimeout(() => m.classList.remove('opacity-0'), 10);
+    } else {
+      m.classList.add('opacity-0');
+      setTimeout(() => m.classList.add('hidden'), 300);
+    }
+  });
+  document.getElementById('close-menu-btn')?.addEventListener('click', () => {
+    const m = document.getElementById('mobile-menu');
+    m.classList.add('opacity-0');
+    setTimeout(() => m.classList.add('hidden'), 300);
+  });
+});
+</script>
+
+<script src="js/cookie-consent.js"></script>
+</body>
+</html>

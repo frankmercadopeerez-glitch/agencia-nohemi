@@ -103,7 +103,7 @@
       .hero-section { position: relative; height: 60vh; overflow: hidden; display: flex; align-items: center; justify-content: center; }
       .hero-bg { position: absolute; inset: 0; background-image: url("images/cocinacaribe.jpg"); background-size: cover; background-position: center; z-index: 0; }
       .hero-overlay { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)); position: absolute; inset: 0; z-index: 1; }
-      .whatsapp-container { position:fixed;bottom:30px;right:30px;z-index:1000;display:flex;flex-direction:column;align-items:end; }
+      .whatsapp-container { position:fixed;bottom:90px;right:30px;z-index:1000;display:flex;flex-direction:column;align-items:end; }
       @keyframes bounce-slow { 0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)} }
       .whatsapp-float { background:transparent;cursor:pointer;border:none;display:flex;flex-direction:column;align-items:center;transition:transform .3s;animation:bounce-slow 3s infinite ease-in-out; }
       .whatsapp-float:hover { transform:scale(1.05);animation:none; }
@@ -227,19 +227,6 @@
         </article>
 
         <aside class="lg:w-1/3 space-y-6">
-          <div id="reservar" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 sticky top-32">
-            <div class="price-tag mb-4">
-              <span class="price-label">Precio estimado / persona</span>
-              <span class="price-value">$140.000 COP</span>
-            </div>
-            <button onclick="addToCart('gastronomico', this)" class="add-to-cart-btn justify-center w-full mb-3">
-              <i class="fas fa-cart-plus"></i> Agregar al Carrito
-            </button>
-            <button onclick="openWhatsApp('Hola, quiero reservar el Recorrido Gastronómico por la Ciudad con Nohemi.')" class="whatsapp-info-btn w-full mb-3">
-              <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
-            </button>
-            <a href="experiences.html#experiencia-gastronomico" class="block w-full text-center text-sm text-blue-600 hover:underline font-semibold">Ver más detalles</a>
-          </div>
           <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
             <h3 class="text-base font-bold text-gray-900 mb-3">Otras experiencias</h3>
             <ul class="space-y-2">
@@ -348,6 +335,22 @@
         </div>
       </div>
     </footer>
+
+    <!-- ── Barra de reserva fija ── -->
+    <div class="fixed bottom-0 left-0 right-0 z-[200] bg-white border-t border-gray-100 shadow-[0_-2px_20px_rgba(0,0,0,0.10)] px-4 py-3 flex items-center gap-3">
+      <div class="shrink-0">
+        <div class="text-[10px] font-semibold text-gray-400 uppercase tracking-wide leading-none mb-0.5">Precio est. / persona</div>
+        <div class="text-xl font-extrabold text-[#3F2761]">$140.000 COP</div>
+      </div>
+      <div class="flex gap-2 ml-auto">
+        <button onclick="addToCart('gastronomico', this)" class="bg-[#3F2761] hover:bg-[#5B3A82] text-white font-bold text-sm py-2.5 px-4 rounded-xl flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fas fa-cart-plus text-xs"></i> Reservar
+        </button>
+        <button onclick="openWhatsApp('Hola, quiero reservar el Recorrido Gastronómico por la Ciudad con Nohemi.')" class="bg-[#25D366] hover:bg-[#20b559] text-white font-bold text-sm py-2.5 px-4 rounded-xl flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fab fa-whatsapp text-xs"></i> WhatsApp
+        </button>
+      </div>
+    </div>
 
     <div class="whatsapp-container">
       <button id="wa-main-btn" onclick="openWhatsApp('Hola, quiero reservar el Recorrido Gastronómico por la Ciudad con Nohemi.')" class="whatsapp-float group focus:outline-none">
