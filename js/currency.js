@@ -131,11 +131,13 @@
   };
 
   window.formatPrice = formatPrice;
-  window.getCurrencyRate = function () {
-    return copRate;
-  };
-  window.getCurrentCurrency = function () {
-    return current;
+  window.getCurrencyRate = function () { return copRate; };
+  window.getCurrentCurrency = function () { return current; };
+  window.setCurrency = function (code) {
+    if (CURRENCIES.indexOf(code) === -1) return;
+    current = code;
+    localStorage.setItem(CURRENCY_KEY, current);
+    applyDisplay();
   };
 
   // Parchar updateKiteTotalPreview para que respete la moneda seleccionada

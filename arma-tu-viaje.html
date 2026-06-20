@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <meta name="description" content="Planifica tu viaje perfecto a Cartagena de Indias con Dunas & Olas. Arma tu itinerario día a día: city tour, acuario, atardecer en bote, pasadía a las Islas del Rosario y más." />
+  <meta name="description" content="Planifica tu viaje perfecto a Cartagena de Indias con Dunas & Olas. Arma tu itinerario día a día: city tour, acuario, catamarán al atardecer, pasadía a las Islas del Rosario y más." />
   <meta name="keywords" content="arma tu viaje Cartagena, planificador viaje Cartagena, itinerario Cartagena Colombia, tours personalizados Cartagena, experiencias Cartagena de Indias" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dunasyolas.com/arma-tu-viaje" />
@@ -200,6 +200,25 @@
 
 <body class="bg-gray-50">
 
+<!-- ══════════════════ PREFERENCIAS (idioma + moneda) ══════════════════ -->
+<div id="pref-banner" class="fixed top-0 left-0 right-0 z-[999] hidden" style="background:linear-gradient(90deg,#1e0f30,#3F2761)">
+  <div class="container mx-auto px-4 py-4 max-w-4xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div class="flex items-center gap-2 shrink-0">
+      <i class="fas fa-globe text-yellow-400 text-lg"></i>
+      <span class="text-white font-bold text-sm" id="pref-title">¿En qué moneda quieres ver los precios?</span>
+    </div>
+    <div class="flex flex-wrap gap-2 flex-1">
+      <button onclick="prefSelectCurrency('COP')" data-pref-cur="COP" class="pref-cur-btn text-xs font-bold px-3 py-1.5 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition">🇨🇴 COP – Pesos</button>
+      <button onclick="prefSelectCurrency('USD')" data-pref-cur="USD" class="pref-cur-btn text-xs font-bold px-3 py-1.5 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition">🇺🇸 USD – Dólares</button>
+      <button onclick="prefSelectCurrency('MXN')" data-pref-cur="MXN" class="pref-cur-btn text-xs font-bold px-3 py-1.5 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition">🇲🇽 MXN – Pesos MX</button>
+    </div>
+    <div class="flex items-center gap-2 shrink-0">
+      <button onclick="prefSave()" class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold text-xs px-4 py-2 rounded-lg transition">Guardar</button>
+      <button onclick="prefDismiss()" class="text-white/40 hover:text-white text-lg leading-none" title="Cerrar">✕</button>
+    </div>
+  </div>
+</div>
+
 <!-- Toast de confirmación -->
 <div id="toast"><i class="fas fa-check-circle text-green-400"></i><span id="toast-msg">Paquete aplicado</span></div>
 
@@ -219,6 +238,7 @@
       <a href="kitesurf.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Kitesurf</a>
       <a href="about.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Nosotros</a>
       <a href="blog/index.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Blog</a>
+      <button id="currency-toggle-nav" onclick="window.toggleCurrency && window.toggleCurrency()" title="Cambiar moneda" class="text-xs text-white/80 hover:text-white font-bold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5 flex items-center gap-1">💱 <span id="currency-label-nav">COP</span></button>
       <a id="lang-switch" href="en/index.html" class="text-xs text-white/80 hover:text-white font-semibold border border-white/25 rounded-md px-2.5 py-1.5 transition hover:border-white/50 hover:bg-white/5" title="English version">EN</a>
       <a href="arma-tu-viaje.html" class="py-2 px-5 text-xs bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded drop-shadow-none transition">✦ Arma tu viaje</a>
     </div>
@@ -312,11 +332,11 @@
         <div class="p-5 text-white">
           <div class="text-2xl mb-2">🌴</div>
           <h3 class="font-extrabold text-base mb-1">Fin de Semana Caribeño</h3>
-          <p class="text-xs text-white/70 mb-4">Historia, gastronomía y un atardecer mágico</p>
+          <p class="text-xs text-white/70 mb-4">Historia, gastronomía y un atardecer en catamarán</p>
           <ul class="space-y-1 text-xs text-white/90 mb-3">
-            <li>🏛️ City Tour Histórico</li>
+            <li>🏛️ City Tours de Roa</li>
             <li>🍽️ Recorrido Gastronómico</li>
-            <li>🌅 Atardecer en Bote</li>
+            <li>⛵ Catamarán Atardecer</li>
           </ul>
           <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
             <span class="text-xs text-white/60">Desde</span>
@@ -360,11 +380,11 @@
         <div class="p-5 text-white">
           <div class="text-2xl mb-2">☀️</div>
           <h3 class="font-extrabold text-base mb-1">Sabor &amp; Sol</h3>
-          <p class="text-xs text-white/70 mb-4">Acuario, cocina local y atardecer en bote</p>
+          <p class="text-xs text-white/70 mb-4">Acuario, cocina local y catamarán al atardecer</p>
           <ul class="space-y-1 text-xs text-white/90 mb-3">
             <li>🐠 Acuario &amp; Vida Marina</li>
             <li>🥘 Sabores Locales</li>
-            <li>🌅 Atardecer en Bote</li>
+            <li>⛵ Catamarán Atardecer</li>
           </ul>
           <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
             <span class="text-xs text-white/60">Desde</span>
@@ -491,7 +511,7 @@
         <button class="filter-btn" data-filter="sport" onclick="setFilter('sport')">Deportes</button>
       </div>
       <!-- Grid de actividades -->
-      <div id="picker-activity-grid" class="overflow-y-auto p-4 grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1 content-start" style="min-height:0"></div>
+      <div id="picker-activity-grid" class="overflow-y-auto p-4 grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1 content-start items-start" style="min-height:0"></div>
     </div>
   </div>
 </div>
@@ -704,15 +724,15 @@
 // ─────────────────────────────────────────────────────────────────────────────
 const ACTIVITIES = {
   citytour: {
-    name: 'City Tour Histórico',
+    name: 'City Tours de Roa',
     emoji: '🏛️',
-    price: 90000,
-    duration: '3 horas',
-    description: 'Murallas, plazas históricas y el mágico Getsemaní con guía local',
+    price: 140000,
+    duration: '4.5 horas',
+    description: 'Recorrido histórico por Cartagena con guía, audio e historia incluidos. Dos horarios diarios: mañana o tarde',
     category: 'cultural',
     image: 'images/cartagenacentro.jpg',
     slots: ['morning', 'afternoon'],
-    link: null,
+    link: 'city-tour-roa.html',
   },
   acuario: {
     name: 'Acuario & Vida Marina',
@@ -725,16 +745,16 @@ const ACTIVITIES = {
     slots: ['morning', 'afternoon'],
     link: null,
   },
-  atardecer: {
-    name: 'Atardecer en Bote',
-    emoji: '🌅',
-    price: 120000,
-    duration: '2.5 horas',
-    description: 'El cielo se pinta de naranjas y rosas sobre la Bahía de Cartagena',
+  catamaran: {
+    name: 'Catamarán Atardecer',
+    emoji: '⛵',
+    price: 150000,
+    duration: '2 horas',
+    description: 'Bebidas ilimitadas, DJ en vivo y el mejor atardecer de Cartagena desde el mar. Membresía Plata $150k / Oro $180k',
     category: 'water',
     image: 'images/cartagenasunset.jpg',
     slots: ['afternoon', 'night'],
-    link: 'atardeceres-bahia.html',
+    link: 'catamaran-atardecer.html',
   },
   pasadia: {
     name: 'Pasadía Islas del Rosario',
@@ -811,18 +831,18 @@ const ACTIVITIES = {
 // ─────────────────────────────────────────────────────────────────────────────
 const PACKAGES = {
   'fin-semana': {
-    activities: ['citytour', 'gastronomico', 'atardecer'],
-    slotPrefs: { citytour: 'morning', gastronomico: 'night', atardecer: 'afternoon' },
+    activities: ['citytour', 'gastronomico', 'catamaran'],
+    slotPrefs: { citytour: 'morning', gastronomico: 'night', catamaran: 'afternoon' },
     days: 2,
   },
   'aventura': {
-    activities: ['buceo', 'atardecer', 'kitesurf'],
-    slotPrefs: { buceo: 'morning', atardecer: 'night', kitesurf: 'morning' },
+    activities: ['buceo', 'catamaran', 'kitesurf'],
+    slotPrefs: { buceo: 'morning', catamaran: 'night', kitesurf: 'morning' },
     days: 2,
   },
   'sabor-sol': {
-    activities: ['acuario', 'sabores', 'atardecer'],
-    slotPrefs: { acuario: 'morning', sabores: 'night', atardecer: 'afternoon' },
+    activities: ['acuario', 'sabores', 'catamaran'],
+    slotPrefs: { acuario: 'morning', sabores: 'night', catamaran: 'afternoon' },
     days: 2,
   },
   'islas-cultura': {
@@ -1688,6 +1708,81 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<script src="js/currency.js"></script>
 <script src="js/cookie-consent.js"></script>
+
+<script>
+// ── Preferencias de moneda (popup primera visita) ──────────────────────────
+(function() {
+  var PREF_KEY = 'dunasyolas-pref-set';
+  var CUR_KEY  = 'dunas_currency';
+  var _selectedCur = localStorage.getItem(CUR_KEY) || 'COP';
+
+  function showBanner() {
+    var banner = document.getElementById('pref-banner');
+    if (banner) {
+      banner.classList.remove('hidden');
+      // push nav down
+      var nav = document.getElementById('navbar');
+      if (nav) nav.style.top = banner.offsetHeight + 'px';
+      highlightCur(_selectedCur);
+    }
+  }
+
+  function highlightCur(code) {
+    document.querySelectorAll('.pref-cur-btn').forEach(function(btn) {
+      var active = btn.dataset.prefCur === code;
+      btn.style.background = active ? '#C9A227' : '';
+      btn.style.color      = active ? '#1e0f30' : '';
+      btn.style.borderColor = active ? '#C9A227' : '';
+    });
+  }
+
+  window.prefSelectCurrency = function(code) {
+    _selectedCur = code;
+    highlightCur(code);
+  };
+
+  window.prefSave = function() {
+    localStorage.setItem(PREF_KEY, '1');
+    localStorage.setItem(CUR_KEY, _selectedCur);
+    if (typeof window.setCurrency === 'function') window.setCurrency(_selectedCur);
+    hideBanner();
+    updateNavCurrencyLabel();
+  };
+
+  window.prefDismiss = function() {
+    localStorage.setItem(PREF_KEY, '1');
+    hideBanner();
+  };
+
+  function hideBanner() {
+    var banner = document.getElementById('pref-banner');
+    if (banner) banner.classList.add('hidden');
+    var nav = document.getElementById('navbar');
+    if (nav) nav.style.top = '';
+  }
+
+  function updateNavCurrencyLabel() {
+    var cur = localStorage.getItem(CUR_KEY) || 'COP';
+    var lbl = document.getElementById('currency-label-nav');
+    if (lbl) lbl.textContent = cur;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    updateNavCurrencyLabel();
+    // Override toggleCurrency to also update nav label
+    var origToggle = window.toggleCurrency;
+    window.toggleCurrency = function() {
+      if (origToggle) origToggle();
+      updateNavCurrencyLabel();
+    };
+    // Show banner on first visit
+    if (!localStorage.getItem(PREF_KEY)) {
+      setTimeout(showBanner, 800);
+    }
+  });
+})();
+</script>
 </body>
 </html>
