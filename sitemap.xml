@@ -75,6 +75,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dunasyolas.com/salto-paracaidismo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/salto-paracaidismo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/salto-paracaidismo.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/city-bahia.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-bahia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-bahia.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/tour-bahia-yate.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tour-bahia-yate.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tour-bahia-yate.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/playa-blanca-baru.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/playa-blanca-baru.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/playa-blanca-baru.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/chiva-rumbera.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/chiva-rumbera.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/chiva-rumbera.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://dunasyolas.com/about.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about.html"/>

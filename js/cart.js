@@ -50,6 +50,31 @@ const TOURS = {
     price: 200000,
     unit: "clase",
   },
+  paracaidismo: {
+    name: "Salto en Paracaídas sobre el Mar Caribe",
+    price: 980000,
+    unit: "persona",
+  },
+  citybahia: {
+    name: "City Bahía de ROA (con almuerzo y atardecer)",
+    price: 195000,
+    unit: "persona",
+  },
+  yate: {
+    name: "Tour Bahía en Yate (Luna Mía)",
+    price: 120000,
+    unit: "persona",
+  },
+  chiva: {
+    name: "Chiva Rumbera (con discoteca Taboo)",
+    price: 45000,
+    unit: "persona",
+  },
+  playablanca: {
+    name: "Puerto Medallo – Playa Blanca, Barú",
+    price: 190000,
+    unit: "persona",
+  },
 
   /* ---- Cursos de Kitesurf (precio base, 1 persona) ---- */
   kitesurf_iniciacion: {
