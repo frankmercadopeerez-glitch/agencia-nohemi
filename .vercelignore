@@ -3,3 +3,6 @@ node_modules
 *.mjs
 package.json
 package-lock.json
+src
+tailwind.config.js
+_cmp
