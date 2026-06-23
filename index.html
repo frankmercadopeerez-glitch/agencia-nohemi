@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+    <link rel="preload" as="image" href="images/cartagenasunset.jpg" fetchpriority="high"/>
     <meta
       name="description"
-      content="Dunas & Olas: agencia turística multicultural — la calidez del norte, la magia del caribe. Alquiler de botes deportivos y yates de lujo, clases de kitesurf en La Boquilla y experiencias inolvidables en Cartagena."
+      content="Dunas & Olas: agencia turística multicultural — la calidez del norte, la magia del caribe. Tours a las Islas del Rosario, recorridos gastronómicos, kitesurf en La Boquilla y experiencias únicas de la mano de Nohemi, tu guía local en Cartagena."
     />
     <meta
       name="keywords"
@@ -18,11 +21,11 @@
     <meta property="og:url" content="https://dunasyolas.com/" />
     <meta
       property="og:title"
-      content="Mexicana en Cartagena | Dunas & Olas — Cartagena con Nohemi, tu guía local"
+      content="Dunas & Olas — Experiencias únicas en Cartagena de la mano de Nohemi"
     />
     <meta
       property="og:description"
-      content="La calidez del norte, la magia del caribe. Alquiler de botes deportivos y yates de lujo, clases de kitesurf en La Boquilla y experiencias inolvidables en Cartagena."
+      content="Vive el Caribe colombiano como nunca antes. Tours personalizados, experiencias únicas y el acompañamiento de Nohemi, tu guía local en Cartagena de Indias."
     />
     <meta
       property="og:image"
@@ -33,11 +36,11 @@
     <meta property="twitter:url" content="https://dunasyolas.com/" />
     <meta
       property="twitter:title"
-      content="Mexicana en Cartagena | Dunas & Olas — Cartagena con Nohemi, tu guía local"
+      content="Dunas & Olas — Experiencias únicas en Cartagena de la mano de Nohemi"
     />
     <meta
       property="twitter:description"
-      content="La calidez del norte, la magia del caribe. Alquiler de botes deportivos y yates de lujo, clases de kitesurf en La Boquilla y experiencias inolvidables en Cartagena."
+      content="Vive el Caribe colombiano como nunca antes. Tours personalizados, experiencias únicas y el acompañamiento de Nohemi, tu guía local en Cartagena de Indias."
     />
     <meta
       property="twitter:image"
@@ -430,7 +433,7 @@
       "name": "Dunas & Olas",
       "url": "https://dunasyolas.com",
       "logo": "https://dunasyolas.com/images/logo-badge.png",
-      "description": "Dunas & Olas: agencia turística multicultural — la calidez del norte, la magia del caribe. Tour operator local en Cartagena de Indias. Alquiler de botes privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "description": "Dunas & Olas: agencia turística multicultural — la calidez del norte, la magia del caribe. Tour operator local en Cartagena de Indias. Tours privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
       "telephone": "+573163030589",
       "address": {
         "@type": "PostalAddress",
@@ -707,17 +710,12 @@
         id="hero-content"
         class="max-w-5xl text-white relative z-10 pt-20 pb-14 transition-opacity duration-1000"
       >
-        <!-- FRASE CAMBIANTE -->
-        <div class="mb-10 flex justify-center animate-fade-in-up">
-          <div
-            class="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 shadow-lg"
-          >
-            <p class="text-white text-xs md:text-sm font-medium tracking-wide">
-              ✨ "El secreto de salir adelante es comenzar"
-            </p>
+        <div class="mb-8 flex justify-center animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm font-medium text-white drop-shadow-md">
+            <i class="fas fa-globe-americas text-yellow-400"></i>
+            <span>Agencia turística multicultural · Cartagena de Indias</span>
           </div>
         </div>
-        <!-- FIN FRASE CAMBIANTE -->
 
         <span
           class="text-blue-400 font-bold tracking-widest uppercase text-sm md:text-base mb-4 block drop-shadow-lg"
@@ -729,18 +727,12 @@
           Descubre Cartagena <br />
           <span class="text-white">de la mano de Nohemi</span>
         </h1>
-        <div class="flex justify-center mb-6">
-          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm font-medium text-white drop-shadow-md">
-            <i class="fas fa-globe-americas text-yellow-400"></i>
-            <span>Agencia turística multicultural · Cartagena de Indias</span>
-          </div>
-        </div>
         <p
           class="text-lg md:text-xl mb-10 font-light text-gray-100 max-w-3xl mx-auto drop-shadow-md"
         >
           Planificamos tus estadías y eventos (privados y corporativos) en el
-          caribe colombiano y Cartagena. Alquiler de yates y botes deportivos de
-          lujo.
+          caribe colombiano y Cartagena. Experiencias únicas de la mano de
+          Nohemi, tu guía local.
         </p>
         <div class="flex flex-col md:flex-row gap-4 justify-center">
           <a href="arma-tu-viaje.html" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-xl text-lg px-10 py-4 transition">
@@ -750,12 +742,6 @@
             >Ver Experiencias</a
           >
         </div>
-        <p class="mt-5 text-sm text-white/70">
-          ¿Buscas alquilar un bote?
-          <a href="fleet.html" class="underline hover:text-white transition"
-            >Conoce nuestra flotilla</a
-          >
-        </p>
       </div>
 
       <div
@@ -1105,75 +1091,6 @@
       </div>
     </section>
 
-    <!-- Flotilla -->
-    <section class="py-14 bg-white border-t border-gray-100">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-10">
-          <h2 class="text-2xl font-bold text-gray-900">Nuestra Flotilla</h2>
-          <p class="text-gray-500 mt-2 text-sm">
-            ¿Prefieres tu propio bote? Alquila yates y botes deportivos para
-            tu tour.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          <div
-            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-56"
-          >
-            <img
-              src="images/la%20leona%20(1).webp"
-              alt="Yate La Leona, alquiler de botes de lujo en Cartagena"
-              loading="lazy"
-              class="w-full h-full object-cover transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
-            ></div>
-            <div class="absolute bottom-0 left-0 p-5 text-white">
-              <h3 class="text-lg font-bold">La Leona</h3>
-              <p class="text-xs opacity-90">Ideal para grupos y fiestas.</p>
-            </div>
-          </div>
-          <div
-            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-56"
-          >
-            <img
-              src="images/oly.JPG"
-              alt="Yate Oly 420 para pasadías privadas en Cartagena"
-              loading="lazy"
-              class="w-full h-full object-cover transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
-            ></div>
-            <div class="absolute bottom-0 left-0 p-5 text-white">
-              <h3 class="text-lg font-bold">Oly 420</h3>
-              <p class="text-xs opacity-90">Velocidad y estilo deportivo.</p>
-            </div>
-          </div>
-          <div
-            class="group relative rounded-xl overflow-hidden shadow-lg cursor-pointer h-56"
-          >
-            <img
-              src="images/virginia%20(1).webp"
-              alt="Yate Virginia 420, charter náutico en Cartagena de Indias"
-              loading="lazy"
-              class="w-full h-full object-cover transition duration-700"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"
-            ></div>
-            <div class="absolute bottom-0 left-0 p-5 text-white">
-              <h3 class="text-lg font-bold">Virginia</h3>
-              <p class="text-xs opacity-90">Elegancia y confort premium.</p>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-8">
-          <a href="fleet.html" class="btn-outline">Ver toda la flotilla</a>
-        </div>
-      </div>
-    </section>
 
     <!-- Carrusel Doble de Reseñas -->
     <section class="py-16 bg-white overflow-hidden border-t border-gray-100">
@@ -1807,11 +1724,6 @@
             <ul class="space-y-2 text-gray-400 text-xs">
               <li>
                 <a href="arma-tu-viaje.html" class="hover:text-yellow-400">✦ Arma tu viaje</a>
-              </li>
-              <li>
-                <a href="fleet.html" class="hover:text-blue-400"
-                  >Nuestra Flotilla</a
-                >
               </li>
               <li>
                 <a href="experiences.html" class="hover:text-blue-400"

@@ -1,0 +1,5 @@
+images/_originals/
+node_modules/
+package.json
+package-lock.json
+*.mjs

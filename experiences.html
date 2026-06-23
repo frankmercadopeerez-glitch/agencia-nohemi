@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
     <meta
       name="description"
       content="Experiencias Dunas & Olas: Pasadías en Islas del Rosario, Atardeceres en la Bahía y Gastronomía Local en Cartagena."
@@ -284,7 +286,7 @@
       "name": "Dunas & Olas",
       "url": "https://dunasyolas.com",
       "logo": "https://dunasyolas.com/images/logo-badge.png",
-      "description": "Tour operator local en Cartagena de Indias. Alquiler de botes privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "description": "Tour operator local en Cartagena de Indias. Tours privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
       "telephone": "+573163030589",
       "address": {
         "@type": "PostalAddress",
@@ -708,68 +710,10 @@
                 </p>
               </div>
 
-              <div class="mb-2">
-                <h4 class="font-bold text-gray-900 text-sm mb-1.5">
-                  <i class="fas fa-ship text-blue-600 mr-1"></i> Elige el bote
-                  para tu tour:
-                </h4>
-                <div class="flex flex-wrap gap-2">
-                  <a href="fleet.html#bote-interceptor" class="boat-pick-btn">
-                    <img src="images/interceptor%20(1).webp" alt="Bote Interceptor 38'" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Interceptor 38'</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>16 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-laleona" class="boat-pick-btn">
-                    <img src="images/la%20leona%20(1).webp" alt="Yate La Leona" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">La Leona</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>26 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-oly" class="boat-pick-btn">
-                    <img src="images/oly420%20(1).webp" alt="Yate Oly 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Oly 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-vicky" class="boat-pick-btn">
-                    <img src="images/vicky%20(1).webp" alt="Yate Vicky 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Vicky 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-virginia" class="boat-pick-btn">
-                    <img src="images/virginia%20(1).webp" alt="Yate Virginia 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Virginia 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                </div>
-                <p class="text-xs text-gray-500 mt-2">
-                  <i class="fas fa-circle-info text-[#5B3A82] mr-1"></i>
-                  Precio por persona en tour compartido. ¿Prefieres
-                  privacidad total? Alquila el bote completo desde
-                  <strong class="text-[#3F2761]">$3.200.000 COP</strong>
-                  (Interceptor, 16 pax) hasta
-                  <strong class="text-[#3F2761]">$3.900.000 COP</strong>
-                  (Virginia 420, 28 pax).
-                </p>
-              </div>
-
               <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
                   <span class="price-label">Precio estimado / persona</span>
-                  <span class="price-value">$120.000 COP</span>
+                  <span class="price-value" data-cop-val="120000">$120.000 COP</span>
                 </div>
                 <div
                   class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
@@ -791,169 +735,73 @@
             </div>
           </div>
 
-          <!-- Experiencia 2: Sunny Day -->
+          <!-- Experiencia 2: 4 Islas + Atardecer -->
           <div
             id="experiencia-pasadia"
-            data-category="pasadia" data-price="180000" data-order="2"
+            data-category="pasadia" data-price="300000" data-order="2"
             class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
           >
             <div class="md:w-1/2 relative">
               <img
-                src="images/acuario.jpg"
-                alt="Pasadía a las Islas del Rosario desde Cartagena"
+                src="images/islastour (2).jpg"
+                alt="Tour 4 Islas del Rosario + Atardecer en la Bahía de Cartagena"
                 class="w-full h-56 md:h-full object-cover"
               />
-              <div
-                class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase"
-              >
-                Más Popular
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">
+                ★ Tour Premium
+              </div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">
+                Solo 12 cupos por salida
               </div>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-1">
-                Pasadía Islas del Rosario (SUNNY DAY)
+                4 Islas del Rosario + Atardecer en la Bahía
               </h3>
-              <div
-                class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit"
-              >
+              <div class="inline-flex items-center gap-2 bg-[#F3EFFA] text-[#3F2761] text-xs font-semibold px-2.5 py-1 rounded-full mb-2 w-fit">
                 <i class="fas fa-shield-heart text-[#C9A227]"></i>
-                Acompañamiento directo de Nohemi y respaldo de seguridad de la
-                agencia
+                Acompañamiento directo de Nohemi · Respaldo y seguridad de la agencia
               </div>
-              <p class="text-gray-600 mb-2 text-sm leading-relaxed">
-                Conoce el Parque Nacional Natural Corales del Rosario y San
-                Bernardo a bordo de nuestras embarcaciones, totalmente
-                equipadas para disfrutar cada destino.
+              <p class="text-gray-600 mb-3 text-sm leading-relaxed">
+                La experiencia más completa del Caribe colombiano: <strong>4 destinos únicos en un solo día</strong> a bordo de una embarcación premium. Snorkel, mariscos frescos, playa blanca, historia colonial y el mejor atardecer de Cartagena visto desde el mar.
               </p>
 
-              <div class="mb-2">
-                <h4
-                  class="font-bold text-gray-900 text-xs mb-1 uppercase border-b pb-1 border-gray-100"
-                >
-                  Destinos Disponibles:
-                </h4>
-                <ul class="grid grid-cols-2 gap-1 text-xs text-gray-600 mt-1.5">
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
-                    >Islas del Rosario
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Barú
-                    – Cholón
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Barú
-                    – Playa Blanca
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
-                    >Tierra Bomba
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
-                    >Punta Arena
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
-                    >Bocachica
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i
-                    >Archipiélago San Bernardo
-                  </li>
-                  <li>
-                    <i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Isla
-                    Fuerte
-                  </li>
+              <div class="mb-3">
+                <h4 class="font-bold text-gray-900 text-xs mb-2 uppercase border-b pb-1 border-gray-100">Los 4 Destinos:</h4>
+                <ul class="space-y-1.5 text-xs text-gray-600">
+                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">1</span><span><strong>Isla Grande</strong> — Snorkel y peces tropicales</span></li>
+                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">2</span><span><strong>Cholón</strong> — Degustación de mariscos frescos</span></li>
+                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">3</span><span><strong>Barú</strong> — Playa de arena blanca + frutas tropicales</span></li>
+                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">4</span><span><strong>Bocachica</strong> — Castillo de San Fernando (entrada + guía nativo)</span></li>
+                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-yellow-500 text-white flex items-center justify-center text-[10px] font-bold shrink-0">✦</span><span><strong>Atardecer en la Bahía</strong> — El cierre perfecto del día</span></li>
                 </ul>
               </div>
 
-              <div class="bg-blue-50 p-3 rounded-lg mb-2">
-                <h4 class="font-bold text-blue-900 text-sm mb-0.5">Horarios:</h4>
-                <p class="text-sm text-blue-800">
-                  <span class="font-semibold">Salida:</span> según petición
-                  (desde 8:00 AM) ·
-                  <span class="font-semibold">Llegada:</span> muelle a las
-                  5:00 PM.
-                </p>
-              </div>
-
-              <div class="mb-2">
-                <h4 class="font-bold text-gray-900 text-sm mb-1.5">
-                  <i class="fas fa-ship text-blue-600 mr-1"></i> Elige el bote
-                  para tu tour:
-                </h4>
-                <div class="flex flex-wrap gap-2">
-                  <a href="fleet.html#bote-interceptor" class="boat-pick-btn">
-                    <img src="images/interceptor%20(1).webp" alt="Bote Interceptor 38'" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Interceptor 38'</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>16 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-laleona" class="boat-pick-btn">
-                    <img src="images/la%20leona%20(1).webp" alt="Yate La Leona" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">La Leona</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>26 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-oly" class="boat-pick-btn">
-                    <img src="images/oly420%20(1).webp" alt="Yate Oly 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Oly 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-vicky" class="boat-pick-btn">
-                    <img src="images/vicky%20(1).webp" alt="Yate Vicky 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Vicky 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-virginia" class="boat-pick-btn">
-                    <img src="images/virginia%20(1).webp" alt="Yate Virginia 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Virginia 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
+              <div class="bg-blue-50 p-3 rounded-lg mb-3">
+                <div class="flex items-center gap-3 text-sm text-blue-800">
+                  <span><i class="fas fa-clock mr-1"></i><strong>Salida:</strong> 9:00 AM · Muelle de los Pegasos</span>
+                  <span class="text-blue-300">|</span>
+                  <span><i class="fas fa-sun mr-1 text-yellow-500"></i><strong>Todo el día</strong></span>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">
-                  <i class="fas fa-circle-info text-[#5B3A82] mr-1"></i>
-                  Precio por persona en tour compartido. ¿Prefieres
-                  privacidad total? Alquila el bote completo desde
-                  <strong class="text-[#3F2761]">$3.200.000 COP</strong>
-                  (Interceptor, 16 pax) hasta
-                  <strong class="text-[#3F2761]">$3.900.000 COP</strong>
-                  (Virginia 420, 28 pax).
-                </p>
               </div>
 
-              <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+              <div class="flex flex-wrap gap-1.5 mb-3">
+                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Almuerzo completo</span>
+                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Barra libre</span>
+                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Snorkel</span>
+                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Guía nativo</span>
+              </div>
+
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
-                  <span class="price-label">Precio estimado / persona</span>
-                  <span class="price-value">$180.000 COP</span>
+                  <span class="price-label">Precio / persona · Todo el día</span>
+                  <span class="price-value" data-cop-val="300000">$300.000 COP</span>
                 </div>
-                <div
-                  class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
-                >
-                  <button
-                    onclick="addToCart('pasadia', this)"
-                    class="add-to-cart-btn justify-center"
-                  >
+                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
+                  <button onclick="addToCart('pasadia', this)" class="add-to-cart-btn justify-center">
                     <i class="fas fa-cart-plus"></i> Agregar al Carrito
                   </button>
-                  <button
-                    onclick="openWhatsApp('Hola, quiero cotizar la Pasadía a las Islas del Rosario.')"
-                    class="whatsapp-info-btn"
-                  >
+                  <button onclick="openWhatsApp('Hola, quiero cotizar el Tour 4 Islas del Rosario + Atardecer.')" class="whatsapp-info-btn">
                     <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
                   </button>
                 </div>
@@ -1285,68 +1133,10 @@
                 </div>
               </div>
 
-              <div class="mb-2">
-                <h4 class="font-bold text-gray-900 text-sm mb-1.5">
-                  <i class="fas fa-ship text-blue-600 mr-1"></i> Elige el bote
-                  para tu tour:
-                </h4>
-                <div class="flex flex-wrap gap-2">
-                  <a href="fleet.html#bote-interceptor" class="boat-pick-btn">
-                    <img src="images/interceptor%20(1).webp" alt="Bote Interceptor 38'" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Interceptor 38'</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>16 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-laleona" class="boat-pick-btn">
-                    <img src="images/la%20leona%20(1).webp" alt="Yate La Leona" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">La Leona</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>26 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-oly" class="boat-pick-btn">
-                    <img src="images/oly420%20(1).webp" alt="Yate Oly 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Oly 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-vicky" class="boat-pick-btn">
-                    <img src="images/vicky%20(1).webp" alt="Yate Vicky 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Vicky 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                  <a href="fleet.html#bote-virginia" class="boat-pick-btn">
-                    <img src="images/virginia%20(1).webp" alt="Yate Virginia 420" class="boat-pick-img" loading="lazy" />
-                    <span class="boat-pick-text">
-                      <span class="boat-pick-name">Virginia 420</span>
-                      <span class="boat-pick-cap"><i class="fas fa-users"></i>28 pax</span>
-                    </span>
-                    <span class="boat-pick-info">Más información</span>
-                  </a>
-                </div>
-                <p class="text-xs text-gray-500 mt-2">
-                  <i class="fas fa-circle-info text-[#5B3A82] mr-1"></i>
-                  Precio por persona en tour compartido. ¿Prefieres
-                  privacidad total? Alquila el bote completo desde
-                  <strong class="text-[#3F2761]">$3.200.000 COP</strong>
-                  (Interceptor, 16 pax) hasta
-                  <strong class="text-[#3F2761]">$3.900.000 COP</strong>
-                  (Virginia 420, 28 pax).
-                </p>
-              </div>
-
               <div class="mt-3 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
                 <div class="price-tag">
                   <span class="price-label">Precio estimado / persona</span>
-                  <span class="price-value">$250.000 COP</span>
+                  <span class="price-value" data-cop-val="250000">$250.000 COP</span>
                 </div>
                 <div
                   class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap"
@@ -1770,11 +1560,6 @@
           <div class="hidden md:block">
             <h4 class="text-white font-bold mb-4 text-sm">Explorar</h4>
             <ul class="space-y-2 text-gray-400 text-xs">
-              <li>
-                <a href="fleet.html" class="hover:text-blue-400"
-                  >Nuestra Flotilla</a
-                >
-              </li>
               <li>
                 <a href="experiences.html" class="hover:text-blue-400"
                   >Experiencias</a

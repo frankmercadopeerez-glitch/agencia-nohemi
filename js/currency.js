@@ -120,6 +120,8 @@
       var btn = document.getElementById(id);
       if (btn) btn.innerHTML = html;
     });
+    var navLabel = document.getElementById("currency-label-nav");
+    if (navLabel) navLabel.textContent = current;
   }
 
   // Expuesto globalmente
