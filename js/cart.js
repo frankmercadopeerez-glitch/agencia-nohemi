@@ -20,11 +20,6 @@ const TOURS = {
     price: 80000,
     unit: "persona",
   },
-  gastronomico: {
-    name: "Recorrido Gastronómico por la Ciudad",
-    price: 140000,
-    unit: "persona",
-  },
   pasadia: {
     name: "Pasadía Islas del Rosario (Sunny Day)",
     price: 180000,
@@ -73,6 +68,47 @@ const TOURS = {
   playablanca: {
     name: "Puerto Medallo – Playa Blanca, Barú",
     price: 190000,
+    unit: "persona",
+  },
+  medalloislas: {
+    name: "Puerto Medallo + Islas + Mapaches y Snorkel",
+    price: 290000,
+    unit: "persona",
+  },
+  cabalgata: {
+    name: "Cabalgata en la Playa (La Boquilla)",
+    price: 160000,
+    unit: "persona",
+  },
+  poloaviario: {
+    name: "Barú – Polo Beach + Aviario Nacional",
+    price: 240000,
+    unit: "persona",
+  },
+  polobeach: {
+    name: "Barú – Playa Tranquila Polo Beach",
+    price: 160000,
+    unit: "persona",
+  },
+  bqcartagena: {
+    name: "City Tour Barranquilla + Cartagena",
+    price: 350000,
+    unit: "persona",
+  },
+  bqsantamarta: {
+    name: "City Tour Barranquilla + Santa Marta",
+    price: 260000,
+    unit: "persona",
+  },
+
+  atv: {
+    name: "Cartagena ATV Tour – Cuatrimotos, Playa y Montañas (2.5 h)",
+    price: 220000,
+    unit: "persona",
+  },
+  tirolesa: {
+    name: "Tour de Tirolesa – 5 Tirolesas con Vistas al Mar (2 h)",
+    price: 200000,
     unit: "persona",
   },
 

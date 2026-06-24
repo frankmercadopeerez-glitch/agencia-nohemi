@@ -51,14 +51,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/recorrido-gastronomico.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/recorrido-gastronomico.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://dunasyolas.com/buceo-snorkel.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel.html"/>
@@ -106,6 +98,70 @@
     <loc>https://dunasyolas.com/chiva-rumbera.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/chiva-rumbera.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/chiva-rumbera.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/puerto-medallo-islas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/puerto-medallo-islas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/puerto-medallo-islas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/puerto-medallo-islas.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/cabalgata-playa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/cabalgata-playa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cabalgata-playa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/cabalgata-playa.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/baru-polo-beach-aviario.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/baru-polo-beach-aviario.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/baru-polo-beach-aviario.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/baru-polo-beach-aviario.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/baru-polo-beach.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/baru-polo-beach.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/baru-polo-beach.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/baru-polo-beach.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/city-tour-barranquilla-cartagena.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-barranquilla-cartagena.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-tour-barranquilla-cartagena.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-barranquilla-cartagena.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/city-tour-barranquilla-santa-marta.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-barranquilla-santa-marta.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-tour-barranquilla-santa-marta.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-barranquilla-santa-marta.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/cuatrimotos-atv.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/cuatrimotos-atv.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cuatrimotos-atv.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/cuatrimotos-atv.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/tirolesa.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tirolesa.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/tirolesa.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tirolesa.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -382,14 +438,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/recorrido-gastronomico.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/recorrido-gastronomico.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/recorrido-gastronomico.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

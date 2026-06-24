@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -191,15 +191,15 @@
 
 <!-- ══════════════════ PREFERENCIAS (idioma + moneda) ══════════════════ -->
 <div id="pref-banner" class="fixed top-0 left-0 right-0 z-[999] hidden" style="background:linear-gradient(90deg,#1e0f30,#3F2761)">
-  <div class="container mx-auto px-4 py-2 max-w-5xl flex flex-row items-center gap-3">
+  <div class="container mx-auto px-4 py-2 max-w-5xl flex flex-row items-center gap-2 overflow-x-auto" style="-ms-overflow-style:none;scrollbar-width:none">
     <div class="flex items-center gap-2 shrink-0">
       <i class="fas fa-globe text-yellow-400"></i>
       <span class="text-white font-bold text-xs hidden sm:inline" id="pref-title">¿En qué moneda?</span>
     </div>
-    <div class="flex flex-nowrap gap-1.5 flex-1">
-      <button onclick="prefSelectCurrency('COP')" data-pref-cur="COP" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇨🇴 COP – Pesos</button>
-      <button onclick="prefSelectCurrency('USD')" data-pref-cur="USD" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇺🇸 USD – Dólares</button>
-      <button onclick="prefSelectCurrency('MXN')" data-pref-cur="MXN" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇲🇽 MXN – Pesos MX</button>
+    <div class="flex flex-wrap gap-1.5 flex-1">
+      <button onclick="prefSelectCurrency('COP')" data-pref-cur="COP" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇨🇴 COP<span class="hidden sm:inline"> – Pesos</span></button>
+      <button onclick="prefSelectCurrency('USD')" data-pref-cur="USD" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇺🇸 USD<span class="hidden sm:inline"> – Dólares</span></button>
+      <button onclick="prefSelectCurrency('MXN')" data-pref-cur="MXN" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇲🇽 MXN<span class="hidden sm:inline"> – Pesos MX</span></button>
     </div>
     <div class="flex items-center gap-2 shrink-0">
       <button onclick="prefSave()" class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold text-xs px-3 py-1.5 rounded-lg transition">Guardar</button>
@@ -250,7 +250,7 @@
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="relative flex items-center justify-center text-center px-4 overflow-hidden" style="min-height:58vh;background:linear-gradient(135deg,#1e0f30 0%,#3F2761 55%,#5B3A82 100%)">
-  <div class="absolute inset-0 bg-center bg-cover opacity-20" style="background-image:url('images/cartagena.jpg')"></div>
+  <div class="absolute inset-0 bg-center bg-cover opacity-20" style="background-image:url('images/cartagena.webp')"></div>
   <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(30,15,48,0.6) 100%)"></div>
   <div class="relative z-10 text-white pt-28 pb-14 max-w-3xl mx-auto">
     <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-6 text-sm font-medium">
@@ -682,13 +682,13 @@
       <div>
         <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
         <div class="flex justify-center md:justify-start gap-2">
-          <a href="https://www.instagram.com/dunasyolas_ctg?igsh=d3pjNXJtZTIzZHd6" target="_blank" class="transition hover:opacity-80">
+          <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" class="transition hover:opacity-80">
             <img src="images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform"/>
           </a>
-          <a href="https://www.facebook.com/dunasyolas" target="_blank" class="transition hover:opacity-80">
+          <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" class="transition hover:opacity-80">
             <img src="images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform"/>
           </a>
-          <a href="https://www.tiktok.com/@mexicanaencartagena" target="_blank" class="social-badge" style="background:#000">
+          <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" class="social-badge" style="background:#000">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
@@ -719,7 +719,7 @@ const ACTIVITIES = {
     duration: '4.5 horas',
     description: 'Recorrido histórico por Cartagena con guía, audio e historia incluidos. Dos horarios diarios: mañana o tarde',
     category: 'cultural',
-    image: 'images/cartagenacentro.jpg',
+    image: 'images/cartagenacentro.webp',
     slots: ['morning', 'afternoon'],
     link: 'city-tour-roa.html',
   },
@@ -730,7 +730,7 @@ const ACTIVITIES = {
     duration: '2 horas',
     description: 'El fascinante mundo submarino del Caribe colombiano en las Islas del Rosario',
     category: 'water',
-    image: 'images/acuario.jpg',
+    image: 'images/acuario.webp',
     slots: ['morning', 'afternoon'],
     link: null,
   },
@@ -741,7 +741,7 @@ const ACTIVITIES = {
     duration: '2 horas',
     description: 'Bebidas ilimitadas, DJ en vivo y el mejor atardecer de Cartagena desde el mar. Membresía Plata $150k / Oro $180k',
     category: 'water',
-    image: 'images/cartagenasunset.jpg',
+    image: 'images/cartagenasunset.webp',
     slots: ['afternoon', 'night'],
     link: 'catamaran-atardecer.html',
   },
@@ -752,7 +752,7 @@ const ACTIVITIES = {
     duration: 'Todo el día',
     description: '4 destinos en un día: Isla Grande, Cholón, Barú y Bocachica. Almuerzo, barra libre, snorkel y atardecer. Solo 12 cupos.',
     category: 'water',
-    image: 'images/islastour (2).jpg',
+    image: 'images/islastour (2).webp',
     slots: ['morning'],
     allDay: true,
     link: 'pasadia-islas-rosario.html',
@@ -764,21 +764,10 @@ const ACTIVITIES = {
     duration: 'Todo el día',
     description: 'Incluye 3 inmersiones en arrecifes de coral, almuerzo en las islas y regreso a las 16:00 h al Muelle La Bodeguita',
     category: 'water',
-    image: 'images/cartagena.jpg',
+    image: 'images/cartagena.webp',
     slots: ['morning'],
     allDay: true,
     link: 'buceo-snorkel.html',
-  },
-  gastronomico: {
-    name: 'Recorrido Gastronómico',
-    emoji: '🍽️',
-    price: 140000,
-    duration: '2.5 horas',
-    description: 'Los sabores más auténticos de Cartagena: friche, carimañola, coctel de camarón',
-    category: 'food',
-    image: 'images/cocinacaribe.jpg',
-    slots: ['afternoon', 'night'],
-    link: 'recorrido-gastronomico.html',
   },
   sabores: {
     name: 'Sabores Locales',
@@ -787,7 +776,7 @@ const ACTIVITIES = {
     duration: '2 horas',
     description: 'Mercados, cocinas tradicionales y chefs de la gastronomía caribeña',
     category: 'food',
-    image: 'images/cocinacaribe.jpg',
+    image: 'images/cocinacaribe.webp',
     slots: ['afternoon', 'night'],
     link: 'sabores-locales.html',
   },
@@ -809,9 +798,149 @@ const ACTIVITIES = {
     duration: '2 horas',
     description: 'El tour más cartagenero: Zapatos Viejos, Castillo de San Felipe y Letras de Cartagena, con música crossover, animación bilingüe y entrada a la discoteca Taboo',
     category: 'cultural',
-    image: 'images/chiva-rumbera.jpg',
+    image: 'images/chiva-rumbera.webp',
     slots: ['night'],
     link: 'chiva-rumbera.html',
+  },
+  paracaidismo: {
+    name: 'Salto en Paracaídas',
+    emoji: '🪂',
+    price: 980000,
+    duration: 'Todo el día',
+    description: 'La única zona de paracaidismo en Colombia donde saltas viendo el mar. Salto tándem desde 10.000 pies con instructor certificado, fotos y video',
+    category: 'sport',
+    image: 'images/paracaidismo.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'salto-paracaidismo.html',
+  },
+  citybahia: {
+    name: 'City Bahía de ROA',
+    emoji: '🏛️',
+    price: 195000,
+    duration: '7 horas',
+    description: 'Íconos de Cartagena, almuerzo y atardecer en bote deportivo con 2 horas de barra libre. Básico $195k / Full con Castillo $235k',
+    category: 'cultural',
+    image: 'images/city-bahia.webp',
+    slots: ['afternoon'],
+    allDay: true,
+    link: 'city-bahia.html',
+  },
+  yate: {
+    name: 'Tour Bahía en Yate (Luna Mía)',
+    emoji: '🛥️',
+    price: 120000,
+    duration: '2 horas',
+    description: 'Navega la bahía con barra libre en bebidas seleccionadas, DJ a bordo, animador y bartender. 3 salidas diarias desde el Muelle de los Pegasos',
+    category: 'water',
+    image: 'images/yate-bahia.webp',
+    slots: ['afternoon', 'night'],
+    link: 'tour-bahia-yate.html',
+  },
+  playablanca: {
+    name: 'Puerto Medallo – Playa Blanca, Barú',
+    emoji: '🏖️',
+    price: 190000,
+    duration: 'Todo el día',
+    description: 'Día de playa en Playa Blanca: transporte terrestre, cóctel de bienvenida, almuerzo a elegir, piscina y camas asoleadoras frente al Caribe',
+    category: 'water',
+    image: 'images/playa-blanca-baru.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'playa-blanca-baru.html',
+  },
+  medalloislas: {
+    name: 'Puerto Medallo + Islas + Snorkel',
+    emoji: '🤿',
+    price: 290000,
+    duration: 'Todo el día',
+    description: 'Día de playa en Puerto Medallo + tour panorámico por las islas + tour de mapaches con snorkel. Transporte, almuerzo y piscina incluidos',
+    category: 'water',
+    image: 'images/playa-blanca-baru.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'puerto-medallo-islas.html',
+  },
+  cabalgata: {
+    name: 'Cabalgata en la Playa (La Boquilla)',
+    emoji: '🐴',
+    price: 160000,
+    duration: '1 hora',
+    description: 'Recorrido a caballo de 1 hora por la playa de La Boquilla, frente al mar Caribe. Horarios de 8:00 a.m. a 5:00 p.m.',
+    category: 'water',
+    image: 'images/tourcaballo (1).webp',
+    slots: ['morning', 'afternoon'],
+    link: 'cabalgata-playa.html',
+  },
+  poloaviario: {
+    name: 'Barú – Polo Beach + Aviario',
+    emoji: '🦜',
+    price: 240000,
+    duration: 'Todo el día',
+    description: 'Playa tranquila Polo Beach + Aviario Nacional en Barú: bus climatizado, guía y almuerzo. Nacionales $240k / Extranjeros $275k',
+    category: 'water',
+    image: 'images/polo-beach.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'baru-polo-beach-aviario.html',
+  },
+  polobeach: {
+    name: 'Barú – Playa Tranquila Polo Beach',
+    emoji: '🏝️',
+    price: 160000,
+    duration: 'Todo el día',
+    description: 'Pasadía en la playa tranquila Polo Beach, Barú: bus climatizado, guía y almuerzo a elegir, lejos de las multitudes',
+    category: 'water',
+    image: 'images/polo-beach.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'baru-polo-beach.html',
+  },
+  bqcartagena: {
+    name: 'City Tour Barranquilla + Cartagena',
+    emoji: '🌆',
+    price: 350000,
+    duration: 'Todo el día',
+    description: 'Los íconos de Barranquilla y Cartagena en un día, con almuerzo en Barranquilla y cena en Cartagena. Transporte climatizado y guía',
+    category: 'cultural',
+    image: 'images/barranquilla.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'city-tour-barranquilla-cartagena.html',
+  },
+  bqsantamarta: {
+    name: 'City Tour Barranquilla + Santa Marta',
+    emoji: '⛰️',
+    price: 260000,
+    duration: 'Todo el día',
+    description: 'Atractivos de Barranquilla y Santa Marta en un día, con tiempo de playa y piscina, desayuno y almuerzo. Salidas todos los días',
+    category: 'cultural',
+    image: 'images/santa-marta.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'city-tour-barranquilla-santa-marta.html',
+  },
+  atv: {
+    name: 'Cartagena ATV Tour',
+    emoji: '🏍️',
+    price: 220000,
+    duration: '2.5 horas',
+    description: 'Cuatrimotos por playa, montañas y senderos del norte de Cartagena. Almuerzo, bebida y transporte incluidos.',
+    category: 'sport',
+    image: 'images/atv-cuatrimotos.webp',
+    slots: ['morning', 'afternoon'],
+    link: 'cuatrimotos-atv.html',
+  },
+  tirolesa: {
+    name: 'Tour de Tirolesa',
+    emoji: '🧗',
+    price: 200000,
+    duration: '2 horas',
+    description: '5 tirolesas sobre los árboles con vistas al océano Caribe. Almuerzo y transporte incluidos. El único de Cartagena.',
+    category: 'sport',
+    image: 'images/tirolesa.webp',
+    slots: ['morning', 'afternoon'],
+    link: 'tirolesa.html',
   },
 };
 
@@ -820,8 +949,8 @@ const ACTIVITIES = {
 // ─────────────────────────────────────────────────────────────────────────────
 const PACKAGES = {
   'fin-semana': {
-    activities: ['citytour', 'gastronomico', 'catamaran'],
-    slotPrefs: { citytour: 'morning', gastronomico: 'night', catamaran: 'afternoon' },
+    activities: ['citytour', 'sabores', 'catamaran'],
+    slotPrefs: { citytour: 'morning', sabores: 'night', catamaran: 'afternoon' },
     days: 2,
   },
   'aventura': {
@@ -835,8 +964,8 @@ const PACKAGES = {
     days: 2,
   },
   'islas-cultura': {
-    activities: ['citytour', 'pasadia', 'gastronomico'],
-    slotPrefs: { citytour: 'morning', pasadia: 'morning', gastronomico: 'night' },
+    activities: ['citytour', 'pasadia', 'sabores'],
+    slotPrefs: { citytour: 'morning', pasadia: 'morning', sabores: 'night' },
     days: 2,
   },
 };
