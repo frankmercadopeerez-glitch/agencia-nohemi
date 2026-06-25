@@ -116,6 +116,16 @@ const TOURS = {
     price: 200000,
     unit: "persona",
   },
+  tamarindo: {
+    name: "Tamarindo Beach House – Pasadía en Tierra Bomba",
+    price: 190000,
+    unit: "persona",
+  },
+  namaste: {
+    name: "Namaste – Experiencia Holística en Tierra Bomba",
+    price: 220000,
+    unit: "persona",
+  },
 
   /* ---- Cursos de Kitesurf (precio base, 1 persona) ---- */
   kitesurf_iniciacion: {
