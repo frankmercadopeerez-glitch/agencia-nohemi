@@ -9,7 +9,7 @@
     <link rel="preload" as="image" href="images/cartagenasunset.webp" fetchpriority="high"/>
     <meta
       name="description"
-      content="Dunas & Olas: agencia turística multicultural — la calidez del norte, la magia del caribe. Tours a las Islas del Rosario, recorridos gastronómicos, kitesurf en La Boquilla y experiencias únicas de la mano de Nohemi, tu guía local en Cartagena."
+      content="Agencia de tours en Cartagena de Indias. Islas del Rosario, kitesurf en La Boquilla, gastronomía caribeña y experiencias únicas con Nohemi, tu guía local en Cartagena."
     />
     <meta
       name="keywords"
@@ -28,8 +28,12 @@
     />
     <meta
       property="og:image"
-      content="https://dunasyolas.com/images/favicon-dunas-olas.png"
+      content="https://dunasyolas.com/images/cartagenasunset.webp"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Atardecer en la bahía de Cartagena de Indias" />
+    <meta property="og:locale" content="es_CO" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://dunasyolas.com/" />
@@ -43,7 +47,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://dunasyolas.com/images/favicon-dunas-olas.png"
+      content="https://dunasyolas.com/images/cartagenasunset.webp"
     />
     <title>Dunas & Olas | Cartagena con Nohemi, tu guía local</title>
     <!-- Google Analytics 4 — reemplaza G-XXXXXXXXXX con tu Measurement ID -->
@@ -425,7 +429,44 @@
       ],
       "priceRange": "$$",
       "currenciesAccepted": "COP",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
       "openingHours": "Mo-Su 08:00-20:00",
+      "availableLanguage": [
+        { "@type": "Language", "name": "Spanish", "alternateName": "es" },
+        { "@type": "Language", "name": "English", "alternateName": "en" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+573163030589",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "availableLanguage": ["Spanish", "English"],
+        "areaServed": "CO"
+      },
+      "founder": {
+        "@type": "Person",
+        "@id": "https://dunasyolas.com/#nohemi",
+        "name": "Nohemi",
+        "jobTitle": "Guía Local & Fundadora",
+        "knowsAbout": ["Cartagena de Indias", "Islas del Rosario", "Kitesurf", "Turismo Caribeño", "Gastronomía Caribeña"],
+        "sameAs": "https://www.instagram.com/mexicanaencartagena"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tours y Experiencias en Cartagena",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Pasadía 4 Islas del Rosario + Atardecer", "url": "https://dunasyolas.com/pasadia-islas-rosario" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Atardeceres Mágicos en la Bahía", "url": "https://dunasyolas.com/atardeceres-bahia" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Catamarán Atardecer", "url": "https://dunasyolas.com/catamaran-atardecer" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Buceo y Snorkel en Cartagena", "url": "https://dunasyolas.com/buceo-snorkel" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Chiva Rumbera Cartagena", "url": "https://dunasyolas.com/chiva-rumbera" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Kitesurf en La Boquilla", "url": "https://dunasyolas.com/kitesurf" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Recorrido Gastronómico", "url": "https://dunasyolas.com/recorrido-gastronomico" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Salto en Paracaídas Cartagena", "url": "https://dunasyolas.com/salto-paracaidismo" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Playa Blanca Barú", "url": "https://dunasyolas.com/playa-blanca-baru" } },
+          { "@type": "Offer", "itemOffered": { "@type": "TouristTrip", "name": "Cabalgata en la Playa La Boquilla", "url": "https://dunasyolas.com/cabalgata-playa" } }
+        ]
+      },
       "sameAs": [
         "https://www.instagram.com/mexicanaencartagena",
         "https://www.facebook.com/dunasyolas"
@@ -436,7 +477,15 @@
       "@id": "https://dunasyolas.com/#website",
       "url": "https://dunasyolas.com",
       "name": "Dunas & Olas",
-      "inLanguage": "es-CO"
+      "inLanguage": "es-CO",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://dunasyolas.com/experiences?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "BreadcrumbList",

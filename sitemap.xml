@@ -1,682 +1,884 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Páginas principales (Español) -->
+  <!-- ===== INICIO ===== -->
   <url>
     <loc>https://dunasyolas.com/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- ===== PÁGINAS PRINCIPALES ===== -->
   <url>
-    <loc>https://dunasyolas.com/fleet.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/fleet.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/fleet.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/fleet.html"/>
+    <loc>https://dunasyolas.com/experiences</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/experiences.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences.html"/>
+    <loc>https://dunasyolas.com/kitesurf</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/kitesurf"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/kitesurf"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/kitesurf.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/kitesurf.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/kitesurf.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf.html"/>
+    <loc>https://dunasyolas.com/arma-tu-viaje</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/arma-tu-viaje"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/arma-tu-viaje"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
+
+  <!-- ===== EXPERIENCIAS (Bilingüe) ===== -->
   <url>
-    <loc>https://dunasyolas.com/atardeceres-bahia.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/atardeceres-bahia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/atardeceres-bahia.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/atardeceres-bahia.html"/>
+    <loc>https://dunasyolas.com/pasadia-islas-rosario</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/pasadia-islas-rosario.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
+    <loc>https://dunasyolas.com/atardeceres-bahia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/atardeceres-bahia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/atardeceres-bahia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/atardeceres-bahia"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/buceo-snorkel.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel.html"/>
+    <loc>https://dunasyolas.com/buceo-snorkel</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/salto-paracaidismo.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/salto-paracaidismo.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/salto-paracaidismo.html"/>
+    <loc>https://dunasyolas.com/recorrido-gastronomico</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/recorrido-gastronomico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/recorrido-gastronomico"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/recorrido-gastronomico"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/city-bahia.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-bahia.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-bahia.html"/>
+    <loc>https://dunasyolas.com/sabores-locales</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/sabores-locales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/sabores-locales"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/sabores-locales"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== EXPERIENCIAS (Solo español) ===== -->
+  <url>
+    <loc>https://dunasyolas.com/catamaran-atardecer</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/catamaran-atardecer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/catamaran-atardecer"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/tour-bahia-yate.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tour-bahia-yate.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tour-bahia-yate.html"/>
+    <loc>https://dunasyolas.com/city-tour-roa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-roa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-roa"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/playa-blanca-baru.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/playa-blanca-baru.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/playa-blanca-baru.html"/>
+    <loc>https://dunasyolas.com/chiva-rumbera</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/chiva-rumbera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/chiva-rumbera"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/chiva-rumbera.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/chiva-rumbera.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/chiva-rumbera.html"/>
+    <loc>https://dunasyolas.com/salto-paracaidismo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/salto-paracaidismo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/salto-paracaidismo"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/puerto-medallo-islas.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/puerto-medallo-islas.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/puerto-medallo-islas.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/puerto-medallo-islas.html"/>
+    <loc>https://dunasyolas.com/city-bahia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-bahia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-bahia"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/cabalgata-playa.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/cabalgata-playa.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cabalgata-playa.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/cabalgata-playa.html"/>
+    <loc>https://dunasyolas.com/tour-bahia-yate</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tour-bahia-yate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tour-bahia-yate"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/baru-polo-beach-aviario.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/baru-polo-beach-aviario.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/baru-polo-beach-aviario.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/baru-polo-beach-aviario.html"/>
+    <loc>https://dunasyolas.com/playa-blanca-baru</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/playa-blanca-baru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/playa-blanca-baru"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/baru-polo-beach.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/baru-polo-beach.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/baru-polo-beach.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/baru-polo-beach.html"/>
+    <loc>https://dunasyolas.com/puerto-medallo-islas</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/puerto-medallo-islas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/puerto-medallo-islas"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/city-tour-barranquilla-cartagena.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-barranquilla-cartagena.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-tour-barranquilla-cartagena.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-barranquilla-cartagena.html"/>
+    <loc>https://dunasyolas.com/cabalgata-playa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/cabalgata-playa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/cabalgata-playa"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/city-tour-barranquilla-santa-marta.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-barranquilla-santa-marta.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-tour-barranquilla-santa-marta.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-barranquilla-santa-marta.html"/>
+    <loc>https://dunasyolas.com/baru-polo-beach-aviario</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/baru-polo-beach-aviario"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/baru-polo-beach-aviario"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/cuatrimotos-atv.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/cuatrimotos-atv.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/cuatrimotos-atv.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/cuatrimotos-atv.html"/>
+    <loc>https://dunasyolas.com/baru-polo-beach</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/baru-polo-beach"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/baru-polo-beach"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/tirolesa.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tirolesa.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/tirolesa.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tirolesa.html"/>
+    <loc>https://dunasyolas.com/city-tour-barranquilla-cartagena</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-barranquilla-cartagena"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-barranquilla-cartagena"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/tamarindo-beach-house.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tamarindo-beach-house.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tamarindo-beach-house.html"/>
+    <loc>https://dunasyolas.com/city-tour-barranquilla-santa-marta</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-barranquilla-santa-marta"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-barranquilla-santa-marta"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/namaste-holistica.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/namaste-holistica.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/namaste-holistica.html"/>
+    <loc>https://dunasyolas.com/cuatrimotos-atv</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/cuatrimotos-atv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/cuatrimotos-atv"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/about.html"/>
+    <loc>https://dunasyolas.com/tirolesa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tirolesa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tirolesa"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/tamarindo-beach-house</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tamarindo-beach-house"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tamarindo-beach-house"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/namaste-holistica</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/namaste-holistica"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/namaste-holistica"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== PÁGINAS DE SOPORTE ===== -->
+  <url>
+    <loc>https://dunasyolas.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/about"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/index.html"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/policies.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/policies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/policies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/policies.html"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/faq.html"/>
+    <loc>https://dunasyolas.com/faq</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/faq"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/privacy.html"/>
+    <loc>https://dunasyolas.com/policies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/policies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/policies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/policies"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/privacy"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!-- Blog posts (Español) -->
+
+  <!-- ===== BLOG (Español) ===== -->
   <url>
-    <loc>https://dunasyolas.com/blog/atardeceres-magicos/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/atardeceres-magicos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/atardeceres-magicos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/atardeceres-magicos/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://dunasyolas.com/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+  <!-- Posts bilingües -->
   <url>
-    <loc>https://dunasyolas.com/blog/cambio-de-moneda-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cambio-de-moneda-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/cocinas-del-caribe/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cocinas-del-caribe/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cocinas-del-caribe/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cocinas-del-caribe/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/gastronomia-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/gastronomia-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/gastronomia-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/gastronomia-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/historia-nombre-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/historia-nombre-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/historia-nombre-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/historia-nombre-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/identificar-lancha-pirata/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/identificar-lancha-pirata/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/identificar-lancha-pirata/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/identificar-lancha-pirata/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/mejores-islas-rosario/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejores-islas-rosario/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejores-islas-rosario/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejores-islas-rosario/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/seguridad-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/seguridad-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/seguridad-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/seguridad-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/viajar-con-un-local-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/viajar-con-un-local-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/kitesurf-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/kitesurf-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/blog/que-hacer-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/que-hacer-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/que-hacer-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/que-hacer-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/que-hacer-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/que-hacer-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/que-hacer-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/que-hacer-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/costo-viaje-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/costo-viaje-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/costo-viaje-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/costo-viaje-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/itinerario-3-dias-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/costo-viaje-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/costo-viaje-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/costo-viaje-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/costo-viaje-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/mejores-islas-rosario/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejores-islas-rosario/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejores-islas-rosario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejores-islas-rosario/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/playas-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/playas-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/playas-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/playas-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/kitesurf-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/kitesurf-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/atardeceres-magicos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/atardeceres-magicos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/atardeceres-magicos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/atardeceres-magicos/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/playas-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/playas-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/playas-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/playas-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/cambio-de-moneda-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cambio-de-moneda-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/cartagena-con-ninos/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-con-ninos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-con-ninos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-con-ninos/index.html"/>
+    <loc>https://dunasyolas.com/blog/cartagena-con-ninos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-con-ninos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-con-ninos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-con-ninos/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/cartagena-vs-cancun/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-vs-cancun/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
+    <loc>https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/cartagena-vs-cancun/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-vs-cancun/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-vs-cancun/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-vs-cancun/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <loc>https://dunasyolas.com/blog/cocinas-del-caribe/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cocinas-del-caribe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cocinas-del-caribe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cocinas-del-caribe/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <loc>https://dunasyolas.com/blog/donde-alojarse-en-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/gastronomia-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/gastronomia-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/gastronomia-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/gastronomia-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/historia-nombre-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/historia-nombre-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/historia-nombre-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/historia-nombre-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/blog/identificar-lancha-pirata/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/identificar-lancha-pirata/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/identificar-lancha-pirata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/identificar-lancha-pirata/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/seguridad-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/seguridad-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/seguridad-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/seguridad-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/viajar-con-un-local-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/viajar-con-un-local-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Posts solo en español -->
+  <url>
+    <loc>https://dunasyolas.com/blog/compras-artesanias-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/compras-artesanias-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/compras-artesanias-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/miradores-atardeceres-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/miradores-atardeceres-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/miradores-atardeceres-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/plan-finde-islas-rosario/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/plan-finde-islas-rosario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/plan-finde-islas-rosario/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/restaurantes-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/restaurantes-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/restaurantes-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/transporte-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/transporte-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/transporte-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/vida-nocturna-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/vida-nocturna-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/vida-nocturna-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/paracaidismo-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/paracaidismo-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/paracaidismo-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/tirolesa-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/tirolesa-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/tirolesa-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/blog/cuatrimotos-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cuatrimotos-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cuatrimotos-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- English version -->
-  <!-- Páginas principales (English) -->
+  <!-- ===== VERSIÓN EN INGLÉS ===== -->
   <url>
     <loc>https://dunasyolas.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/fleet.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/fleet.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/fleet.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/fleet.html"/>
+    <loc>https://dunasyolas.com/en/experiences</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/experiences.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences.html"/>
+    <loc>https://dunasyolas.com/en/kitesurf</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/kitesurf"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/kitesurf"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/kitesurf.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/kitesurf.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/kitesurf.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/kitesurf.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/atardeceres-bahia.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/atardeceres-bahia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/atardeceres-bahia.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/atardeceres-bahia.html"/>
+    <loc>https://dunasyolas.com/en/pasadia-islas-rosario</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/pasadia-islas-rosario.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/pasadia-islas-rosario.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/pasadia-islas-rosario.html"/>
+    <loc>https://dunasyolas.com/en/atardeceres-bahia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/atardeceres-bahia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/atardeceres-bahia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/atardeceres-bahia"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/buceo-snorkel.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel.html"/>
+    <loc>https://dunasyolas.com/en/buceo-snorkel</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/buceo-snorkel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/buceo-snorkel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/buceo-snorkel"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/about.html"/>
+    <loc>https://dunasyolas.com/en/recorrido-gastronomico</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/recorrido-gastronomico"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/recorrido-gastronomico"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/recorrido-gastronomico"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/sabores-locales</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/sabores-locales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/sabores-locales"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/sabores-locales"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/about"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/index.html"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/policies.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/policies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/policies.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/policies.html"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/faq.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/faq.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/faq.html"/>
+    <loc>https://dunasyolas.com/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/faq"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/privacy.html"/>
+    <loc>https://dunasyolas.com/en/policies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/policies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/policies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/policies"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/privacy"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!-- Blog posts (English) -->
+
+  <!-- ===== BLOG (English) ===== -->
   <url>
-    <loc>https://dunasyolas.com/en/blog/atardeceres-magicos/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/atardeceres-magicos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/atardeceres-magicos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/atardeceres-magicos/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://dunasyolas.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/cambio-de-moneda-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cambio-de-moneda-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/cocinas-del-caribe/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cocinas-del-caribe/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cocinas-del-caribe/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cocinas-del-caribe/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/gastronomia-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/gastronomia-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/gastronomia-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/gastronomia-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/historia-nombre-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/historia-nombre-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/historia-nombre-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/historia-nombre-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/identificar-lancha-pirata/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/identificar-lancha-pirata/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/identificar-lancha-pirata/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/identificar-lancha-pirata/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/mejores-islas-rosario/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejores-islas-rosario/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejores-islas-rosario/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejores-islas-rosario/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/seguridad-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/seguridad-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/seguridad-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/seguridad-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/viajar-con-un-local-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/viajar-con-un-local-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/kitesurf-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/kitesurf-cartagena/index.html"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dunasyolas.com/en/blog/que-hacer-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/que-hacer-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/que-hacer-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/que-hacer-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/que-hacer-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/que-hacer-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/que-hacer-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/que-hacer-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/costo-viaje-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/costo-viaje-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/costo-viaje-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/costo-viaje-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/costo-viaje-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/costo-viaje-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/costo-viaje-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/costo-viaje-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/mejores-islas-rosario/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejores-islas-rosario/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejores-islas-rosario/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejores-islas-rosario/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/playas-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/playas-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/playas-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/playas-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/kitesurf-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/kitesurf-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/atardeceres-magicos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/atardeceres-magicos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/atardeceres-magicos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/atardeceres-magicos/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/playas-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/playas-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/playas-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/playas-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/cambio-de-moneda-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cambio-de-moneda-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cambio-de-moneda-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/cartagena-con-ninos/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-con-ninos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-con-ninos/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-con-ninos/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/cartagena-con-ninos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-con-ninos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-con-ninos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-con-ninos/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/cartagena-vs-cancun/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-vs-cancun/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-vs-cancun/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/cartagena-vs-cancun/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-vs-cancun/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-vs-cancun/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-vs-cancun/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cartagena-en-un-dia-crucero/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cartagena-en-un-dia-crucero/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/cocinas-del-caribe/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/cocinas-del-caribe/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/cocinas-del-caribe/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/cocinas-del-caribe/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/donde-alojarse-en-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/donde-alojarse-en-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/gastronomia-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/gastronomia-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/gastronomia-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/gastronomia-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/itinerario-3-dias-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/itinerario-3-dias-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/guia-viajeros-estados-unidos-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/guia-viajeros-estados-unidos-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/como-llegar-aeropuerto-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/como-llegar-aeropuerto-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/historia-nombre-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/historia-nombre-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/historia-nombre-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/historia-nombre-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/index.html"/>
+    <loc>https://dunasyolas.com/en/blog/identificar-lancha-pirata/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/identificar-lancha-pirata/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/identificar-lancha-pirata/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/identificar-lancha-pirata/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/mejor-epoca-para-visitar-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/mejor-epoca-para-visitar-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/requisitos-viajar-colombia-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/requisitos-viajar-colombia-2026/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/seguridad-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/seguridad-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/seguridad-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/seguridad-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/viajar-con-un-local-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/viajar-con-un-local-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/viajar-con-un-local-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/blog/wing-foil-vs-kitesurf-cartagena/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/blog/wing-foil-vs-kitesurf-cartagena/"/>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

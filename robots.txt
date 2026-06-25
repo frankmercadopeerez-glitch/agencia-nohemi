@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /fleet
+Disallow: /fleet.html
+Disallow: /en/fleet
+Disallow: /en/fleet.html
 
 Sitemap: https://dunasyolas.com/sitemap.xml
