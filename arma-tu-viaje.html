@@ -734,16 +734,16 @@ const ACTIVITIES = {
     slots: ['morning', 'afternoon'],
     link: null,
   },
-  atardecer: {
-    name: 'Atardeceres Mágicos en la Bahía',
-    emoji: '🌅',
+  yate_noche: {
+    name: 'Tour Nocturno en Yate – Luna Mía',
+    emoji: '🌙',
     price: 120000,
-    duration: '3 horas',
-    description: 'Navega por la bahía interna de Cartagena al atardecer — entre el Centro Histórico, Bocagrande y Castillogrande. Ideal para propuestas, cumpleaños y noches especiales.',
+    duration: '2 horas',
+    description: 'Fiesta nocturna en el Yate Luna Mía. DJ a bordo, barra libre y el skyline de Cartagena iluminado. Sale 7pm–9pm o 9pm–11pm.',
     category: 'water',
-    image: 'images/cartagenasunset.webp',
-    slots: ['afternoon', 'night'],
-    link: 'atardeceres-bahia.html',
+    image: 'images/lunamia.webp',
+    slots: ['night'],
+    link: 'tour-bahia-yate.html',
   },
   catamaran: {
     name: 'Catamarán Atardecer',
@@ -753,7 +753,18 @@ const ACTIVITIES = {
     description: 'Bebidas ilimitadas, DJ en vivo y el mejor atardecer de Cartagena desde el mar. Membresía Plata $150k / Oro $180k',
     category: 'water',
     image: 'images/cartagenasunset.webp',
-    slots: ['afternoon', 'night'],
+    slots: ['afternoon'],
+    link: 'catamaran-atardecer.html',
+  },
+  catamaran_noche: {
+    name: 'Tour Nocturno en Catamarán',
+    emoji: '🎉',
+    price: 150000,
+    duration: '2 horas',
+    description: 'La fiesta del Caribe sobre el mar. DJ, coctelería, baile y el horizonte iluminado de noche. Sale 7pm–9pm o 9pm–11pm. Membresía Plata $150k / Oro $180k.',
+    category: 'water',
+    image: 'images/cartagenasunset.webp',
+    slots: ['night'],
     link: 'catamaran-atardecer.html',
   },
   pasadia: {
@@ -964,8 +975,8 @@ const PACKAGES = {
     days: 2,
   },
   'islas-cultura': {
-    activities: ['citytour', 'pasadia', 'atardecer'],
-    slotPrefs: { citytour: 'morning', pasadia: 'morning', atardecer: 'afternoon' },
+    activities: ['citytour', 'pasadia', 'yate_noche'],
+    slotPrefs: { citytour: 'morning', pasadia: 'morning', yate_noche: 'night' },
     days: 2,
   },
 };
@@ -1338,8 +1349,7 @@ function renderPickerGrid() {
   }
 
   grid.innerHTML = visible.map(([id, act]) => `
-    <button onclick="pickActivity('${id}')"
-      class="act-card text-left bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-500 group">
+    <div class="act-card text-left bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-blue-500 hover:shadow-md transition-all group cursor-pointer" onclick="pickActivity('${id}')">
       <div class="relative" style="height:120px;overflow:hidden;">
         <img src="${act.image}" alt="${act.name}" style="display:block;width:100%;height:100%;object-fit:cover;" class="group-hover:scale-105 transition-transform duration-300"/>
         <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,0.5),transparent)"></div>
@@ -1352,12 +1362,15 @@ function renderPickerGrid() {
       <div class="p-3 bg-white">
         <div class="font-bold text-gray-900 text-sm mb-0.5">${act.name}</div>
         <div class="text-xs text-gray-400 mb-2 line-clamp-2">${act.description}</div>
-        <div class="flex items-center justify-between">
-          <span class="text-sm font-extrabold text-blue-700">${displayPrice(act.price)}<span class="text-xs font-normal text-gray-400">/p</span></span>
-          <span class="text-xs font-bold text-blue-600 group-hover:underline">Agregar →</span>
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-sm font-extrabold text-[#5B3A82]">${displayPrice(act.price)}<span class="text-xs font-normal text-gray-400">/p</span></span>
+          <div class="flex items-center gap-2 flex-shrink-0">
+            ${act.link ? `<a href="${act.link}" onclick="event.stopPropagation()" target="_blank" rel="noopener" class="text-[10px] text-gray-400 hover:text-[#5B3A82] underline whitespace-nowrap">Ver más</a>` : ''}
+            <span class="text-xs font-bold text-[#5B3A82] group-hover:underline whitespace-nowrap">Agregar →</span>
+          </div>
         </div>
       </div>
-    </button>`).join('');
+    </div>`).join('');
 }
 
 function pickActivity(actId) {

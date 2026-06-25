@@ -55,6 +55,16 @@ const TOURS = {
     price: 120000,
     unit: "persona",
   },
+  yate_noche: {
+    name: "Tour Nocturno en Yate – Luna Mía (7pm–9pm o 9pm–11pm)",
+    price: 120000,
+    unit: "persona",
+  },
+  catamaran_noche: {
+    name: "Tour Nocturno en Catamarán (7pm–9pm o 9pm–11pm)",
+    price: 150000,
+    unit: "persona",
+  },
   chiva: {
     name: "Chiva Rumbera (con discoteca Taboo)",
     price: 45000,
