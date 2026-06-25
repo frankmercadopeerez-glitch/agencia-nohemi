@@ -30,11 +30,6 @@ const TOURS = {
     price: 120000,
     unit: "persona",
   },
-  sabores: {
-    name: "Sabores Locales – Experiencia Culinaria",
-    price: 150000,
-    unit: "persona",
-  },
   buceo: {
     name: "Buceo y Snorkel: Aventura Submarina",
     price: 250000,

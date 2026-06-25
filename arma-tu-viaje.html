@@ -780,17 +780,6 @@ const ACTIVITIES = {
     allDay: true,
     link: 'buceo-snorkel.html',
   },
-  sabores: {
-    name: 'Sabores Locales',
-    emoji: '🥘',
-    price: 150000,
-    duration: '2 horas',
-    description: 'Mercados, cocinas tradicionales y chefs de la gastronomía caribeña',
-    category: 'food',
-    image: 'images/cocinacaribe.webp',
-    slots: ['afternoon', 'night'],
-    link: 'sabores-locales.html',
-  },
   kitesurf: {
     name: 'Kitesurf Iniciación',
     emoji: '🪁',
@@ -960,8 +949,8 @@ const ACTIVITIES = {
 // ─────────────────────────────────────────────────────────────────────────────
 const PACKAGES = {
   'fin-semana': {
-    activities: ['citytour', 'sabores', 'catamaran'],
-    slotPrefs: { citytour: 'morning', sabores: 'night', catamaran: 'afternoon' },
+    activities: ['citytour', 'chiva', 'catamaran'],
+    slotPrefs: { citytour: 'morning', chiva: 'night', catamaran: 'afternoon' },
     days: 2,
   },
   'aventura': {
@@ -969,14 +958,14 @@ const PACKAGES = {
     slotPrefs: { buceo: 'morning', catamaran: 'night', kitesurf: 'morning' },
     days: 2,
   },
-  'sabor-sol': {
-    activities: ['acuario', 'sabores', 'catamaran'],
-    slotPrefs: { acuario: 'morning', sabores: 'night', catamaran: 'afternoon' },
+  'noche-cultura': {
+    activities: ['citytour', 'chiva', 'catamaran'],
+    slotPrefs: { citytour: 'morning', chiva: 'night', catamaran: 'afternoon' },
     days: 2,
   },
   'islas-cultura': {
-    activities: ['citytour', 'pasadia', 'sabores'],
-    slotPrefs: { citytour: 'morning', pasadia: 'morning', sabores: 'night' },
+    activities: ['citytour', 'pasadia', 'atardecer'],
+    slotPrefs: { citytour: 'morning', pasadia: 'morning', atardecer: 'afternoon' },
     days: 2,
   },
 };
