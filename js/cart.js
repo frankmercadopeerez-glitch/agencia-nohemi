@@ -105,6 +105,16 @@ const TOURS = {
     price: 260000,
     unit: "persona",
   },
+  citytour_roa: {
+    name: "City Tours de Roa – Recorrido Histórico con Almuerzo",
+    price: 140000,
+    unit: "persona",
+  },
+  catamaran: {
+    name: "Catamarán Atardecer – Membresía Plata",
+    price: 150000,
+    unit: "persona",
+  },
 
   atv: {
     name: "Cartagena ATV Tour – Cuatrimotos, Playa y Montañas (2.5 h)",

@@ -238,12 +238,12 @@
             <i class="fas fa-calendar-alt mr-2"></i> <strong>Tarifas 2026</strong> — Válidas del 1 de enero al 31 de diciembre de 2026.
           </div>
 
-          <h2>Galería</h2>
+          <h2>Galería <span class="text-sm font-normal text-gray-400">(toca para ampliar)</span></h2>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
-            <div class="gallery-img"><img src="images/tamarindo-1.webp" alt="Tamarindo Beach House piscina" loading="lazy" decoding="async"/></div>
-            <div class="gallery-img"><img src="images/tamarindo-2.webp" alt="Tamarindo Beach House playa" loading="lazy" decoding="async"/></div>
-            <div class="gallery-img"><img src="images/tamarindo-3.webp" alt="Tamarindo Beach House camas lounge" loading="lazy" decoding="async"/></div>
-            <div class="gallery-img"><img src="images/tamarindo-4.webp" alt="Tamarindo Beach House vistas" loading="lazy" decoding="async"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/tamarindo-1.webp" alt="Tamarindo Beach House piscina" loading="lazy" decoding="async"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/tamarindo-2.webp" alt="Tamarindo Beach House playa" loading="lazy" decoding="async"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/tamarindo-3.webp" alt="Tamarindo Beach House camas lounge" loading="lazy" decoding="async"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/tamarindo-4.webp" alt="Tamarindo Beach House vistas" loading="lazy" decoding="async"/></div>
           </div>
 
           <h2>Horarios</h2>
@@ -407,6 +407,45 @@
       function openWhatsApp(message) {
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
       }
+    </script>
+    <!-- Lightbox galería -->
+    <div id="lb" onclick="if(event.target===this)closeLb()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9998;align-items:center;justify-content:center;padding:1rem;">
+      <button onclick="closeLb()" style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.18);border:none;color:#fff;font-size:1.6rem;width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">&times;</button>
+      <button onclick="lbPrev()" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.18);border:none;color:#fff;font-size:2rem;width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">&#8249;</button>
+      <img id="lb-img" src="" alt="" style="max-width:calc(100% - 6rem);max-height:88vh;border-radius:10px;object-fit:contain;"/>
+      <button onclick="lbNext()" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.18);border:none;color:#fff;font-size:2rem;width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">&#8250;</button>
+      <div id="lb-cap" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:.8rem;"></div>
+    </div>
+    <script>
+      var _lbImgs=[], _lbIdx=0;
+      function openLb(el){
+        _lbImgs=Array.from(document.querySelectorAll('.gallery-img img'));
+        _lbIdx=_lbImgs.indexOf(el);
+        if(_lbIdx<0)_lbIdx=0;
+        _showLb();
+        var lb=document.getElementById('lb');
+        lb.style.display='flex';
+        document.body.style.overflow='hidden';
+      }
+      function closeLb(){
+        document.getElementById('lb').style.display='none';
+        document.body.style.overflow='';
+      }
+      function _showLb(){
+        var img=_lbImgs[_lbIdx];
+        document.getElementById('lb-img').src=img.src;
+        document.getElementById('lb-img').alt=img.alt;
+        document.getElementById('lb-cap').textContent=(_lbIdx+1)+' / '+_lbImgs.length;
+      }
+      function lbNext(){_lbIdx=(_lbIdx+1)%_lbImgs.length;_showLb();}
+      function lbPrev(){_lbIdx=(_lbIdx-1+_lbImgs.length)%_lbImgs.length;_showLb();}
+      document.addEventListener('keydown',function(e){
+        if(document.getElementById('lb').style.display!=='none'){
+          if(e.key==='Escape')closeLb();
+          if(e.key==='ArrowRight')lbNext();
+          if(e.key==='ArrowLeft')lbPrev();
+        }
+      });
     </script>
     <script src="js/cart.js"></script>
     <script src="js/currency.js"></script>
