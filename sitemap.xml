@@ -91,22 +91,25 @@
   <url>
     <loc>https://dunasyolas.com/catamaran-atardecer</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/catamaran-atardecer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/catamaran-atardecer"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/catamaran-atardecer"/>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dunasyolas.com/city-tour-roa</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-roa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-tour-roa"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-roa"/>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dunasyolas.com/chiva-rumbera</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/chiva-rumbera"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/chiva-rumbera"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/chiva-rumbera"/>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -131,6 +134,7 @@
   <url>
     <loc>https://dunasyolas.com/tour-bahia-yate</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tour-bahia-yate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/tour-bahia-yate"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tour-bahia-yate"/>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -139,6 +143,7 @@
   <url>
     <loc>https://dunasyolas.com/playa-blanca-baru</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/playa-blanca-baru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/playa-blanca-baru"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/playa-blanca-baru"/>
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -553,6 +558,53 @@
     <lastmod>2026-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- ===== VERSIÓN EN INGLÉS — experiencias nuevas ===== -->
+  <url>
+    <loc>https://dunasyolas.com/en/chiva-rumbera</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/chiva-rumbera"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/chiva-rumbera"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/chiva-rumbera"/>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/city-tour-roa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/city-tour-roa"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/city-tour-roa"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/city-tour-roa"/>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/catamaran-atardecer</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/catamaran-atardecer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/catamaran-atardecer"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/catamaran-atardecer"/>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/tour-bahia-yate</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/tour-bahia-yate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/tour-bahia-yate"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/tour-bahia-yate"/>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dunasyolas.com/en/playa-blanca-baru</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dunasyolas.com/playa-blanca-baru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/playa-blanca-baru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/playa-blanca-baru"/>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- ===== VERSIÓN EN INGLÉS ===== -->
