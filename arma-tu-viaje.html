@@ -24,8 +24,6 @@
   <link rel="canonical" href="https://dunasyolas.com/arma-tu-viaje"/>
   <link rel="alternate" hreflang="es" href="https://dunasyolas.com/arma-tu-viaje"/>
   <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/arma-tu-viaje"/>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
   <link href="./css/tailwind.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -589,7 +587,7 @@
           </ul>
           <label class="flex items-start gap-2 cursor-pointer">
             <input type="checkbox" id="ck-terms" class="mt-0.5 accent-blue-600 shrink-0"/>
-            <span class="text-gray-700">He leído y acepto los <a href="policies.html" target="_blank" class="text-blue-600 underline font-semibold">Términos y Condiciones</a> de Dunas &amp; Olas</span>
+            <span class="text-gray-700">He leído y acepto los <a href="policies.html" target="_blank" class="text-blue-600 underline font-semibold" rel="noopener noreferrer">Términos y Condiciones</a> de Dunas &amp; Olas</span>
           </label>
         </div>
 
@@ -682,13 +680,13 @@
       <div>
         <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
         <div class="flex justify-center md:justify-start gap-2">
-          <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" class="transition hover:opacity-80">
+          <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" class="transition hover:opacity-80" rel="noopener noreferrer">
             <img src="images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform"/>
           </a>
-          <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" class="transition hover:opacity-80">
+          <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" class="transition hover:opacity-80" rel="noopener noreferrer">
             <img src="images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform"/>
           </a>
-          <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" class="social-badge" style="background:#000">
+          <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" class="social-badge" style="background:#000" rel="noopener noreferrer">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
@@ -1151,7 +1149,7 @@ function renderSlot(day, slot, actId) {
   if (act) {
     const isAllDay = act.allDay ? '<span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-1.5 py-0.5 rounded ml-1">Todo el día</span>' : '';
     const nameHtml = act.link
-      ? `<a href="${act.link}" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-600 hover:underline">${act.name}</a>`
+      ? `<a href="${act.link}" target="_blank" onclick="event.stopPropagation()" class="hover:text-blue-600 hover:underline" rel="noopener noreferrer">${act.name}</a>`
       : act.name;
     return `
       <div class="slot-dropzone flex items-center gap-3 px-4 py-3 ${cfg.bg} border-b ${cfg.border}"
@@ -1389,7 +1387,7 @@ function renderPickerGrid() {
         <div class="flex items-center justify-between gap-2">
           <span class="text-sm font-extrabold text-[#5B3A82]">${displayPrice(act.price)}<span class="text-xs font-normal text-gray-400">/p</span></span>
           <div class="flex items-center gap-2 flex-shrink-0">
-            ${act.link ? `<a href="${act.link}" onclick="event.stopPropagation()" target="_blank" rel="noopener" class="text-[10px] text-gray-400 hover:text-[#5B3A82] underline whitespace-nowrap">Ver más</a>` : ''}
+            ${act.link ? `<a href="${act.link}" onclick="event.stopPropagation()" target="_blank" rel="noopener noreferrer" class="text-[10px] text-gray-400 hover:text-[#5B3A82] underline whitespace-nowrap">Ver más</a>` : ''}
             <span class="text-xs font-bold text-[#5B3A82] group-hover:underline whitespace-nowrap">Agregar →</span>
           </div>
         </div>

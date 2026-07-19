@@ -1,0 +1,31 @@
+{
+  "name": "agencia-nohemi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run check",
+    "check": "node scripts/check-site.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankmercadopeerez-glitch/agencia-nohemi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/frankmercadopeerez-glitch/agencia-nohemi/issues"
+  },
+  "homepage": "https://github.com/frankmercadopeerez-glitch/agencia-nohemi#readme",
+  "devDependencies": {
+    "sharp": "^0.35.2",
+    "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^25.2.0"
+  }
+}
