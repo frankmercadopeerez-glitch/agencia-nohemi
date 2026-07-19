@@ -130,7 +130,7 @@
           <a href="blog/index.html" class="text-gray-300 hover:text-white transition">Blog</a>
           <a href="experiences.html" class="py-2 px-6 text-xs bg-blue-600 hover:bg-blue-700 text-white font-bold rounded transition">Reservar</a>
         </div>
-        <button id="mobile-menu-btn" class="md:hidden focus:outline-none text-white"><i class="fas fa-bars text-2xl"></i></button>
+        <button aria-label="Abrir menú de navegación" id="mobile-menu-btn" class="md:hidden focus:outline-none text-white"><i class="fas fa-bars text-2xl"></i></button>
       </div>
     </nav>
     <div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[10000] hidden flex flex-col justify-center items-center space-y-8 opacity-0 transition-opacity duration-300">
@@ -143,7 +143,7 @@
         class="text-2xl font-bold text-yellow-400 hover:text-yellow-300"
         >✦ Arma tu viaje</a
       >
-      <button id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fas fa-times"></i></button>
+      <button aria-label="Cerrar menú de navegación" id="close-menu-btn" class="absolute top-6 right-6 text-white text-3xl"><i class="fas fa-times"></i></button>
     </div>
 
     <!-- Hero -->
@@ -270,10 +270,10 @@
 
           <h2>Galería <span class="text-sm font-normal text-gray-400">(toca para ampliar)</span></h2>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-1.webp" alt="Namaste holística Tierra Bomba" loading="lazy" decoding="async"/></div>
-            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-2.webp" alt="Namaste yoga playa Cartagena" loading="lazy" decoding="async"/></div>
-            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-3.webp" alt="Meditación en Tierra Bomba" loading="lazy" decoding="async"/></div>
-            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-4.webp" alt="Bienestar y relajación Cartagena" loading="lazy" decoding="async"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-1.webp" alt="Namaste holística Tierra Bomba" loading="lazy" decoding="async" width="448" height="448"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-2.webp" alt="Namaste yoga playa Cartagena" loading="lazy" decoding="async" width="1000" height="684"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-3.webp" alt="Meditación en Tierra Bomba" loading="lazy" decoding="async" width="449" height="1000"/></div>
+            <div class="gallery-img" style="cursor:pointer" onclick="openLb(this.querySelector('img'))"><img src="images/namaste-4.webp" alt="Bienestar y relajación Cartagena" loading="lazy" decoding="async" width="754" height="1000"/></div>
           </div>
 
           <div class="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 text-sm text-red-700">
@@ -370,10 +370,10 @@
             <h4 class="text-white font-bold mb-4 text-sm">Redes</h4>
             <div class="flex justify-center md:justify-start gap-2">
               <a href="https://www.instagram.com/mexicanaencartagena?igsh=MTJ2MjZwdmU5NjZ4Nw==" target="_blank" rel="noopener noreferrer" class="transition hover:opacity-80">
-                <img src="images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform"/>
+                <img src="images/instagram-logo.png" alt="Instagram" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy"/>
               </a>
               <a href="https://www.facebook.com/share/1aQqHEvkyG/" target="_blank" rel="noopener noreferrer" class="transition hover:opacity-80">
-                <img src="images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform"/>
+                <img src="images/logo-facebook.png" alt="Facebook" class="w-12 h-12 hover:scale-110 transition transform" width="512" height="512" decoding="async" loading="lazy"/>
               </a>
               <a href="https://www.tiktok.com/@mexicanaencartagena?_r=1&amp;_t=ZS-97Sfx04blGW" target="_blank" rel="noopener noreferrer" title="TikTok" class="social-badge" style="background:#000000;"><i class="fab fa-tiktok"></i></a>
               <a href="https://youtube.com/@mexicanaencartagena?si=9JDydMI-7EINl9ns" target="_blank" rel="noopener noreferrer" title="YouTube" class="social-badge" style="background:#FF0000;"><i class="fab fa-youtube"></i></a>
@@ -390,7 +390,7 @@
     <!-- WhatsApp flotante -->
     <div class="whatsapp-container">
       <button onclick="openWhatsApp('Hola, quiero información sobre la Experiencia Holística Namaste en Tierra Bomba.')" class="whatsapp-float focus:outline-none">
-        <img src="images/WhatsApp.svg.webp" alt="WhatsApp" class="whatsapp-icon"/>
+        <img src="images/WhatsApp.svg.webp" alt="WhatsApp" class="whatsapp-icon" width="479" height="480" decoding="async" loading="lazy"/>
         <span class="whatsapp-text">Contactar / Contact</span>
       </button>
     </div>
@@ -429,7 +429,7 @@
     <div id="lb" onclick="if(event.target===this)closeLb()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:9998;align-items:center;justify-content:center;padding:1rem;">
       <button onclick="closeLb()" style="position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.18);border:none;color:#fff;font-size:1.6rem;width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">&times;</button>
       <button onclick="lbPrev()" style="position:absolute;left:.75rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.18);border:none;color:#fff;font-size:2rem;width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">&#8249;</button>
-      <img id="lb-img" src="" alt="" style="max-width:calc(100% - 6rem);max-height:88vh;border-radius:10px;object-fit:contain;"/>
+      <img id="lb-img" src="" width="1000" height="1000" decoding="async" loading="lazy" alt="" style="max-width:calc(100% - 6rem);max-height:88vh;border-radius:10px;object-fit:contain;"/>
       <button onclick="lbNext()" style="position:absolute;right:.75rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.18);border:none;color:#fff;font-size:2rem;width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">&#8250;</button>
       <div id="lb-cap" style="position:absolute;bottom:.75rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:.8rem;"></div>
     </div>
