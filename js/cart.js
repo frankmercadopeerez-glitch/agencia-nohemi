@@ -25,6 +25,16 @@ const TOURS = {
     price: 180000,
     unit: "persona",
   },
+  isla_palma: {
+    name: "Pasadía Isla Palma – Reserva Natural",
+    price: 490000,
+    unit: "persona",
+  },
+  mucura_tintipan: {
+    name: "Pasadía Múcura, Tintipán y Santa Cruz del Islote",
+    price: 320000,
+    unit: "persona",
+  },
   atardecer: {
     name: "Atardeceres Mágicos en la Bahía",
     price: 120000,
@@ -554,61 +564,57 @@ function checkoutViaWhatsApp() {
   openWhatsApp(message);
 }
 
-function payWithMercadoPago() {
+async function payWithMercadoPago() {
   const data = getCheckoutFormData();
   if (!validateCheckoutForm(data)) return;
 
-  /*
-    EJEMPLO DE INTEGRACIÓN — Checkout Pro de Mercado Pago
-    (https://www.mercadopago.com.mx/developers)
-    ------------------------------------------------------------------
-    Mercado Pago procesa el pago mediante una "preferencia" (preference):
-    un objeto con los ítems, el monto y las URLs de retorno, que se debe
-    crear desde un servidor usando el Access Token PRIVADO del comercio
-    (nunca debe exponerse en el navegador). El servidor devuelve un
-    "preference id" (o "init_point") que el frontend usa para abrir el
-    Checkout, ya sea con el SDK de JS o redirigiendo directamente.
-
-    Pasos para activar pagos reales aquí:
-      1. Reemplaza MERCADOPAGO_PUBLIC_KEY con la Public Key del comercio
-         (panel de Mercado Pago > Tus integraciones > Credenciales).
-      2. Crea un endpoint en tu servidor (o función serverless) que,
-         usando el Access Token privado, llame a la API de Mercado Pago
-         (POST https://api.mercadopago.com/checkout/preferences) con los
-         datos del carrito (buildOrderSummary()) y devuelva el
-         "preference id" generado.
-      3. Incluye el SDK de Mercado Pago en la página:
-         <script src="https://sdk.mercadopago.com/js/v2"></script>
-      4. Sustituye la simulación de abajo por la inicialización real:
-
-         const mp = new MercadoPago('MERCADOPAGO_PUBLIC_KEY', { locale: 'es-CO' });
-         const preferenceId = await fetch('/api/crear-preferencia', {
-           method: 'POST',
-           headers: { 'Content-Type': 'application/json' },
-           body: JSON.stringify({ items: entries, total, customer: data }),
-         }).then((r) => r.json());
-         mp.checkout({ preference: { id: preferenceId.id }, autoOpen: true });
-
-    Mientras tanto, dejamos el botón visible con esta explicación y
-    ofrecemos la confirmación por WhatsApp como vía de pago manual.
-  */
-  const MERCADOPAGO_PUBLIC_KEY = "MERCADOPAGO_PUBLIC_KEY"; // <-- reemplazar con la Public Key real del comercio
-
-  if (MERCADOPAGO_PUBLIC_KEY === "MERCADOPAGO_PUBLIC_KEY") {
-    alert(
-      "El pago en línea con Mercado Pago está casi listo: solo falta " +
-        "conectar la Public Key del comercio y el endpoint que crea la " +
-        "preferencia de pago (panel de Mercado Pago). Mientras tanto, " +
-        "puedes confirmar y pagar tu reserva directamente con Nohemi por WhatsApp."
-    );
-    checkoutViaWhatsApp();
-    return;
+  const button = document.getElementById("mercadopago-pay-btn");
+  const original = button ? button.innerHTML : "";
+  if (button) {
+    button.disabled = true;
+    button.innerHTML =
+      '<i class="fas fa-spinner fa-spin mr-2"></i>Preparando pago seguro…';
   }
 
-  // Aquí iría la apertura real del Checkout de Mercado Pago una vez
-  // configurada la Public Key y el endpoint que crea la preferencia.
+  try {
+    const response = await fetch("/api/create-mercadopago-preference", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cart: loadCart(), customer: data }),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || !result.checkoutUrl) {
+      const message =
+        result.code === "mercadopago_not_configured"
+          ? "Mercado Pago está preparado, pero aún falta activar la credencial de producción en el servidor. Puedes confirmar tu reserva por WhatsApp mientras terminamos la activación."
+          : result.error ||
+            "No pudimos iniciar el pago. Intenta de nuevo o confirma tu reserva por WhatsApp.";
+      alert(message);
+      return;
+    }
+
+    window.location.assign(result.checkoutUrl);
+  } catch (error) {
+    alert(
+      "No pudimos conectar con Mercado Pago. Revisa tu conexión o confirma la reserva por WhatsApp."
+    );
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.innerHTML = original;
+    }
+  }
 }
 
-window.renderCheckoutSummary = renderCheckoutSummary;
+if (typeof window !== "undefined") {
+  window.renderCheckoutSummary = renderCheckoutSummary;
+}
 
-document.addEventListener("DOMContentLoaded", renderCart);
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", renderCart);
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { TOURS };
+}

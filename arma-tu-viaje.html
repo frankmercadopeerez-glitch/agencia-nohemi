@@ -6,24 +6,44 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
-    <meta name="description" content="Planifica tu itinerario en Cartagena: combina tours de ciudad, islas, bahía y gastronomía. La herramienta de Dunas & Olas para armar el viaje perfecto." />
+    <meta name="description" content="Crea un itinerario personalizado para Cartagena según tus fechas y presupuesto. Combina ciudad, islas y gastronomía con orientación local por WhatsApp." />
   <meta name="keywords" content="arma tu viaje Cartagena, planificador viaje Cartagena, itinerario Cartagena Colombia, tours personalizados Cartagena, experiencias Cartagena de Indias" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dunasyolas.com/arma-tu-viaje" />
-  <meta property="og:title" content="Arma tu viaje perfecto a Cartagena | Dunas & Olas" />
-  <meta property="og:description" content="Planifica tu itinerario día a día, combina experiencias únicas y reserva con Nohemi tu guía local en Cartagena." />
+  <meta property="og:title" content="Itinerario personalizado para Cartagena | Dunas & Olas" />
+  <meta property="og:description" content="Ordena tus días, compara costos y combina experiencias con orientación local antes de reservar." />
   <meta property="og:image" content="https://dunasyolas.com/images/cartagenasunset.webp" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://dunasyolas.com/arma-tu-viaje" />
-  <meta property="twitter:title" content="Arma tu viaje perfecto a Cartagena | Dunas & Olas" />
-  <meta property="twitter:description" content="Planifica tu itinerario día a día, combina experiencias únicas y reserva con Nohemi." />
-  <title>Arma tu viaje a Cartagena | Dunas &amp; Olas — Agencia Turística Multicultural</title>
+  <meta property="twitter:title" content="Itinerario personalizado para Cartagena | Dunas & Olas" />
+  <meta property="twitter:description" content="Ordena tus días, compara costos y combina experiencias con orientación local antes de reservar." />
+  <title>Itinerario personalizado para Cartagena | Dunas &amp; Olas</title>
   <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
   <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
   <meta name="theme-color" content="#5B3A82"/>
   <link rel="canonical" href="https://dunasyolas.com/arma-tu-viaje"/>
   <link rel="alternate" hreflang="es" href="https://dunasyolas.com/arma-tu-viaje"/>
   <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/arma-tu-viaje"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://dunasyolas.com/arma-tu-viaje#webpage",
+    "url": "https://dunasyolas.com/arma-tu-viaje",
+    "name": "Itinerario personalizado para Cartagena",
+    "description": "Herramienta para organizar experiencias en Cartagena por fecha, duración y presupuesto, con orientación local antes de reservar.",
+    "inLanguage": "es-CO",
+    "isPartOf": { "@id": "https://dunasyolas.com/#website" },
+    "about": { "@type": "City", "name": "Cartagena de Indias" },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://dunasyolas.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Arma tu viaje", "item": "https://dunasyolas.com/arma-tu-viaje" }
+      ]
+    }
+  }
+  </script>
   <link href="./css/tailwind.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -256,10 +276,10 @@
       <span>Agencia turística multicultural · Cartagena de Indias</span>
     </div>
     <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight">
-      Arma tu viaje<br><span class="text-yellow-400">perfecto</span>
+      Arma tu itinerario<br><span class="text-yellow-400">para Cartagena</span>
     </h1>
     <p class="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8">
-      Elige tus fechas, combina experiencias únicas y Nohemi se encarga del resto
+      Elige fechas, organiza actividades por día y recibe orientación local antes de reservar
     </p>
     <a href="#planificador" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-xl px-8 py-3 transition text-sm md:text-base">
       <i class="fas fa-calendar-plus"></i> Comenzar a planificar
@@ -776,6 +796,30 @@ const ACTIVITIES = {
     slots: ['morning'],
     allDay: true,
     link: 'pasadia-islas-rosario.html',
+  },
+  isla_palma: {
+    name: 'Pasadía Isla Palma',
+    emoji: '🌴',
+    price: 490000,
+    duration: 'Todo el día',
+    description: 'Hotel Isla Palma, recorrido panorámico por Islas del Rosario y San Bernardo, almuerzo gourmet, playa y traslado hotel-muelle. Tasa portuaria y seguro no incluidos.',
+    category: 'water',
+    image: 'images/isla-palma-4.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'pasadia-isla-palma.html',
+  },
+  mucura_tintipan: {
+    name: 'Múcura, Tintipán e Islote',
+    emoji: '🐚',
+    price: 320000,
+    duration: 'Todo el día',
+    description: 'Tintipán, Casa en el Agua, Santa Cruz del Islote e Isla Múcura con almuerzo. Tasa portuaria y seguro no incluidos.',
+    category: 'water',
+    image: 'images/mucura-tintipan-1.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'pasadia-mucura-tintipan.html',
   },
   buceo: {
     name: 'Buceo y Snorkel',

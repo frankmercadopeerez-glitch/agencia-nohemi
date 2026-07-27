@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
     <meta
       name="description"
-      content="20+ tours en Cartagena: Islas del Rosario, kitesurf, chiva rumbera, buceo, atardeceres en bahía y gastronomía caribeña. Reserva con Dunas & Olas."
+      content="Compara experiencias y tours seguros en Cartagena con precios claros y apoyo local: Islas del Rosario, Barú, gastronomía, ciudad y aventura."
     />
     <meta name="keywords" content="tours Cartagena, experiencias Cartagena, tours Islas del Rosario, kitesurf Cartagena, chiva rumbera Cartagena, buceo Cartagena, agencia turistica Cartagena"/>
-    <title>Tours y Experiencias en Cartagena de Indias | Dunas & Olas</title>
+    <title>Experiencias y tours seguros en Cartagena | Dunas & Olas</title>
     <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
     <meta name="theme-color" content="#5B3A82"/>
@@ -83,6 +83,39 @@
         background: #5b3a82;
         color: #fff;
         border-color: #5b3a82;
+      }
+
+      /* Una sola gramática visual para el catálogo */
+      #experiences-grid > [data-category] {
+        border: 1px solid #ebe7f0;
+        box-shadow: 0 12px 32px rgba(31, 24, 45, 0.08);
+      }
+      @media (min-width: 768px) {
+        #experiences-grid > [data-category].catalog-card {
+          display: grid !important;
+          grid-template-columns: minmax(300px, 40%) minmax(0, 60%);
+          align-items: stretch !important;
+        }
+        #experiences-grid > [data-category].catalog-card > .catalog-media {
+          width: 100% !important;
+          height: 360px;
+          align-self: start;
+          overflow: hidden;
+        }
+        #experiences-grid > [data-category].catalog-card > .catalog-media img {
+          width: 100%;
+          height: 360px !important;
+          object-fit: cover;
+        }
+      }
+      @media (max-width: 767px) {
+        #experiences-grid > [data-category].catalog-card > .catalog-media,
+        #experiences-grid > [data-category].catalog-card > .catalog-media img {
+          width: 100% !important;
+          height: 230px !important;
+          min-height: 230px;
+          object-fit: cover;
+        }
       }
 
       /* --- Estilos WhatsApp Widget Multi-idioma --- */
@@ -243,7 +276,7 @@
       "name": "Dunas & Olas",
       "url": "https://dunasyolas.com",
       "logo": "https://dunasyolas.com/images/logo-badge.png",
-      "description": "Tour operator local en Cartagena de Indias. Tours privados, kitesurf, recorridos gastronómicos, pasadías a las Islas del Rosario y experiencias únicas de la mano de Nohemi, guía local.",
+      "description": "Experiencias seleccionadas en Cartagena con precios visibles, información clara y acompañamiento local: islas, Barú, gastronomía, kitesurf, ciudad y atardeceres.",
       "telephone": "+573163030589",
       "address": {
         "@type": "PostalAddress",
@@ -287,7 +320,7 @@
       "@type": "ItemList",
       "name": "Tours y Experiencias en Cartagena — Dunas & Olas",
       "url": "https://dunasyolas.com/experiences",
-      "numberOfItems": 20,
+      "numberOfItems": 22,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -528,6 +561,30 @@
             "provider": { "@id": "https://dunasyolas.com/#org" },
             "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://dunasyolas.com/tirolesa" }
           }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Pasadía Isla Palma – Reserva Natural",
+            "url": "https://dunasyolas.com/pasadia-isla-palma",
+            "description": "Pasadía desde Cartagena con traslado hotel-muelle, navegación por Islas del Rosario y San Bernardo, Hotel Isla Palma, almuerzo gourmet y playa.",
+            "provider": { "@id": "https://dunasyolas.com/#org" },
+            "offers": { "@type": "Offer", "price": "490000", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "https://dunasyolas.com/pasadia-isla-palma" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@type": "TouristTrip",
+            "name": "Pasadía Múcura, Tintipán y Santa Cruz del Islote",
+            "url": "https://dunasyolas.com/pasadia-mucura-tintipan",
+            "description": "Pasadía desde Cartagena con paradas en Tintipán, Casa en el Agua, Santa Cruz del Islote e Isla Múcura, cóctel y almuerzo típico.",
+            "provider": { "@id": "https://dunasyolas.com/#org" },
+            "offers": { "@type": "Offer", "price": "320000", "priceCurrency": "COP", "availability": "https://schema.org/InStock", "url": "https://dunasyolas.com/pasadia-mucura-tintipan" }
+          }
         }
       ]
     },
@@ -683,10 +740,10 @@
           >Descubre el Caribe</span
         >
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          Nuestras Experiencias
+          Experiencias y tours en Cartagena
         </h1>
         <p class="text-lg md:text-xl font-light text-gray-100">
-          Más que un alquiler, creamos momentos inolvidables en el Caribe.
+          Planes seleccionados con información clara y acompañamiento local.
         </p>
       </div>
     </header>
@@ -696,9 +753,9 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-900">
-            Elige tu Próxima Aventura
+            Elige qué hacer en Cartagena
           </h2>
-          <p class="text-gray-500 mt-2">Planes diseñados para cada ocasión.</p>
+          <p class="text-gray-500 mt-2">Compara experiencias por estilo, precio y tiempo disponible.</p>
           <p class="text-gray-400 text-xs mt-3 max-w-xl mx-auto">
             <i class="fas fa-circle-info mr-1"></i>
             Los precios mostrados son estimados y pueden variar según el
@@ -731,19 +788,83 @@
           <a href="#" onclick="openWhatsApp('Hola, busco una experiencia específica.'); return false;" class="text-blue-600 underline">escríbenos por WhatsApp</a>.
         </p>
 
-        <div class="space-y-16" id="experiences-grid">
+        <div class="space-y-10" id="experiences-grid">
+
+          <!-- Pasadía Isla Palma -->
+          <div
+            id="experiencia-isla-palma"
+            data-category="pasadia" data-price="490000" data-order="1"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card"
+          >
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="images/isla-palma-4.webp" alt="Pasadía Isla Palma desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1280" height="720" decoding="async" loading="eager"/>
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nueva experiencia</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">Reserva natural · Salidas diarias</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Pasadía Isla Palma</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">Viaja desde Cartagena hasta el archipiélago de San Bernardo y disfruta el Hotel Isla Palma, almuerzo gourmet, playa cristalina y navegación panorámica.</p>
+              <div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700">
+                <span><i class="fas fa-van-shuttle text-[#5B3A82] mr-1"></i>Recogida hotel-muelle</span>
+                <span><i class="fas fa-martini-glass-citrus text-[#5B3A82] mr-1"></i>Cóctel de bienvenida</span>
+                <span><i class="fas fa-utensils text-[#5B3A82] mr-1"></i>Almuerzo gourmet</span>
+                <span><i class="fas fa-umbrella-beach text-[#5B3A82] mr-1"></i>Playa y naturaleza</span>
+              </div>
+              <div class="rounded-lg bg-red-50 border border-red-100 px-3 py-2 mb-4 text-xs text-red-700"><strong>No incluido:</strong> tasa portuaria + seguro $37.000 COP por persona.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">Precio / persona · Todo el día</span><span class="price-value" data-cop-val="490000">$490.000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="pasadia-isla-palma.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a>
+                  <button onclick="addToCart('isla_palma', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero cotizar el Pasadía Isla Palma desde Cartagena.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pasadía Múcura, Tintipán y Santa Cruz del Islote -->
+          <div
+            id="experiencia-mucura-tintipan"
+            data-category="pasadia" data-price="320000" data-order="2"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card"
+          >
+            <div class="md:w-1/2 relative catalog-media">
+              <img src="images/mucura-tintipan-1.webp" alt="Pasadía a Isla Múcura y Tintipán desde Cartagena" class="w-full h-64 md:h-full object-cover" width="1280" height="720" decoding="async" loading="lazy"/>
+              <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Nueva experiencia</div>
+              <div class="absolute bottom-4 left-4 bg-black/60 text-white text-xs font-bold px-3 py-1 rounded-full">4 paradas · Salidas diarias</div>
+            </div>
+            <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-1">Múcura, Tintipán y Santa Cruz del Islote</h3>
+              <p class="text-gray-600 mb-4 text-sm leading-relaxed">Conoce cuatro rincones del archipiélago de San Bernardo en un día: Tintipán, Casa en el Agua, Santa Cruz del Islote e Isla Múcura.</p>
+              <div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700">
+                <span><i class="fas fa-van-shuttle text-[#5B3A82] mr-1"></i>Recogida hotel-muelle</span>
+                <span><i class="fas fa-route text-[#5B3A82] mr-1"></i>4 paradas</span>
+                <span><i class="fas fa-martini-glass-citrus text-[#5B3A82] mr-1"></i>Cóctel de bienvenida</span>
+                <span><i class="fas fa-utensils text-[#5B3A82] mr-1"></i>Almuerzo típico</span>
+              </div>
+              <div class="rounded-lg bg-red-50 border border-red-100 px-3 py-2 mb-4 text-xs text-red-700"><strong>No incluido:</strong> tasa portuaria + seguro $37.000 COP por persona y entrada al oceanario artesanal.</div>
+              <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
+                <div class="price-tag"><span class="price-label">Precio / persona · Todo el día</span><span class="price-value" data-cop-val="320000">$320.000 COP</span></div>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="pasadia-mucura-tintipan.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a>
+                  <button onclick="addToCart('mucura_tintipan', this)" class="add-to-cart-btn justify-center"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+                  <button onclick="openWhatsApp('Hola, quiero cotizar el Pasadía Múcura, Tintipán y Santa Cruz del Islote desde Cartagena.')" class="whatsapp-info-btn"><i class="fab fa-whatsapp"></i> Consultar disponibilidad</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Experiencia 1: 4 Islas + Atardecer -->
           <div
             id="experiencia-pasadia"
             data-category="pasadia" data-price="300000" data-order="2"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row catalog-card"
           >
-            <div class="md:w-1/2 relative">
+            <div class="md:w-1/2 relative catalog-media">
               <img
-                src="images/islastour (2).webp"
+                src="images/islastour (7).webp"
                 alt="Tour 4 Islas del Rosario + Atardecer en la Bahía de Cartagena"
-                class="w-full h-56 md:h-full object-cover" width="960" height="1280" decoding="async" loading="eager"
+                class="w-full h-56 md:h-full object-cover" width="1242" height="734" decoding="async" loading="eager"
               />
               <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">
                 ★ Tour Premium
@@ -757,33 +878,18 @@
                 4 Islas del Rosario + Atardecer en la Bahía
               </h3>
               <p class="text-gray-600 mb-3 text-sm leading-relaxed">
-                La experiencia más completa del Caribe colombiano: <strong>4 destinos únicos en un solo día</strong> a bordo de una embarcación premium. Snorkel, mariscos frescos, playa blanca, historia colonial y el mejor atardecer de Cartagena visto desde el mar.
+                Un día en lancha por Isla Grande, Cholón, Barú y Bocachica, con el cierre perfecto: el atardecer de Cartagena visto desde el mar.
               </p>
 
-              <div class="mb-3">
-                <h4 class="font-bold text-gray-900 text-xs mb-2 uppercase border-b pb-1 border-gray-100">Los 4 Destinos:</h4>
-                <ul class="space-y-1.5 text-xs text-gray-600">
-                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">1</span><span><strong>Isla Grande</strong> — Snorkel y peces tropicales</span></li>
-                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">2</span><span><strong>Cholón</strong> — Degustación de mariscos frescos</span></li>
-                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">3</span><span><strong>Barú</strong> — Playa de arena blanca + frutas tropicales</span></li>
-                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-[#3F2761] text-white flex items-center justify-center text-[10px] font-bold shrink-0">4</span><span><strong>Bocachica</strong> — Castillo de San Fernando (entrada + guía nativo)</span></li>
-                  <li class="flex items-center gap-2"><span class="w-5 h-5 rounded-full bg-yellow-500 text-white flex items-center justify-center text-[10px] font-bold shrink-0">✦</span><span><strong>Atardecer en la Bahía</strong> — El cierre perfecto del día</span></li>
-                </ul>
+              <div class="grid grid-cols-2 gap-2 mb-4 text-xs text-gray-700">
+                <span><i class="fas fa-water text-[#5B3A82] mr-1"></i>Snorkel en Isla Grande</span>
+                <span><i class="fas fa-shrimp text-[#5B3A82] mr-1"></i>Parada en Cholón</span>
+                <span><i class="fas fa-umbrella-beach text-[#5B3A82] mr-1"></i>Playa en Barú</span>
+                <span><i class="fas fa-sun text-[#5B3A82] mr-1"></i>Atardecer en la bahía</span>
               </div>
 
-              <div class="bg-blue-50 p-3 rounded-lg mb-3">
-                <div class="flex items-center gap-3 text-sm text-blue-800">
-                  <span><i class="fas fa-clock mr-1"></i><strong>Salida:</strong> 9:00 AM · Muelle de los Pegasos</span>
-                  <span class="text-blue-300">|</span>
-                  <span><i class="fas fa-sun mr-1 text-yellow-500"></i><strong>Todo el día</strong></span>
-                </div>
-              </div>
-
-              <div class="flex flex-wrap gap-1.5 mb-3">
-                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Almuerzo completo</span>
-                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Barra libre</span>
-                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Snorkel</span>
-                <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-1 rounded-full border border-green-200"><i class="fas fa-check text-xs"></i> Guía nativo</span>
+              <div class="rounded-lg bg-[#F8F6FB] border border-[#E5DFF0] px-3 py-2.5 mb-4 text-xs text-[#3F2761]">
+                <strong>Salida 9:00 a. m.</strong> desde el Muelle de los Pegasos · almuerzo, barra libre, snorkel y guía nativo incluidos.
               </div>
 
               <div class="mt-2 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-4">
@@ -791,13 +897,13 @@
                   <span class="price-label">Precio / persona · Todo el día</span>
                   <span class="price-value" data-cop-val="300000">$300.000 COP</span>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 sm:ml-auto w-full sm:w-auto items-center flex-wrap">
-                  <a href="pasadia-islas-rosario.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver más info</a>
+                <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
+                  <a href="pasadia-islas-rosario.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a>
                   <button onclick="addToCart('pasadia', this)" class="add-to-cart-btn justify-center">
-                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                    <i class="fas fa-cart-plus"></i> Agregar al carrito
                   </button>
                   <button onclick="openWhatsApp('Hola, quiero cotizar el Tour 4 Islas del Rosario + Atardecer.')" class="whatsapp-info-btn">
-                    <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
+                    <i class="fab fa-whatsapp"></i> Consultar disponibilidad
                   </button>
                 </div>
               </div>
@@ -807,7 +913,7 @@
           <!-- Experiencia 3: Kitesurf y Deportes Acuáticos (con tabla de precios) -->
           <div data-category="agua" data-price="750000" data-order="3" class="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div class="flex flex-col md:flex-row md:items-center">
-              <div class="md:w-1/2">
+              <div class="md:w-1/2 catalog-media">
                 <img
                   src="images/kitesurf/salto.webp"
                   alt="Kitesurf en las playas de Cartagena"
@@ -948,9 +1054,9 @@
           <div
             id="experiencia-buceo"
             data-category="agua" data-price="250000" data-order="5"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse catalog-card"
           >
-            <div class="md:w-2/5 relative">
+            <div class="md:w-2/5 relative catalog-media">
               <img
                 src="images/foto%20(10).webp"
                 alt="Buceo y snorkel en arrecifes de coral cerca de Cartagena"
@@ -1027,9 +1133,9 @@
           <div
             id="experiencia-chiva"
             data-category="cultural" data-price="45000" data-order="7"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/chiva-rumbera.webp"
                 alt="Chiva Rumbera nocturna en Cartagena de Indias"
@@ -1092,9 +1198,9 @@
           <div
             id="experiencia-citytour"
             data-category="cultural" data-price="140000" data-order="8"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/cartagenacentro.webp"
                 alt="City Tours de Roa – Recorrido histórico por Cartagena"
@@ -1139,9 +1245,9 @@
           <div
             id="experiencia-catamaran"
             data-category="pasadia" data-price="150000" data-order="9"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/cartagenasunset.webp"
                 alt="Experiencia en Catamarán – Atardecer y noche en Cartagena"
@@ -1186,9 +1292,9 @@
           <div
             id="experiencia-paracaidismo"
             data-category="agua" data-price="980000" data-order="10"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/paracaidismo.webp"
                 alt="Salto en paracaídas tándem sobre el mar Caribe, entre Cartagena y Barranquilla"
@@ -1227,9 +1333,9 @@
           <div
             id="experiencia-citybahia"
             data-category="cultural" data-price="195000" data-order="11"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/city-bahia.webp"
                 alt="City Bahía de ROA – Tour por Cartagena con almuerzo y atardecer en bote"
@@ -1268,9 +1374,9 @@
           <div
             id="experiencia-yate"
             data-category="pasadia" data-price="120000" data-order="12"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/lunamia.webp"
                 alt="Tour Bahía en Yate Luna Mía en Cartagena"
@@ -1309,9 +1415,9 @@
           <div
             id="experiencia-yate-noche"
             data-category="pasadia" data-price="120000" data-order="12b"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/lunamia.webp" alt="Tour nocturno en Yate Luna Mía – fiesta de noche en Cartagena" class="w-full h-56 md:h-[340px] object-cover" width="1000" height="750" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1346,9 +1452,9 @@
           <div
             id="experiencia-catamaran-noche"
             data-category="pasadia" data-price="150000" data-order="9b"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/cartagenasunset.webp" alt="Tour nocturno en Catamarán – fiesta de noche en Cartagena" class="w-full h-56 md:h-[340px] object-cover object-bottom" width="1400" height="933" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1384,9 +1490,9 @@
           <div
             id="experiencia-playablanca"
             data-category="agua" data-price="190000" data-order="13"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img
                 src="images/playa-blanca-baru.webp"
                 alt="Playa Blanca en Barú, Puerto Medallo – pasadía con piscina frente al mar"
@@ -1425,9 +1531,9 @@
           <div
             id="experiencia-medalloislas"
             data-category="agua" data-price="290000" data-order="14"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/playa-blanca-baru.webp" alt="Puerto Medallo + Islas + Snorkel en Barú" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1453,9 +1559,9 @@
           <div
             id="experiencia-cabalgata"
             data-category="agua" data-price="160000" data-order="15"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/tourcaballo (1).webp" alt="Cabalgata por la playa de La Boquilla en Cartagena" class="w-full h-56 md:h-[340px] object-cover" width="1280" height="720" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1481,9 +1587,9 @@
           <div
             id="experiencia-poloaviario"
             data-category="agua" data-price="240000" data-order="16"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/polo-beach.webp" alt="Barú – Polo Beach + Aviario Nacional" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1509,9 +1615,9 @@
           <div
             id="experiencia-polobeach"
             data-category="agua" data-price="160000" data-order="17"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/polo-beach.webp" alt="Barú – Playa Tranquila Polo Beach" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1537,9 +1643,9 @@
           <div
             id="experiencia-bqcartagena"
             data-category="cultural" data-price="350000" data-order="18"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/barranquilla.webp" alt="City Tour Barranquilla + Cartagena" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1565,9 +1671,9 @@
           <div
             id="experiencia-bqsantamarta"
             data-category="cultural" data-price="260000" data-order="19"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2">
+            <div class="md:w-1/2 catalog-media">
               <img src="images/santa-marta.webp" alt="City Tour Barranquilla + Santa Marta" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
             </div>
             <div class="p-5 md:p-6 md:w-1/2 flex flex-col justify-center">
@@ -1593,9 +1699,9 @@
           <div
             id="experiencia-atv"
             data-category="agua" data-price="220000" data-order="20"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2 relative">
+            <div class="md:w-1/2 relative catalog-media">
               <img src="images/atv-cuatrimotos.webp" alt="Cartagena ATV Tour — cuatrimotos por playa y montañas" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
               <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Top TripAdvisor ⭐</div>
             </div>
@@ -1625,9 +1731,9 @@
           <div
             id="experiencia-tirolesa"
             data-category="agua" data-price="200000" data-order="21"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2 relative">
+            <div class="md:w-1/2 relative catalog-media">
               <img src="images/tirolesa.webp" alt="Tour de Tirolesa Cartagena — 5 tirolesas con vistas al mar" class="w-full h-56 md:h-[340px] object-cover" width="1200" height="800" decoding="async" loading="lazy"/>
               <div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Top TripAdvisor ⭐</div>
             </div>
@@ -1657,9 +1763,9 @@
           <div
             id="experiencia-tamarindo"
             data-category="pasadia" data-price="190000" data-order="22"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row md:items-center catalog-card"
           >
-            <div class="md:w-1/2 relative overflow-hidden">
+            <div class="md:w-1/2 relative overflow-hidden catalog-media">
               <div id="carousel-tamarindo" class="flex transition-transform duration-300 ease-in-out">
                 <img src="images/tamarindo-1.webp" alt="Tamarindo Beach House piscina" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" width="955" height="1000" decoding="async" loading="lazy"/>
                 <img src="images/tamarindo-2.webp" alt="Tamarindo Beach House playa" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="686" height="1000" decoding="async"/>
@@ -1703,9 +1809,9 @@
           <div
             id="experiencia-namaste"
             data-category="pasadia" data-price="220000" data-order="23"
-            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center"
+            class="bg-white rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row-reverse md:items-center catalog-card"
           >
-            <div class="md:w-1/2 relative overflow-hidden">
+            <div class="md:w-1/2 relative overflow-hidden catalog-media">
               <div id="carousel-namaste" class="flex transition-transform duration-300 ease-in-out">
                 <img src="images/namaste-2.webp" alt="Namaste yoga playa Cartagena" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" width="1000" height="684" decoding="async" loading="lazy"/>
                 <img src="images/namaste-1.webp" alt="Namaste holística Tierra Bomba" class="min-w-full h-56 md:h-[340px] object-cover shrink-0" loading="lazy" width="448" height="448" decoding="async"/>
@@ -2282,6 +2388,3 @@
       <script src="js/cookie-consent.js"></script>
   </body>
 </html>
-
-
-
