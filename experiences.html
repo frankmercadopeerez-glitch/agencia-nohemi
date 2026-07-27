@@ -86,9 +86,63 @@
       }
 
       /* Una sola gramática visual para el catálogo */
+      #experiences-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
       #experiences-grid > [data-category] {
+        margin: 0 !important;
         border: 1px solid #ebe7f0;
-        box-shadow: 0 12px 32px rgba(31, 24, 45, 0.08);
+        box-shadow: 0 16px 38px rgba(31, 24, 45, 0.1);
+      }
+      .kitesurf-portal-cta {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding: 1rem 1.15rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 0.85rem;
+        color: #fff;
+        background: linear-gradient(135deg, #5b3a82 0%, #34204f 100%);
+        box-shadow: 0 12px 26px rgba(63, 39, 97, 0.22);
+        transition: transform 180ms ease, box-shadow 180ms ease,
+          background 180ms ease;
+      }
+      .kitesurf-portal-cta:hover {
+        color: #fff;
+        background: linear-gradient(135deg, #6e469b 0%, #452b68 100%);
+        box-shadow: 0 16px 32px rgba(63, 39, 97, 0.3);
+        transform: translateY(-2px);
+      }
+      .kitesurf-portal-cta__copy {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+      .kitesurf-portal-cta__title {
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      .kitesurf-portal-cta__subtitle {
+        margin-top: 0.3rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      .kitesurf-portal-cta__icon {
+        display: grid;
+        width: 2.65rem;
+        height: 2.65rem;
+        flex: 0 0 2.65rem;
+        place-items: center;
+        border-radius: 999px;
+        color: #2a1a40;
+        background: #f3bd19;
       }
       @media (min-width: 768px) {
         #experiences-grid > [data-category].catalog-card {
@@ -98,23 +152,74 @@
         }
         #experiences-grid > [data-category].catalog-card > .catalog-media {
           width: 100% !important;
-          height: 360px;
-          align-self: start;
+          height: 100%;
+          min-height: 360px;
+          align-self: stretch;
           overflow: hidden;
+          background: #eef3f4;
         }
         #experiences-grid > [data-category].catalog-card > .catalog-media img {
           width: 100%;
-          height: 360px !important;
+          height: 100% !important;
+          min-height: 360px;
           object-fit: cover;
         }
       }
+      @media (min-width: 1024px) {
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+          display: grid !important;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.7rem !important;
+          flex: 1 1 320px;
+          width: auto !important;
+          min-width: 320px;
+          max-width: 510px;
+          margin-left: auto;
+          align-items: stretch !important;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .whatsapp-info-btn:last-child:nth-child(3) {
+          grid-column: 1 / -1;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn-solid,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .whatsapp-info-btn {
+          width: 100%;
+          min-width: 0;
+          min-height: 46px;
+          padding: 0.65rem 0.8rem;
+          white-space: normal;
+          line-height: 1.2;
+        }
+      }
       @media (max-width: 767px) {
+        #experiences-grid {
+          gap: 2rem;
+        }
         #experiences-grid > [data-category].catalog-card > .catalog-media,
         #experiences-grid > [data-category].catalog-card > .catalog-media img {
           width: 100% !important;
           height: 230px !important;
           min-height: 230px;
           object-fit: cover;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid) {
+          display: flex !important;
+          flex-direction: column !important;
+          width: 100% !important;
+        }
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .add-to-cart-btn-solid,
+        .catalog-card div:has(> .add-to-cart-btn, > .add-to-cart-btn-solid)
+          > .whatsapp-info-btn {
+          width: 100%;
+          justify-content: center;
+          white-space: normal;
         }
       }
 
@@ -943,9 +1048,17 @@
                 </div>
                 <a
                   href="kitesurf.html"
-                  class="inline-flex items-center gap-2 text-sm font-bold text-[#5B3A82] hover:text-[#3F2761] mt-3"
-                  >Ver portal completo de Kitesurf <i class="fas fa-arrow-right"></i
-                ></a>
+                  class="kitesurf-portal-cta"
+                  aria-label="Explorar el portal completo de Kitesurf en Cartagena"
+                >
+                  <span class="kitesurf-portal-cta__copy">
+                    <span class="kitesurf-portal-cta__title">Explora nuestro portal de Kitesurf</span>
+                    <span class="kitesurf-portal-cta__subtitle">Cursos, niveles y experiencias en La Boquilla</span>
+                  </span>
+                  <span class="kitesurf-portal-cta__icon" aria-hidden="true">
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                </a>
               </div>
             </div>
 

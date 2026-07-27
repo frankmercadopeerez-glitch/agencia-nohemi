@@ -810,14 +810,21 @@
         </div>
 
         <style>
+          .nohemi-proof-grid > div + div {
+            border-top: 1px solid rgba(255, 255, 255, 0.16);
+          }
           @media (min-width: 768px) {
             .nohemi-proof-grid > div { padding-left: 2.25rem; padding-right: 2.25rem; }
             .nohemi-proof-grid > div:first-child { padding-left: 0; }
             .nohemi-proof-grid > div:last-child { padding-right: 0; }
+            .nohemi-proof-grid > div + div {
+              border-top: 0;
+              border-left: 1px solid rgba(255, 255, 255, 0.16);
+            }
           }
         </style>
-        <div class="max-w-6xl mx-auto border-y border-white/20">
-          <div class="nohemi-proof-grid grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/20">
+        <div class="max-w-6xl mx-auto">
+          <div class="nohemi-proof-grid grid md:grid-cols-3">
             <div class="py-7 md:py-9 md:pr-10">
               <span class="block text-yellow-400 text-xs font-bold tracking-[0.24em] mb-3">01 · ANTES DE RESERVAR</span>
               <h3 class="font-bold text-xl mb-3">Sabes cuánto vas a pagar</h3>
