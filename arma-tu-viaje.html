@@ -97,8 +97,61 @@
     .filter-btn.active { background: #5B3A82; color: #fff; border-color: #5B3A82; }
 
     /* --- Package cards --- */
-    .pkg-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .pkg-card {
+      display: flex;
+      width: 18rem;
+      height: 372px;
+      flex: 0 0 18rem;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
     .pkg-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.16); }
+    .pkg-card-media {
+      position: relative;
+      height: 116px;
+      flex: 0 0 116px;
+      overflow: hidden;
+    }
+    .pkg-card-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(23,15,36,.58), rgba(23,15,36,.04) 65%);
+    }
+    .pkg-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+    .pkg-card:hover .pkg-card-media img { transform: scale(1.04); }
+    .pkg-card-icon {
+      position: absolute;
+      right: .75rem;
+      bottom: .65rem;
+      z-index: 1;
+      display: grid;
+      width: 2.15rem;
+      height: 2.15rem;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 4px 12px rgba(0,0,0,.18);
+      font-size: 1rem;
+    }
+    .pkg-card-body {
+      display: flex;
+      min-height: 0;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    /* El selector de moneda siempre queda debajo del navbar. */
+    #pref-banner {
+      top: var(--navbar-height, 54px) !important;
+      z-index: 45 !important;
+    }
+    #pref-banner .pref-banner-inner::-webkit-scrollbar { display: none; }
 
     /* --- Drag handle & drop zones --- */
     .drag-handle { cursor:grab; font-size:.85rem; padding:.45rem .4rem; color:#d1d5db; line-height:1; transition:color .15s; user-select:none; }
@@ -202,6 +255,53 @@
       .whatsapp-icon { width: 40px; height: 40px; }
       .whatsapp-text { font-size: 8px; padding: 2px 7px; margin-top: 4px; }
     }
+    @media (max-width: 639px) {
+      #navbar {
+        min-height: 60px;
+        padding-top: .25rem !important;
+        padding-bottom: .25rem !important;
+      }
+      #navbar > .container { min-height: 52px; }
+      #navbar > .container > a {
+        max-width: 245px;
+        gap: .35rem;
+        transform: none !important;
+      }
+      #navbar > .container > a img { height: 2.1rem !important; }
+      #navbar > .container > a > span > span:first-child {
+        font-size: 1.2rem !important;
+        line-height: 1 !important;
+      }
+      #navbar > .container > a > span > span:last-child {
+        margin-top: .2rem !important;
+        font-size: .45rem !important;
+        letter-spacing: .2em !important;
+      }
+      .trip-hero {
+        min-height: auto !important;
+        align-items: flex-start !important;
+        padding-top: 61px;
+      }
+      body.pref-banner-visible .trip-hero { padding-top: 101px; }
+      .trip-hero > .relative {
+        padding-top: 2rem !important;
+        padding-bottom: 3.5rem !important;
+      }
+      #pref-banner .pref-banner-inner {
+        gap: .35rem !important;
+        padding: .4rem .6rem !important;
+      }
+      #pref-banner .pref-cur-btn {
+        padding: .25rem .5rem !important;
+        font-size: .65rem !important;
+      }
+      #pref-banner .pref-banner-actions { gap: .35rem !important; }
+      #pref-banner .pref-banner-save {
+        padding: .35rem .55rem !important;
+        font-size: .65rem !important;
+      }
+      .pkg-card { height: 362px; }
+    }
   </style>
 </head>
 
@@ -209,7 +309,7 @@
 
 <!-- ══════════════════ PREFERENCIAS (idioma + moneda) ══════════════════ -->
 <div id="pref-banner" class="fixed top-0 left-0 right-0 z-[999] hidden" style="background:linear-gradient(90deg,#1e0f30,#3F2761)">
-  <div class="container mx-auto px-4 py-2 max-w-5xl flex flex-row items-center gap-2 overflow-x-auto" style="-ms-overflow-style:none;scrollbar-width:none">
+  <div class="pref-banner-inner container mx-auto px-4 py-2 max-w-5xl flex flex-row items-center gap-2 overflow-x-auto" style="-ms-overflow-style:none;scrollbar-width:none">
     <div class="flex items-center gap-2 shrink-0">
       <i class="fas fa-globe text-yellow-400"></i>
       <span class="text-white font-bold text-xs hidden sm:inline" id="pref-title">¿En qué moneda?</span>
@@ -219,8 +319,8 @@
       <button onclick="prefSelectCurrency('USD')" data-pref-cur="USD" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇺🇸 USD<span class="hidden sm:inline"> – Dólares</span></button>
       <button onclick="prefSelectCurrency('MXN')" data-pref-cur="MXN" class="pref-cur-btn text-xs font-bold px-2.5 py-1 rounded-full border border-white/30 text-white/70 hover:text-white hover:border-white transition whitespace-nowrap">🇲🇽 MXN<span class="hidden sm:inline"> – Pesos MX</span></button>
     </div>
-    <div class="flex items-center gap-2 shrink-0">
-      <button onclick="prefSave()" class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold text-xs px-3 py-1.5 rounded-lg transition">Guardar</button>
+    <div class="pref-banner-actions flex items-center gap-2 shrink-0">
+      <button onclick="prefSave()" class="pref-banner-save bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold text-xs px-3 py-1.5 rounded-lg transition">Guardar</button>
       <button onclick="prefDismiss()" class="text-white/40 hover:text-white text-base leading-none" title="Cerrar">✕</button>
     </div>
   </div>
@@ -267,7 +367,7 @@
 </div>
 
 <!-- ══════════════════ HERO ══════════════════ -->
-<section class="relative flex items-center justify-center text-center px-4 overflow-hidden" style="min-height:58vh;background:linear-gradient(135deg,#1e0f30 0%,#3F2761 55%,#5B3A82 100%)">
+<section class="trip-hero relative flex items-center justify-center text-center px-4 overflow-hidden" style="min-height:58vh;background:linear-gradient(135deg,#1e0f30 0%,#3F2761 55%,#5B3A82 100%)">
   <div class="absolute inset-0 bg-center bg-cover opacity-20" style="background-image:url('images/cartagena.webp')"></div>
   <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(30,15,48,0.6) 100%)"></div>
   <div class="relative z-10 text-white pt-28 pb-14 max-w-3xl mx-auto">
@@ -336,16 +436,19 @@
     <div class="flex gap-4 overflow-x-auto pb-2 -mx-4 px-4" style="scrollbar-width:none">
       <!-- Paquete 1 -->
       <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#3F2761,#5B3A82)">
-        <div class="p-5 text-white">
-          <div class="text-2xl mb-2">🌴</div>
+        <div class="pkg-card-media">
+          <img src="images/cartagenacentro.webp" alt="Centro histórico de Cartagena para el paquete Fin de Semana Caribeño" width="1400" height="933" loading="lazy" decoding="async"/>
+          <span class="pkg-card-icon" aria-hidden="true">🌴</span>
+        </div>
+        <div class="pkg-card-body p-4 text-white">
           <h3 class="font-extrabold text-base mb-1">Fin de Semana Caribeño</h3>
-          <p class="text-xs text-white/70 mb-4">Historia, gastronomía y un atardecer en catamarán</p>
+          <p class="text-xs text-white/70 mb-3">Historia, gastronomía y un atardecer en catamarán</p>
           <ul class="space-y-1 text-xs text-white/90 mb-3">
             <li>🏛️ City Tours de Roa</li>
             <li>🍽️ Recorrido Gastronómico</li>
             <li>⛵ Catamarán Atardecer</li>
           </ul>
-          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20 mt-auto">
             <span class="text-xs text-white/60">Desde</span>
             <div class="text-right">
               <div class="text-xl font-extrabold text-white leading-none">$350.000</div>
@@ -360,16 +463,19 @@
       </div>
       <!-- Paquete 2 -->
       <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#0e7490,#0891b2)">
-        <div class="p-5 text-white">
-          <div class="text-2xl mb-2">🤿</div>
+        <div class="pkg-card-media">
+          <img src="images/kitesurf/salto.webp" alt="Kitesurf en Cartagena para el paquete Aventura Total" width="4290" height="2860" loading="lazy" decoding="async"/>
+          <span class="pkg-card-icon" aria-hidden="true">🤿</span>
+        </div>
+        <div class="pkg-card-body p-4 text-white">
           <h3 class="font-extrabold text-base mb-1">Aventura Total</h3>
-          <p class="text-xs text-white/70 mb-4">Buceo, catamarán y kitesurf — adrenalina pura</p>
+          <p class="text-xs text-white/70 mb-3">Buceo, catamarán y kitesurf — adrenalina pura</p>
           <ul class="space-y-1 text-xs text-white/90 mb-3">
             <li>🤿 Buceo y Snorkel</li>
             <li>⛵ Catamarán Atardecer</li>
             <li>🪁 Kitesurf Iniciación</li>
           </ul>
-          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20 mt-auto">
             <span class="text-xs text-white/60">Desde</span>
             <div class="text-right">
               <div class="text-xl font-extrabold text-white leading-none">$1.150.000</div>
@@ -384,16 +490,19 @@
       </div>
       <!-- Paquete 3 -->
       <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#8a6d19,#C9A227)">
-        <div class="p-5 text-white">
-          <div class="text-2xl mb-2">☀️</div>
+        <div class="pkg-card-media">
+          <img src="images/acuario.webp" alt="Vida marina del Caribe para el paquete Sabor y Sol" width="1200" height="800" loading="lazy" decoding="async"/>
+          <span class="pkg-card-icon" aria-hidden="true">☀️</span>
+        </div>
+        <div class="pkg-card-body p-4 text-white">
           <h3 class="font-extrabold text-base mb-1">Sabor &amp; Sol</h3>
-          <p class="text-xs text-white/70 mb-4">Acuario, cocina local y catamarán al atardecer</p>
+          <p class="text-xs text-white/70 mb-3">Acuario, cocina local y catamarán al atardecer</p>
           <ul class="space-y-1 text-xs text-white/90 mb-3">
             <li>🐠 Acuario &amp; Vida Marina</li>
             <li>🥘 Sabores Locales</li>
             <li>⛵ Catamarán Atardecer</li>
           </ul>
-          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20 mt-auto">
             <span class="text-xs text-white/60">Desde</span>
             <div class="text-right">
               <div class="text-xl font-extrabold text-white leading-none">$350.000</div>
@@ -408,16 +517,19 @@
       </div>
       <!-- Paquete 4 -->
       <div class="pkg-card flex-shrink-0 w-72 rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer" style="background:linear-gradient(135deg,#1e3a2f,#0f766e)">
-        <div class="p-5 text-white">
-          <div class="text-2xl mb-2">🏛️</div>
+        <div class="pkg-card-media">
+          <img src="images/islastour (7).webp" alt="Tour por las Islas del Rosario para el paquete Islas y Cultura" width="1242" height="734" loading="lazy" decoding="async"/>
+          <span class="pkg-card-icon" aria-hidden="true">🏛️</span>
+        </div>
+        <div class="pkg-card-body p-4 text-white">
           <h3 class="font-extrabold text-base mb-1">Islas &amp; Cultura</h3>
-          <p class="text-xs text-white/70 mb-4">Ciudad histórica, 4 islas + atardecer y gastronomía</p>
+          <p class="text-xs text-white/70 mb-3">Ciudad histórica, 4 islas + atardecer y gastronomía</p>
           <ul class="space-y-1 text-xs text-white/90 mb-3">
             <li>🏛️ City Tours de Roa</li>
             <li>🏝️ 4 Islas + Atardecer en la Bahía</li>
             <li>🍽️ Recorrido Gastronómico</li>
           </ul>
-          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20">
+          <div class="flex items-end justify-between pt-3 mb-3 border-t border-white/20 mt-auto">
             <span class="text-xs text-white/60">Desde</span>
             <div class="text-right">
               <div class="text-xl font-extrabold text-white leading-none">$580.000</div>
@@ -808,6 +920,30 @@ const ACTIVITIES = {
     slots: ['morning'],
     allDay: true,
     link: 'pasadia-isla-palma.html',
+  },
+  corona_island: {
+    name: 'Corona Island',
+    emoji: '🍺',
+    price: 800000,
+    duration: 'Todo el día',
+    description: 'Pasadía premium para mayores de 18 años con speedboat, almuerzo de tres tiempos, cerveza Corona ilimitada, kayak y paddle board.',
+    category: 'water',
+    image: 'images/corona-island/corona-island-card.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'corona-island.html',
+  },
+  tritonia: {
+    name: 'Tritonia Beach Club',
+    emoji: '🔱',
+    price: 470000,
+    duration: 'Todo el día',
+    description: 'Pasadía premium solo adultos en Tintipán con recogida en hotel, bus y lancha vía Tolú, snack y retorno hasta Cartagena. Pet friendly.',
+    category: 'water',
+    image: 'images/tritonia/tritonia-card.webp',
+    slots: ['morning'],
+    allDay: true,
+    link: 'tritonia-beach-club.html',
   },
   mucura_tintipan: {
     name: 'Múcura, Tintipán e Islote',
@@ -1919,9 +2055,13 @@ document.addEventListener('DOMContentLoaded', () => {
     var banner = document.getElementById('pref-banner');
     if (banner) {
       banner.classList.remove('hidden');
-      // push nav down
+      document.body.classList.add('pref-banner-visible');
       var nav = document.getElementById('navbar');
-      if (nav) nav.style.top = banner.offsetHeight + 'px';
+      if (nav) {
+        var navHeight = Math.ceil(nav.getBoundingClientRect().height);
+        document.documentElement.style.setProperty('--navbar-height', navHeight + 'px');
+        banner.style.top = navHeight + 'px';
+      }
       highlightCur(_selectedCur);
     }
   }
@@ -1956,8 +2096,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function hideBanner() {
     var banner = document.getElementById('pref-banner');
     if (banner) banner.classList.add('hidden');
-    var nav = document.getElementById('navbar');
-    if (nav) nav.style.top = '';
+    document.body.classList.remove('pref-banner-visible');
   }
 
   function updateNavCurrencyLabel() {
@@ -1978,6 +2117,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!localStorage.getItem(PREF_KEY)) {
       setTimeout(showBanner, 800);
     }
+    window.addEventListener('resize', function() {
+      var banner = document.getElementById('pref-banner');
+      if (banner && !banner.classList.contains('hidden')) showBanner();
+    });
   });
 })();
 </script>

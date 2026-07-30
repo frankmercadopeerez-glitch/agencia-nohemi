@@ -30,6 +30,16 @@ const TOURS = {
     price: 490000,
     unit: "persona",
   },
+  corona_island: {
+    name: "Corona Island – Pasadía para adultos",
+    price: 800000,
+    unit: "persona",
+  },
+  tritonia: {
+    name: "Tritonia Beach Club – Pasadía solo adultos",
+    price: 470000,
+    unit: "persona",
+  },
   mucura_tintipan: {
     name: "Pasadía Múcura, Tintipán y Santa Cruz del Islote",
     price: 320000,
