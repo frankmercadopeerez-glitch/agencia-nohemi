@@ -51,6 +51,11 @@ nav .space-x-7 > :not([hidden]) ~ :not([hidden]) {
   margin-left: 1.25rem !important;
 }
 
+nav .hidden.md\:flex > a {
+  font-size: .95rem !important;
+  line-height: 1.2;
+}
+
 .brand-signature,
 nav a[href$="index.html"] .tracking-\[0\.3em\],
 nav a[href="index.html"] .tracking-\[0\.3em\],
@@ -155,6 +160,11 @@ button[data-filter].active, button[data-filter].active-filter,
   background: linear-gradient(90deg, rgba(5, 24, 36, .72) 0%, rgba(5, 24, 36, .38) 52%, rgba(5, 24, 36, .56) 100%) !important;
 }
 
+@media (min-width: 768px) {
+  .home-hero { min-height: 100svh !important; }
+  .home-hero #hero-content { transform: translateY(-2.5rem); }
+}
+
 #cookie-consent-banner {
   background: rgba(11, 36, 52, .97) !important;
   font-family: "Manrope", sans-serif !important;
@@ -201,6 +211,45 @@ button[data-filter].active, button[data-filter].active-filter,
   backdrop-filter: blur(8px);
 }
 
+#galeria { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+
+#galeria .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 220px;
+  gap: 1.15rem;
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+#galeria .gallery-grid .gallery-tile:first-child {
+  grid-column: span 2;
+}
+
+#galeria .gallery-grid .gallery-tile {
+  min-height: 0;
+  height: 100%;
+}
+
+#galeria .gallery-grid .gallery-tile:first-child img {
+  object-position: center 62%;
+}
+
+#galeria .gallery-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1180px;
+  margin: 2rem auto 0;
+}
+
+.home-experiences-cta {
+  margin-top: 2.5rem !important;
+  padding-top: .25rem;
+}
+
 .gallery-lightbox {
   position: fixed;
   inset: 0;
@@ -217,6 +266,12 @@ button[data-filter].active, button[data-filter].active-filter,
 .gallery-lightbox img { max-width: min(1100px, 94vw); max-height: 86vh; object-fit: contain; border-radius: 1rem; }
 .gallery-lightbox button { position: absolute; top: 1.25rem; right: 1.25rem; width: 46px; height: 46px; border-radius: 50%; background: #fff; color: var(--brand-ink); font-size: 1.4rem; }
 
+@media (min-width: 768px) {
+  .whatsapp-container { right: 18px !important; bottom: 18px !important; }
+  .whatsapp-icon { width: 50px !important; height: 50px !important; }
+  .whatsapp-text { display: none !important; }
+}
+
 @media (max-width: 767px) {
   nav { min-height: 62px; }
   nav > .container { min-height: 62px; padding-left: 1rem !important; padding-right: 1rem !important; }
@@ -228,6 +283,11 @@ button[data-filter].active, button[data-filter].active-filter,
   .whatsapp-icon { width: 42px !important; height: 42px !important; }
   .catalog-page .whatsapp-container { display: none !important; }
   .gallery-tile { min-height: 210px; }
+  #galeria { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  #galeria .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 205px; gap: .9rem; }
+  #galeria .gallery-grid .gallery-tile:first-child { grid-column: auto; }
+  #galeria .gallery-actions { align-items: stretch; flex-direction: column; margin-top: 1.5rem; }
+  #galeria .gallery-actions .btn-primary { width: 100%; }
   .reveal-ready { transform: translateY(14px); }
   .home-hero #hero-content { padding-top: 6.6rem !important; padding-bottom: 5.5rem !important; }
   .home-hero h1 { font-size: clamp(2.15rem, 11vw, 3rem) !important; line-height: .98 !important; margin-bottom: 1.25rem !important; }
@@ -241,12 +301,12 @@ button[data-filter].active, button[data-filter].active-filter,
 
 @media (min-width: 768px) and (max-width: 1320px) {
   nav .container { padding-left: 1rem !important; padding-right: 1rem !important; }
-  nav .hidden.md\:flex { font-size: .64rem !important; }
+  nav .hidden.md\:flex > a { font-size: .8rem !important; }
   nav .space-x-8 > :not([hidden]) ~ :not([hidden]),
   nav .space-x-7 > :not([hidden]) ~ :not([hidden]) { margin-left: .62rem !important; }
   nav a[href$="index.html"] .text-2xl { font-size: 1.08rem !important; }
   nav a[href$="index.html"] img { height: 1.9rem !important; }
-  nav a[href$="index.html"] .tracking-\[0\.3em\] { font-size: .42rem !important; }
+  nav a[href$="index.html"] .tracking-\[0\.3em\] { font-size: .5rem !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
