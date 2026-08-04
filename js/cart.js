@@ -25,6 +25,11 @@ const TOURS = {
     price: 180000,
     unit: "persona",
   },
+  pasadia_cuatro_islas: {
+    name: "4 Islas del Rosario + Atardecer en la Bahía",
+    price: 300000,
+    unit: "persona",
+  },
   isla_palma: {
     name: "Pasadía Isla Palma – Reserva Natural",
     price: 490000,

@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#5B3A82"/>
     <link href="../css/tailwind.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/cart.css"/>
     <script type="application/ld+json">
 {
@@ -111,7 +111,8 @@
       .plan-card { border:2px solid #EEF0F4;border-radius:16px;padding:1.5rem; }
       .plan-card.featured { border-color:#5B3A82; }
     </style>
-  </head>
+    <link rel="stylesheet" href="../css/brand-refresh.css?v=20260804c"/>
+</head>
   <body class="bg-gray-50 text-gray-800">
     <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px]">
       <div class="container mx-auto px-6 flex justify-between items-center">
@@ -356,5 +357,6 @@
       if(mobileMenuBtn){mobileMenuBtn.addEventListener('click',()=>{mobileMenu.classList.remove('hidden');setTimeout(()=>mobileMenu.classList.add('opacity-100'),10);});}
       if(closeMenuBtn){closeMenuBtn.addEventListener('click',()=>{mobileMenu.classList.remove('opacity-100');setTimeout(()=>mobileMenu.classList.add('hidden'),300);});}
     </script>
-  </body>
+    <script src="../js/site-refresh.js?v=20260804c" defer></script>
+</body>
 </html>

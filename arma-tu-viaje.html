@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -46,7 +46,7 @@
   </script>
   <link href="./css/tailwind.css" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
   <style>
     body { font-family: 'Montserrat', sans-serif; }
@@ -148,10 +148,18 @@
 
     /* El selector de moneda siempre queda debajo del navbar. */
     #pref-banner {
-      top: var(--navbar-height, 54px) !important;
+      top: var(--navbar-height, 68px) !important;
       z-index: 45 !important;
     }
     #pref-banner .pref-banner-inner::-webkit-scrollbar { display: none; }
+    #pref-banner button {
+      min-height: 32px !important;
+      border-radius: .65rem !important;
+      box-shadow: none !important;
+      transform: none !important;
+    }
+    body.pref-banner-visible .trip-hero { min-height: calc(58vh + 80px) !important; }
+    body.pref-banner-visible .trip-hero > .relative { transform: translateY(80px); }
 
     /* --- Drag handle & drop zones --- */
     .drag-handle { cursor:grab; font-size:.85rem; padding:.45rem .4rem; color:#d1d5db; line-height:1; transition:color .15s; user-select:none; }
@@ -282,7 +290,9 @@
         align-items: flex-start !important;
         padding-top: 61px;
       }
-      body.pref-banner-visible .trip-hero { padding-top: 101px; }
+      #pref-banner { --navbar-height: 62px; }
+      body.pref-banner-visible .trip-hero { padding-top: 108px; }
+      body.pref-banner-visible .trip-hero > .relative { transform: translateY(34px); }
       .trip-hero > .relative {
         padding-top: 2rem !important;
         padding-bottom: 3.5rem !important;
@@ -303,6 +313,7 @@
       .pkg-card { height: 378px; }
     }
   </style>
+  <link rel="stylesheet" href="css/brand-refresh.css?v=20260804c"/>
 </head>
 
 <body class="bg-gray-50">
@@ -336,12 +347,13 @@
       <picture><source srcset="images/logo-icon.webp" type="image/webp"/><img src="images/logo-icon.png" alt="Dunas & Olas" width="291" height="153" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"/></picture>
       <span class="leading-none select-none">
         <span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">Dunas <span class="text-yellow-500">&amp; Olas</span></span>
-        <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">Cartagena de Indias</span>
+        <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">Mexicana en Cartagena</span>
       </span>
     </a>
     <div class="hidden md:flex items-center space-x-7 text-sm font-semibold tracking-wide uppercase h-full">
       <a href="index.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Inicio</a>
       <a href="experiences.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Experiencias</a>
+      <a href="index.html#galeria" class="text-white hover:text-blue-400 transition drop-shadow-md">Galería</a>
       <a href="kitesurf.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Kitesurf</a>
       <a href="about.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Nosotros</a>
       <a href="blog/index.html" class="text-white hover:text-blue-400 transition drop-shadow-md">Blog</a>
@@ -359,6 +371,7 @@
 <div id="mobile-menu" class="fixed inset-0 bg-gray-900/95 backdrop-blur-md z-[10000] hidden flex flex-col justify-center items-center space-y-7 opacity-0 transition-opacity duration-300">
   <a href="index.html" class="text-2xl font-bold text-white hover:text-blue-400">Inicio</a>
   <a href="experiences.html" class="text-2xl font-bold text-white hover:text-blue-400">Experiencias</a>
+  <a href="index.html#galeria" class="text-2xl font-bold text-white hover:text-blue-400">Galería</a>
   <a href="kitesurf.html" class="text-2xl font-bold text-white hover:text-blue-400">Kitesurf</a>
   <a href="about.html" class="text-2xl font-bold text-white hover:text-blue-400">Nosotros</a>
   <a href="blog/index.html" class="text-2xl font-bold text-white hover:text-blue-400">Blog</a>
@@ -371,10 +384,7 @@
   <div class="absolute inset-0 bg-center bg-cover opacity-20" style="background-image:url('images/cartagena.webp')"></div>
   <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,0,0,0.15) 0%,rgba(30,15,48,0.6) 100%)"></div>
   <div class="relative z-10 text-white pt-28 pb-14 max-w-3xl mx-auto">
-    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-6 text-sm font-medium">
-      <i class="fas fa-globe-americas text-yellow-400"></i>
-      <span>Agencia turística multicultural · Cartagena de Indias</span>
-    </div>
+    <div class="site-kicker mb-6">Mexicana en Cartagena · Tu viaje, bien pensado</div>
     <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight tracking-tight">
       Arma tu itinerario<br><span class="text-yellow-400">para Cartagena</span>
     </h1>
@@ -2149,5 +2159,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })();
 </script>
+  <script src="js/site-refresh.js?v=20260804c" defer></script>
 </body>
 </html>

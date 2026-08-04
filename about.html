@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -249,8 +249,15 @@
     },
     {
       "@type": "Person",
+      "@id": "https://dunasyolas.com/#nohemi",
       "name": "Nohemi",
+      "url": "https://dunasyolas.com/about",
       "jobTitle": "Guía turística local y fundadora",
+      "nationality": { "@type": "Country", "name": "México" },
+      "sameAs": [
+        "https://www.instagram.com/mexicanaencartagena",
+        "https://www.tiktok.com/@mexicanaencartagena"
+      ],
       "worksFor": {
         "@id": "https://dunasyolas.com/#org"
       },
@@ -289,7 +296,8 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/about"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/about"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/about"/>
-  </head>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260804c"/>
+</head>
   <body class="bg-gray-50 text-gray-800">
     <nav
       id="navbar"
@@ -302,7 +310,7 @@
               Dunas <span class="text-yellow-500">&amp; Olas</span>
             </span>
             <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
-              Cartagena de Indias
+              Mexicana en Cartagena
             </span>
           </span>
         </a>
@@ -316,6 +324,9 @@
             href="experiences.html"
             class="text-gray-300 hover:text-white transition"
             >Experiencias</a
+          >
+          <a href="index.html#galeria" class="text-gray-300 hover:text-white transition"
+            >Galería</a
           >
           <a
             href="kitesurf.html"
@@ -361,6 +372,9 @@
         href="experiences.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Experiencias</a
+      >
+      <a href="index.html#galeria" class="text-2xl font-bold text-white hover:text-blue-400"
+        >Galería</a
       >
       <a
         href="kitesurf.html"
@@ -418,9 +432,9 @@
             class="absolute -bottom-4 -right-4 w-full h-full border-2 border-blue-100 rounded-lg -z-10"
           ></div>
           <img
-            src="images/foto (1).webp"
-            alt="Nohemi en Cartagena de Indias"
-            class="rounded-lg shadow-2xl w-full object-cover h-96 lg:h-[600px]" width="1200" height="1600" decoding="async" loading="eager"
+            src="images/cartagenacentro.webp"
+            alt="Centro Histórico de Cartagena, ciudad que Nohemi eligió como hogar"
+            class="rounded-lg shadow-2xl w-full object-cover h-96 lg:h-[600px]" width="1400" height="1135" decoding="async" loading="eager"
           />
           <picture>
             <source srcset="images/logo-seal.webp" type="image/webp" />
@@ -856,5 +870,6 @@
     </script>
       <script src="js/currency.js"></script>
       <script src="js/cookie-consent.js"></script>
-  </body>
+    <script src="js/site-refresh.js?v=20260804c" defer></script>
+</body>
 </html>

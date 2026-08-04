@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -771,8 +771,9 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/experiences"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/experiences"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/experiences"/>
-  </head>
-  <body class="bg-gray-50 text-gray-800 antialiased">
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260804c"/>
+</head>
+  <body class="catalog-page bg-gray-50 text-gray-800 antialiased">
     <!-- Navbar -->
     <nav
       id="navbar"
@@ -785,7 +786,7 @@
               Dunas <span class="text-yellow-500">&amp; Olas</span>
             </span>
             <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
-              Cartagena de Indias
+              Mexicana en Cartagena
             </span>
           </span>
         </a>
@@ -797,6 +798,9 @@
           >
           <a href="experiences.html" class="text-blue-400 transition"
             >Experiencias</a
+          >
+          <a href="index.html#galeria" class="text-white hover:text-blue-400 transition"
+            >Galería</a
           >
           <a href="kitesurf.html" class="text-white hover:text-blue-400 transition"
             >Kitesurf</a
@@ -852,6 +856,9 @@
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Experiencias</a
       >
+      <a href="index.html#galeria" class="text-2xl font-bold text-white hover:text-blue-400"
+        >Galería</a
+      >
       <a
         href="kitesurf.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
@@ -885,6 +892,7 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="relative z-10 text-center text-white px-4 max-w-4xl">
+        <span class="site-kicker mb-5">Mexicana en Cartagena · Selección de Nohemi</span>
         <span
           class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-2 block"
           >Descubre el Caribe</span
@@ -915,26 +923,54 @@
           </p>
         </div>
 
-        <div class="mb-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between bg-white rounded-xl border border-gray-100 shadow-sm p-4">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="text-xs font-bold uppercase text-gray-400 mr-1">Categoría:</span>
-            <button class="fleet-filter-btn active" data-category="all">Todas</button>
-            <button class="fleet-filter-btn" data-category="agua">Acuáticas</button>
-            <button class="fleet-filter-btn" data-category="pasadia">Paseos en Barco</button>
-            <button class="fleet-filter-btn" data-category="gastronomia">Gastronomía</button>
-            <button class="fleet-filter-btn" data-category="cultural">Cultural & Noche</button>
+        <div class="mb-10 bg-white rounded-xl border border-gray-100 shadow-sm p-4 md:p-5 space-y-4">
+          <div>
+            <label for="experiences-search" class="block text-xs font-bold uppercase text-gray-500 mb-2">
+              Busca tu próxima experiencia
+            </label>
+            <div class="relative">
+              <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-[#5B3A82]" aria-hidden="true"></i>
+              <input
+                id="experiences-search"
+                type="search"
+                autocomplete="off"
+                placeholder="Ej. Barú, snorkel, islas, adultos, gastronomía..."
+                class="w-full rounded-xl border border-gray-200 bg-gray-50 py-3 pl-11 pr-12 text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5B3A82]/20 focus:border-[#5B3A82]"
+              />
+              <button
+                id="experiences-search-clear"
+                type="button"
+                class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full text-gray-400 hover:text-[#5B3A82] hover:bg-purple-50 transition"
+                aria-label="Limpiar búsqueda"
+              >
+                <i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p id="experiences-search-summary" class="mt-2 text-xs text-gray-500" aria-live="polite">
+              Explora todas nuestras experiencias.
+            </p>
           </div>
-          <div class="flex items-center gap-2">
-            <label for="experiences-sort" class="text-xs font-bold uppercase text-gray-400">Ordenar por:</label>
-            <select id="experiences-sort" class="text-sm border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:border-blue-500">
-              <option value="default">Recomendados</option>
-              <option value="price-asc">Precio: menor a mayor</option>
-              <option value="price-desc">Precio: mayor a menor</option>
-            </select>
+          <div class="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between border-t border-gray-100 pt-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold uppercase text-gray-400 mr-1">Categoría:</span>
+              <button class="fleet-filter-btn active" data-category="all">Todas</button>
+              <button class="fleet-filter-btn" data-category="agua">Acuáticas</button>
+              <button class="fleet-filter-btn" data-category="pasadia">Paseos en Barco</button>
+              <button class="fleet-filter-btn" data-category="gastronomia">Gastronomía</button>
+              <button class="fleet-filter-btn" data-category="cultural">Cultural & Noche</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="experiences-sort" class="text-xs font-bold uppercase text-gray-400">Ordenar por:</label>
+              <select id="experiences-sort" class="text-sm border border-gray-200 rounded-lg px-3 py-2 text-gray-700 focus:outline-none focus:border-blue-500">
+                <option value="default">Recomendados</option>
+                <option value="price-asc">Precio: menor a mayor</option>
+                <option value="price-desc">Precio: mayor a menor</option>
+              </select>
+            </div>
           </div>
         </div>
         <p id="experiences-empty-msg" class="hidden text-center text-gray-500 py-10">
-          No tenemos experiencias en esta categoría por ahora. Prueba con otro filtro o
+          No encontramos experiencias con esos criterios. Prueba otra palabra o
           <a href="#" onclick="openWhatsApp('Hola, busco una experiencia específica.'); return false;" class="text-blue-600 underline">escríbenos por WhatsApp</a>.
         </p>
 
@@ -1113,7 +1149,7 @@
                 </div>
                 <div class="flex flex-col gap-2 sm:ml-auto w-full sm:w-auto">
                   <a href="pasadia-islas-rosario.html" class="add-to-cart-btn justify-center text-center"><i class="fas fa-arrow-right"></i> Ver experiencia</a>
-                  <button onclick="addToCart('pasadia', this)" class="add-to-cart-btn justify-center">
+                  <button onclick="addToCart('pasadia_cuatro_islas', this)" class="add-to-cart-btn justify-center">
                     <i class="fas fa-cart-plus"></i> Agregar al carrito
                   </button>
                   <button onclick="openWhatsApp('Hola, quiero cotizar el Tour 4 Islas del Rosario + Atardecer.')" class="whatsapp-info-btn">
@@ -2553,16 +2589,60 @@
         var filterBtns = document.querySelectorAll(".fleet-filter-btn");
         var sortSelect = document.getElementById("experiences-sort");
         var emptyMsg = document.getElementById("experiences-empty-msg");
+        var searchInput = document.getElementById("experiences-search");
+        var searchClear = document.getElementById("experiences-search-clear");
+        var searchSummary = document.getElementById("experiences-search-summary");
         var currentFilter = "all";
+        var currentQuery = "";
+
+        function normalizeText(value) {
+          return (value || "")
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+        }
+
+        cards.forEach(function (card) {
+          var imageText = Array.prototype.map.call(card.querySelectorAll("img"), function (image) {
+            return image.alt || "";
+          }).join(" ");
+          card._searchIndex = normalizeText(card.textContent + " " + imageText + " " + card.id);
+        });
+
+        function updateSearchUrl() {
+          var url = new URL(window.location.href);
+          var rawValue = searchInput.value.trim();
+          if (rawValue) url.searchParams.set("buscar", rawValue);
+          else url.searchParams.delete("buscar");
+          window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+        }
 
         function applyFilter() {
           var visibleCount = 0;
+          var queryTerms = currentQuery ? currentQuery.split(" ") : [];
+
           cards.forEach(function (card) {
-            var match = currentFilter === "all" || card.dataset.category === currentFilter;
+            var categoryMatch = currentFilter === "all" || card.dataset.category === currentFilter;
+            var searchMatch = !queryTerms.length || queryTerms.every(function (term) {
+              return card._searchIndex.indexOf(term) !== -1;
+            });
+            var match = categoryMatch && searchMatch;
             card.style.display = match ? "" : "none";
             if (match) visibleCount++;
           });
+
           emptyMsg.classList.toggle("hidden", visibleCount > 0);
+          searchClear.classList.toggle("hidden", !searchInput.value);
+
+          if (searchInput.value.trim()) {
+            searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experiencia encontrada para “" : " experiencias encontradas para “") + searchInput.value.trim() + "”.";
+          } else if (currentFilter !== "all") {
+            searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experiencia en esta categoría." : " experiencias en esta categoría.");
+          } else {
+            searchSummary.textContent = visibleCount + (visibleCount === 1 ? " experiencia disponible." : " experiencias disponibles.");
+          }
         }
 
         filterBtns.forEach(function (btn) {
@@ -2574,6 +2654,26 @@
           });
         });
 
+        searchInput.addEventListener("input", function () {
+          currentQuery = normalizeText(searchInput.value);
+          updateSearchUrl();
+          applyFilter();
+        });
+
+        searchClear.addEventListener("click", function () {
+          searchInput.value = "";
+          currentQuery = "";
+          updateSearchUrl();
+          applyFilter();
+          searchInput.focus();
+        });
+
+        searchInput.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && searchInput.value) {
+            searchClear.click();
+          }
+        });
+
         sortSelect.addEventListener("change", function () {
           var val = sortSelect.value;
           var sorted = cards.slice().sort(function (a, b) {
@@ -2583,6 +2683,13 @@
           });
           sorted.forEach(function (card) { grid.appendChild(card); });
         });
+
+        var initialQuery = new URLSearchParams(window.location.search).get("buscar") || "";
+        if (initialQuery) {
+          searchInput.value = initialQuery;
+          currentQuery = normalizeText(initialQuery);
+        }
+        applyFilter();
       })();
     </script>
 
@@ -2605,8 +2712,9 @@
     </script>
 
     <!-- Carrito de compras: catálogo y lógica compartidos (ver js/cart.js) -->
-    <script src="js/cart.js"></script>
+<script src="js/cart.js?v=20260804"></script>
       <script src="js/currency.js"></script>
       <script src="js/cookie-consent.js"></script>
-  </body>
+    <script src="js/site-refresh.js?v=20260804c" defer></script>
+</body>
 </html>

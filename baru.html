@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#5B3A82"/>
     <link href="./css/tailwind.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/cart.css"/>
     <script type="application/ld+json">
 {
@@ -102,12 +102,13 @@
       .tour-card:hover { border-color:#5B3A82;box-shadow:0 4px 12px rgba(91,58,130,.1); }
       .isla-badge { background:#E8F4FD;color:#1E5FA8;font-size:.75rem;font-weight:700;padding:.3rem .75rem;border-radius:9999px; }
     </style>
-  </head>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260804c"/>
+</head>
   <body class="bg-gray-50 text-gray-800">
     <nav class="fixed w-full z-50 bg-gray-900 text-white shadow-lg py-[2.5px]">
       <div class="container mx-auto px-6 flex justify-between items-center">
         <a href="index.html" class="flex items-center gap-2 z-50 transform -translate-y-1"><picture><source srcset="images/logo-icon.webp" type="image/webp"/><img src="images/logo-icon.png" alt="Dunas & Olas - Tours y experiencias en Cartagena Colombia" width="291" height="153" class="h-9 md:h-10 w-auto object-contain" loading="eager" decoding="async"/></picture>
-          <span class="leading-none select-none"><span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">Dunas <span class="text-yellow-500">&amp; Olas</span></span><span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">Cartagena de Indias</span></span>
+          <span class="leading-none select-none"><span class="block font-extrabold tracking-tight text-2xl md:text-3xl text-white">Dunas <span class="text-yellow-500">&amp; Olas</span></span><span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">Mexicana en Cartagena</span></span>
         </a>
         <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase items-center">
           <a href="index.html" class="text-gray-300 hover:text-white transition">Inicio</a>
@@ -326,5 +327,6 @@
       if(mobileMenuBtn){mobileMenuBtn.addEventListener('click',()=>{mobileMenu.classList.remove('hidden');setTimeout(()=>mobileMenu.classList.add('opacity-100'),10);});}
       if(closeMenuBtn){closeMenuBtn.addEventListener('click',()=>{mobileMenu.classList.remove('opacity-100');setTimeout(()=>mobileMenu.classList.add('hidden'),300);});}
     </script>
-  </body>
+    <script src="js/site-refresh.js?v=20260804c" defer></script>
+</body>
 </html>

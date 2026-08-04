@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +6,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
-    <link rel="preload" as="image" href="images/cartagenasunset.webp" fetchpriority="high"/>
+    <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer.webp" fetchpriority="high"/>
     <meta
       name="description"
-      content="Planea experiencias en Cartagena con acompañamiento local: itinerarios personalizados, costos claros y tours formales en islas, ciudad y gastronomía."
+      content="Planea tours y experiencias en Cartagena con Nohemi, Mexicana en Cartagena: itinerarios personalizados, costos claros y acompañamiento local."
     />
     <meta
       name="keywords"
@@ -28,7 +28,7 @@
     />
     <meta
       property="og:image"
-      content="https://dunasyolas.com/images/cartagenasunset.webp"
+      content="https://dunasyolas.com/images/catamaran-cartagena-atardecer.webp"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -47,19 +47,19 @@
     />
     <meta
       property="twitter:image"
-      content="https://dunasyolas.com/images/cartagenasunset.webp"
+      content="https://dunasyolas.com/images/catamaran-cartagena-atardecer.webp"
     />
     <title>Experiencias locales e itinerarios en Cartagena | Dunas & Olas</title>
     <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
     <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
-    <meta name="theme-color" content="#5B3A82"/>
+    <meta name="theme-color" content="#10293A"/>
     <link href="./css/tailwind.css" rel="stylesheet"/>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -391,8 +391,10 @@
       ],
       "@id": "https://dunasyolas.com/#org",
       "name": "Dunas & Olas",
+      "alternateName": ["Mexicana en Cartagena", "Dunas y Olas Cartagena"],
       "url": "https://dunasyolas.com",
       "logo": "https://dunasyolas.com/images/logo-badge.png",
+      "image": "https://dunasyolas.com/images/catamaran-cartagena-atardecer.webp",
       "description": "Agencia turística multicultural en Cartagena de Indias. Diseña itinerarios personalizados y coordina experiencias seleccionadas en la ciudad, Barú, La Boquilla e Islas del Rosario, con costos claros y acompañamiento local.",
       "telephone": "+573163030589",
       "address": {
@@ -440,7 +442,10 @@
         "name": "Nohemi",
         "jobTitle": "Anfitriona local y fundadora",
         "knowsAbout": ["Cartagena de Indias", "Islas del Rosario", "Kitesurf", "Turismo Caribeño", "Gastronomía Caribeña"],
-        "sameAs": "https://www.instagram.com/mexicanaencartagena"
+        "sameAs": [
+          "https://www.instagram.com/mexicanaencartagena",
+          "https://www.tiktok.com/@mexicanaencartagena"
+        ]
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -575,7 +580,8 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"/>
-  </head>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260804c"/>
+</head>
   <body
     class="bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900"
   >
@@ -590,7 +596,7 @@
               Dunas <span class="text-yellow-500">&amp; Olas</span>
             </span>
             <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-gray-300/80 font-semibold mt-0.5">
-              Cartagena de Indias
+              Mexicana en Cartagena
             </span>
           </span>
         </a>
@@ -606,6 +612,11 @@
             href="experiences.html"
             class="text-white hover:text-blue-400 transition drop-shadow-md"
             >Experiencias</a
+          >
+          <a
+            href="#galeria"
+            class="text-white hover:text-blue-400 transition drop-shadow-md"
+            >Galería</a
           >
           <a
             href="kitesurf.html"
@@ -655,6 +666,11 @@
         >Experiencias</a
       >
       <a
+        href="#galeria"
+        class="text-2xl font-bold text-white hover:text-blue-400"
+        >Galería</a
+      >
+      <a
         href="kitesurf.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Kitesurf</a
@@ -684,29 +700,15 @@
 
     <!-- Hero Section -->
     <header
-      class="hero-section flex items-center justify-center text-center px-4"
+      class="hero-section home-hero flex items-center justify-center text-center px-4"
     >
-      <!-- Reordered Slides: Images first, Video last -->
-
-      <!-- Slide 1: Imagen Atardecer (Start here) -->
+      <!-- Imagen única para mantener legibilidad y una identidad consistente -->
       <div class="hero-slide active">
         <div
           class="hero-bg-image"
-          style="background-image: url(&quot;images/cartagenasunset.webp&quot;)"
-        ></div>
-      </div>
-      <!-- Slide 2: Imagen Acuario -->
-      <div class="hero-slide">
-        <div
-          class="hero-bg-image"
-          style="background-image: url(&quot;images/acuario.webp&quot;)"
-        ></div>
-      </div>
-      <!-- Slide 3: Imagen Cartagena -->
-      <div class="hero-slide">
-        <div
-          class="hero-bg-image"
-          style="background-image: url(&quot;images/cartagena.webp&quot;)"
+          role="img"
+          aria-label="Catamarán navegando frente a Cartagena durante el atardecer"
+          style="background-image: url(&quot;images/catamaran-cartagena-atardecer.webp&quot;); background-position:center 58%;"
         ></div>
       </div>
 
@@ -717,29 +719,27 @@
         id="hero-content"
         class="max-w-5xl text-white relative z-10 pt-28 md:pt-20 pb-14 transition-opacity duration-1000"
       >
-        <div class="mb-8 hidden md:flex justify-center animate-fade-in-up">
-          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-sm font-medium text-white drop-shadow-md">
-            <i class="fas fa-globe-americas text-yellow-400"></i>
-            <span>Agencia turística multicultural · Cartagena de Indias</span>
+        <div class="mb-7 flex justify-center animate-fade-in-up">
+          <div class="site-kicker">
+            Mexicana en Cartagena · Nohemi
           </div>
         </div>
 
         <span
-          class="text-blue-400 font-bold tracking-widest uppercase text-sm md:text-base mb-4 block drop-shadow-lg"
-          >Cartagena de Indias</span
+          class="text-yellow-300 font-bold tracking-widest uppercase text-sm md:text-base mb-4 block drop-shadow-lg"
+          >Conoce Cartagena como alguien de casa</span
         >
         <h1
           class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight tracking-tight drop-shadow-lg"
         >
-          Experiencias locales en Cartagena <br />
-          <span class="text-white">a tu ritmo y con acompañamiento</span>
+          Cartagena, a tu manera <br />
+          <span class="text-yellow-300">con la guía de Nohemi</span>
         </h1>
         <p
           class="text-lg md:text-xl mb-10 font-light text-gray-100 max-w-3xl mx-auto drop-shadow-md"
         >
-          Diseña un itinerario personalizado con precios claros, experiencias
-          seleccionadas y la orientación de Nohemi y su equipo antes y durante
-          tu viaje.
+          Una mexicana que hizo de Cartagena su casa te ayuda a elegir tours
+          confiables, entender cada costo y organizar tus días sin complicarte.
         </p>
         <div class="flex flex-col md:flex-row gap-4 justify-center">
           <a href="arma-tu-viaje.html" class="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-xl text-lg px-10 py-4 transition">
@@ -1487,6 +1487,38 @@
       </div>
     </section>
 
+    <!-- Galería editorial -->
+    <section id="galeria" class="py-20 bg-white scroll-mt-20">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mb-10">
+          <span class="text-teal-700 font-extrabold text-sm uppercase tracking-[0.18em] mb-3 block">Galería</span>
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Así se siente el Caribe con nosotros</h2>
+          <p class="text-gray-600 text-base md:text-lg leading-relaxed">Una mirada real a las islas, la bahía y los días que ayudamos a organizar desde Cartagena. Toca cualquier foto para verla completa.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[260px]">
+          <figure class="gallery-tile sm:col-span-2 lg:col-span-2 lg:row-span-2" data-label="Atardecer en la bahía" data-gallery-src="images/catamaran-cartagena-atardecer.webp">
+            <img src="images/catamaran-cartagena-atardecer.webp" alt="Catamarán al atardecer frente a la bahía de Cartagena" width="1600" height="900" loading="lazy" decoding="async"/>
+          </figure>
+          <figure class="gallery-tile" data-label="Isla Palma" data-gallery-src="images/isla-palma-4.webp">
+            <img src="images/isla-palma-4.webp" alt="Aguas cristalinas y playa de Isla Palma" width="1280" height="720" loading="lazy" decoding="async"/>
+          </figure>
+          <figure class="gallery-tile" data-label="Múcura y Tintipán" data-gallery-src="images/mucura-tintipan-1.webp">
+            <img src="images/mucura-tintipan-1.webp" alt="Lancha navegando por las aguas de Tintipán" width="1280" height="720" loading="lazy" decoding="async"/>
+          </figure>
+          <figure class="gallery-tile" data-label="Barú" data-gallery-src="images/playa-blanca-baru.webp">
+            <img src="images/playa-blanca-baru.webp" alt="Playa Blanca en Barú cerca de Cartagena" width="1200" height="800" loading="lazy" decoding="async"/>
+          </figure>
+          <figure class="gallery-tile" data-label="Cartagena desde el mar" data-gallery-src="images/city-bahia.webp">
+            <img src="images/city-bahia.webp" alt="Vista de Cartagena desde la bahía" width="1200" height="800" loading="lazy" decoding="async"/>
+          </figure>
+        </div>
+        <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <a href="experiences.html" class="btn-primary px-8 py-3">Explorar todas las experiencias <i class="fas fa-arrow-right"></i></a>
+          <p class="text-sm text-gray-500">¿No sabes cuál elegir? Nohemi te orienta por WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Blog Preview -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6">
@@ -1905,77 +1937,6 @@
           setTimeout(() => menu.classList.add("hidden"), 300);
         });
 
-      // Carrusel logic (Video + Images + Auto-hide Text)
-      const slides = document.querySelectorAll(".hero-slide");
-      const heroContent = document.getElementById("hero-content"); // ID agregado al texto
-      let currentSlide = 0;
-      const slideDuration = 3000; // 3 segundos por imagen (solicitado)
-      let slideInterval;
-
-      function updateContentVisibility(slideElement) {
-        // Si el slide tiene un video, ocultamos el texto. Si no, lo mostramos.
-        if (slideElement.querySelector("video")) {
-          heroContent.classList.add("opacity-0", "pointer-events-none");
-          heroContent.classList.remove("opacity-100", "pointer-events-auto");
-        } else {
-          heroContent.classList.remove("opacity-0", "pointer-events-none");
-          heroContent.classList.add("opacity-100", "pointer-events-auto");
-        }
-      }
-
-      function nextSlide() {
-        const currentEl = slides[currentSlide];
-        currentEl.classList.remove("active");
-
-        // Pausar video anterior si existe
-        const video = currentEl.querySelector("video");
-        if (video) {
-          video.pause();
-          video.currentTime = 0;
-        }
-
-        currentSlide = (currentSlide + 1) % slides.length;
-        const nextEl = slides[currentSlide];
-        nextEl.classList.add("active");
-
-        // Actualizar visibilidad del texto
-        updateContentVisibility(nextEl);
-
-        // Verificar si el nuevo slide es video
-        const nextVideo = nextEl.querySelector("video");
-        if (nextVideo) {
-          clearInterval(slideInterval); // Detener loop automático
-          nextVideo.play();
-          nextVideo.onended = function () {
-            nextSlide(); // Avanzar al terminar
-            startImageLoop(); // Reiniciar loop
-          };
-        }
-      }
-
-      function startImageLoop() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, slideDuration);
-      }
-
-      // Inicialización
-      if (slides.length > 0) {
-        const firstSlide = slides[0];
-        updateContentVisibility(firstSlide); // Verificar estado inicial
-
-        const firstVideo = firstSlide.querySelector("video");
-        if (firstVideo) {
-          // IMPORTANT: removed loop attribute in HTML to ensure onended fires
-          firstVideo.play();
-          firstVideo.onended = function () {
-            nextSlide();
-            startImageLoop();
-          };
-        } else {
-          startImageLoop();
-        }
-      }
-
       // WhatsApp — número único de contacto
       const WHATSAPP_NUMBER = "573163030589";
       function openWhatsApp(message) {
@@ -1987,5 +1948,6 @@
     </script>
       <script src="js/currency.js"></script>
       <script src="js/cookie-consent.js"></script>
-  </body>
+    <script src="js/site-refresh.js?v=20260804c" defer></script>
+</body>
 </html>
