@@ -9,7 +9,7 @@
     <link rel="preload" as="image" href="images/catamaran-cartagena-atardecer.webp" fetchpriority="high"/>
     <meta
       name="description"
-      content="Planea tours y experiencias en Cartagena con Nohemi, Mexicana en Cartagena: itinerarios personalizados, costos claros y acompañamiento local."
+      content="Reserva tours en Cartagena con precios claros y orientación local de Nohemi, Mexicana en Cartagena. Islas, ciudad, gastronomía e itinerarios personalizados."
     />
     <meta
       name="keywords"
@@ -20,11 +20,11 @@
     <meta property="og:url" content="https://dunasyolas.com/" />
     <meta
       property="og:title"
-      content="Experiencias locales e itinerarios en Cartagena | Dunas & Olas"
+      content="Tours en Cartagena con guía local | Dunas & Olas"
     />
     <meta
       property="og:description"
-      content="Arma un viaje a tu ritmo con experiencias seleccionadas, costos claros y acompañamiento local antes y durante tu visita a Cartagena."
+      content="Tours seleccionados en Cartagena, precios claros y orientación de Nohemi, Mexicana en Cartagena. Islas, ciudad e itinerarios a tu medida."
     />
     <meta
       property="og:image"
@@ -39,19 +39,19 @@
     <meta property="twitter:url" content="https://dunasyolas.com/" />
     <meta
       property="twitter:title"
-      content="Experiencias locales e itinerarios en Cartagena | Dunas & Olas"
+      content="Tours en Cartagena con guía local | Dunas & Olas"
     />
     <meta
       property="twitter:description"
-      content="Arma un viaje a tu ritmo con experiencias seleccionadas, costos claros y acompañamiento local antes y durante tu visita a Cartagena."
+      content="Tours seleccionados en Cartagena, precios claros y orientación de Nohemi, Mexicana en Cartagena. Islas, ciudad e itinerarios a tu medida."
     />
     <meta
       property="twitter:image"
       content="https://dunasyolas.com/images/catamaran-cartagena-atardecer.webp"
     />
-    <title>Experiencias locales e itinerarios en Cartagena | Dunas & Olas</title>
-    <link rel="icon" href="images/favicon-dunas-olas.png" type="image/png" />
-    <link rel="apple-touch-icon" href="images/favicon-dunas-olas.png"/>
+    <title>Tours en Cartagena con guía local | Dunas & Olas</title>
+    <link rel="icon" href="images/favicon-circle.png" type="image/png" />
+    <link rel="apple-touch-icon" href="images/favicon-circle.png"/>
     <meta name="theme-color" content="#10293A"/>
     <link href="./css/tailwind.css" rel="stylesheet"/>
     <link
@@ -480,7 +480,7 @@
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://dunasyolas.com/experiences?q={search_term_string}"
+          "urlTemplate": "https://dunasyolas.com/experiences?buscar={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       }
@@ -580,7 +580,7 @@
     <link rel="alternate" hreflang="es" href="https://dunasyolas.com/"/>
     <link rel="alternate" hreflang="en" href="https://dunasyolas.com/en/"/>
     <link rel="alternate" hreflang="x-default" href="https://dunasyolas.com/"/>
-    <link rel="stylesheet" href="css/brand-refresh.css?v=20260804d"/>
+    <link rel="stylesheet" href="css/brand-refresh.css?v=20260805a"/>
 </head>
   <body
     class="bg-gray-50 text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900"
@@ -614,7 +614,7 @@
             >Experiencias</a
           >
           <a
-            href="#galeria"
+            href="galeria.html"
             class="text-white hover:text-blue-400 transition drop-shadow-md"
             >Galería</a
           >
@@ -666,7 +666,7 @@
         >Experiencias</a
       >
       <a
-        href="#galeria"
+        href="galeria.html"
         class="text-2xl font-bold text-white hover:text-blue-400"
         >Galería</a
       >
@@ -748,6 +748,12 @@
           <a href="experiences.html" class="btn-primary text-lg px-10 py-4"
             >Ver Experiencias</a
           >
+        </div>
+        <div class="site-search-shell" role="search">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <label for="site-search" class="sr-only">Buscar en Dunas y Olas</label>
+          <input id="site-search" class="site-search-input" type="search" autocomplete="off" placeholder="Busca Barú, Isla Palma, kitesurf, playas o guías…" aria-controls="site-search-results" aria-expanded="false" />
+          <div id="site-search-results" class="site-search-results hidden" role="listbox" aria-label="Resultados de búsqueda"></div>
         </div>
       </div>
 
@@ -1487,38 +1493,6 @@
       </div>
     </section>
 
-    <!-- Galería editorial -->
-    <section id="galeria" class="py-20 bg-white scroll-mt-20">
-      <div class="container mx-auto px-6">
-        <div class="max-w-3xl mb-10">
-          <span class="text-teal-700 font-extrabold text-sm uppercase tracking-[0.18em] mb-3 block">Galería</span>
-          <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Así se siente el Caribe con nosotros</h2>
-          <p class="text-gray-600 text-base md:text-lg leading-relaxed">Una mirada real a las islas, la bahía y los días que ayudamos a organizar desde Cartagena. Toca cualquier foto para verla completa.</p>
-        </div>
-        <div class="gallery-grid">
-          <figure class="gallery-tile" data-label="Atardecer en la bahía" data-gallery-src="images/catamaran-cartagena-atardecer.webp">
-            <img src="images/catamaran-cartagena-atardecer.webp" alt="Catamarán al atardecer frente a la bahía de Cartagena" width="1600" height="900" loading="lazy" decoding="async"/>
-          </figure>
-          <figure class="gallery-tile" data-label="Isla Palma" data-gallery-src="images/isla-palma-4.webp">
-            <img src="images/isla-palma-4.webp" alt="Aguas cristalinas y playa de Isla Palma" width="1280" height="720" loading="lazy" decoding="async"/>
-          </figure>
-          <figure class="gallery-tile" data-label="Múcura y Tintipán" data-gallery-src="images/mucura-tintipan-1.webp">
-            <img src="images/mucura-tintipan-1.webp" alt="Lancha navegando por las aguas de Tintipán" width="1280" height="720" loading="lazy" decoding="async"/>
-          </figure>
-          <figure class="gallery-tile" data-label="Barú" data-gallery-src="images/playa-blanca-baru.webp">
-            <img src="images/playa-blanca-baru.webp" alt="Playa Blanca en Barú cerca de Cartagena" width="1200" height="800" loading="lazy" decoding="async"/>
-          </figure>
-          <figure class="gallery-tile" data-label="Cartagena desde el mar" data-gallery-src="images/city-bahia.webp">
-            <img src="images/city-bahia.webp" alt="Vista de Cartagena desde la bahía" width="1200" height="800" loading="lazy" decoding="async"/>
-          </figure>
-        </div>
-        <div class="gallery-actions">
-          <a href="experiences.html" class="btn-primary px-8 py-3">Ver todas las experiencias <i class="fas fa-arrow-right"></i></a>
-          <p class="text-sm text-gray-500">¿No sabes cuál elegir? Nohemi te orienta por WhatsApp.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Blog Preview -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6">
@@ -1948,6 +1922,7 @@
     </script>
       <script src="js/currency.js"></script>
       <script src="js/cookie-consent.js"></script>
-    <script src="js/site-refresh.js?v=20260804c" defer></script>
+    <script src="js/site-search.js?v=20260804a" defer></script>
+    <script src="js/site-refresh.js?v=20260805a" defer></script>
 </body>
 </html>

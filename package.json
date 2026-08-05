@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run check",
-    "check": "node scripts/check-site.js"
+    "build:search": "node scripts/build-search-index.js",
+    "check": "npm run build:search && node scripts/check-site.js"
   },
   "repository": {
     "type": "git",

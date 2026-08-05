@@ -33,27 +33,72 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 nav {
-  min-height: 68px;
+  min-height: 64px;
   background: rgba(12, 30, 44, 0.94) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 10px 35px rgba(4, 18, 28, 0.16);
   backdrop-filter: blur(16px);
 }
 
-nav > .container { min-height: 68px; }
+nav > .container { min-height: 64px; }
 
-nav a { letter-spacing: 0.025em; }
+nav a { letter-spacing: 0.035em; }
 nav a[href$="index.html"], nav a[href="../index.html"] { flex-shrink: 0; white-space: nowrap; }
 nav a[class*="bg-yellow-500"] { white-space: nowrap; padding-left: 1rem !important; padding-right: 1rem !important; }
 
 nav .space-x-8 > :not([hidden]) ~ :not([hidden]),
 nav .space-x-7 > :not([hidden]) ~ :not([hidden]) {
-  margin-left: 1.25rem !important;
+  margin-left: 1.45rem !important;
 }
 
 nav .hidden.md\:flex > a {
-  font-size: .95rem !important;
+  font-size: 1rem !important;
   line-height: 1.2;
+}
+
+#experiences-search { padding-left: 3rem !important; padding-right: 3rem !important; }
+section:has(#newsletter-form) { display: none !important; }
+
+.site-search-shell { position: relative; width: min(620px, calc(100vw - 2rem)); margin: 1.5rem auto 0; text-align: left; }
+.site-search-shell > i { position: absolute; left: 1rem; top: 1.05rem; z-index: 2; color: #0f8f9d; }
+.site-search-input { width: 100%; border: 1px solid rgba(255,255,255,.5); border-radius: 999px; background: rgba(255,255,255,.96); color: #10293a; padding: .85rem 3rem .85rem 2.85rem; box-shadow: 0 12px 32px rgba(4,18,28,.22); outline: none; }
+.site-search-input:focus { border-color: #f4cf6a; box-shadow: 0 0 0 4px rgba(244,207,106,.22), 0 12px 32px rgba(4,18,28,.22); }
+.site-search-results { position: absolute; top: calc(100% + .55rem); left: 0; right: 0; z-index: 60; max-height: min(420px, 55vh); overflow-y: auto; border-radius: 1rem; background: #fff; box-shadow: 0 18px 48px rgba(4,18,28,.3); }
+.site-search-result { display: block; padding: .85rem 1rem; border-bottom: 1px solid #edf1f2; color: #10293a; }
+.site-search-result:last-child { border-bottom: 0; }
+.site-search-result:hover, .site-search-result:focus { background: #f3faf9; }
+.site-search-result strong { display: block; font-size: .92rem; }
+.site-search-result span { display: block; margin-top: .18rem; color: #64748b; font-size: .76rem; line-height: 1.35; }
+
+nav .hidden.md\:flex > a:not(#lang-switch):not([href*="arma-tu-viaje"]) {
+  position: relative;
+  padding: .72rem .08rem;
+  white-space: nowrap;
+  text-shadow: none !important;
+  transition: color .2s ease, transform .2s ease !important;
+}
+
+nav .hidden.md\:flex > a:not(#lang-switch):not([href*="arma-tu-viaje"])::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: .3rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #f4cf6a;
+  transition: left .22s ease, right .22s ease;
+}
+
+nav .hidden.md\:flex > a:not(#lang-switch):not([href*="arma-tu-viaje"]):hover {
+  color: #f4cf6a !important;
+  transform: translateY(-1px);
+}
+
+nav .hidden.md\:flex > a:not(#lang-switch):not([href*="arma-tu-viaje"]):hover::after,
+nav .hidden.md\:flex > a[aria-current="page"]::after {
+  left: 0;
+  right: 0;
 }
 
 .brand-signature,
@@ -273,8 +318,8 @@ button[data-filter].active, button[data-filter].active-filter,
 }
 
 @media (max-width: 767px) {
-  nav { min-height: 62px; }
-  nav > .container { min-height: 62px; padding-left: 1rem !important; padding-right: 1rem !important; }
+  nav { min-height: 60px; }
+  nav > .container { min-height: 60px; padding-left: 1rem !important; padding-right: 1rem !important; }
   nav a[href$="index.html"] img { height: 2rem !important; }
   nav a[href$="index.html"] .text-2xl { font-size: 1.15rem !important; }
   nav a[href$="index.html"] .tracking-\[0\.3em\] { font-size: .43rem !important; letter-spacing: .08em !important; }
@@ -301,9 +346,9 @@ button[data-filter].active, button[data-filter].active-filter,
 
 @media (min-width: 768px) and (max-width: 1320px) {
   nav .container { padding-left: 1rem !important; padding-right: 1rem !important; }
-  nav .hidden.md\:flex > a { font-size: .8rem !important; }
+  nav .hidden.md\:flex > a { font-size: .95rem !important; }
   nav .space-x-8 > :not([hidden]) ~ :not([hidden]),
-  nav .space-x-7 > :not([hidden]) ~ :not([hidden]) { margin-left: .62rem !important; }
+  nav .space-x-7 > :not([hidden]) ~ :not([hidden]) { margin-left: .8rem !important; }
   nav a[href$="index.html"] .text-2xl { font-size: 1.08rem !important; }
   nav a[href$="index.html"] img { height: 1.9rem !important; }
   nav a[href$="index.html"] .tracking-\[0\.3em\] { font-size: .5rem !important; }
@@ -313,4 +358,59 @@ button[data-filter].active, button[data-filter].active-filter,
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal-ready { opacity: 1; transform: none; }
+}
+
+/* Transiciones marinas continuas entre secciones. */
+@keyframes dyo-wave-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes dyo-wave-breathe {
+  0%, 100% { transform: translate3d(0, 0, 0) scaleY(1); }
+  50% { transform: translate3d(-25%, 0, 0) scaleY(1.08); }
+  100% { transform: translate3d(-50%, 0, 0) scaleY(1); }
+}
+
+.dyo-wave-divider {
+  --dyo-wave-color: #fff;
+  --dyo-wave-accent: rgba(14, 143, 157, .2);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 58px;
+  margin: -1px 0;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.dyo-wave-divider svg {
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: block;
+  width: calc(200% + 2px);
+  height: 100%;
+  will-change: transform;
+}
+
+.dyo-wave-divider .dyo-wave-back {
+  color: var(--dyo-wave-accent);
+  animation: dyo-wave-breathe 13s ease-in-out infinite;
+}
+
+.dyo-wave-divider .dyo-wave-front {
+  color: var(--dyo-wave-color);
+  animation: dyo-wave-drift 9s linear infinite;
+}
+
+.dyo-wave-divider path { fill: currentColor; }
+
+@media (max-width: 640px) {
+  .dyo-wave-divider { height: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dyo-wave-divider svg { animation: none !important; }
 }
