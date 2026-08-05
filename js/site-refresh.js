@@ -127,20 +127,40 @@
   }
 
   function addMarineSectionTransitions() {
+    function solidBackground(node, fallback) {
+      var current = node;
+      while (current && current !== document.documentElement) {
+        var styles = getComputedStyle(current);
+        var color = styles.backgroundColor;
+        if (color && color !== "rgba(0, 0, 0, 0)" && color !== "transparent") return color;
+        if (styles.backgroundImage && styles.backgroundImage !== "none") {
+          var gradientColors = styles.backgroundImage.match(/rgba?\([^\)]+\)/g) || [];
+          var gradientColor = gradientColors.find(function (candidate) {
+            return !/rgba\([^\)]+,\s*0(?:\.0+)?\s*\)/.test(candidate);
+          });
+          if (gradientColor) return gradientColor;
+        }
+        current = current.parentElement;
+      }
+      return fallback;
+    }
+
     var sections = Array.prototype.slice.call(document.querySelectorAll("body > section, main > section"));
     sections.forEach(function (section) {
       var previous = section.previousElementSibling;
       if (!previous || previous.classList.contains("dyo-wave-divider")) return;
       if (!(previous.matches("section") || previous.matches("header") || previous.matches("main"))) return;
 
-      var nextColor = getComputedStyle(section).backgroundColor;
-      if (!nextColor || nextColor === "rgba(0, 0, 0, 0)") return;
+      var previousColor = solidBackground(previous, "#10293a");
+      var nextColor = solidBackground(section, "#fffdf9");
+      if (previousColor === nextColor) return;
 
       var wave = document.createElement("div");
       wave.className = "dyo-wave-divider";
       wave.setAttribute("aria-hidden", "true");
-      wave.style.setProperty("--dyo-wave-color", nextColor);
-      wave.innerHTML = '<svg class="dyo-wave-back" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 31C180 66 360 3 540 34c180 31 360-29 540 1 180 30 270-15 360-4v39H0Z"/></svg><svg class="dyo-wave-front" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0 39c120-25 240-25 360 0s240 25 360 0 240-25 360 0 240 25 360 0v31H0Z"/></svg>';
+      wave.style.setProperty("--dyo-wave-from", previousColor);
+      wave.style.setProperty("--dyo-wave-to", nextColor);
+      wave.innerHTML = '<svg viewBox="0 0 1440 70" preserveAspectRatio="none"><rect width="1440" height="70"/><path d="M0 40C120 20 240 20 360 40s240 20 360 0 240-20 360 0 240 20 360 0v30H0Z"/></svg>';
       section.before(wave);
     });
   }
