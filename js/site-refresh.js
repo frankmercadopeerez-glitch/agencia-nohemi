@@ -45,6 +45,87 @@
     });
   }
 
+  function initWhatsAppMessages() {
+    var nativeOpen = window.open.bind(window);
+    var clickContext = "";
+
+    function cleanLabel(value) {
+      return String(value || "")
+        .replace(/\s+/g, " ")
+        .replace(/^[\s\-–—:|]+|[\s\-–—:|]+$/g, "")
+        .trim()
+        .slice(0, 140);
+    }
+
+    function normalize(value) {
+      return cleanLabel(value)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    }
+
+    function pageContext(trigger) {
+      var scope = trigger && trigger.closest
+        ? trigger.closest("[data-experience-name], [data-tour-name], article, .experience-card, .tour-card, .package-card, .day-card")
+        : null;
+      var explicit = scope && (scope.getAttribute("data-experience-name") || scope.getAttribute("data-tour-name"));
+      var scopedTitle = scope && scope.querySelector("h2, h3, h4, [data-title], .title");
+      var heading = document.querySelector("main h1, body > header h1, h1");
+      var title = cleanLabel(explicit || (scopedTitle && scopedTitle.textContent) || clickContext || (heading && heading.textContent));
+
+      if (!title || /^(inicio|contacto|tu carrito|arma tu viaje|dunas\s*&\s*olas)$/i.test(title)) {
+        title = cleanLabel(document.title.split("|")[0].split("–")[0]);
+      }
+      return title || "las experiencias en Cartagena";
+    }
+
+    function personalizedMessage(original, trigger) {
+      var context = pageContext(trigger);
+      var base = "Hola, vengo desde la web de Dunas y Olas y quiero más información sobre " + context + ".";
+      var detail = cleanLabel(String(original || "")
+        .replace(/^hola[,!\s]*/i, "")
+        .replace(/^vengo desde la web de dunas y olas[^.]*\.?/i, ""));
+
+      if (!detail || /^(quiero|quisiera|me gustar[ií]a)\s+m[aá]s informaci[oó]n\.?$/i.test(detail)) return base;
+      var contextKey = normalize(context);
+      var detailKey = normalize(detail);
+      if (contextKey && detailKey.indexOf(contextKey) !== -1 && detailKey.length < contextKey.length + 55) return base;
+      return base + "\n\nDetalle de mi consulta: " + detail;
+    }
+
+    function personalizeUrl(rawUrl, trigger) {
+      try {
+        var url = new URL(String(rawUrl), window.location.href);
+        if (!/(^|\.)wa\.me$|(^|\.)api\.whatsapp\.com$/i.test(url.hostname)) return rawUrl;
+        var original = url.searchParams.get("text") || "";
+        if (/^Hola, vengo desde la web de Dunas y Olas/i.test(original)) return url.toString();
+        url.searchParams.set("text", personalizedMessage(original, trigger));
+        return url.toString();
+      } catch (_error) {
+        return rawUrl;
+      }
+    }
+
+    document.addEventListener("click", function (event) {
+      var trigger = event.target.closest("a, button");
+      if (!trigger) return;
+      var nearbyTitle = trigger.closest("article, .experience-card, .tour-card, .package-card, .day-card");
+      var heading = nearbyTitle && nearbyTitle.querySelector("h2, h3, h4, [data-title], .title");
+      clickContext = cleanLabel(heading && heading.textContent);
+      window.setTimeout(function () { clickContext = ""; }, 1000);
+
+      if (trigger.tagName === "A" && trigger.href && /wa\.me|api\.whatsapp\.com/i.test(trigger.href)) {
+        trigger.href = personalizeUrl(trigger.href, trigger);
+      }
+    }, true);
+
+    window.open = function (url, target, features) {
+      return nativeOpen(personalizeUrl(url, document.activeElement), target, features);
+    };
+  }
+
   function addMarineSectionTransitions() {
     var sections = Array.prototype.slice.call(document.querySelectorAll("body > section, main > section"));
     sections.forEach(function (section) {
@@ -112,8 +193,10 @@
   }
 
   if (document.readyState === "loading") {
+    initWhatsAppMessages();
     document.addEventListener("DOMContentLoaded", function () { initBrandIdentity(); initGalleryNavigation(); removeNewsletterSections(); addMarineSectionTransitions(); initReveal(); initGallery(); });
   } else {
+    initWhatsAppMessages();
     initBrandIdentity(); initGalleryNavigation(); removeNewsletterSections(); addMarineSectionTransitions(); initReveal(); initGallery();
   }
 })();
